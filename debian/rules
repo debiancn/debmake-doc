@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+
+# no translation at this moment
+export LANGPO :=
+# UTF-8 locale
+export LC_ALL:= C.UTF-8
+
+# single binary: debmake-doc
+BASEDIR := $(CURDIR)/debian/debmake-doc/usr/share/doc/debmake-doc
+export BASEDIR
+
+%:
+	dh $@
+
+override_dh_compress:
+	dh_compress -X.pdf
