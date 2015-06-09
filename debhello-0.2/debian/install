@@ -1,0 +1,3 @@
+data/hello.desktop usr/share/applications
+data/hello.png usr/share/pixmaps
+scripts/hello usr/bin

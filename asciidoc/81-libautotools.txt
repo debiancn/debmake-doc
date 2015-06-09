@@ -1,0 +1,108 @@
+[[autotools-multi]]
+=== Autotools (multi-binary)
+
+Here is an example of creating a set of Debian binary packages including the executable package, the shared library package, the development file package, and the debug symbol package from a simple C source using the Autotools = Autoconf and Automake (*Makefile.am* and *configure.ac*) as its build system.  See <<autotools>>.
+
+Let's package this in the same way as <<autotools-single>>.
+
+Let's assume this upstream tarball to be *debhello-2.0.tar.gz*.
+
+This type of source is meant to be installed as a non-system file, for example, as:
+
+----
+ $ tar -xzmf debhello-2.0.tar.gz
+ $ cd debhello-2.0
+ $ autoreconf -ivf # optional
+ $ ./configure --with-math
+ $ make
+ $ make install
+----
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-2.0.tar.gz*
+----
+include::../debhello-2.0-pkg1/step000.slog[]
+----
+
+Here, the contents of this source are as follows.
+
+.*src/hello.c* (v=2.0):
+----
+include::../debhello-2.0-pkg1/step101.slog[]
+----
+
+.*lib/sharedlib.h* and *lib/sharedlib.c* (v=1.6):
+----
+include::../debhello-2.0-pkg1/step102.slog[]
+----
+
+.*Makefile.am* (v=2.0):
+----
+include::../debhello-2.0-pkg1/step103.slog[]
+----
+
+.*configure.ac* (v=2.0):
+----
+include::../debhello-2.0-pkg1/step104.slog[]
+----
+
+Let's package this with the *debmake* command into multiple packages:
+
+* *debhello*: type = *bin*
+* *libsharedlib1*: type = *lib*
+* *libsharedlib-dev*: type = *dev*
+* *debhello-dbg*: type = *dbg*
+* *libsharedlib1-dbg*: type = *dbg*
+
+Here, the *-b\',libsharedlib1,libsharedlib-dev,-dbg,libsharedlib1-dbg'* option is used to specify the generated binary packages.
+
+----
+sys::[head -n16  ../debhello-2.0-pkg1/step200.slog]
+...
+----
+
+The result is similar to <<configure-single>> but with more template files.
+
+Let's inspect notable template files generated.
+
+.*debian/rules* (template file, v=2.0):
+----
+include::../debhello-2.0-pkg1/step202.slog[]
+----
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=2.0):
+----
+include::../debhello-2.0-pkg1/step301.slog[]
+----
+
+.*debian/control* (maintainer version, v=2.0):
+----
+include::../debhello-2.0-pkg1/step302.slog[]
+----
+
+.**debian/*.install** (maintainer version, v=2.0):
+----
+include::../debhello-2.0-pkg1/step303.slog[]
+----
+
+Since this upstream source creates the proper auto-generated *Makefile*, there are no needs to create *debian/install* and *debian/manpages* files.
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+.Template files under *debian/*. (v=2.0):
+----
+include::../debhello-2.0-pkg1/step400.slog[]
+----
+
+The rest of the packaging activities are practically the same as the one in <<configure-single>>.
+
+Here are the generated dependency lists of binary packages.
+
+.The generated dependency lists of binary packages (v=2.0):
+----
+include::../debhello-2.0-pkg1/step702.slog[]
+----
+

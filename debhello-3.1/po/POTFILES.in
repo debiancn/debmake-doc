@@ -1,0 +1,4 @@
+# program source file
+hello_py/__init__.py
+# gettext 0.19 can handle desktop file
+data/hello.desktop.in

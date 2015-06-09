@@ -1,0 +1,36 @@
+[[emptypkg]]
+=== Cherry-pick templates
+
+Here is an example of creating a simple Debian package from a zero content source on an empty directory.
+
+This is a good platform to get all the template files without making mess in the upstream source tree you are working on.
+
+Let's assume this empty directory to be *debhello-0.1*.
+
+----
+include::../debhello-0.1-pkg1/step000.slog[]
+----
+
+Let's generate the maximum amount of template files by specifying the *-x4* option.
+
+Let's also use the ``*-p* 'debhello' *-t -u* '0.1' *-r* '1''' options to make missing upstream tarball.
+
+----
+sys::[head -n2  ../debhello-0.1-pkg1/step200.slog]
+ ...
+sys::[grep -A3  '^I: debmake -x' ../debhello-0.1-pkg1/step200.slog]
+ ...
+sys::[tail -n7  ../debhello-0.1-pkg1/step200.slog]
+----
+
+Let's inspect generated template files.
+
+----
+sys::[head -n15  ../debhello-0.1-pkg1/step201.slog]
+ ...
+sys::[tail -n6  ../debhello-0.1-pkg1/step201.slog]
+----
+
+Now you can copy any of these generated template files in the 'debhello-0.1/'*debian/* directory to your package as needed while renaming them as needed.
+
+TIP: The generated template files can be made more verbose ones by invoking the *debmake* command with the *-T* option (tutorial mode).

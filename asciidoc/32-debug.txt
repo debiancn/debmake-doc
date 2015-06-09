@@ -1,0 +1,25 @@
+[[dbg]]
+=== Debugging information
+
+The Debian package is built with the debugging information but packaged into the binary package after stripping the debugging information as required by https://www.debian.org/doc/debian-policy/ch-files.html[Chapter 10 - Files] of the ``Debian Policy Manual''.
+
+The debugging information can be packaged separately as the debug package using the ``*dh_strip --dbg-package=*'package''' command in the *override_dh_strip:* target of the *debian/rules* file.  The name of such debug package normally has the *-dbg* suffix.
+
+NOTE: The creation of the *-dbg* package is optional.  In future, it may be superseded by some new mechanism to provide the debugging information.
+
+The installation path of the debugging information is as follows to enable auto-loading of it by the *gdb* command.
+
+* */usr/lib/debug/.build-id/*'12/3456...' (compat>=9, for *buildID*='123456...')
+* */usr/lib/debug/*'path/to/binary' (compat<<9, for '/path/to/binary')
+
+See
+
+* http://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html#bpp-dbg[6.7.9. Best practices for debug packages] of the ``Debian Developer's Reference''.
+* https://sourceware.org/gdb/current/onlinedocs/gdb/Separate-Debug-Files.html#Separate-Debug-Files[18.2 Debugging Information in Separate Files] of the ``Debugging with gdb''
+* *dh_strip*(1)
+* *strip*(1)
+* *readelf*(1)
+* *objcopy*(1)
+* Debian wiki https://wiki.debian.org/DebugPackage[DebugPackage]
+* Debian wiki https://wiki.debian.org/AutomaticDebugPackages[AutomaticDebugPackages]
+

@@ -1,0 +1,38 @@
+#!/bin/sh -e
+# default values
+PREFIX="/usr/local"
+VERBOSE=""
+PACKAGE_AUTHOR="John Doe"
+PACKAGE_NAME="debhello"
+
+# parse arguments
+while [ "${1}" != "" ]; do
+  VAR="${1%=*}" # Drop suffix =*
+  VAL="${1#*=}" # Drop prefix *=
+  case "${VAR}" in
+  --prefix)
+    PREFIX="${VAL}"
+    ;;
+  --verbose|-v)
+    VERBOSE="-v"
+    ;;
+  --author)
+    PACKAGE_AUTHOR="${VAL}"
+    ;;
+  *)
+    echo "W: Unknown argument: ${1}"
+  esac
+  shift
+done
+
+LOCALEDIR="${PREFIX}/locale"
+# setup configured Makefile and src/config.h
+sed -e "s,@prefix@,${PREFIX}," \
+    -e "s,@VERBOSE@,${VERBOSE}," \
+    <Makefile.in >Makefile
+
+: >src/config.h
+echo "#define PACKAGE_NAME \"${PACKAGE_NAME}\"" >>src/config.h
+echo "#define LOCALEDIR \"${LOCALEDIR}\"" >>src/config.h
+echo "#define PACKAGE_AUTHOR \"${PACKAGE_AUTHOR}\"" >>src/config.h
+

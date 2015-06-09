@@ -1,0 +1,78 @@
+[[autotools-single]]
+=== Autotools (single-binary)
+
+Here is an example of creating a simple Debian package from a simple C source using the Autotools = Autoconf and Automake (*Makefile.am* and *configure.ac*) as its build system. See <<autotools>>.
+
+This source usually comes with the upstream auto-generated *Makefile.in* and *configure* files, too.  This source can be packaged using these files as <<configure-single>> with the help of the *autotools-dev* package.
+
+The better alternative is to regenerate these files using the latest Autoconf and Automake packages if the upstream provided *Makefile.am* and *configure.ac* are compatible with the latest version.  This is advantageous for the porting to the new CPU architectures etc.  This can be automated by using the ``*--with autoreconf*'' option for the *dh* command.
+
+Let's assume this upstream tarball to be *debhello-1.6.tar.gz*.
+
+This type of source is meant to be installed as a non-system file, for example, as:
+
+----
+ $ tar -xzmf debhello-1.6.tar.gz
+ $ cd debhello-1.6
+ $ autoreconf -ivf # optional
+ $ ./configure --with-math
+ $ make
+ $ make install
+----
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.6.tar.gz*
+----
+include::../debhello-1.6-pkg1/step000.slog[]
+----
+
+Here, the contents of this source are as follows.
+
+.*src/hello.c* (v=1.6):
+----
+include::../debhello-1.6-pkg1/step101.slog[]
+----
+
+.*Makefile.am* (v=1.6):
+----
+include::../debhello-1.6-pkg1/step102.slog[]
+----
+
+.*configure.ac* (v=1.6):
+----
+include::../debhello-1.6-pkg1/step103.slog[]
+----
+
+Let's package this with the *debmake* command.
+
+----
+sys::[head -n12  ../debhello-1.6-pkg1/step200.slog]
+...
+----
+
+The result is similar to <<configure-single>> but not exactly the same.
+
+Let's inspect notable template files generated.
+
+// .The source tree after the basic *debmake* execution. (v=1.6)
+// ----
+// include::../debhello-1.6-pkg1/step201.slog[]
+// ----
+
+.*debian/rules* (template file, v=1.6):
+----
+include::../debhello-1.6-pkg1/step202.slog[]
+----
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=1.6):
+----
+include::../debhello-1.6-pkg1/step301.slog[]
+----
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+The rest of the packaging activities are practically the same as the one in <<step-debuild>>.
+

@@ -1,0 +1,61 @@
+[[chroot]]
+=== chroot
+
+The http://en.wikipedia.org/wiki/Chroot[chroot] for the clean package build environment can be created and managed using the tools described in <<setup>>.
+footnote:[The *git-pbuilder* style organization is deployed here.  See https://wiki.debian.org/git-pbuilder .  Be careful since many HOWTOs use different organization.]
+
+Here is a quick summary of available package build commands.  There are many ways to do the same thing.
+
+* *dpkg-buildpackage* = core of package building tool
+* *debuild* = *dpkg-buildpackage* + *lintian* (build under the sanitized environment variables)
+* *pbuilder* = core of the Debian chroot environment tool
+* *pdebuild* = *pbuilder* + *dpkg-buildpackage* (build in the chroot)
+* *cowbuilder* = speed up the *pbuilder* execution
+* *git-pbuilder* = the easy-to-use command line syntax for *pdebuild* (used by *gbp buildpackge*)
+* *gbp* = manage the Debian source under the git
+* *gbp buildpackge* = *pbuilder* + *dpkg-buildpackage* + *gbp*
+
+A clean *sid* distribution chroot environment can be used as follows.
+
+* The chroot filesystem creation command for the *sid* distribution
+** *pbuilder create*
+** *git-pbuilder create*
+* The master chroot filesystem path for the *sid* distribution chroot
+** */var/cache/pbuilder/base.cow*
+* The package build command for the *sid* distribution chroot
+** *pdebuild*
+** *git-pbuilder*
+** *gbp buildpackage*
+* The command to update the *sid* chroot
+** *pbuilder --update*
+** *git-pbuilder update*
+* The command to login to the *sid* chroot to modify it
+** *git-pbuilder login --save-after-login*
+
+An arbitrary 'dist' distribution environment can be used as follows.
+
+* The chroot filesystem creation command for the 'dist' distribution
+** *pbuilder create --distribution* 'dist'
+** *DIST=*'dist' *git-pbuilder create*
+* The master chroot filesystem path for the 'dist' distribution chroot
+** path: */var/cache/pbuilder/base-*'dist'*.cow*
+* The package build command for the 'dist' distribution chroot
+** *pdebuild \-- --basepath=/var/cache/pbuilder/base-*'dist'*.cow*
+** *DIST=*'dist' *git-pbuilder*
+** *gbp buildpackage --git-dist=*'dist'
+* The command to update the 'dist' chroot
+** *pbuilder update --basepath=/var/cache/pbuilder/base-*'dist'*.cow*
+** *DIST=*'dist' *git-pbuilder update*
+* The command to login to the *sid* chroot to modify it
+** *pbuilder --login --basepath=/var/cache/pbuilder/base-*'dist'*.cow --save-after-login*
+** *DIST=*'dist' *git-pbuilder login --save-after-login*
+
+TIP: A custom environment with some pre-loaded packages needed for the new experimental packages, this ``*git-pbuilder login --save-after-login*'' command is quite handy.
+
+TIP: If your old chroot is missing packages such as *libeatmydata1*, *ccache*, and *lintian*, you may want to install these with the ``*git-pbuilder login --save-after-login*'' command.
+
+TIP: The chroot filesystem can be cloned simply by copying with ``*cp -a base-*'dist'*.cow base-*'customdist'*.cow*''.  The new chroot can be accessed as ``*gbp buildpackage --git-dist=*'customdist''' and ``*DIST=*'customdist' *git-pbuilder ...*''.
+
+TIP: When the *orig.tar.gz* file needs to be upload for the Debian revision other than *0* and *1* (e.g., for the security upload), add the *-sa* option to the end of *dpkg-buildpackage*, *debuild*, *pdebuild*, and *git-pbuilder* commands.  For the ``*gbp buildpackage*'' command,  temporarily modify the *builder* setting of *~/.gbp.conf*.
+
+NOTE: The description in this section is too terse to be useful for most of the prospective maintainers.  This is the intentional choice of the author.   You are highly encouraged to search and read all the pertinent documents associated with the commands used.

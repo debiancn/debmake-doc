@@ -1,0 +1,79 @@
+Here are some notable tips around the Debian packaging.
+
+[[debdiff]]
+=== debdiff
+
+You can compare file contents in two source Debian packages with the *debdiff* command.
+
+----
+$ debdiff old-package.dsc new-package.dsc
+----
+
+You can also compare file lists in two sets of binary Debian packages with the *debdiff* command.
+
+----
+$ debdiff old-package.changes new-package.changes
+----
+
+These are useful to identify what has been changed in the source packages and to check for inadvertent changes made when updating binary packages, such as unintentionally misplacing or removing files.
+
+
+[[dget]]
+=== dget
+
+You can download the set of files for the Debian source package with the *dget* command.
+
+----
+$ dget http://www.example.org/path/to/package_version-rev.dsc
+----
+
+[[debc]]
+=== debc
+
+You should install generated packages with the *debc* command to test it locally.
+
+----
+$ debc package_version-rev_arch.changes
+----
+
+[[piuparts]]
+=== piuparts
+
+You should install generated packages with the *piuparts* command to test it automatically.
+
+----
+$ sudo piuparts package_version-rev_arch.changes
+----
+
+NOTE: This is very slow proess with the remote APT package repository access.
+
+[[debsign]]
+=== debsign
+
+After completing the test of the package, you can sign it with the *debsign* command.
+
+----
+$ debsign package_version-rev_arch.changes
+----
+
+[[dput]]
+=== dput
+
+After signing the package with the *debsign* command, you can upload the set of files for the Debian source and binary package with the *dput* command.
+
+----
+$ dput package_version-rev_arch.changes
+----
+
+[[bts]]
+=== bts
+
+After uploading the package, you will receive bug reports.  It is an important duty of a package maintainer to manage these bugs properly as described in http://www.debian.org/doc/manuals/developers-reference/pkgs.html#bug-handling[5.8. Handling bugs] of the ``Debian Developer's Reference''.
+
+The *bts* command is a handy tool to manage bugs on https://www.debian.org/Bugs/[Debian Bug Tracking System].
+
+----
+$ bts severity 123123 wishlist , tags -1 pending
+----
+
+

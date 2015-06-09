@@ -1,0 +1,78 @@
+[[configure-single]]
+=== Makefile.in + configure (single-binary)
+
+Here is an example of creating a simple Debian package from a simple C source using the *Makefile.in* and *configure* as its build system.
+
+This is an enhanced upstream source example for <<makefile-single>>.  This also links to an external library *libm* and this source is configurable using arguments to the *configure* script which generates the *Makefile* and *src/config.h* files.
+
+Let's assume this upstream tarball to be *debhello-1.5.tar.gz*.
+
+This type of source is meant to be installed as a non-system file, for example, as:
+
+----
+ $ tar -xzmf debhello-1.5.tar.gz
+ $ cd debhello-1.5
+ $ ./configure --with-math
+ $ make
+ $ make install
+----
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.5.tar.gz*
+----
+include::../debhello-1.5-pkg1/step000.slog[]
+----
+
+Here, the contents of this source are as follows.
+
+
+.*src/hello.c* (v=1.5):
+----
+include::../debhello-1.5-pkg1/step101.slog[]
+----
+
+.*Makefile.in* (v=1.5):
+----
+include::../debhello-1.5-pkg1/step102.slog[]
+----
+
+.*configure* (v=1.5):
+----
+include::../debhello-1.5-pkg1/step103.slog[]
+----
+
+Please note that the *configure* command replaces strings with *@...@* in the *Makefile.in* to produce *Makefile* and creates *src/config.h*.
+
+Let's package this with the *debmake* command.
+
+----
+sys::[head -n12  ../debhello-1.5-pkg1/step200.slog]
+...
+----
+
+The result is similar to <<step-debmake>> but not exactly the same.
+
+Let's inspect notable template files generated.
+
+// .The source tree after the basic *debmake* execution. (v=1.5)
+// ----
+// include::../debhello-1.5-pkg1/step201.slog[]
+// ----
+
+.*debian/rules* (template file, v=1.5):
+----
+include::../debhello-1.5-pkg1/step202.slog[]
+----
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=1.5):
+----
+include::../debhello-1.5-pkg1/step301.slog[]
+----
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+The rest of the packaging activities are practically the same as the one in <<step-debuild>>.
+

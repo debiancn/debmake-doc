@@ -1,0 +1,2 @@
+/* name of the package author */
+#define PACKAGE_AUTHOR "@PACKAGE_AUTHOR@"

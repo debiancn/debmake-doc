@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Hello
+Comment=Greetings
+Type=Application
+Keywords=hello
+Exec=hello
+Terminal=true
+Icon=hello.png
+Categories=Utility;

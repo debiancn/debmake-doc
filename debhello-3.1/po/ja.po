@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debhello 2.2\n"
+"Report-Msgid-Bugs-To: foo@example.org\n"
+"POT-Creation-Date: 2015-02-21 23:24+0900\n"
+"PO-Revision-Date: 2015-02-21 23:18+0900\n"
+"Last-Translator: Osamu Aoki <osamu@debian.org>\n"
+"Language-Team: Japanese <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../hello_py/__init__.py:34
+msgid "Hello World!"
+msgstr "こんにちは、世界！"
+
+#: ../hello_py/__init__.py:39
+msgid "Click me!"
+msgstr "クリックして！"
+
+#: ../hello_py/__init__.py:49
+#, python-format
+msgid ""
+"Hello, World!\n"
+"Click count = %i"
+msgstr ""
+"こんにちは、世界！\n"
+"クリック数 = %i"

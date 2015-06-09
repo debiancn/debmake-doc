@@ -1,0 +1,12 @@
+#!/bin/sh -e
+TEXTDOMAIN="debhello"
+export TEXTDOMAIN
+TEXTDOMAINDIR="/usr/share/locale/"
+export TEXTDOMAINDIR
+# This is internationalized with gettext
+. gettext.sh
+eval_gettext "Hello from the shell!"
+echo ""
+echo ""
+eval_gettext "Type Enter to exit this program: "
+read X

@@ -1,0 +1,34 @@
+If you are a somewhat experienced Debian user footnote:[You do need to know a little about Unix programming but you certainly don't need to be a wizard. You can learn about the basic handling of a Debian system from the https://www.debian.org/doc/user-manuals#quick-reference[Debian Reference]. It contains some pointers to learn about Unix programming, too.], you may have encountered following situations:
+
+* You wish to install a certain software package not yet found in the Debian archive.
+* You wish to update a Debian package with the newer upstream release.
+* You wish to fix bugs of a Debian package with some patches.
+
+If you wanted to create a Debian package to fulfill these wishes and to share your work with the community, you are the target audience of this guide as a prospective Debian maintainer. footnote:[If you are not interested in sharing the Debian package, you can certainly work around your local situation by compiling and installing the fixed upstream source package into */usr/local/*.]  Welcome to the Debian community.
+
+Debian has many social and technical rules and conventions to follow since it is a large volunteer organization with history.  Debian also has developed huge array of packaging tools and archive maintenance tools to build consistent set of binary packages addressing many technical objectives:
+
+* clean build under clearly specified package dependencies and patches
+* packages build across many architectures
+* optimal splits into multiple binary packages
+* smooth library transitions
+* security enhancement using specific compiler flags
+* multiarch support
+* ...
+
+These make it somewhat overwhelming for many new prospective Debian maintainers to get involved with Debian.  This guide tries to provide entry points for them to get started.  It describes as follows:
+
+* What you should know before getting involved with Debian as a prospective maintainer.
+* What it looks like to make a simple Debian package.
+* What kind of rules exist for making the Debian package.
+* Tips for making the Debian package.
+* Examples of making Debian packages for several typical scenarios.
+
+The author felt limitations of updating the original ``New Maintainers' Guide'' with the *dh-make* package and decided to create an alternative tool and its matching document to address modern requirements.  The result is the *debmake* (version: {debmakeversion}) package and this updated ``Guide for Debian Maintainers'' in the *debmake-doc* (version: {revision}) package.
+
+Many chores and tips have been integrated into the *debmake* command making this guide simple.  This guide also offers many packaging examples.
+
+CAUTION: It takes many hours to properly create and maintain Debian packages. The Debian maintainer must be *both technically competent and diligent* to take up this challenge.
+
+Some important topics are explained in detail.  Some of them may look irrelevant to you. Please be patient. Some corner cases are skipped.  Some topics are only covered by the external pointers.  These are intentional choices to keep this guide simple and maintainable.
+

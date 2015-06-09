@@ -1,0 +1,19 @@
+Source: debhello
+Section: devel
+Priority: extra
+Maintainer: Osamu Aoki <osamu@debian.org>
+Build-Depends: debhelper (>=9), dh-python, python3-all
+Standards-Version: 3.9.6
+Homepage: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/
+X-Python3-Version: >= 3.2
+
+Package: debhello
+Architecture: all
+Multi-Arch: foreign
+Depends: gir1.2-gtk-3.0, python3-gi, ${misc:Depends}, ${python3:Depends}
+Description: example package in the debmake-doc package
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.

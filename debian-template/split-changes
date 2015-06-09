@@ -1,0 +1,18 @@
+#!/usr/bin/make
+REVS = $(shell sed -ne 's/^debhello (\(.*\)-.*).*$$/\1/p' changelog )
+CHANGES = $(addprefix change-,$(REVS))
+
+rchanges: $(CHANGES)
+	cat $(sort $(CHANGES)) >$@
+
+foo:
+	echo $(sort CHANGES)
+
+rev:
+	#cat $(shell echo $(CHANGES) | sort -r)
+	echo $(sort $(CHANGES))
+
+change-%: changelog
+	sed -ne '/^debhello ($*-/,$$p' <$^ |\
+	sed -ne '1,2p' -e '3,/^ *$$/p' >$@
+

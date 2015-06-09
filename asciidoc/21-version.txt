@@ -1,0 +1,56 @@
+[[name-version]]
+=== Package name and version
+
+If the upstream source comes as *hello-0.9.12.tar.gz*, you can take *hello* as the upstream source package name and *0.9.12* as the upstream version.
+
+include::caveat.txt[]
+
+You must adjust the package name and upstream version accordingly for the Debian packaging.
+
+In order to manage the package name and version information effectively under popular tools such as the *aptitude* command, it is a good idea to keep the length of package name to be equal or less than 30 characters; and the total length of version and revision to be equal or less than 14 characters. footnote:[For more than 90% of packages, the package name is equal or less than 24 characters; the upstream version is equal or less than 10 characters and the Debian revision is equal or less than 3 characters.]
+
+In order to avoid name collisions, the user visible binary package name should not be chosen from any generic words.
+
+// aptitude bug #62454 fixed :-)
+
+If upstream does not use a normal versioning scheme such as *2.30.32* but uses some kind of date such as *11Apr29*, a random codename string, or a VCS hash value as part of the version, make sure to remove them from the upstream version. Such information can be recorded in the *debian/changelog* file. If you need to invent a version string, use the *YYYYMMDD* format such as *20110429* as upstream version. This ensures that dpkg interprets later versions correctly as upgrades. If you need to ensure smooth transition to the normal version scheme such as *0.1* in future, use the *0\~YYMMDD* format such as *0~110429* as upstream version, instead.
+
+Version strings can be compared using the *dpkg* command as follows.
+
+----
+$ dpkg --compare-versions ver1 op ver2
+----
+
+The version comparison rule can be summarized as:
+
+* Strings are compared from the head to the tail.
+* Letters are larger than digits.
+* Numbers are compared as integers.
+* Letters are compared in ASCII code order.
+
+There are special rules for period (*.*), plus (*+*), and tilde (*~*) characters, as follows.
+
+----
+0.0 < 0.5 < 0.10 < 0.99 < 1 < 1.0~rc1 < 1.0 < 1.0+b1 < 1.0+nmu1 < 1.1 < 2.0
+----
+
+One tricky case occurs when upstream releases *hello-0.9.12-ReleaseCandidate-99.tar.gz* as the pre-release of *hello-0.9.12.tar.gz*. You can ensure the upgrade to work properly by renaming the upstream source to *hello-0.9.12~rc99.tar.gz* having the proper version order.
+
+[[native]]
+=== Native Debian package
+
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  The above workflow and the following packaging examples always use this format.
+
+The native Debian package is the rare Debian binary package format.  It may be used only when the package is useful and valuable only for Debian.  Thus, its use is generally deprecated.
+
+CAUTION: The native debian package is often accidentally built when its upstream tarball is not accessible from the *dpkg-buildpackage* command with its correct name 'package_version'.*orig.tar.gz* .  A typical newbie mistake is to make a symlink name with ``**-**'' instead of the correct one with ``**_**''.
+
+The native Debian package has no separation between the *upstream code* and the *Debian changes* and consists only with the following:
+
+* 'package_version'.*tar.gz* (copy or symlink of 'package-version'.*tar.gz* with *debian/** files.)
+* 'package_version'.*dsc*
+
+If you need to create the native Debian package, create it in the ``*3.0 (native)*'' format using *dpkg-source*(1).
+
+TIP: Some people promote to package even programs which have been written only for Debian in the non-native package format.  The required tarball without *debian/** files needs to be manually generated in advance before the standard workflow in <<workflow>>. footnote:[Use of the ``*debameke -t ...*'' command can help this workflow.  See <<dt-option>>.]  They claim that the use of non-native package format eases communication with the downstream distributions.
+

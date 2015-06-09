@@ -1,0 +1,125 @@
+# Build all Debian packaging examples
+# Copyright (C) 2015 Osamu Aoki
+
+include Makefile.common
+
+#######################################################################
+pkg:
+	-mkdir -p $(TMPDIR)
+	#$(MAKE) prep     # prepare source tree for consistent changelog etc.
+	$(MAKE) tars     # make upstream tar files
+	$(MAKE) makes    # add Makefile
+	$(MAKE) stamps   # build source
+
+.PHONY: pkg
+#######################################################################
+# Preparing upstream sources (prep, tars)
+ARCH := $(shell dpkg-architecture -q DEB_TARGET_ARCH)
+VERSIONS := $(shell ls -d debhello-* | \
+	egrep -e '^debhello-[0-9]+\.[0-9]+$$' | \
+	sed -e 's/^debhello-//' )
+TARS := $(addsuffix .tar.gz, $(addprefix debhello-,$(VERSIONS)))
+ORIGTARS := $(addsuffix .orig.tar.gz, $(addprefix debhello_,$(VERSIONS)))
+CHANGELOGS := $(addsuffix /debian/changelog, $(addprefix debhello-,$(VERSIONS)))
+COPYRIGHTS := $(addsuffix /debian/copyright, $(addprefix debhello-,$(VERSIONS)))
+COMPATS := $(addsuffix /debian/compat, $(addprefix debhello-,$(VERSIONS)))
+READMES := $(addsuffix /debian/README.Debian, $(addprefix debhello-,$(VERSIONS)))
+WATCHS := $(addsuffix /debian/watch, $(addprefix debhello-,$(VERSIONS)))
+SRCF := $(addsuffix /debian/source/format, $(addprefix debhello-,$(VERSIONS)))
+SRCL := $(addsuffix /debian/source/local-options, $(addprefix debhello-,$(VERSIONS)))
+CHANGES := $(addsuffix -1_$(ARCH).changes, $(addprefix debhello_,$(VERSIONS)))
+WRAPS := $(addprefix debhello-,$(VERSIONS))
+
+prep: $(CHANGELOGS) $(COPYRIGHTS) $(COMPATS) $(READMES) $(WATCHS) $(SRCF) $(SRCL)
+	# clean whitespaces in line tail (exclude binary files)
+	-find . -type d \
+		-regex ".*/\.git" -prune -o \
+		-regex ".*/png" -prune -o \
+	       -type f -exec sed -i -e 's/[ \t]*$$//' '{}' \;
+	$(MAKE) $(WRAPS)
+
+tars: $(TARS) $(ORIGTARS)
+
+.PHONY: prep tars
+#######################################################################
+# Mock user sessions (makes, stamps)
+CMDS := $(wildcard debhello-*/step000.cmd)
+MAKEFILEX := $(sort $(subst step000.cmd,Makefile, $(CMDS)))
+# MAKEFILES is the reserved variable for make !!!
+STAMPX := $(sort $(subst step000.cmd,.stamp, $(CMDS)))
+CMDSCL := $(sort $(subst /step000.cmd,-clean, $(CMDS)))
+CMDSDCL := $(sort $(subst /step000.cmd,-distclean, $(CMDS)))
+
+makes: $(MAKEFILEX)
+
+stamps: $(STAMPX)
+
+clean:: $(CMDSCL)
+	-rm -f *.tar.xz *.tar.gz
+	-rm -f *.dsc *.changes *.build *.deb *~
+
+distclean:: $(CMDSDCL)
+
+.PHONY: makes stamps clean distclean
+#######################################################################
+# Build rules
+debhello-%/debian/changelog: debian-template/changelog
+	mkdir -p debhello-$*/debian
+	sed -ne '/debhello ($*-1/,$$p' <$^ >$@
+
+debhello-%/debian/copyright: debian-template/copyright
+	mkdir -p debhello-$*/debian
+	cp -f $^ $@
+
+debhello-%/debian/compat: debian-template/compat
+	mkdir -p debhello-$*/debian
+	cp -f $^ $@
+
+debhello-%/debian/README.Debian: debian-template/README.Debian
+	mkdir -p debhello-$*/debian
+	cp -f $^ $@
+
+debhello-%/debian/watch: debian-template/watch
+	mkdir -p debhello-$*/debian
+	cp -f $^ $@
+
+debhello-%/debian/source/format: debian-template/source/format
+	mkdir -p debhello-$*/debian/source
+	cp -f $^ $@
+
+debhello-%/debian/source/local-options: debian-template/source/local-options
+	mkdir -p debhello-$*/debian/source
+	cp -f $^ $@
+
+debhello-%-wrap:
+	cd debhello-$* ; \
+	wrap-and-sort
+
+#######################################################################
+debhello-%.tar.gz:
+	tar --exclude=debhello-$*/debian -cvzf $@ debhello-$*/
+
+debhello_%.orig.tar.gz: debhello-%.tar.gz
+	ln -sf $^ $@
+
+#######################################################################
+debhello-%/Makefile: debian-template/Makefile
+	ln -sf ../$^ $@
+
+debhello-%/.stamp: debhello-%/Makefile
+	$(MAKE) -C debhello-$*
+	touch $@
+
+#######################################################################
+debhello-%-clean:
+	if [ -e debhello-$*/Makefile ]; then \
+	$(MAKE) -C debhello-$* clean ; \
+	fi
+	-rm -f debhello-$*/.stamp
+
+debhello-%-distclean:
+	if [ -e debhello-$*/Makefile ]; then \
+	$(MAKE) -C debhello-$* distclean ;\
+	rm -f debhello-$*/Makefile ; \
+	fi
+	-rm -f debhello-$*/.stamp

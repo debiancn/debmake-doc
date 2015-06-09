@@ -1,0 +1,24 @@
+[[details]]
+=== Details
+
+Actual details of the examples presented and their variants can be obtained by the following.
+
+.How to get details
+----
+ $ apt-get source debmake-doc
+ $ sudo apt-get install devscripts build-essentials
+ $ sudo apt-get build-dep debmake-doc
+ $ cd debmake-doc*
+ $ make
+----
+
+Each directory with the *-pkg[0-9]* suffix contains the Debian packaging example.
+
+* emulated console command line activity log: the *.log* file
+* emulated console command line activity log (short): the *.slog* file
+* snapshot source tree image after the *debmake* command: the *debmake* directory
+* snapshot source tree image after the properly packaging: the *packge* directory
+* snapshot source tree image after the *debuild* command: the *test* directory
+
+
+

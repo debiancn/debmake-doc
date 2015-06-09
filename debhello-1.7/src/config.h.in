@@ -1,0 +1,4 @@
+/* name of the package author */
+#define PACKAGE_AUTHOR "@PACKAGE_AUTHOR@"
+/* math library support */
+#cmakedefine WITH_MATH

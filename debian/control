@@ -1,0 +1,62 @@
+Source: debmake-doc
+Section: doc
+Priority: extra
+Maintainer: Osamu Aoki <osamu@debian.org>
+Build-Depends: asciidoc (>=8),
+               autoconf,
+               automake,
+               autopoint,
+               cmake,
+               dblatex,
+               debhelper (>=9),
+               debmake (>=4),
+               devscripts,
+               dh-autoreconf,
+               dh-python,
+               docbook-xml,
+               docbook-xsl,
+               expect,
+               fonts-liberation,
+               gettext,
+               itstool,
+               libltdl-dev,
+               libtool,
+               libxml2-utils,
+               lmodern,
+               python3-all,
+               python3-debian,
+               python3-distutils-extra,
+               quilt,
+               texlive,
+               texlive-lang-english,
+               texlive-lang-french,
+               texlive-xetex,
+               tree,
+               w3m,
+               xsltproc,
+               zip
+Standards-Version: 3.9.6
+Homepage: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/debmake-doc.git
+Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git
+
+Package: debmake-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Recommends: debmake
+Suggests: debian-policy, developers-reference
+Description: Guide for Debian Maintainers
+ This tutorial document describes the building of the Debian
+ package to ordinary Debian users and prospective developers using
+ the debmake command.
+ .
+ It is focused on the modern packaging style and comes with many
+ simple examples.
+  * POSIX shell script packaging
+  * Python3 script packaging
+  * C with Makefile/Autotools/CMake
+  * multiple binary package with shared library etc.
+ .
+ This package can be considered as the successor to the
+ maint-guide package.

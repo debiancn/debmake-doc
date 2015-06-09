@@ -1,0 +1,3 @@
+src/hello.c
+lib/sharedlib.c
+data/hello.desktop.in

@@ -1,0 +1,40 @@
+[[newrevision]]
+=== New Debian revision
+
+Let's assume that a bug report *#*'bug_number' was filed against your package, and it describes a problem that you can solve by editing *buggy* file in the upstream source.  Here's what you need to do to create a new Debian revision of the package with the *bugname.patch* file recording the fix.
+
+.New Debian revision with the *dquilt* command
+----
+ $ dquilt push -a
+ $ dquilt new bugname.patch
+ $ dquilt add buggy
+ $ vim buggy
+   ...
+ $ dquilt refresh
+ $ dquilt header -e
+ $ dquilt pop -a
+ $ dch -i
+----
+
+Alternatively if the package is managed in the git repository using the *git-buildpackage* command with its default configuration.
+
+.New Debian revision with the *gbp-pq* command
+----
+ $ git checkout master
+ $ gbp pq import
+ $ vim buggy
+ $ git add buggy
+ $ git commit
+ $ git tag pq/<newrev>
+ $ gbp pq export
+ $ gbp drop
+ $ git add debian/patches/*
+ $ dch -i
+ $ git commit -a -m "Closes: #<bug_number>"
+----
+
+Please make sure to describe concisely the changes that fix reported bugs and close those bugs by adding ``*Closes: #*'<bug_number>''' in the *debian/changelog* file.
+
+
+TIP: Use a *debian/changelog* entry with a version string such as *1.0.1-1~rc1* when you experiment. Then, unclutter such *changelog* entries into a single entry for the official package.
+

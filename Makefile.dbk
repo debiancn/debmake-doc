@@ -1,0 +1,283 @@
+# Produce documentation
+# Copyright (C) 2015 Osamu Aoki
+
+include Makefile.common
+
+#######################################################################
+# Document translation strategy: use itstool instead of po4a
+# 1. Generate $(BASEXML) using AsciiDoc with docbook4 backend
+#    (Ease of writing main cantents)
+# 2. Make docbook 5 source $(MANUAL).en.x01 with db4-upgrade.xsl
+# 3. Write the info header section as $(HEADXML)
+# 4. Merge $(HEADXML) and $(MANUAL).en.x01 as $(MANUAL).en.xml
+# 5. Generate po/$(MANUAL).pot from $(MANUAL).en.xml with itstool
+# 6. Translate po/$(MANUAL).pot and create po/<lang>.po
+# 7. Generate $(MANUAL).<lang>.xml from $(MANUAL).en.x01 and po/<lang>.po
+#    using itstool
+# 8. Build html, ... from $(MANUAL).<lang>.xml
+#######################################################################
+# Build documentation
+MANUAL := debmake-doc
+BASEXML := $(ASCIIDOC_DIR)/$(MANUAL).xml
+HEADXML := $(ASCIIDOC_DIR)/head.txt
+# languages translated with PO files (not used now)
+LANGPO ?= ja
+# languages to skip generation of PDF files (not used now)
+NOPDF ?=
+# languages to build document
+LANGALL := en $(LANGPO)
+SRC_PO := $(addsuffix .po, $(addprefix  $(PO_DIR)/, $(LANGPO)))
+SRC_XML := $(addsuffix .xml, $(addprefix  $(MANUAL)., $(LANGALL)))
+ENT_ALL := url.ent common.ent
+# version of the debmake command used
+DEBMAKEVERSION ?= $(shell { debmake -v 2>&1 | sed -ne '/^debmake/s/^.*(version: \([0-9.]*\)).*$$/\1/p' ; })
+# version of this Debian package (debian/changelog)
+DEBVERSION ?= $(shell { dpkg-parsechangelog -SVersion || echo "vcs-0.0" ; })
+# short date of this Debian package (debian/changelog)
+DEBDATE ?= $(shell { date +'%Y-%m-%d' -d"`dpkg-parsechangelog -SDate`" || date +'(No changelog) %Y-%m-%d' ; })
+
+#######################################################################
+dbk:
+	-mkdir -p $(TMPDIR)
+	-mkdir -p $(BASEDIR)/html
+	$(MAKE) -C $(ASCIIDOC_DIR) xml
+	$(MAKE) css html
+
+.PHONY: dbk
+#######################################################################
+# Constants for asciidoc -> xml -> any conversion
+# Program name and option
+XSLT := xsltproc --novalid --nonet --xinclude
+ITSTOOL := itstool -i $(XSLT_DIR)/docbook.its
+MKDIRP := mkdir -p
+MSGCAT := msgcat
+MSGFMT := msgfmt
+MSGMERGE := msgmerge
+MSGATTRIB := msgattrib
+DBLATEX	:= dblatex
+# Change $(DRAFTMODE) from "yes" to "maybe" when this document
+# should go into production mode
+#export DRAFTMODE := yes
+export DRAFTMODE := maybe
+#######################################################################
+# set last chapter as appendix.
+$(MANUAL).en.x01: $(BASEXML)
+	@$(call check-command, xsltproc, xsltproc)
+	$(XSLT) $(XSLT_DIR)/modappendix.xsl $< > $@
+
+# header is manually written and main content is generated from asciidoc
+$(MANUAL).en.xml: $(MANUAL).en.x01 $(HEADXML) $(ENT_ALL)
+	cat $(HEADXML) > $@
+	sed -e '1,/<\/bookinfo>/d' $(MANUAL).en.x01 >> $@
+
+url.ent: $(BASEXML)
+	@$(call check-command, xsltproc, xsltproc)
+	$(XSLT) $(XSLT_DIR)/urls.xsl $^ | sort | uniq | sed -e "s/&/\&amp;/g"> $@
+	# Check duplicates
+	@DUPLICATE="$$(sed -ne 's/<[^ ]* \([^ ]*\) .*$$/\1/p' $@ | uniq -d)" ; \
+		if [ "$${DUPLICATE}" != "" ]; then \
+		echo "W: duplicate entity = $${DUPLICATE}"; fi
+
+common.ent:
+	echo "<!ENTITY  debmakeversion \"$(DEBMAKEVERSION)\">" >$@
+	echo "<!ENTITY  debversion \"$(DEBVERSION)\">" >>$@
+	echo "<!ENTITY  debdate \"$(DEBDATE)\">" >>$@
+	echo "<!ENTITY  codeoldstable \"wheezy\">" >>$@
+	echo "<!ENTITY  codestable \"jessie\">" >>$@
+	echo "<!ENTITY  codetesting \"stretch\">" >>$@
+
+pot: $(PO_DIR)/templates.pot
+
+$(PO_DIR)/templates.pot: $(MANUAL).en.xml
+	$(ITSTOOL) $< -o - | $(MSGCAT) - -o $@
+
+$(MANUAL).%.xml: $(PO_DIR)/%.po $(MANUAL).en.xml
+	$(MKDIRP) po/
+	$(MSGFMT) -D $(PO_DIR) $*.po -o $(PO_DIR)/$*.mo
+	-$(MKDIRP) po/$*/
+	$(ITSTOOL) -m $(PO_DIR)/$*.mo -o po/$*/ $(MANUAL).en.xml
+	cp po/$*/$(MANUAL).en.xml $(MANUAL).$*.xml
+	rm po/$*/$(MANUAL).en.xml
+	rmdir po/$*
+
+po: $(SRC_PO)
+
+.PHONY: po pot
+
+# Always update
+$(PO_DIR)/%.po: $(PO_DIR)/templates.pot .FORCE
+	@$(call check-command, msgmerge, gettext)
+	$(MSGMERGE) -U $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
+	MESS1="no-obsolete  $*  `$(MSGATTRIB) --no-obsolete  $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
+	MESS2="untranslated $*  `$(MSGATTRIB) --untranslated $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
+	MESS3="fuzzy        $*  `$(MSGATTRIB) --fuzzy        $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
+	echo "$$MESS1" >>fuzzy.log ; \
+	echo "$$MESS2" >>fuzzy.log ; \
+	echo "$$MESS3" >>fuzzy.log ; \
+	echo "" >>fuzzy.log
+
+.FORCE:
+	echo "FORCE"
+
+doc-clean:
+	-rm -f *.swp *~ *.tmp
+	-rm -f $(ENT_ALL)
+	-rm -f $(PO_DIR)/*~ $(PO_DIR)/*.mo $(PO_DIR)/*.pot
+	-rm -rf $(TMPDIR)
+	-rm -rf $(BASEDIR)
+	-rm -rf $(LANGALL) en
+	-rm -f $(addsuffix .x00, $(addprefix $(MANUAL)., $(LANGALL)))
+	-rm -f $(addsuffix .x01, $(addprefix $(MANUAL)., $(LANGALL)))
+	-rm -f $(addsuffix .x02, $(addprefix $(MANUAL)., $(LANGALL)))
+	-rm -f $(addsuffix .xml, $(addprefix $(MANUAL)., $(LANGALL)))
+	-rm -f fuzzy.log
+
+clean:: doc-clean
+
+#######################################################################
+.PHONY: doc-all
+doc-all: css html txt epub
+
+#######################################################################
+# $ make test      # build html for testing (for Translator)
+#######################################################################
+.PHONY: test
+doc-test: html css
+
+#######################################################################
+# $ make wrap       # wrap all PO
+#######################################################################
+.PHONY: wrap nowrap wip
+wrap:
+	@$(call check-command, msgcat, gettext)
+	for XX in $(foreach LX, $(LANGPO), $(DPO)/$(LX).po); do \
+	$(MSGCAT) -o $$XX $$XX ;\
+	done
+nowrap:
+	@$(call check-command, msgcat, gettext)
+	for XX in $(foreach LX, $(LANGPO), $(DPO)/$(LX).po); do \
+	$(MSGCAT) -o $$XX --no-wrap $$XX ;\
+	done
+
+wip:
+	@$(call check-command, msgattrib, gettext)
+	for XX in $(foreach LX, $(LANGPO), $(DPO)/$(LX).po); do \
+	$(MSGATTR) -o $$XX.fuzz --fuzzy        $$XX ;\
+	$(MSGATTR) -o $$XX.untr --untranslated $$XX ;\
+	done
+
+#######################################################################
+# $ make css       # update CSS and DIMG in $(BASEDIR)
+#######################################################################
+.PHONY: css
+css:
+	-rm -rf $(BASEDIR)/html/images
+	mkdir -p $(BASEDIR)/html/images
+	cp -f $(XSLT_DIR)/debian.css $(BASEDIR)/html/debian.css
+	echo "AddCharset UTF-8 .txt" > $(BASEDIR)/html/.htaccess
+	cd png ; \
+	cp caution.png home.png important.png next.png note.png \
+		prev.png tip.png warning.png $(BASEDIR)/html/images
+
+#######################################################################
+# $ make html      # update all HTML in $(BASEDIR)
+#######################################################################
+.PHONY: html
+html:	$(foreach LX, $(LANGALL), $(BASEDIR)/html/index.$(LX).html)
+
+$(BASEDIR)/html/index.%.html: $(MANUAL).%.xml $(ENT_ALL)
+	@$(call check-command, xsltproc, xsltproc)
+	-mkdir -p $(BASEDIR)/html
+	$(XSLT) --stringparam base.dir $(BASEDIR)/html \
+                --stringparam html.ext .$*.html \
+                $(XSLT_DIR)/style-html.xsl $<
+
+#######################################################################
+# $ make txt       # update all Plain TEXT in $(BASEDIR)
+#######################################################################
+.PHONY: txt
+txt:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).txt.gz)
+
+# style-txt.xsl provides work around for hidden URL links by appending them explicitly.
+$(BASEDIR)/$(MANUAL).%.txt.gz: $(MANUAL).%.xml $(ENT_ALL)
+	@$(call check-command, w3m, w3m)
+	@$(call check-command, xsltproc, xsltproc)
+	-mkdir -p $(BASEDIR)
+	@test -n "`which w3m`"  || { echo "ERROR: w3m not found. Please install the w3m package." ; false ;  }
+	$(XSLT) $(XSLT_DIR)/style-txt.xsl $< | LC_ALL=C.UTF-8 \
+	  w3m -o display_charset=UTF-8 -cols 70 -dump -no-graph -T text/html | \
+	  gzip -n -9 - > $@
+
+
+#######################################################################
+# $ make pdf       # update all PDF in $(BASEDIR)
+#######################################################################
+.PHONY: pdf
+pdf:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).pdf)
+
+$(foreach LX, $(NOPDF), $(BASEDIR)/$(MANUAL).$(LX).pdf):
+	-mkdir -p $(BASEDIR)
+	echo "PDF generation skipped." >$@
+
+# dblatex.xsl provide work around for hidden URL links by appending them explicitly.
+$(BASEDIR)/$(MANUAL).%.pdf: $(MANUAL).%.xml $(ENT_ALL)
+	@$(call check-command, dblatex, dblatex)
+	@$(call check-command, xsltproc, xsltproc)
+	-mkdir -p $(BASEDIR)
+	@test -n "`which $(DBLATEX)`"  || { echo "ERROR: dblatex not found. Please install the dblatex package." ; false ;  }
+	export TEXINPUTS=".:"; \
+	export TMPDIR="$(TMPDIR)"; \
+	$(XSLT) $(XSLT_DIR)/dblatex.xsl $<  | \
+	$(DBLATEX) --style=db2latex \
+		--debug \
+		--backend=xetex \
+		--xsl-user=$(XSLT_DIR)/user_param.xsl \
+		--xsl-user=$(XSLT_DIR)/xetex_param.xsl \
+		--param=draft.mode=$(DRAFTMODE) \
+		--param=doc.collab.show=0 \
+		--param=latex.output.revhistory=0 \
+		--param=doc.lot.show="" \
+		--param=lingua=$* \
+		--output=$@ - || { echo "OMG!!!!!! XXX_CHECK_XXX ... Do not worry ..."; true ; }
+
+#######################################################################
+# $ make tex       # update all TeX source in $(BASEDIR)
+#######################################################################
+.PHONY: tex
+tex:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).tex)
+
+# dblatex.xsl provide work around for hidden URL links by appending them explicitly.
+$(BASEDIR)/$(MANUAL).%.tex: $(MANUAL).%.xml $(ENT_ALL)
+	-mkdir -p $(BASEDIR)
+	@test -n "`which $(DBLATEX)`"  || { echo "ERROR: dblatex not found. Please install the dblatex package." ; false ;  }
+	export TEXINPUTS=".:"; \
+	export TMPDIR="$(TMPDIR)"; \
+	$(XSLT) $(XSLT_DIR)/dblatex.xsl $<  | \
+	$(DBLATEX) --style=native \
+		--debug \
+		--type=tex \
+		--backend=xetex \
+		--xsl-user=$(XSLT_DIR)/user_param.xsl \
+		--xsl-user=$(XSLT_DIR)/xetex_param.xsl \
+		--param=draft.mode=$(DRAFTMODE) \
+		--param=doc.collab.show=0 \
+		--param=latex.output.revhistory=0 \
+		--param=doc.lot.show="" \
+		--param=lingua=$* \
+		--output=$@ - || { echo "OMG!!!!!! XXX_CHECK_XXX ... Do not worry ..."; true ; }
+
+#######################################################################
+# $ make epub      # update all epub in $(BASEDIR)
+#######################################################################
+.PHONY: epub
+epub:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).epub)
+
+$(BASEDIR)/$(MANUAL).%.epub: $(MANUAL).%.xml $(ENT_ALL)
+	@$(call check-command, xsltproc, xsltproc)
+	-mkdir -p $(TMPDIR)/$*/
+	cd $(TMPDIR)/$*/ ; $(XSLT) $(CURDIR)/$(XSLT_DIR)/style-epub.xsl $(CURDIR)/$<
+	cp -f $(XSLT_DIR)/mimetype $(TMPDIR)/$*/mimetype
+	cp -f $(XSLT_DIR)/debian.css $(TMPDIR)/$*/OEBPS/debian.css
+	cp -f $(XSLT_DIR)/debian-openlogo.png $(TMPDIR)/$*/OEBPS/debian-openlogo.png
+	cd $(TMPDIR)/$*/ ; zip -r $@ ./
+

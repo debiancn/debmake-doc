@@ -1,0 +1,83 @@
+[[makefile-single]]
+=== Makefile (single-binary)
+
+Here is an example of creating a simple Debian package from a simple C source using the *Makefile* as its build system.
+
+This is an enhanced upstream source example for <<simple>>.  This comes with the manpage, the desktop file, and the desktop icon.  This also links to an external library *libm* to be a more practical example.
+
+Let's assume this upstream tarball to be *debhello-1.4.tar.gz*.
+
+This type of source is meant to be installed as a non-system file as:
+
+----
+ $ tar -xzmf debhello-1.4.tar.gz
+ $ cd debhello-1.4
+ $ make
+ $ make install
+----
+
+Debian packaging requires to change this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.4.tar.gz*
+----
+include::../debhello-1.4-pkg1/step000.slog[]
+----
+
+Here, the contents of this source are as follows.
+
+.*src/hello.c* (v=1.4):
+----
+include::../debhello-1.4-pkg1/step101.slog[]
+----
+
+.*src/config.h* (v=1.4):
+----
+include::../debhello-1.4-pkg1/step102.slog[]
+----
+
+.*Makefile* (v=1.4):
+----
+include::../debhello-1.4-pkg1/step103.slog[]
+----
+
+Please note that this *Makefile* has the proper *install* target for the manpage, the desktop file, and the desktop icon.
+
+Let's package this with the *debmake* command.
+
+----
+sys::[head -n12  ../debhello-1.4-pkg1/step200.slog]
+...
+----
+
+The result is practically the same as <<step-debmake>>.
+
+Let's make this Debian package better as the maintainer which is practically the same as <<step-maintainer>>.
+
+
+// .*debian/rules* (maintainer version, v=1.4):
+// ----
+// include::../debhello-1.4-pkg1/step301.slog[]
+// ----
+
+If the *DEB_BUILD_MAINT_OPTIONS* is not exported in the *debian/rules*, the lintian warns "W: debhello: hardening-no-relro usr/bin/hello" for the linking of the *libm*.
+
+The *debian/control* file making it exactly the same as one in <<step-maintainer>>, since the *libm* library is always available as a part of the *libc6* (Priority: required).
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+.Template files under *debian/*. (v=1.4):
+----
+include::../debhello-1.4-pkg1/step400.slog[]
+----
+
+The rest of the packaging activities are practically the same as the one in <<step-debuild>>.
+
+Here is the generated dependency list of binary packages.
+
+.The generated dependency list of binary packages (v=1.4):
+----
+include::../debhello-1.4-pkg1/step702.slog[]
+----
+

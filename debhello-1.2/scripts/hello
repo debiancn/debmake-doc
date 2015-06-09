@@ -1,0 +1,2 @@
+#!/bin/sh -e
+zenity --info --title "hello" --text "Hello from the shell!"

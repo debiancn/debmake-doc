@@ -1,0 +1,178 @@
+= Guide for Debian Maintainers
+:Author:    Osamu Aoki
+:Email:     osamu@debian.org
+:Date:      {date}
+:Revision:  {revision}
+:encoding: UTF-8
+
+// asciidoc output docbook 4.5 entity but the first conversion creates
+// the real UTF-8 output in the XML base file.
+//
+// ASCIIDOC SOURCE STYLE GUIDE
+// '             : leave it to asciidoc to convert to ’ U+2019
+//     use for for let's, doesn't don't can't *'s *s' o'clock we'll
+//                 U+2019 RIGHT SINGLE QUOTATION MARK (NYT,arstechnica.com, PDF of US.GOV) **
+//                 U+0027 APOSTROPHE                  (Wikipedia.org)
+//                 U+2032 PRIME
+// "quoted text" : avoid using this except in code section
+//
+// ``quoted text'' : leave it to asciidoc to convert to “quoted text”
+//                 U+201C LEFT DOUBLE QUOTATION MARK
+//                 U+201D RIGHT DOUBLE QUOTATION MARK
+// `quoted text' : leave it to asciidoc to convert to ‘quoted text’
+//                 U+2018 LEFT SINGLE QUOTATION MARK
+//                 U+2019 RIGHT SINGLE QUOTATION MARK
+//
+// Problem with LEFT and RIGHT SINGLE QUOTATION MARKs
+//   * xetex treat it as full width CJK char.
+//   * All Japanese character treats these as double width chars.
+
+// head.txt takes care this
+//####include::00-terms.txt[]
+
+[[preface]]
+== Preface
+
+include::01-preface.txt[]
+
+[[overview]]
+== Overview
+
+include::02-overview.txt[]
+
+[[start]]
+== Prerequisites
+
+include::10-prereq.txt[]
+
+[[setup]]
+== Tool Setups
+
+include::12-setups.txt[]
+
+[[simple]]
+== Simple Example
+
+include::14-simpledeb.txt[]
+
+[[basics]]
+== Basics
+
+include::20-workflow.txt[]
+
+include::21-version.txt[]
+
+include::22-rules.txt[]
+
+include::23-control.txt[]
+
+include::24-boption.txt[]
+
+include::25-changelog.txt[]
+
+include::26-copyright.txt[]
+
+include::27-debconfig.txt[]
+
+include::28-gpg.txt[]
+
+include::30-customize.txt[]
+
+include::31-build.txt[]
+
+include::32-debug.txt[]
+
+include::33-lib.txt[]
+
+include::34-multiarch.txt[]
+
+include::35-symbols.txt[]
+
+include::36-harden.txt[]
+
+include::37-bug.txt[]
+
+include::38-debconf.txt[]
+
+include::39-pkgtest.txt[]
+
+[[options]]
+== Options
+
+include::40-aioption.txt[]
+
+include::41-dtoption.txt[]
+
+include::42-pymod.txt[]
+
+include::43-coption.txt[]
+
+include::44-koption.txt[]
+
+include::45-joption.txt[]
+
+include::46-xoption.txt[]
+
+include::47-toption.txt[]
+
+[[tips]]
+== Tips
+
+include::50-devs.txt[]
+
+include::51-gbp.txt[]
+
+include::52-gitrepo.txt[]
+
+include::53-chroot.txt[]
+
+include::54-newrev.txt[]
+
+include::55-newver.txt[]
+
+include::56-deb3.txt[]
+
+include::57-cdbs.txt[]
+
+include::58-utf8.txt[]
+
+include::60-origtar.txt[]
+
+include::69-adv.txt[]
+
+[[more]]
+== More Examples
+
+include::70-example.txt[]
+
+include::71-emptypkg.txt[]
+
+include::72-nomake.txt[]
+
+include::73-makesh.txt[]
+
+include::74-setup-py.txt[]
+
+include::75-makesh-gui.txt[]
+
+include::76-setup-py-gui.txt[]
+
+include::77-make.txt[]
+
+include::78-configure.txt[]
+
+include::79-autotools.txt[]
+
+include::80-cmake.txt[]
+
+include::81-libautotools.txt[]
+
+include::82-libcmake.txt[]
+
+include::83-i18n.txt[]
+
+include::84-details.txt[]
+
+[[manpage]]
+include::99-manpage.txt[]
+

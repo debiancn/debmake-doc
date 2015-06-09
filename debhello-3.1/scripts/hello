@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+import hello_py
+
+if __name__ == '__main__':
+    hello_py.main()
+

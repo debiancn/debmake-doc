@@ -1,0 +1,56 @@
+[[custom]]
+=== Package customization
+
+Some upstream sources do not behave well and you may need to add customization to the build system of those upstream sources.
+
+The package should be customized by the least invasive way to address the root cause of the Debian packaging problem.  Your packaging shall be more robust for the future upgrades in this way.  (You should also solve the root cause of the problem and send its patch to the upstream.)
+
+Here, there are a few technical approaches to customize the build system:
+
+* *debian/rules* approach
+* *debian/*'bianrypackage'.* approach
+* *patches/** approach
+
+[[rulesapproach]]
+==== debian/rules approach
+
+The customization to the Debian package build system can be done through the *debian/rules* file.
+
+See <<customrules>>.
+
+[[configapproach]]
+==== debian/binarypackage.* approach
+
+Add customized configuration files for the *dh_** command from the *debhelper* package in the *debian/* directory.
+
+See <<debianconf>>.
+
+[[patchapproach]]
+==== patches/* approach
+
+Modifications to the upstream source before building it can be done by placing the collection of the *-p1* patches in the *patches/* directory and applying them in sequence defined in the  *patches/series* file.
+
+There are several methods to prepare the required *-p1* patches for this.
+
+* The *diff* command (manual)
+* The ``*git format-patches*'' command (manual for the git repository)
+* The *dquilt* command (manual, elegant) (alias of the *quilt* command, see <<quilt-setup>>)
+* The *gbp-pq* command (specialized, simple)
+* The *git-dpm* command (specialized, elegant)
+* Patches used in other distros and floating on the mailing list
+* ...
+
+Wherever these patches come from, it is good idea to tag them with http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
+
+These patches should apply cleanly.  For new upstream releases, you must normalize them by the *dquilt* command (see <<quilt-setup>>).
+
+----
+ $ while dquilt push; do dquilt refresh ; done
+ $ dquilt pop -a
+----
+
+CAUTION:  Don't forget to normalize patches when you upgrade to the new upstream source or import the externally generated patches.
+
+See  <<alt-patch>> for example.
+
+

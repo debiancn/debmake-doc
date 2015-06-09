@@ -1,0 +1,30 @@
+# Common build parameters
+# Copyright (C) 2015 Osamu Aoki
+
+# Include this once
+ifndef DEBMAKE_MAKEFILE_COMMON
+DEBMAKE_MAKEFILE_COMMON := INCLUDED
+# Normalize build environment (Debian default is LANG=C etc.)
+export LC_ALL := C.UTF-8
+export DEBEMAIL ?= osamu@debian.org
+export DEBFULLNAME ?= "Osamu Aoki"
+export BASEDIR ?= $(CURDIR)/tmp
+export TMPDIR ?= $(BASEDIR)/tmp
+#
+# Used as $(call check-command, <command>, <package>)
+define check-command
+set -e; if ! which $(1) >/dev/null; then \
+  echo "Missing command: $(1), install package: $(2)"; \
+  false; \
+fi
+endef
+XSLT_DIR := xslt
+BIN_DIR := bin
+ASCIIDOC_DIR := asciidoc
+PO_DIR := po
+##ifdef DEBMAKE_DOC_DEBUG
+.SECONDARY:
+##endif
+endif
+
+

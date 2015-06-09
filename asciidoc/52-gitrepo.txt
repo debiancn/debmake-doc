@@ -1,0 +1,20 @@
+[[debsnap]]
+=== Package history
+
+For Debian source packages named '<source-package>' recorded in the http://snapshot.debian.org/[snapshot.debian.org] archive, an initial git repository with all of the Debian version history can be generated as follows.
+
+--------------
+$ git-import-dscs --debsnap --pristine-tar '<source-package>'
+--------------
+
+[[upstream-git]]
+=== Upstream git repository
+
+For the Debian packaging with the *git-buildpackage* package, the *upstream* branch on the remote repository *origin* is normally used to track the content of the released upstream tarball.
+
+The upstream git repository can also be tracked by naming its remote repository as *upstream* instead of the default *origin*.  Then you can easily cherry-pick recent upstream changes into the Debian revision by cherry-picking with the *gitk* command and using the *gbp-pq* command.
+
+TIP: The *git-import-orig* command with the *--upstream-vcs-tag* option can create a nice packaging history by making a merge commit into *upstream* branch from the specified tag on the upstream git repository.
+
+CAUTION: The content of the released upstream tarball may not match exactly with the corresponding content of the upstream git repository.  It may contain some auto-generated files or miss some files.  (Autotools, distutils, ...)
+

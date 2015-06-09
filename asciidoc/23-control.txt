@@ -1,0 +1,94 @@
+[[control]]
+=== debian/control
+
+The *debian/control* file consists of blocks of meta data separated by the blank line.  Each block of meta data defines the following in this order:
+
+* meta data for the Debian source package
+* meta data for the Debian binary packages
+
+See https://www.debian.org/doc/debian-policy/ch-controlfields.html[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual'' for the definition of each meta data.
+
+The *debmake* command with the *-b* option (see <<boption>>) creates the initial template *debian/control* file with followings:
+
+* a set of *Package* stanzas defining the split of the Debian binary packages
+* a basic set of substvar used in each pertinent stanza
+
+[[split]]
+==== Split of the Debian binary package
+
+For well behaving build systems, the split of the Debian binary package into small ones can be realized as follows.
+
+* Create binary package entries for all binary packages in the *debian/control* file.
+* List all file paths (relative to *debian/tmp*) in the corresponding *debian/*'binarypackage'**.install** files.
+
+Please check examples in this guide:
+
+* <<autotools-multi>> (Autotools based)
+* <<cmake-multi>> (CMake based)
+
+[[substvar]]
+==== Substvar
+
+The *debian/control* file also defines the package dependency in which the http://www.debian.org/doc/debian-policy/ch-source.html#s-substvars[variable substitutions mechanism] (substvar) may be used to free package maintainers from chores of tracking most of the simple package dependency cases.  See *deb-substvars*(5).
+
+The *debmake* command supports following substvars.
+
+* *$\{misc:Depends}* for all binary packages
+* *$\{misc:Pre-Depends}* for all multiarch packages
+* *$\{shlibs:Depends}* for all binary executable and library packages
+* *$\{python:Depends}* for all Python packages
+* *$\{python3:Depends}* for all Python3 packages
+* *$\{perl:Depends}* for all Perl packages
+* *$\{ruby:Depends}* for all Ruby packages
+
+For the shared library, required libraries found simply by "*objdump -p* '/path/to/program' *| grep NEEDED*" are covered by the *shlib* substvar.
+
+For the Python and other interpreters, required modules found simply looking for lines with ``*import*'', ``*use*'', ``*require*'', etc., are covered by the corresponding substvar.
+
+For other programs which do not deploy their own substvar, the *misc* substvar covers their dependency.
+
+For POSIX shell programs, there is no easy way to identify the dependency and no substvar covers their dependency.
+
+For libraries and modules required via the dynamic loading mechanism including the https://wiki.gnome.org/Projects/GObjectIntrospection[GObject introspection] mechanism, there is no easy way to identify the dependency and no substvar covers their dependency.
+
+[[binnmu]]
+==== binNMU safe
+
+For the safe https://wiki.debian.org/binNMU[binNMU], the dependency among binary packages from a same source package needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
+
+* ``*Architecture: any*'' package depends on ``*Architecture: any*'' 'foo' package
+** *Depends:* 'foo' *(== $\{binary:Version})*
+* ``*Architecture: any*'' package depends on ``*Architecture: all*'' 'bar' package
+** *Depends:* 'bar' *(== $\{source:Version}*
+* ``*Architecture: all*'' package depends on ``*Architecture: any*'' 'baz' package
+** *Depends:* 'baz' *(>= $\{source:Version})*, 'baz' *(<< $\{source:Upstream-Version}.0~)*
+
+[[libnames]]
+==== The library package name
+
+Let's consider that the upstream source tarball of the *lib*'foo' library is updated from *lib*'foo-7.0'*.tar.gz* to *lib*'foo-8.0'*.tar.gz* with the new SONAME major version which affects other packages.
+
+The binary library package must be renamed from *lib*'foo7' to *lib*'foo8' to keep the *unstable* suite system working for all dependent packages after the upload of the package based on the *lib*'foo-8.0'*.tar.gz*.
+
+WARNING: If the binary library package isn't renamed, many dependent packages in the *unstable* suite become broken just after the library upload even if the binNMU is requested.  The binNMU may not happen immediately after the upload due to several reasons.
+
+The *-dev* package must follow one of the following naming rules:
+
+* Use the *unversioned -dev* package name: *lib*'foo'*-dev*
+** This is the normal case.
+** Only one version of the library source package is allowed in the archive.
+*** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent the dependency breakage in the *unstable* archive during the library transition.
+** This approach must be used if the simple binNMU resolves the library dependency. (http://en.wikipedia.org/wiki/Application_binary_interface[ABI] change)
+** This approach is still a good idea if manual code updates, etc. can be coordinated. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+
+* Use the *versioned -dev* package names: *lib*'foo7'*-dev* and *lib*'foo8'*-dev*
+** This is the special case.
+** Two versions of the library source packages are allowed simultaneously in the archive.
+*** Make all dependent packages depend on *lib*'foo'*-dev*.
+*** Make both *lib*'foo7'*-dev* and *lib*'foo8'*-dev* provide *lib*'foo'*-dev*.
+*** The source package needs to be renamed as *lib*'foo7-7.0'*.tar.gz* and *lib*'foo8-8.0'*.tar.gz* respectively from *lib*'foo-?.0'*.tar.gz*.
+*** The package specific install file path including *lib*'foo7' and *lib*'foo8' respectively for header files etc. needs to be chosen to make them co-installable.
+** Do not use this approach, if possible.
+** This approach may be useful if the update of dependent packages require major manual code updates, etc. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+
+See <<lib>>.

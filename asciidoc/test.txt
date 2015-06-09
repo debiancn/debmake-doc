@@ -1,0 +1,19 @@
+= Test for AsciiDoc
+:Author:    Osamu Aoki
+:Email:     osamu@debian.org
+:Date:      {date}
+:Revision:  {revision}
+:encoding: UTF-8
+
+
+[[simple]]
+== Simple Debian package
+
+include::00-terms.txt[]
+
+
+//[[examples]]
+//== Packaging examples
+
+//include::86-python.txt[]
+

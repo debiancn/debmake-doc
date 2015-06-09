@@ -1,0 +1,69 @@
+It's time to learn the basic rules of the Debian packaging.
+
+The Debian source package is a set of input files used to build the Debian binary package and is not a single file.
+
+The Debian binary package is a special archive file which holds a set of installable binary data with their associated information.
+
+A single Debian source package may generate multiple Debian binary packages defined in the *debian/control* file.
+
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.
+
+NOTE: There are many wrapper scripts.  Use them to streamline your workflow but make sure to understand the basics of their internals.
+
+[[workflow]]
+=== Packaging workflow
+
+The Debian packaging workflow to create the Debian binary package involves generating several specifically named files (see <<name-version>>) as defined in the ``Debian Policy Manual''.
+
+The oversimplified method for the Debian packaging workflow can be summarized in 5 steps as follows.
+
+1. The upstream tarball is downloaded as the 'package-version'**.tar.gz** file.
+2. The upstream tarball is untarred to create many files under the 'package-version'**/** directory.
+3. The upstream tarball is copied (or symlinked) to the particular filename 'packagename_version'**.orig.tar.gz**.
+* the character separating 'package' and 'version' is changed from *-* (hyphen) to *_* (underscore)
+* *.orig* is added in the file extension.
+4. The Debian package specification files are added to the upstream source under the 'package-version'**/debian/** directory.
+* Required specification files under the *debian/**:
+*debian/rules*::
+The executable script for building the Debian package (see <<rules>>)
+*debian/control*::
+The package configuration file containing the source package name, the source build dependency, the binary package name, the binary dependency, etc. (see <<control>>)
+*debian/changelog*::
+The Debian package history file defining the upstream package version and the Debian revision in its first line (see <<changelog>>)
+*debian/copyright*::
+The copyright and license summary (see <<copyright>>)
+* Optional specification files under the *debian/** (see <<debianconf>>):
+* The *debmake* command invoked in the 'package-version/' directory provides the initial set of these template configuration files.
+** Required specification files are generated even with the *-x0* option.
+** The *debmake* command does not overwrite any existing configuration files.
+* These files must be manually edited to their perfection according to the ``Debian Policy Manual'' and ``Debian Developer's Reference''.
+5. The *dpkg-buildpackage* command (usually from its wrapper *debuild* or *pdebuild*) is invoked in the 'package-version/' directory to make the Debian source and binary packages by invoking the *debian/rules* script.
+* The current directory is set as: *$(CURDIR)=*'/path/to/package-version/'
+* Create the Debian source package in the ``*3.0 (quilt)*'' format using *dpkg-source*(1)
+** 'package_version'.*orig.tar.gz* (copy or symlink of 'package-version'.*tar.gz*)
+** 'package_version-revision'.*debian.tar.xz* (tarball of 'package-version'/*debian/**)
+** 'package_version-revision'.*dsc*
+* Build the source using ``*debian/rules build*'' into *$(DESTDIR)*
+** *DESTDIR=debian*/'binarypackage/' (single binary package)
+** *DESTDIR=debian/tmp/* (multi binary package)
+* Create the Debian binary package using *dpkg-deb*(1), and *dpkg-genchanges*(1).
+** 'binarypackage_version-revision_arch'.*deb*
+** ... (There may be multiple Debian binary package files.)
+** 'package_version-revision_arch'.*changes*
+6. Check the quality of the Debian package with the *lintian* command. (recommended)
+* Follow the rejection guideline from https://ftp-master.debian.org/[ftp-master].
+** https://ftp-master.debian.org/REJECT-FAQ.html[REJECT-FAQ]
+** https://ftp-master.debian.org/NEW-checklist.html[NEW checklist]
+** https://ftp-master.debian.org/#lintianrejects[Lintian Autorejects] (https://ftp-master.debian.org/static/lintian.tags[lintian tag list])
+7. Sign the 'package_version-revision'.*dsc* and 'package_version-revision_arch'.*changes* with the *debsign* command using your private GPG key.
+8. Upload the set of the Debian source and binary package files with the *dput* command to the Debian archive.
+
+Here, please replace each part of the filename as:
+
+* the 'package' part with the Debian source package name
+* the 'binarypackage' part with the Debian binary package name
+* the 'version' part with the upstream version
+* the 'revision' part with the Debian revision
+* the 'arch' part with the package architecture
+
+TIP: There is very extensive documentation in http://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html[Chapter 6. Best Packaging Practices] of the ``Debian Developer's Reference''.  Please read it.

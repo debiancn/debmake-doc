@@ -1,0 +1,14 @@
+From: "Osamu Aoki" <osamu@debian.org>
+Description: cmake multiarch patch
+ This moves install path from /usr/lib to /usr/lib/<triplet>.
+ Set <triplet> by cmake -DCMAKE_LIBRARY_ARCHITECTURE="$(DEB_HOST_MULTIARCH)".
+
+--- a/lib/CMakeLists.txt
++++ b/lib/CMakeLists.txt
+@@ -4,5 +4,5 @@
+ # the RPATH of these targets so they are installed with an empty RPATH.
+ set_property(TARGET sharedlib PROPERTY VERSION "1.0.0")
+ set_property(TARGET sharedlib PROPERTY SOVERSION 1 )
+-install(TARGETS sharedlib LIBRARY DESTINATION lib)
++install(TARGETS sharedlib LIBRARY DESTINATION lib/${CMAKE_LIBRARY_ARCHITECTURE})
+ install(FILES sharedlib.h DESTINATION include)

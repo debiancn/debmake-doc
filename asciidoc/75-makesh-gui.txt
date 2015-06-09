@@ -1,0 +1,78 @@
+[[makefile-sh-gui]]
+=== Makefile (shell, GUI)
+
+Here is an example of creating a simple Debian package from a POSIX shell GUI program using the *Makefile* as its build system.
+
+This upstream is based in <<makefile-sh>> with enhanced GUI support.
+
+Let's assume its upstream tarball to be *debhello-1.2.tar.gz*.
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.2.tar.gz*
+----
+include::../debhello-1.2-pkg1/step000.slog[]
+----
+
+Here, the *hello* has been re-written to use the *zenity* command to make this a GTK+ GUI program.
+
+.*hello* (v=1.2)
+----
+include::../debhello-1.2-pkg1/step101.slog[]
+----
+
+Here, the desktop file is updated to be *Terminal=false* as a GUI program.
+
+.*hello.desktop* (v=1.2)
+----
+include::../debhello-1.2-pkg1/step102.slog[]
+----
+
+All other files are the same as <<makefile-sh>>.
+
+Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify the generated binary package is a shell script.
+
+----
+sys::[head -n12  ../debhello-1.2-pkg1/step200.slog]
+...
+----
+
+Let's inspect notable template files generated.
+
+// .The source tree after the basic *debmake* execution. (v=1.2)
+// ----
+// include::../debhello-1.2-pkg1/step201.slog[]
+// ----
+
+.*debian/control* (template file, v=1.2):
+----
+include::../debhello-1.2-pkg1/step202.slog[]
+----
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/control* (maintainer version, v=1.2):
+----
+include::../debhello-1.2-pkg1/step302.slog[]
+----
+
+Please note manually added *zenity*.
+
+The *debian/rules* file is exactly the same as the one in <<makefile-sh>>.
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+.Template files under *debian/*. (v=1.2):
+----
+include::../debhello-1.2-pkg1/step400.slog[]
+----
+
+The rest of the packaging activities are practically the same as the one in <<makefile-sh>>.
+
+Here is the generated dependency list of binary packages.
+
+.The generated dependency list of binary packages (v=1.2):
+----
+include::../debhello-1.2-pkg1/step702.slog[]
+----
+

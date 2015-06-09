@@ -1,0 +1,3 @@
+debian/hello.1 usr/share/man/man1
+debian/hello.desktop usr/share/applications
+debian/hello.png usr/share/pixmaps

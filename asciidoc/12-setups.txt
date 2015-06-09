@@ -1,0 +1,236 @@
+The *build-essential* package must be installed in the build environment.
+
+The *devscripts* package should be installed on the maintainer environment.
+
+Although this is not necessary the absolute requirement, it is a good idea to install and setup all of the popular set of packages mentioned in this chapter on the maintainer environment.  This enables us to share the common baseline working environment.
+
+Please install the tools mentioned in the https://www.debian.org/doc/manuals/developers-reference/tools.html[Overview of Debian Maintainer Tools] of the ``Debian Developer's Reference'', as needed, too.
+
+TIP: For the cut-and-paste from the code listing part, use this document in the HTML format.  footnote:[The cut-and-paste from the PDF format does not function well for U+0022 QUOTATION MARK (ASCII double quote), U+0027 APOSTROPHE (ASCII single quote), and U+0060 GRAVE ACCENT (ASCII back tick) since they are converted by the LaTeX to U+201D RIGHT DOUBLE QUOTATION MARK, U+2019 RIGHT SINGLE QUOTATION MARK, and U+2018 LEFT SINGLE QUOTATION MARK.]
+
+CAUTION: Tool setups presented here are only meant as an example and may not be up-to-date with the latest packages on the system.  Debian development is a moving target.  Please make sure to read the pertinent documentation and update the configuration as needed.
+
+[[email-setup]]
+=== Email address
+
+Various Debian maintenance tools recognize your email address and name to use by the shell environment variables *$DEBEMAIL* and *$DEBFULLNAME*.
+
+Let's setup these packages by adding the following lines to *\~/.bashrc* footnote:[This assumes you are using Bash as your login shell. If you use some other login shell such as Z shell, use their corresponding configuration files instead of *~/.bashrc*.].
+
+.Add to the *~/.bashrc* file
+----
+DEBEMAIL="your.email.address@example.org"
+DEBFULLNAME="Firstname Lastname"
+export DEBEMAIL DEBFULLNAME
+----
+
+[[mc-setup]]
+=== mc
+
+The *mc* command offers very easy ways to manage files.  It can open the binary *deb* file to check its content by pressing the Enter key over the binary *deb* file.  It uses the *dpkg-deb* command as its back-end.  Let's setup it to support easy *chdir* as follows.
+
+.Add to the *~/.bashrc* file
+----
+# mc related
+export HISTCONTROL=ignoreboth
+. /usr/lib/mc/mc.sh
+----
+
+[[git-setup]]
+=== git
+
+Nowadays, the *git* command is the essential tool to manage the source tree with history.
+
+The global user configuration for the *git* command such as your name and email address can be set in *~/.gitconfig* as follows.
+
+----
+$ git config --global user.name "Name Surname"
+$ git config --global user.email yourname@example.com
+----
+
+If you are too accustomed to the CVS or Subversion commands, you may wish to set several command aliases as follows.
+
+----
+$ git config --global alias.ci "commit -a"
+$ git config --global alias.co checkout
+----
+
+You can check your global configuration as follows.
+
+----
+$ git config --global --list
+----
+
+TIP: It is essential to use the *gitk* command to work effectively with the history of the git repository.
+
+[[quilt-setup]]
+=== quilt
+
+The *quilt* command offers a basic method for recording modifications. For the Debian packaging, it should be customized to record modifications in the *debian/patches/* directory instead of its default *patches/* directory.
+
+In order to avoid changing the behavior of the *quilt* command itself, let's create an alias *dquilt* for the Debian packaging by adding the following lines to the *~/.bashrc* file. The second line provides the same shell completion feature of the *quilt* command to the *dquilt* command.
+
+.Add to the *~/.bashrc* file
+----
+alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
+complete -F _quilt_completion $_quilt_complete_opt dquilt
+----
+
+Then let's create *~/.quiltrc-dpkg* as follows.
+
+----
+d=.
+while [ ! -d $d/debian -a `readlink -e $d` != / ];
+    do d=$d/..; done
+if [ -d $d/debian ] && [ -z $QUILT_PATCHES ]; then
+    # if in Debian packaging tree with unset $QUILT_PATCHES
+    QUILT_PATCHES="debian/patches"
+    QUILT_PATCH_OPTS="--reject-format=unified"
+    QUILT_DIFF_ARGS="-p ab --no-timestamps --no-index --color=auto"
+    QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
+    QUILT_COLORS="diff_hdr=1;32:diff_add=1;34:" + \
+            "diff_rem=1;31:diff_hunk=1;33:diff_ctx=35:diff_cctx=33"
+    if ! [ -d $d/debian/patches ]; then mkdir $d/debian/patches; fi
+fi
+----
+
+See *quilt*(1) and file:///usr/share/doc/quilt/quilt.html[How To Survive With Many Patches or Introduction to Quilt] on how to use the *quilt* command.
+
+See <<alt-patch>> for example usages.
+
+[[devscripts-setup]]
+=== devscripts
+
+The *debsign* command, included in the *devscripts* package, is used to sign the Debian package with your private GPG key.
+
+The *debuild* command, included in the *devscripts* package, builds the binary package and check them with the *lintian* command.  It is useful to have verbose outputs from the *lintian* command.
+
+You can setup these by the *~/.devscripts* as follows.
+
+----
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -us -uc"
+DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"
+DEBSIGN_KEYID="Your_GPG_keyID"
+----
+
+Currently, RSA key with 4096 bits is good idea.  See http://keyring.debian.org/creating-key.html[Creating a new GPG key].
+
+[[pbuilder-setup]]
+=== pbuilder
+
+The *pbuilder* package provides the clean room (*chroot*) build environment. footnote:[The *sbuild* package provides an alternative chroot platform.]
+
+Let's customize it with several helper packages.
+
+* The *cowbuilder* package to boost the chroot creation speed.
+* The *lintian* package to find bugs in the package.
+* The *bash*, *mc*, and *vim* packages in case build fails.
+* The *ccache* package to boost the *gcc* speed. (optional)
+* The *libeatmydata1* package to boost the *dpkg* speed. (optional)
+* The parallel *make* to boost the build speed. (optional)
+
+WARNING: The optional customization may cause negative effects.  In case of doubts, disable them.
+
+Let's create *~/.pbuilderrc* as follows (all optional features are disabled).
+
+----
+AUTO_DEBSIGN="${AUTO_DEBSIGN:-no}"
+PDEBUILD_PBUILDER=cowbuilder
+HOOKDIR="/var/cache/pbuilder/hooks"
+MIRRORSITE="http://httpredir.debian.org/debian/"
+#APTCACHE=/var/cache/pbuilder/aptcache
+APTCACHE=/var/cache/apt/archives
+#BUILDRESULT=/var/cache/pbuilder/result/
+BUILDRESULT=../
+EXTRAPACKAGES="ccache lintian libeatmydata1"
+
+# enable to use libeatmydata1 for pbuilder
+#export LD_PRELOAD=${LD_PRELOAD+$LD_PRELOAD:}libeatmydata.so
+
+# enable ccache for pbuilder
+#export PATH="/usr/lib/ccache${PATH+:$PATH}"
+#export CCACHE_DIR="/var/cache/pbuilder/ccache"
+#BINDMOUNTS="${CCACHE_DIR}"
+
+# parallel make
+#DEBBUILDOPTS=-j8
+-----
+
+NOTE: A symlink from */root/.pbuilderrc* to */home/<user>/.pbuilderrc* may help for the consistent experience.
+
+NOTE: Due to https://bugs.debian.org/606542[Bug #606542], you may need to manually install packages listed in *EXTRAPACKAGES* into the chroot.  See <<chroot>>.
+
+NOTE: Install *libeatmydata1* (>=82-2) both inside and outside of the chroot or disable to use *libeatmydata1*.  This may cause the race condition with some build systems.
+
+NOTE: The parallel *make* may fail for some existing packages and may make the build log difficult to read.
+
+Let's create a hook scripts as follows.
+
+*/var/cache/pbuilder/hooks/A10ccache*
+----
+#!/bin/sh
+set -e
+# increase the ccache caching size
+ccache -M 4G
+# output the current statistics
+ccache -s
+----
+
+*/var/cache/pbuilder/hooks/B90lintian*
+----
+#!/bin/sh
+set -e
+apt-get -y --force-yes install lintian
+echo "+++ lintian output +++"
+su -c "lintian -i -I --show-overrides /tmp/buildd/*.changes; :" -l pbuilder
+echo "+++ end of lintian output +++"
+----
+
+*/var/cache/pbuilder/hooks/C10shell*
+----
+#!/bin/sh
+set -e
+apt-get -y --force-yes install vim bash mc
+# invoke shell if build fails
+cd /tmp/buildd/*/debian/..
+/bin/bash < /dev/tty > /dev/tty 2> /dev/tty
+----
+
+NOTE: All these scripts need to be set world executable: ``*-rwxr-xr-x 1 root root*''.
+
+NOTE: The *ccache* cache directory */var/cache/pbuilder/ccache* needs to be set world writable: ``*-rwxrwxrwx 1 root root*'' for the *pbuilder* command.  You should be aware of associated security concerns.
+
+[[gbp-setup]]
+=== git-buildpackage
+
+You may wish to set several global configurations in *~/.gbp.conf*
+
+----
+# Configuration file for "gbp <command>"
+
+[DEFAULT]
+# the default build command:
+builder = git-pbuilder -i -I -us -uc
+# use pristine-tar:
+pristine-tar = True
+# Use color when on a terminal, alternatives: on/true, off/false or auto
+color = auto
+----
+
+TIP: The *gbp* command is the alias of the *git-buildpackage* command.
+
+[[proxy]]
+=== HTTP proxy
+
+You should set up a local HTTP caching proxy to save the bandwidth for the Debian package repository access.  There are several choices:
+
+* Simple HTTP caching proxy using the *squid* package.
+* Specialized HTTP caching proxy using the *apt-cacher-ng* package.
+
+[[repropro]]
+=== Private Debian repository
+
+You can set up a private Debian package repository with the *reprepro* package.
+
+
+

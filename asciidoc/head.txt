@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+               "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+[
+ <!-- ENTITY % urlent SYSTEM "url.ent" > %urlent; -->
+ <!ENTITY % commonent SYSTEM "common.ent" > %commonent;
+]>
+
+<book xmlns:its="http://www.w3.org/2005/11/its" its:version="2.0"
+      xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+  <!-- This header part covers all bookinfo section -->
+  <bookinfo>
+    <title>Guide for Debian Maintainers</title>
+    <author>
+      <personname> Osamu Aoki</personname>
+    </author>
+    <date>&debdate;</date>
+    <abstract>
+<simpara>This tutorial document describes the building of the Debian
+package to ordinary Debian users and prospective developers using
+the <emphasis role="strong">debmake</emphasis> command.</simpara>
+
+<simpara>It is focused on the modern packaging style and comes with many simple examples.</simpara>
+
+<itemizedlist>
+<listitem>
+<simpara>
+POSIX shell script packaging
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Python3 script packaging
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+C with Makefile/Autotools/CMake
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+multiple binary package with shared library etc.
+</simpara>
+</listitem>
+</itemizedlist>
+
+<simpara>This “Guide for Debian Maintainers” can be considered as the successor to the “Debian New Maintainers’ Guide”.</simpara>
+    </abstract>
+    <copyright>
+      <year>2014-2015</year>
+      <holder>Osamu Aoki</holder>
+    </copyright>
+    <legalnotice>
+
+<simpara>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:</simpara>
+<simpara>The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.</simpara>
+<simpara>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</simpara>
+<simpara>This guide was made using the following previous documents as its reference:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+“Making a Debian Package (AKA the Debmake Manual)”, copyright © 1997 Jaldhar Vyas.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+“The New-Maintainer’s Debian Packaging Howto”, copyright © 1997 Will Lowe.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, 2005-2014 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Newer versions of this guide should always be available in the <emphasis role="strong">debmake-doc</emphasis> package.</simpara>
+    </legalnotice>
+    <cover>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="debian-openlogo.png"/>
+        </imageobject>
+      </mediaobject>
+    </cover>
+  </bookinfo>
+

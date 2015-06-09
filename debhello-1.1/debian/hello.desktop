@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Hello
+Name[ja]=こんにちは
+Comment=Greetings
+Comment[ja]=挨拶
+Type=Application
+Keywords=hello
+Exec=hello
+Terminal=true
+Icon=hello.png
+Categories=Utility;

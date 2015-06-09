@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: hello
+Version: 0.2
+Summary: Hello Python
+Home-page: http://people.debian.org/~osamu/
+Author: Osamu Aoki
+Author-email: osamu@debian.org
+License: MIT License
+Description: Hello Python program.
+Platform: POSIX
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities

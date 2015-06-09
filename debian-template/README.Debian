@@ -1,0 +1,6 @@
+debhello upstream package example
+
+This is an example upstream package to demonstrate the Debian packaging
+using the debmake command.
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 11 Jan 2015 00:00:00 +0000

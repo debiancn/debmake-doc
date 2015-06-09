@@ -1,0 +1,32 @@
+[[origtar]]
+=== Upload *orig.tar.gz*
+
+When you first upload the package to the archive, you need to include the original *orig.tar.gz* source, too.
+
+If the Debian revision number of the package is either *1* or *0*, this is the default.  Otherwise, you must provide the *dpkg-buildpackage* option *-sa* to the *dpkg-buildpackage* command.
+
+* *dpkg-buildpackage -sa*
+* *debuild -sa*
+* *pdebuild --debbuildopts -sa*
+* *git-pbuilder -sa*
+* For *gbp buildpackage*, edit the *~/.gbp.conf* file.
+
+TIP: On the other hand, the *-sd* option will force the exclusion of the original *orig.tar.gz* source.
+
+TIP: Security uploads require to include the *orig.tar.gz*.
+
+[[skipedupload]]
+=== Skipped uploads
+
+If you created multiple entries in the *debian/changelog* while skipping uploads, you must create a proper **_.changes* file which includes all changes since the last upload. This can be done by specifying the dpkg-buildpackage option *-v* with the last uploaded version, e.g., '1.2'.
+
+
+* *dpkg-buildpackage -v*'1.2'
+* *debuild -v*'1.2'
+* *pdebuild --debbuildopts -v*'1.2'
+* *git-pbuilder -v*'1.2'
+* For *gbp buildpackage*, edit the *~/.gbp.conf* file.
+
+
+
+

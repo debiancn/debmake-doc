@@ -1,0 +1,24 @@
+[[debconf]]
+=== debconf
+
+The *debconf* package enables us to configure packages during their installation in 2 main ways:
+
+* non-interactively from the *debian-installer* pre-seeding.
+* interactively from the menu interface (*dialog*, *gnome*, *kde*, ...)
+** the package installation: invoked by the *dpkg* command
+** the installed package: invoked by the *dpkg-reconfigure* command
+
+All user interactions for the package installation must be handled by this *debconf* system using the following files.
+
+* *debian/*'binarypackage'*.cofig*
+** This is the *debconf* *config* script used for asking any questions necessary to configure the package.
+* *debian/*'binarypackage'*.template*
+** This is the *debconf* *templates* file used for asking any questions necessary to configure the package.
+* package configuration scripts
+** *debian/*'binarypackage'*.preinst*
+** *debian/*'binarypackage'*.prerm*
+** *debian/*'binarypackage'*.postinst*
+** *debian/*'binarypackage'*.postrm*
+
+See *dh_installdebconf*(1), *debconf*(7), *debconf-devel*(7) and http://www.debian.org/doc/debian-policy/ch-binary.html#s-maintscriptprompt[3.9.1 Prompting in maintainer scripts] of the ``Debian Policy Manual''.
+

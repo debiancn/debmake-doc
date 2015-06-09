@@ -1,0 +1,6 @@
+[[toption]]
+=== debmake -T
+
+The *debmake* command invoked with the *-T* option additionally prints the verbose tutorial comment lines.  The lines marked with *&#35;&#35;&#35;* in the template files are part of the verbose tutorial comment lines.
+
+

@@ -1,0 +1,19 @@
+[[koption]]
+=== debmake -k
+
+When updating a package for the new upstream release, the *debmake* command can verify the content of the existing *debian/copyright* file against the copyright and license situation of the entire updated source tree.
+
+----
+ $ cd package-vcs
+ $ gbp import-orig --uscan --pristine-tar
+ ... update source with the new upstream release
+ $ debmake -k | less
+----
+
+The ``*debmake -k*'' command parses the *debian/copyright* file from the top to the bottom and compare the license of all the non-binary files in the current package with the license described in the last matching file pattern entry of the *debian/copyright* file.
+
+When editing the auto-generated *debian/copyright* file, please make sure to keep the generic file patterns at the top of the list.
+
+TIP: For all new upstream releases, run the ``*debmake -k*'' command to ensure that the *debian/copyright* file is current.
+
+

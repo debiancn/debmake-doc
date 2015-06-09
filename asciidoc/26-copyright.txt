@@ -1,0 +1,28 @@
+[[copyright]]
+=== debian/copyright
+
+Debian takes the copyright and license matters very seriously. The ``Debian Policy Manual'' enforces to have summary of them in the *debian/copyright* file in the package.
+
+You should format it as the http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/[machine-readable debian/copyright file] (DEP-5).
+
+CAUTION: The *debian/copyright* file should be sorted to keep the generic file patterns at the top of the list.  See <<koption>>.
+
+The *debmake* command creates the initial DEP-5 compatible template file by scanning the entire source tree.  It uses an internal license checker to classify each license text. footnote:[The *licensecheck* command from the *devscripts* package was referenced to make this internal checker.]
+
+Unless specifically requested to be pedantic with the *-P* option, the *debmake* command skips reporting for auto-generated files with permissive licenses to be practical.
+
+NOTE: If you find issues with this license checker, please file a bug report to the *debmake* package with the problematic part of text containing the copyright and license.
+
+[[dfsg]]
+=== DFSG
+
+Debian takes software freedom seriously and follows the https://www.debian.org/social_contract.html#guidelines[DFSG].
+
+The non-https://www.debian.org/social_contract.html#guidelines[DFSG] components in the upstream source tarball can be easily removed when the *uscan* command is used to update the Debian package.
+
+* List the files to be removed in the *Files-Excluded* stanza of the  *debian/copyright* file.
+* List the URL to download the upstream tarball in the *debian/watch* file.
+* Run the *uscan* command to download the new upstream tarball.
+** Alternatively, use the ``*gbp import-orig --uscan --pristine-tar*'' command.
+* The resulting tarball has the version number with an additional suffix *+dfsg*.
+

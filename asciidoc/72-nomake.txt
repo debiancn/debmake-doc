@@ -1,0 +1,141 @@
+[[nomakefile]]
+=== No Makefile (shell, CLI)
+
+Here is an example of creating a simple Debian package from a POSIX shell CLI program without its build system.
+
+Let's assume this upstream tarball to be *debhello-0.2.tar.gz*.
+
+This type of source has no automated means and files must be installed manually.
+
+----
+ $ tar -xzmf debhello-0.2.tar.gz
+ $ cd debhello-0.2
+ $ sudo cp scripts/hello /bin/hello
+ ...
+----
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-0.2.tar.gz*
+----
+include::../debhello-0.2-pkg1/step000.slog[]
+----
+
+Here, the POSIX shell script *hello* is a very simple one.
+
+.*hello* (v=0.2)
+----
+include::../debhello-0.2-pkg1/step101.slog[]
+----
+
+Here, the *hello.desktop* supports http://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/[Desktop Entry Specification].
+
+.*hello.desktop* (v=0.2)
+----
+include::../debhello-0.2-pkg1/step102.slog[]
+----
+
+Here, the *hello.png* is the icon graphics file.
+
+Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify the generated binary package is a shell script.
+
+----
+sys::[head -n12  ../debhello-0.2-pkg1/step200.slog]
+...
+----
+
+Let's inspect notable template files generated.
+
+.The source tree after the basic *debmake* execution. (v=0.2)
+----
+include::../debhello-0.2-pkg1/step201.slog[]
+----
+
+.*debian/rules* (template file, v=0.2):
+----
+include::../debhello-0.2-pkg1/step202.slog[]
+----
+
+This is essentially the standard *debian/rules* file with the *dh* command. Since this is the script package, this template *debian/rules* file has no build flag related contents.
+
+.*debian/control* (template file, v=0.2):
+----
+include::../debhello-0.2-pkg1/step203.slog[]
+----
+
+Since this is the shell script package, the *debmake* command sets ``*Architecture: all*'' and ``*Multi-Arch: foreign*''.  Also, it sets required *substvar* parameters as ``*Depends: $\{misc:Depends}*''.  These are explained in <<basics>>.
+
+Since this upstream source lacks the upstream *Makefile*, that functionality needs to be provided by the maintainer.  This upstream contains only a script file and data files and no C source files, the *build* process can be skipped but the *install* process needs to be implemented.  For this case, this is achieved cleanly by adding the *debian/install* and *debian/manpages* files without complicating the *debian/rules* file.
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=0.2):
+----
+include::../debhello-0.2-pkg1/step301.slog[]
+----
+
+.*debian/control* (maintainer version, v=0.2):
+----
+include::../debhello-0.2-pkg1/step302.slog[]
+----
+
+.*debian/install* (maintainer version, v=0.2):
+----
+include::../debhello-0.2-pkg1/step303.slog[]
+----
+
+.*debian/manpages* (maintainer version, v=0.2):
+----
+include::../debhello-0.2-pkg1/step304.slog[]
+----
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+.Template files under *debian/*. (v=0.2):
+----
+include::../debhello-0.2-pkg1/step400.slog[]
+----
+
+You can create a non-native Debian package using the *debuild* command (or its equivalents) in this source tree.  The command output is very verbose and explains what it does as follows.
+
+----
+sys::[head -n3  ../debhello-0.2-pkg1/step500.slog]
+ ...
+sys::[grep -A 1 -e '^ fakeroot debian/rules clean' ../debhello-0.2-pkg1/step500.slog]
+ ...
+sys::[grep -A 10 -e '^ debian/rules build' ../debhello-0.2-pkg1/step500.slog]
+ ...
+sys::[grep -A 1 -e '^ fakeroot debian/rules binary' ../debhello-0.2-pkg1/step500.slog]
+ ...
+sys::[tail -n1  ../debhello-0.2-pkg1/step500.slog]
+----
+
+Let's inspect the result.
+
+.The generated files of *debhello* version *0.2* by the *debuild* command:
+----
+include::../debhello-0.2-pkg1/step600.slog[]
+----
+
+You see all the generated files.
+
+* The *debhello_0.2.orig.tar.gz* is a symlink to the upstream tarball.
+* The *debhello_0.2-1.debian.tar.xz* contains the maintainer generated contents.
+* The *debhello_0.2-1.dsc* is the meta data file for the Debian source package.
+* The *debhello_0.2-1_amd64.deb* is the Debian binary package.
+* The *debhello_0.2-1_amd64.changes* is the meta data file for the Debian binary package.
+
+The *debhello_0.2-1.debian.tar.xz* contains the Debian changes to the upstream source as follows.
+
+.The compressed archive contents of *debhello_0.2-1.debian.tar.xz*:
+----
+include::../debhello-0.2-pkg1/step701.slog[]
+----
+
+The *debhello_0.2-1_amd64.deb* contains the files to be installed as follows.
+
+.The binary package contents of *debhello_0.2-1_amd64.deb*:
+----
+include::../debhello-0.2-pkg1/step700.slog[]
+----
+

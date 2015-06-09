@@ -1,0 +1,16 @@
+[[bug]]
+=== Bug report
+
+The *reportbug* command used for the bug report of 'binarypackage' can be customized by the files in *usr/share/bug/*'binarypackage'*/*.
+
+The *dh_bugfiles* command installs these files from the template files in the *debian/* directory.
+
+* *debian/*'binarypackage'*.bug-control*  ->  *usr/share/bug/*'binarypackage'*/control*
+** This file contains some directions such as redirecting the bug report to another package.
+* *debian/*'binarypackage'*.bug-presubj*  ->  *usr/share/bug/*'binarypackage'*/presubj*
+** This file is displayed to the user by the *reportbug* command.
+* *debian/*'binarypackage'*.bug-script*  -> *usr/share/bug/*'binarypackage' or *usr/share/bug/*'binarypackage'*/script*
+** The *reportbug* command runs this script to generate a template file for the bug report.
+
+See *dh_bugfiles*(1) and file:///usr/share/doc/reportbug/README.developers.gz[reportbug's Features for Developers]
+

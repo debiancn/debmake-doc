@@ -1,0 +1,44 @@
+#!/bin/sh -e
+# default values
+PREFIX="/usr/local"
+VERBOSE=""
+WITH_MATH="0"
+LINKLIB=""
+PACKAGE_AUTHOR="John Doe"
+
+# parse arguments
+while [ "${1}" != "" ]; do
+  VAR="${1%=*}" # Drop suffix =*
+  VAL="${1#*=}" # Drop prefix *=
+  case "${VAR}" in
+  --prefix)
+    PREFIX="${VAL}"
+    ;;
+  --verbose|-v)
+    VERBOSE="-v"
+    ;;
+  --with-math)
+    WITH_MATH="1"
+    LINKLIB="-lm"
+    ;;
+  --author)
+    PACKAGE_AUTHOR="${VAL}"
+    ;;
+  *)
+    echo "W: Unknown argument: ${1}"
+  esac
+  shift
+done
+
+# setup configured Makefile and src/config.h
+sed -e "s,@prefix@,${PREFIX}," \
+    -e "s,@VERBOSE@,${VERBOSE}," \
+    -e "s,@LINKLIB@,${LINKLIB}," \
+    <Makefile.in >Makefile
+if [ "${WITH_MATH}" = 1 ]; then
+echo "#define WITH_MATH" >src/config.h
+else
+echo "/* not defined: WITH_MATH */" >src/config.h
+fi
+echo "#define PACKAGE_AUTHOR \"${PACKAGE_AUTHOR}\"" >>src/config.h
+

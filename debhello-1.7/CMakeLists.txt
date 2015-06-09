@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(debhello)
+set(PACKAGE_AUTHOR "Osamu Aoki")
+add_subdirectory(src)
+add_subdirectory(man)

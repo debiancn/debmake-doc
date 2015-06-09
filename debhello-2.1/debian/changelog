@@ -1,0 +1,101 @@
+debhello (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable with a shared library.
+    - Makefile generated from CMakeLists.txt .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 02:01:01 +0900
+
+debhello (2.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable with a shared library.
+    - Makefile generated from Makefile.am and configure.ac .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 02:00:01 +0900
+
+debhello (1.7-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable.
+    - Makefile generated from CMakeLists.txt .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:07:01 +0900
+
+debhello (1.6-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable.
+    - Makefile generated from Makefile.am and configure.ac .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:06:01 +0900
+
+debhello (1.5-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable.
+    - Makefile generated from Makefile.in and ./configure .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:05:01 +0900
+
+debhello (1.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - C source for an executable.
+    - Makefile not supporting $(DESTDIR) and $(prefix) .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:04:01 +0900
+
+debhello (1.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Python3 script with the graphical user interface.
+    - Packaged in Python distutils with setup.py .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:03:01 +0900
+
+debhello (1.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Python3 script with the command-line interface.
+    - Packaged in Python distutils with setup.py .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:02:01 +0900
+
+debhello (1.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - POSIX shell script and data with the graphical user interface.
+    - Makefile supporting $(DESTDIR) and $(prefix) .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:01:01 +0900
+
+debhello (1.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - POSIX shell script and data.
+    - Makefile supporting $(DESTDIR) and $(prefix) .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 01:00:01 +0900
+
+debhello (0.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - POSIX shell script and data without Makefile.
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 00:02:01 +0900
+
+debhello (0.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Empty content.
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 00:01:01 +0900
+
+debhello (0.0-1) unstable; urgency=low
+
+  * Initial release of debhello. Closes: #123456
+    - C source for an executable.
+    - Makefile supporting $(DESTDIR) and $(prefix)=/usr .
+
+ -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 00:00:01 +0900

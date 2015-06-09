@@ -1,0 +1,4 @@
+/* name of the package author */
+#define LOCALEDIR "@CMAKE_INSTALL_LOCALEDIR@"
+#define PACKAGE "@PACKAGE_NAME@"
+#define PACKAGE_AUTHOR "@PACKAGE_AUTHOR@"

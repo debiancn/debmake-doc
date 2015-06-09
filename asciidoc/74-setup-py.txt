@@ -1,0 +1,112 @@
+[[setup-py]]
+=== setup.py (Python3, CLI)
+
+Here is an example of creating a simple Debian package from a Python3 CLI program using the *setup.py* as its build system.
+
+Let's assume its upstream tarball to be *debhello-1.1.tar.gz*.
+
+This type of source is meant to be installed as a non-system file as:
+
+----
+ $ tar -xzmf debhello-1.1.tar.gz
+ $ cd debhello-1.1
+ $ python3 setup.py install
+----
+
+Debian packaging requires to change the last line to ``*python3 setup.py install --install-layout=deb*'' to install files to the target system image location.  This issue is automatically addressed when using the *dh* command for the Debian packaging.
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.1.tar.gz*
+----
+include::../debhello-1.1-pkg1/step000.slog[]
+----
+
+Here, the *hello* script and its associated *hello_py* module are as follows.
+
+.*hello* (v=1.1)
+----
+include::../debhello-1.1-pkg1/step101.slog[]
+----
+
+.*hello_py/\_\_init__.py* (v=1.1)
+----
+include::../debhello-1.1-pkg1/step102.slog[]
+----
+
+These are packaged using the Python https://docs.python.org/3.4/library/distutils.html#module-distutils[distutils] with the *setup.py* and *MANIFEST.in* files.
+
+.*setup.py* (v=1.1)
+----
+include::../debhello-1.1-pkg1/step103.slog[]
+----
+
+.*MANIFEST.in* (v=1.1)
+----
+include::../debhello-1.1-pkg1/step104.slog[]
+----
+
+TIP: Many modern Python packages are distributed using https://setuptools.pypa.io/en/latest/setuptools.html[setuptools].  Since setuptools is an enhanced alternative to distutils, this example is useful for them.
+
+Let's package this with the *debmake* command.  Here, the *-b\':py3'* option is used to specify the generated binary package contain Python3 script and module files.
+
+----
+sys::[head -n12  ../debhello-1.1-pkg1/step200.slog]
+...
+----
+
+Let's inspect notable template files generated.
+
+.*debian/rules* (template file, v=1.1):
+----
+include::../debhello-1.1-pkg1/step202.slog[]
+----
+
+This is essentially the standard *debian/rules* file with the *dh* command.
+
+The use of ``*--with python3*'' option invokes *dh_python3* to calculate Python dependencies, adds maintainer scripts to byte compile files, etc. See *dh_python3*(1).
+
+The use of ``*--buildsystem=pybuild*'' option invokes various build systems for requested Python versions in order to build modules and extensions.  See *pybuild*(1).
+
+.*debian/control* (template file, v=1.1):
+----
+include::../debhello-1.1-pkg1/step203.slog[]
+----
+
+Since this is the Python3 package, the *debmake* command sets ``*Architecture: all*'' and ``*Multi-Arch: foreign*''.  Also, it sets required *substvar* parameters as ``*Depends: $\{python3:Depends}, $\{misc:Depends}*''.  These are explained in <<basics>>.
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=1.1):
+----
+include::../debhello-1.1-pkg1/step301.slog[]
+----
+
+.*debian/control* (maintainer version, v=1.1):
+----
+include::../debhello-1.1-pkg1/step302.slog[]
+----
+
+The *hello* command does not come with the upstream provided manpage, let's add it as the maintainer.
+
+.*debian/manpages* etc. (maintainer version, v=1.1):
+----
+include::../debhello-1.1-pkg1/step303.slog[]
+----
+
+There are several other template files under the *debian/* directory.  These also needs to be updated.
+
+The rest of the packaging activities are practically the same as the one in <<makefile-sh>>.
+
+.Template files under *debian/*. (v=1.1):
+----
+include::../debhello-1.1-pkg1/step400.slog[]
+----
+
+Here is the generated dependency list of binary packages.
+
+.The generated dependency list of binary packages (v=1.1):
+----
+include::../debhello-1.1-pkg1/step702.slog[]
+----
+

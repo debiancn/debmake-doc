@@ -1,0 +1,217 @@
+Here are the prerequisites which you need to understand before you to get involved with Debian.
+
+[[people]]
+=== People around Debian
+
+There are several types of people interacting around Debian with different roles:
+
+* *upstream author*: the person who made the original program.
+* *upstream maintainer*: the person who currently maintains the program.
+* *maintainer*: the person making the Debian package of the program.
+* *sponsor*: a person who helps maintainers to upload packages to the official Debian package archive (after checking their contents).
+* *mentor*: a person who helps novice maintainers with packaging etc.
+* *Debian Developer* (DD): a member of the Debian project with full upload rights to the official Debian package archive.
+* *Debian Maintainer* (DM): a person with limited upload rights to the official Debian package archive.
+
+Please note that you can't become an official *Debian Developer* (DD) overnight, because it takes more than technical skill. Please do not be discouraged by this. If it is useful to others, you can still upload your package either as a *maintainer* through a *sponsor* or as a *Debian Maintainer*.
+
+Please note that you do not need to create any new packages to become an official Debian Developer. Contributing to the existing packages can provide a path to becoming an official Debian Developer too. There are many packages waiting for good maintainers (see <<approaches>>).
+
+[[contribute]]
+=== How to contribute
+
+Please refer to the following to learn how to contribute to Debian:
+
+* http://www.debian.org/intro/help[How can you help Debian?] (official)
+* http://www.debian.org/doc/FAQ/ch-contributing[The Debian GNU/Linux FAQ, Chapter 13 - "Contributing to the Debian Project"] (semi-official)
+* http://wiki.debian.org/HelpDebian[Debian Wiki, HelpDebian] (supplemental)
+* https://nm.debian.org/[Debian New Member site] (official)
+* http://wiki.debian.org/DebianMentorsFaq[Debian Mentors FAQ] (supplemental)
+
+[[social]]
+=== Social dynamics of Debian
+
+Please understand Debian's social dynamics to prepare yourself for interactions with Debian:
+
+* We all are volunteers.
+** You can't impose on others what to do.
+** You should be motivated to do things by yourself.
+* Friendly cooperation is the driving force.
+** Your contribution should not over-strain others.
+** Your contribution is valuable only when others appreciate it.
+* Debian is not your school where you get automatic attention of teachers.
+** You should be able to learn many things by yourself.
+** Attention from other volunteers is a very scarce resource.
+* Debian is constantly improving.
+** You are expected to make high quality packages.
+** You should adapt yourself to the change.
+
+Since we focus only on the technical aspects of the packaging in the rest of this guide, please refer to the following to understand the social dynamics of Debian:
+
+* http://upsilon.cc/~zack/talks/2011/20110321-taipei.pdf[Debian: 17 years of Free Software, ``do-ocracy'', and democracy] (Introductory slides by the ex-DPL)
+
+[[reminders]]
+=== Technical reminders
+
+Here are some technical reminders to accommodate other maintainers to work on your package easily and effectively to maximize the output of Debian as a whole.
+
+* Make your package easy to debug.
+** Keep your package simple.
+** Don't over-engineer your package.
+* Keep your package well-documented.
+** Use readable code style.
+** Make comments in code.
+** Format code consistently.
+** Maintain the git repository footnote:[The overwhelming number of Debian maintainers use *git* over other VCS systems such as *hg*, *bzr*, etc.] of the package.
+
+NOTE: Debugging of software tends to consume more time than writing the initial working software.
+
+[[debian-doc]]
+=== Debian documentation
+
+Please make yourself ready to read the pertinent part of the official Debian documentation together with this guide as needed to generate perfect Debian packages:
+
+* ``Debian Policy Manual''
+** ``must follow'' rules (http://www.debian.org/doc/devel-manuals#policy)
+* ``Debian Developer's Reference''
+** ``best practice'' document (http://www.debian.org/doc/devel-manuals#devref)
+
+If this guide contradicts with the official Debian documentation, they are correct. Please file a bug report on the *debmake-doc* package using the *reportbug* command.
+
+Here are alternative tutorial documents which you may read along with this guide:
+
+* ``Debian New Maintainers' Guide'' (older)
+** https://www.debian.org/doc/devel-manuals#maint-guide
+** https://packages.qa.debian.org/m/maint-guide.html
+* ``Debian Packaging Tutorial''
+** https://www.debian.org/doc/devel-manuals#packaging-tutorial
+** https://packages.qa.debian.org/p/packaging-tutorial.html
+* ``Ubuntu Packaging Guide'' (Ubuntu is Debian based.)
+** http://packaging.ubuntu.com/html/
+
+TIP: When reading these tutorials, you should consider to use the *debmake* command in place of the *dh_make* command for better template files.
+
+[[help]]
+=== Help resources
+
+Before you decide to ask your question in some public place, please do your parts of efforts, i.e., read the fine documentation:
+
+* package information available through the *aptitude*, *apt-cache*, and *dpkg* commands.
+* files in */usr/share/doc/*'package' for all pertinent packages.
+* contents of *man* 'command' for all pertinent commands.
+* contents of *info* 'command' for all pertinent commands.
+* contents of http://lists.debian.org/debian-mentors/[debian-mentors@lists.debian.org mailing list archive].
+* contents of http://lists.debian.org/debian-devel/[debian-devel@lists.debian.org mailing list archive].
+
+Your desired information can be found effectively by using the well-formend search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
+
+Making a small test package is a good way to learn details of the packaging. Inspecting existing well maintained packages is the best way to learn how other people make packages.
+
+If you still have questions about the packaging, you can ask them interactively:
+
+* debian-mentors@lists.debian.org mailing list. (This mailing list is for the novice.)
+* debian-devel@lists.debian.org mailing list. (This mailing list is for the expert.)
+* http://www.debian.org/support#irc[IRC] such as #debian-mentors.
+* Teams focusing on a specific set of packages. (Full list at https://wiki.debian.org/Teams)
+* Language-specific mailing lists.
+** https://lists.debian.org/devel.html[debian-devel-{french,italian,portuguese,spanish}@lists.debian.org]
+** http://www.debian.or.jp/community/ml/openml.html#develML[debian-devel@debian.or.jp]
+
+The more experienced Debian developers will gladly help you, if you ask properly after making your required efforts.
+
+CAUTION: Debian development is a moving target.  Some information found on the web may be outdated, incorrect, and not-applicable.  Please use them carefully.
+
+[[situation]]
+=== Archive situation
+
+Please realize the situation of the Debian archive.
+
+* Debian already has packages for most kinds of programs.
+* The number of packages already in the Debian archive is several tens of times greater than that of active maintainers.
+* Unfortunately, some packages lack appropriate level of attention by the maintainer.
+
+Thus, contributions to packages already in the archive are far more appreciated (and more likely to receive sponsorship for the uploading) by other maintainers.
+
+TIP: The *wnpp-alert* command from the *devscripts* package can check for installed packages up for adoption or orphaned.
+
+[[approaches]]
+=== Contribution approaches
+
+Here is a pseudo-Python code for your contribution approaches to Debian with a *program*:
+
+----
+if exist_in_debian(program):
+  if is_team_maintained(program):
+    join_team(program)
+  if is_orphaned(program) # maintainer: Debian QA Group
+    adopt_it(program)
+  elif is_RFA(program) # Request for Adoption
+    adopt_it(program)
+  else:
+    if need_help(program):
+      contact_maintainer(program)
+      triaging_bugs(program)
+      preparing_QA_or_NMU_uploads(program)
+    else:
+      leave_it(program)
+else: # new packages
+  if not is_good_program(program):
+    give_up_packaging(program)
+  elif not is_distributable(program):
+    give_up_packaging(program)
+  else: # worth packaging
+    if is_ITPed_by_others(program):
+      if need_help(program):
+        contact_ITPer_for_collaboration(program)
+      else:
+        leave_it_to_ITPer(program)
+    else: # really new
+      if is_applicable_team(program):
+        join_team(program)
+      if is_DFSG(program) and is_DFSG(dependency(program)):
+        file_ITP(program, area="main") # This is Debian
+      elif is_DFSG(program):
+        file_ITP(program, area="contrib") # This is not Debian
+      else: # non-DFSG
+        file_ITP(program, area="non-free") # This is not Debian
+      package_it_and_close_ITP(program)
+----
+
+Here:
+
+* For exist_in_debian(), and is_team_maintained(); check:
+** the *aptitude* command
+** https://www.debian.org/distrib/packages[Debian packages] web page
+** https://wiki.debian.org/Teams[Teams]
+* For is_orphaned(), is_RFA(), and is_ITPed_by_others(); check:
+** The output of the *wnpp-alert* command.
+** https://www.debian.org/devel/wnpp/[Work-Needing and Prospective Packages]
+** https://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=wnpp;dist=unstable[Debian Bug report logs: Bugs in pseudo-package wnpp in unstable]
+** http://wnpp.debian.net/[Debian Packages that Need Lovin']
+** http://wnpp-by-tags.debian.net/[Browse wnpp bugs based on debtags]
+* For is_good_program(), check:
+** The program should be useful.
+** The program should not introduce security and maintenance concerns to the Debian system.
+** The program should be well documented and its code needs to be understandable (i.e. not obfuscated).
+** The program's authors agree with the packaging and are amicable to Debian. footnote:[This is not the absolute requirement.  The hostile upstream may become major resource drains for us all.  The friendly upstream can be consulted to solve any problems with the program.]
+* For is_it_DFSG(), and is_its_dependency_DFSG(); check:
+** https://www.debian.org/social_contract#guidelines[Debian Free Software Guidelines] (DFSG).
+* For is_it_distributable(), check:
+** The software must have a license and it should allow its distribution.
+
+You either need to file an ITP or adopt a package to start working on it.  See the ``Debian Developer's Reference'':
+
+* https://www.debian.org/doc/manuals/developers-reference/pkgs.html#newpackage[5.1. New packages].
+* https://www.debian.org/doc/manuals/developers-reference/pkgs.html#archive-manip[5.9. Moving, removing, renaming, orphaning, adopting, and reintroducing packages].
+
+=== Novice maintainer
+
+The novice maintainer should avoid packaging programs with the high security exposure:
+
+* *setuid* or *setgid* program
+* *daemon* program
+* program installed in the */sbin/* or */usr/sbin/* directories
+
+When you gain more experience in packaging, you'll be able to package such programs.
+
+

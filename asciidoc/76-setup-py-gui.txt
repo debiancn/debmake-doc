@@ -1,0 +1,72 @@
+[[setup-py-gui]]
+=== setup.py (Python3, GUI)
+
+Here is an example of creating a simple Debian package from a Python3 GUI program using the *setup.py* as its build system.
+
+This upstream is based in <<setup-py>> with enhanced GUI, desktop icon, and manpage supports.
+
+Let's assume this upstream tarball to be *debhello-1.3.tar.gz*.
+
+Let's get the source and make the Debian package.
+
+.Download *debhello-1.3.tar.gz*
+----
+include::../debhello-1.3-pkg1/step000.slog[]
+----
+
+Here are the upstream sources.
+
+.*hello* (v=1.3)
+----
+include::../debhello-1.3-pkg1/step101.slog[]
+----
+
+.*hello_py/\_\_init__.py* (v=1.3)
+----
+include::../debhello-1.3-pkg1/step102.slog[]
+----
+
+.*setup.py* (v=1.3)
+----
+include::../debhello-1.3-pkg1/step103.slog[]
+----
+
+.*MANIFEST.in* (v=1.3)
+----
+include::../debhello-1.3-pkg1/step104.slog[]
+----
+
+Let's package this with the *debmake* command.  Here, the *-b\':py3'* option is used to specify the generated binary package contain Python3 script and module files.
+
+----
+sys::[head -n12  ../debhello-1.3-pkg1/step200.slog]
+...
+----
+
+The result is practically the same as <<setup-py>>.
+
+Let's make this Debian package better as the maintainer.
+
+.*debian/rules* (maintainer version, v=1.3):
+----
+include::../debhello-1.3-pkg1/step301.slog[]
+----
+
+.*debian/control* (maintainer version, v=1.3):
+----
+include::../debhello-1.3-pkg1/step302.slog[]
+----
+
+Please note manually added *python3-gi* and *gir1.2-gtk-3.0*.
+
+Since this upstream source has manpage and other files with matching entries in the *setup.py* file, there are no needs to create them and add *debian/install* and *debian/manpages* files which was required in <<setup-py>>.
+
+The rest of the packaging activities are practically the same as the one in <<setup-py>>.
+
+Here is the generated dependency list of binary packages.
+
+.The generated dependency list of binary packages (v=1.3):
+----
+include::../debhello-1.3-pkg1/step702.slog[]
+----
+

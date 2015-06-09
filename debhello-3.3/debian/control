@@ -1,0 +1,79 @@
+Source: debhello
+Section: devel
+Priority: extra
+Maintainer: Osamu Aoki <osamu@debian.org>
+Build-Depends: debhelper (>=9), dh-autoreconf
+Standards-Version: 3.9.6
+Homepage: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/
+
+Package: debhello
+Architecture: any
+Multi-Arch: foreign
+Depends: libsharedlib1 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: example executable package
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package provides the executable program.
+
+Package: libsharedlib1
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: example shared library package
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the shared library.
+
+Package: libsharedlib-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libsharedlib1 (= ${binary:Version}), ${misc:Depends}
+Description: example development package
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the development files.
+
+Package: debhello-dbg
+Section: debug
+Architecture: any
+Multi-Arch: same
+Depends: debhello (= ${binary:Version}), ${misc:Depends}
+Description: example debugging package for debhello
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the debugging symbols for debhello.
+
+Package: libsharedlib1-dbg
+Section: debug
+Architecture: any
+Multi-Arch: same
+Depends: libsharedlib1 (= ${binary:Version}), ${misc:Depends}
+Description: example debugging package for libsharedlib1
+ This is an example package to demonstrate the Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the debugging symbols for libsharedlib1.

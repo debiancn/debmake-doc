@@ -1,0 +1,4 @@
+#!/bin/bash
+# echo command and record pwd for next shell
+echo " \$ cd $1"
+echo "$(cd $1 >/dev/null;pwd)" > ${ROOTDIR}/next.dir

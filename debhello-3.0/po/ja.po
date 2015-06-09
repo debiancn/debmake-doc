@@ -1,0 +1,43 @@
+# English translations for hello package.
+# Copyright (C) 2015 THE hello'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the debhello package.
+# Osamu Aoki <osamu@debian.org>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debhello 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-01 17:38+0900\n"
+"PO-Revision-Date: 2015-02-12 23:14+0900\n"
+"Last-Translator: Osamu Aoki <osamu@debian.org>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/hello.desktop.in:3
+msgid "Hello"
+msgstr "こんにちは"
+
+#: ../data/hello.desktop.in:4
+msgid "Greetings"
+msgstr "挨拶"
+
+#: ../data/hello.desktop.in:6
+msgid "hello"
+msgstr ""
+
+#: ../data/hello.desktop.in:9
+msgid "hello.png"
+msgstr ""
+
+#: ../scripts/hello:27
+#, sh-format
+msgid "Hello from the shell!"
+msgstr "シェルから、こんにちは！"
+
+#: ../scripts/hello:30
+#, sh-format
+msgid "Type Enter to exit this program: "
+msgstr "このプログラムを終了するには Enter を押してください: "

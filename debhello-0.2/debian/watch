@@ -1,0 +1,3 @@
+# When there is no appropriate upstream URL for uscan, it is
+# the best to have a watch file without any real content as
+# this file. See uscan(1).

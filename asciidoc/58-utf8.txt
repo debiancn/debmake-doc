@@ -1,0 +1,34 @@
+[[utf-8-build]]
+=== Build under UTF-8
+
+The default locale of the build environment is *C*.
+
+Some programs such as the *read* function of Python3 change their behavior depending on the locale.  
+
+Adding the following code to the *debian/rules* file ensures to build the program under the *C.UTF-8* locale.
+
+----
+LC_ALL := C.UTF-8
+export LC_ALL
+----
+
+[[utf-8-conv]]
+=== UTF-8 conversion
+
+If upstream documents are encoded in old encoding schemes, converting them to http://en.wikipedia.org/wiki/UTF-8[UTF-8] is a good idea.
+
+Use the *iconv* command in the *libc-bin* package to convert encodings of plain text files.
+
+----
+ $ iconv -f latin1 -t utf8 foo_in.txt > foo_out.txt
+----
+
+Use *w3m*(1) to convert from HTML files to UTF-8 plain text files. When you do this, make sure to execute it under UTF-8 locale.
+----
+ $ LC_ALL=C.UTF-8 w3m -o display_charset=UTF-8 \
+        -cols 70 -dump -no-graph -T text/html \
+        < foo_in.html > foo_out.txt
+----
+
+Run these scripts in the *override_dh_** target of the *debian/rules* file.
+

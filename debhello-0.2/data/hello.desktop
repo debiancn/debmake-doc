@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Hello
+Name[fr]=Bonjour
+Comment=Greetings
+Comment[fr]=Salutations
+Type=Application
+Keywords=hello
+Exec=hello
+Terminal=true
+Icon=hello.png
+Categories=Utility;
