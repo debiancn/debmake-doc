@@ -1,5 +1,0 @@
-debmake-doc (1.0-1) unstable; urgency=low
-
-  * Initial release. Closes: #786702:
-
- -- Osamu Aoki <osamu@debian.org>  Mon, 25 May 2015 00:21:14 +0900
