@@ -41,7 +41,7 @@ C with Makefile/Autotools/CMake
 </listitem>
 <listitem>
 <simpara>
-multiple binary package with shared library etc.
+multiple binary packages with shared library etc.
 </simpara>
 </listitem>
 </itemizedlist>
