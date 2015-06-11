@@ -31,7 +31,7 @@ show this help message and exit.
 *-c*, *--copyright*::
 scan source for copyright+license text and exit.
 +
-* *-c*: sinple output style
+* *-c*: simple output style
 * *-cc*: normal output style (similar to the *debian/copyright* file)
 * *-ccc*: debug output style
 
