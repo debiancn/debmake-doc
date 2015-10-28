@@ -1,3 +1,11 @@
+debmake-doc (1.1-1) unstable; urgency=medium
+
+  * Fix typos. (Including root cause of #793654)
+  * Add B-D: python3-gi, gir1.2-gtk-3.0 Closes: #802395
+  * Mention DDEB activity for -deb.
+
+ -- Osamu Aoki <osamu@debian.org>  Wed, 28 Oct 2015 23:14:41 +0900
+
 debmake-doc (1.0-1) unstable; urgency=low
 
   * Initial release. Closes: #786702:
