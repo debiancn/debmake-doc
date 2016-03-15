@@ -88,7 +88,7 @@ Here, 'binarypackage' is the binary package name; and optional 'type' is chosen 
 --
 ** *bin*: C/C++ compiled ELF binary code package (any, foreign) (default, alias: *""*, i.e., 'null-string')
 ** *data*: Data (fonts, graphics, ...) package (all, foreign) (alias: *da*)
-** *dbg*: Debug symbol package (any, same) (alias: *db*)
+** *dbg*: Debug symbol package (any, same) (alias: *db*) (deprecated for strech)
 ** *dev*: Library development package (any, same) (alias: *de*)
 ** *doc*: Documentation package (all, foreign) (alias: *do*)
 ** *lib*: Library package (any, same) (alias: *l*)
