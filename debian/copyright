@@ -5,7 +5,7 @@ Source: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/tree/base
 Files:     *
 Copyright: 2015 Osamu Aoki <osamu@debian.org>
            2015 Stéphane Blondon <stephane.blondon@gmail.com>
-License:   MIT
+License:   Expat
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation
