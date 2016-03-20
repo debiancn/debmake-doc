@@ -13,6 +13,8 @@ Unless specifically requested to be pedantic with the *-P* option, the *debmake*
 
 NOTE: If you find issues with this license checker, please file a bug report to the *debmake* package with the problematic part of text containing the copyright and license.
 
+NOTE: The *debmake* command focuses on bunching up same copyright and license claims in details to create template for *debian/copyright*.  In dorder to do this within reasonable time, it only picks the first section which looks like copyright and license claims.  So its license assignment may not be optiomal.  Please also use other tools such as *licensecheck* which deploy simpler string match rules running on the whole source tree.
+
 [[dfsg]]
 === DFSG
 
