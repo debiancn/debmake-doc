@@ -57,9 +57,9 @@ For libraries and modules required via the dynamic loading mechanism including t
 For the safe https://wiki.debian.org/binNMU[binNMU], the dependency among binary packages from a same source package needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
 
 * ``*Architecture: any*'' package depends on ``*Architecture: any*'' 'foo' package
-** *Depends:* 'foo' *(== $\{binary:Version})*
+** *Depends:* 'foo' *(= $\{binary:Version})*
 * ``*Architecture: any*'' package depends on ``*Architecture: all*'' 'bar' package
-** *Depends:* 'bar' *(== $\{source:Version}*
+** *Depends:* 'bar' *(= $\{source:Version}*
 * ``*Architecture: all*'' package depends on ``*Architecture: any*'' 'baz' package
 ** *Depends:* 'baz' *(>= $\{source:Version})*, 'baz' *(<< $\{source:Upstream-Version}.0~)*
 

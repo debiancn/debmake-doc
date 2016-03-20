@@ -3,14 +3,26 @@
 
 The Debian package is built with the debugging information but packaged into the binary package after stripping the debugging information as required by https://www.debian.org/doc/debian-policy/ch-files.html[Chapter 10 - Files] of the ``Debian Policy Manual''.
 
-The debugging information can be packaged separately as the debug package using the ``*dh_strip --dbg-package=*'package''' command in the *override_dh_strip:* target of the *debian/rules* file.  The name of such debug package normally has the *-dbg* suffix.
 
-NOTE: The creation of the *-dbg* package is optional.  In future, it may be superseded by some new mechanism to provide the debugging information.
+==== New -dbgsym package (Strech 9.0 and after)
+
+The debugging information is automatically packaged separately as the debug package using the *dh_strip* command in its default.  The name of such debug package normally has the *-dbgsym* suffix.
+
+* No special care is needed in the *debian/rules* file, if there were no *-dbg* packages.
+* Use the *--dbgsym-migration* option for the *dh_strip* command, if there were *-dbg* packages.
+
+==== Old -dbg package (Jessie 8.0 or before)
+
+The debugging information can be packaged separately as the debug package using the ``*dh_strip --dbg-package=*'package''' command in the *override_dh_strip:* target of the *debian/rules* file.  The name of such debug package normally has the *-dbg* suffix.
 
 The installation path of the debugging information is as follows to enable auto-loading of it by the *gdb* command.
 
 * */usr/lib/debug/.build-id/*'12/3456...' (compat>=9, for *buildID*='123456...')
 * */usr/lib/debug/*'path/to/binary' (compat<<9, for '/path/to/binary')
+
+NOTE: The creation of the *-dbg* package is optional.  
+
+NOTE: Debian will provide some automatic mechanism to provide the debugging information in near future. 
 
 See
 
@@ -22,4 +34,5 @@ See
 * *objcopy*(1)
 * Debian wiki https://wiki.debian.org/DebugPackage[DebugPackage]
 * Debian wiki https://wiki.debian.org/AutomaticDebugPackages[AutomaticDebugPackages]
+* Debian debian-devel post: https://lists.debian.org/debian-devel/2015/08/msg00443.html[Status on automatic debug packages] (2015-08-15)
 
