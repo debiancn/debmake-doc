@@ -86,3 +86,26 @@ The *pkg-config* program is used to retrieve information about installed librari
 |*/usr/lib/pkgconfig/*	|*/usr/lib/i386-linux-gnu/pkgconfig/*	|*/usr/lib/x86_64-linux-gnu/pkgconfig/*
 |====
 
+== The multiarch package split scenario examples
+
+Here are some typical multiarch package split scenario examples for the followings:
+
+* a library source *lib*'foo'*-1.tar.gz*
+* a tool source 'bar'*-1.tar.gz* written in a compiled language
+* a tool source 'baz'*-1.tar.gz* written in an interpreted language
+
+.Package split examples
+[options="header", cols="3,2,2,8"]
+|====
+|Package            |Architecture: |Multi-Arch: |Package content
+|*lib*'foo1'        |any           |same        |the shared library, co-installable
+|*lib*'foo1'*-dbg*  |any           |same        |the shared library debug symbols, co-installable
+|*lib*'foo'*-dev*   |any           |same        |the shared library header files etc., co-installable
+|*lib*'foo`*-tools* |any           |foreign     |the run-time support programs, not co-installable
+|*lib*'foo'*-doc*   |all           |foreign     |the shared library documentation files
+|'bar'              |any           |foreign     |the compiled program files, not co-installable
+|'bar'*-doc*        |all           |foreign     |the documentation files for the program
+|'baz'              |all           |foreign     |the interpreted program files
+|====
+
+Please note that the development package should contain a symlink for the associated shared library without a version number. E.g.: */usr/lib/x86_64-linux-gnu/libfoo.so* -> *libfoo.so.1*
