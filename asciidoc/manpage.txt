@@ -19,7 +19,7 @@ debmake - program to make the Debian source package
 * It is untared to create many files under the 'package-version/' directory.
 * debmake is invoked in the 'package-version/' directory possibly without any arguments.
 * Files in the 'package-version'**/debian/** directory are manually adjusted.
-* *dpkg-buildpackage* (usually from its wrapper *debuild* or *pdebuild*) is invoked in the 'package-version/' directory to make debian packages.
+* *dpkg-buildpackage* (usually from its wrapper *debuild* or *pdebuild*) is invoked in the 'package-version/' directory to make Debian packages.
 
 Make sure to protect the arguments of the *-b*, *-f*, *-l*, and *-w* options from the shell interference by quoting them properly.
 
@@ -42,7 +42,6 @@ The *debian/copyright* file must be organized to list the generic file patterns 
 +
 * *-k*: basic output style
 * *-kk*: verbose output style
-
 
 *-n*, *--native*::
 make a native Debian source package without *.orig.tar.gz*.  This makes the ``*3.0 (native)*'' format package.
@@ -88,7 +87,7 @@ Here, 'binarypackage' is the binary package name; and optional 'type' is chosen 
 --
 ** *bin*: C/C++ compiled ELF binary code package (any, foreign) (default, alias: *""*, i.e., 'null-string')
 ** *data*: Data (fonts, graphics, ...) package (all, foreign) (alias: *da*)
-** *dbg*: Debug symbol package (any, same) (alias: *db*) (deprecated for strech)
+** *dbg*: Debug symbol package (any, same) (alias: *db*) (deprecated for strech and after since the -dbgsym package is automatically generated)
 ** *dev*: Library development package (any, same) (alias: *de*)
 ** *doc*: Documentation package (all, foreign) (alias: *do*)
 ** *lib*: Library package (any, same) (alias: *l*)
@@ -235,6 +234,8 @@ Packaging may require installation of some additional specialty helper packages.
 
 *debmake* is meant to provide template files for the package maintainer to work on.  Comment lines started by *&#35;* contain the tutorial text.  You must remove or edit such comment lines before uploading to the Debian archive.
 
+The license extraction and assignment process involves a lot of heuristics, it may fail in some cases.  It is highly recommended to use other tools such as *licensecheck* from the *devscripts* package in conjunction with *debmake*.
+
 There  are some limitations for what characters may be used as a part of the Debian package.  The most notable limitation is the prohibition of uppercase letters in the package name.  Here is the summary in the regular expression.
 
 * Upstream package name (**-p**): [-+.a-z0-9]{2,}
@@ -244,7 +245,11 @@ There  are some limitations for what characters may be used as a part of the Deb
 
 See the exact definition in http://www.debian.org/doc/debian-policy/ch-controlfields.html[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual''.
 
+*debmake* assumes relatively simple packaging cases.  So all programs related to the interpreter are assumed to be "*Architecture: all*".  This is not always true.
+
 == DEBUG
+
+Please report bugs to *debmake* using *reportbug*.
 
 The character set in the environment variable *$DEBUG* determines the logging output level.
 
@@ -271,13 +276,15 @@ Use this as:
  $ DEBUG=pdfbmeclak debmake ...
 ----
 
+See README.developer in the source for more.
+
 == AUTHOR
 
 Copyright © 2014-2015 Osamu Aoki <osamu@debian.org>
 
 == LICENSE
 
-MIT License
+Expat License
 
 == SEE ALSO
 
