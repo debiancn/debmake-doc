@@ -26,4 +26,8 @@ clean::
 
 distclean:: clean
 
+# Use this target on devel branch source
+package:
+	debmake -t -y -zx -b':doc' -i pdebuild
+
 .PHONY: all build clean

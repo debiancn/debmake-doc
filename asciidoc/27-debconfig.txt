@@ -12,6 +12,13 @@ installed as *usr/share/bug/*'binarypackage'*/presubj* in 'binarypackage'. See <
 'binarypackage'*.bug-script*  ^*-x3*^::
 installed as *usr/share/bug/*'binarypackage' or *usr/share/bug/*'binarypackage'*/script* in 'binarypackage'. See <<bug>>.
 
+'binarypackage'*.bash-completion*::
+List `bash` completion scripts to be installed.
++
+The `bash-completion` package is required for both build and user environment.
++
+See *dh_bash-completion*(1).
+
 *clean* ^*-x2*^::
 List files which should be removed but are not cleaned by the *dh_auto_clean* command.
 +
@@ -242,7 +249,7 @@ If this exists, it is installed into *usr/lib/tmpfiles.d/*'binarypackage'*.conf*
 See *dh_systemd_enable*(1), *dh_systemd_start*(1), and *dh_installinit*(1).
 
 'binarypackage'*.upstart* ^*-x3*^::
-If this exists, it is installed into etc/init/package.conf in the package build directory.
+If this exists, it is installed into etc/init/package.conf in the package build directory. (deprecated)
 +
 See *dh_installinit*(1) and <<emptypkg>>.
 
