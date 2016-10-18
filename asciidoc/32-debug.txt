@@ -20,9 +20,9 @@ The installation path of the debugging information is as follows to enable auto-
 * */usr/lib/debug/.build-id/*'12/3456...' (compat>=9, for *buildID*='123456...')
 * */usr/lib/debug/*'path/to/binary' (compat<<9, for '/path/to/binary')
 
-NOTE: The creation of the *-dbg* package is optional.  
+NOTE: The creation of the *-dbg* package is optional.
 
-NOTE: Debian will provide some automatic mechanism to provide the debugging information in near future. 
+NOTE: Debian will provide some automatic mechanism to provide the debugging information in near future.
 
 See
 
