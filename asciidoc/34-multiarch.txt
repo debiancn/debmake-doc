@@ -26,10 +26,11 @@ override_dh_install:
 ----
 
 See:
- * <<variablesrules>>
- * *dpkg-architecture*(1)
- * <<boption>>
- * <<package-split>>
+
+* <<variablesrules>>
+* *dpkg-architecture*(1)
+* <<boption>>
+* <<package-split-example>>
 
 ==== The multiarch library path
 
