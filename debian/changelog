@@ -1,3 +1,13 @@
+debmake-doc (1.4-1) unstable; urgency=medium
+
+  * Work around "script -q" bug.
+  * Reorganize debian/control section.
+  * Use gbp.
+  * Update debian/control stanzas.
+  * Add pointer to debug tools.  Closes: #771333
+
+ -- Osamu Aoki <osamu@debian.org>  Tue, 18 Oct 2016 23:23:19 +0900
+
 debmake-doc (1.3-1) unstable; urgency=medium
 
   * Add typical multiarch package split scenario examples.

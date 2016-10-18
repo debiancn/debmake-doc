@@ -7,7 +7,7 @@ You should format it as the http://www.debian.org/doc/packaging-manuals/copyrigh
 
 CAUTION: The *debian/copyright* file should be sorted to keep the generic file patterns at the top of the list.  See <<koption>>.
 
-The *debmake* command creates the initial DEP-5 compatible template file by scanning the entire source tree.  It uses an internal license checker to classify each license text. footnote:[The *licensecheck* command from the *devscripts* package was referenced to make this internal checker.]
+The *debmake* command creates the initial DEP-5 compatible template file by scanning the entire source tree.  It uses an internal license checker to classify each license text. footnote:[The *licensecheck* command from the *devscripts* package was referenced to make this internal checker.  Now the *licensecheck* command is provided in an independent *licensecheck* package.]
 
 Unless specifically requested to be pedantic with the *-P* option, the *debmake* command skips reporting for auto-generated files with permissive licenses to be practical.
 
@@ -15,7 +15,7 @@ NOTE: If you find issues with this license checker, please file a bug report to 
 
 NOTE: The *debmake* command focuses on bunching up same copyright and license claims in details to create template for *debian/copyright*.  In dorder to do this within reasonable time, it only picks the first section which looks like copyright and license claims.  So its license assignment may not be optiomal.  Please also use other tools such as *licensecheck* which deploy simpler string match rules running on the whole source tree.
 
-TIP:  You are highly encourage to check the license status with the licensecheck(1) command and, as needed, with your manual code review.
+TIP:  You are highly encourage to check the license status with the *licensecheck*(1) command and, as needed, with your manual code review.
 
 [[dfsg]]
 === DFSG

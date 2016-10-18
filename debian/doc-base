@@ -1,8 +1,8 @@
 Document: debmake-doc
 Title: Guide for Debian Maintainers
 Author: Osamu Aoki
-Abstract: This tutorial document describes the building of the Debian 
- package to ordinary Debian users and prospective developers using 
+Abstract: This tutorial document describes the building of the Debian
+ package to ordinary Debian users and prospective developers using
  the debmake command.
 Section: Debian
 
