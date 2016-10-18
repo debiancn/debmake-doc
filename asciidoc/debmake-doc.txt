@@ -66,8 +66,6 @@ include::22-rules.txt[]
 
 include::23-control.txt[]
 
-include::24-boption.txt[]
-
 include::25-changelog.txt[]
 
 include::26-copyright.txt[]
