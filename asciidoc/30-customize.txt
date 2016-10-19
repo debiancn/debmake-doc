@@ -53,4 +53,4 @@ CAUTION:  Don't forget to normalize patches when you upgrade to the new upstream
 
 See  <<alt-patch>> for example.
 
-
+NOTE: If you can avoid patching upstream source by customizing the build process via the upstream provided interface such as arguments to the *./configure* command, avoid applying Debian patches and make Debian package by customizing the *debian/rules* file.
