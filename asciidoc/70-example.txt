@@ -22,7 +22,7 @@ Please note Debian takes few things serious.
 
 The typical packaging example presented in <<simple>> is the prerequisite for this chapter.
 
-Some details are intentionally left vague in the following.  Please try to read the pertinent documentation and practice yourself to find them out. 
+Some details are intentionally left vague in the following.  Please try to read the pertinent documentation and practice yourself to find them out.
 
 TIP: The detailed log of all the package build examples can be obtained by following the instruction in <<details>>.
 

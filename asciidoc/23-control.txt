@@ -8,11 +8,6 @@ The *debian/control* file consists of blocks of meta data separated by the blank
 
 See https://www.debian.org/doc/debian-policy/ch-controlfields.html[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual'' for the definition of each meta data.
 
-The *debmake* command with the *-b* option (see <<boption>>) creates the initial template *debian/control* file with followings:
-
-* a set of *Package* stanzas defining the split of the Debian binary packages
-* a basic set of substvar used in each pertinent stanza
-
 [[split]]
 ==== Split of the Debian binary package
 
@@ -25,6 +20,75 @@ Please check examples in this guide:
 
 * <<autotools-multi>> (Autotools based)
 * <<cmake-multi>> (CMake based)
+
+[[boption]]
+===== debmake -b
+
+The *debmake* command with the *-b* option provides intuitive and flexible method to creates the initial template *debian/control* file defining the split of the Debian binary packages with following stanzas:
+
+* *Package:*
+* *Architecture:*
+* *Multi-Arch:*
+* *Depends:*
+* *Pre-Depends:*
+
+The *debmake* command also set an apropriate set of substvar used in each pertinent dependency stanza.
+
+Let's quote the pertinent part from the *debmake* manpage here.
+
+include::binary.txt[]
+
+[[package-split-example]]
+===== Package split scenario and examples
+
+Here are some typical multiarch package split scenarios for the following upstream source examples using the *debmake* command:
+
+* a library source 'libfoo-1.0'*.tar.gz*
+* a tool source 'bar-1.0'*.tar.gz* written in a compiled language
+* a tool source 'baz-1.0'*.tar.gz* written in an interpreted language
+
+[options="header", cols="3,2,3,2,8"]
+|====
+|'binarypackage'   |'type'   |*Architecture:*|*Multi-Arch:*	|Package content
+|*lib*'foo1'	   |*lib*^*^ |any |same    |the shared library, co-installable
+|*lib*'foo1'*-dbg* |*dbg*^*^ |any |same    |the shared library debug symbols, co-installable
+|*lib*'foo'*-dev*  |*dev*^*^ |any |same    |the shared library header files etc., co-installable
+|*lib*'foo'*-tools*|*bin*^*^ |any |foreign |the run-time support programs, not co-installable
+|*lib*'foo'*-doc*  |*doc*^*^ |all |foreign |the shared library documentation files
+|'bar'             |*bin*^*^ |any |foreign |the compiled program files, not co-installable
+|'bar'*-doc*       |*doc*^*^ |all |foreign |the documentation files for the program
+|'baz'             |*script* |all |foreign |the interpreted program files
+|====
+
+[[libnames]]
+===== The library package name
+
+Let's consider that the upstream source tarball of the *lib*'foo' library is updated from *lib*'foo-7.0'*.tar.gz* to *lib*'foo-8.0'*.tar.gz* with the new SONAME major version which affects other packages.
+
+The binary library package must be renamed from *lib*'foo7' to *lib*'foo8' to keep the *unstable* suite system working for all dependent packages after the upload of the package based on the *lib*'foo-8.0'*.tar.gz*.
+
+WARNING: If the binary library package isn't renamed, many dependent packages in the *unstable* suite become broken just after the library upload even if the binNMU is requested.  The binNMU may not happen immediately after the upload due to several reasons.
+
+The *-dev* package must follow one of the following naming rules:
+
+* Use the *unversioned -dev* package name: *lib*'foo'*-dev*
+** This is the normal case.
+** Only one version of the library source package is allowed in the archive.
+*** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent the dependency breakage in the *unstable* archive during the library transition.
+** This approach must be used if the simple binNMU resolves the library dependency. (http://en.wikipedia.org/wiki/Application_binary_interface[ABI] change)
+** This approach is still a good idea if manual code updates, etc. can be coordinated. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+
+* Use the *versioned -dev* package names: *lib*'foo7'*-dev* and *lib*'foo8'*-dev*
+** This is the special case.
+** Two versions of the library source packages are allowed simultaneously in the archive.
+*** Make all dependent packages depend on *lib*'foo'*-dev*.
+*** Make both *lib*'foo7'*-dev* and *lib*'foo8'*-dev* provide *lib*'foo'*-dev*.
+*** The source package needs to be renamed as *lib*'foo7-7.0'*.tar.gz* and *lib*'foo8-8.0'*.tar.gz* respectively from *lib*'foo-?.0'*.tar.gz*.
+*** The package specific install file path including *lib*'foo7' and *lib*'foo8' respectively for header files etc. needs to be chosen to make them co-installable.
+** Do not use this approach, if possible.
+** This approach may be useful if the update of dependent packages require major manual code updates, etc. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+
+See <<lib>>.
 
 [[substvar]]
 ==== Substvar
@@ -54,7 +118,9 @@ For libraries and modules required via the dynamic loading mechanism including t
 [[binnmu]]
 ==== binNMU safe
 
-For the safe https://wiki.debian.org/binNMU[binNMU], the dependency among binary packages from a same source package needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
+A https://wiki.debian.org/binNMU[binNMU] is a binary-only non-maintainer upload performed for library transitions etc.  In a binNMU, only the ``*Architecture: any*'' packages are rebuilt with a suffixed version number (e.g. version 2.3.4-3 will become 2.3.4-3+b1).  The ``*Architecture: all*'' packages are not built.
+
+The dependency defined in the *debian/control* file among binary packages from a same source package should be safe for the binNMU.  This needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
 
 * ``*Architecture: any*'' package depends on ``*Architecture: any*'' 'foo' package
 ** *Depends:* 'foo' *(= $\{binary:Version})*
@@ -63,32 +129,3 @@ For the safe https://wiki.debian.org/binNMU[binNMU], the dependency among binary
 * ``*Architecture: all*'' package depends on ``*Architecture: any*'' 'baz' package
 ** *Depends:* 'baz' *(>= $\{source:Version})*, 'baz' *(<< $\{source:Upstream-Version}.0~)*
 
-[[libnames]]
-==== The library package name
-
-Let's consider that the upstream source tarball of the *lib*'foo' library is updated from *lib*'foo-7.0'*.tar.gz* to *lib*'foo-8.0'*.tar.gz* with the new SONAME major version which affects other packages.
-
-The binary library package must be renamed from *lib*'foo7' to *lib*'foo8' to keep the *unstable* suite system working for all dependent packages after the upload of the package based on the *lib*'foo-8.0'*.tar.gz*.
-
-WARNING: If the binary library package isn't renamed, many dependent packages in the *unstable* suite become broken just after the library upload even if the binNMU is requested.  The binNMU may not happen immediately after the upload due to several reasons.
-
-The *-dev* package must follow one of the following naming rules:
-
-* Use the *unversioned -dev* package name: *lib*'foo'*-dev*
-** This is the normal case.
-** Only one version of the library source package is allowed in the archive.
-*** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent the dependency breakage in the *unstable* archive during the library transition.
-** This approach must be used if the simple binNMU resolves the library dependency. (http://en.wikipedia.org/wiki/Application_binary_interface[ABI] change)
-** This approach is still a good idea if manual code updates, etc. can be coordinated. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
-
-* Use the *versioned -dev* package names: *lib*'foo7'*-dev* and *lib*'foo8'*-dev*
-** This is the special case.
-** Two versions of the library source packages are allowed simultaneously in the archive.
-*** Make all dependent packages depend on *lib*'foo'*-dev*.
-*** Make both *lib*'foo7'*-dev* and *lib*'foo8'*-dev* provide *lib*'foo'*-dev*.
-*** The source package needs to be renamed as *lib*'foo7-7.0'*.tar.gz* and *lib*'foo8-8.0'*.tar.gz* respectively from *lib*'foo-?.0'*.tar.gz*.
-*** The package specific install file path including *lib*'foo7' and *lib*'foo8' respectively for header files etc. needs to be chosen to make them co-installable.
-** Do not use this approach, if possible.
-** This approach may be useful if the update of dependent packages require major manual code updates, etc. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
-
-See <<lib>>.

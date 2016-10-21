@@ -47,3 +47,27 @@ rpm2cpio ${FCSRPM} | cpio -dium
 ----
 
 Many upstream tarballs contain the SPEC file named as 'packagename'.*spec* or 'packagename'.*spec.in* used by the RPM system.  This can be used as the baseline for the Debian package, too.
+
+
+[[debug]]
+=== Debug
+
+When you face build problems or core dumps of generated binary programs, you need to resolve them yourself.  That's *debug*.
+
+This is too deep a topic to describe here.  So, let me just list few pointers for some typical debug tools.
+
+* *gdb* - The GNU Debugger
+** ``*info gdb*''
+** ``Debugging with GDB'' in */usr/share/doc/gdb-doc/html/gdb/index.html*
+* *strace* - Trace system calls and signals
+** Use *strace-graph* script found in */usr/share/doc/strace/examples/* to make a nice tree view
+** ``*man strace*''
+* *ltrace* - Trace library calls
+** ``*man ltrace*''
+* ``*sh -x* 'script.sh''' - Trace a Shell script
+* ``*python -mtrace --trace* 'script.py''' - Trace a Python script
+* *lsof* - List open files by processes
+** ``*man lsof*''
+
+
+

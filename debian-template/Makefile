@@ -28,6 +28,7 @@ all:
 	script -e -q -c $(ROOTDIR)/$$i.cmd $(ROOTDIR)/$$i.log ; \
 	ERR=$$? ; \
 	cat $(ROOTDIR)/$$i.log | col -b -x | \
+	grep -v -e '^Script started on' | \
 	sed -e 's#$(TESTDIR)#/path/to#g' | \
 	sed -e '$(FILTER)' > $(ROOTDIR)/$$i.slog ; \
 	if [ x$$ERR != x0 ]; then exit 1 ; fi ; \
