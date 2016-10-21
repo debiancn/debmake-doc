@@ -39,11 +39,11 @@ One tricky case occurs when upstream releases *hello-0.9.12-ReleaseCandidate-99.
 [[native]]
 === Native Debian package
 
-The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  The above workflow and the following packaging examples always use this format.
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  The *debian/source/format* file should have ``*3.0 (quilt)*'' in it as described in *dpkg-source*(1).  The above workflow and the following packaging examples always use this format.
 
 The native Debian package is the rare Debian binary package format.  It may be used only when the package is useful and valuable only for Debian.  Thus, its use is generally deprecated.
 
-CAUTION: The native debian package is often accidentally built when its upstream tarball is not accessible from the *dpkg-buildpackage* command with its correct name 'package_version'.*orig.tar.gz* .  A typical newbie mistake is to make a symlink name with ``**-**'' instead of the correct one with ``**_**''.
+CAUTION: The native Debian package is often accidentally built when its upstream tarball is not accessible from the *dpkg-buildpackage* command with its correct name 'package_version'.*orig.tar.gz* .  This is a typical newbie mistake caused by making a symlink name with ``**-**'' instead of the correct one with ``**_**''.
 
 The native Debian package has no separation between the *upstream code* and the *Debian changes* and consists only with the following:
 
@@ -54,3 +54,4 @@ If you need to create the native Debian package, create it in the ``*3.0 (native
 
 TIP: Some people promote to package even programs which have been written only for Debian in the non-native package format.  The required tarball without *debian/** files needs to be manually generated in advance before the standard workflow in <<workflow>>. footnote:[Use of the ``*debameke -t ...*'' command can help this workflow.  See <<dt-option>>.]  They claim that the use of non-native package format eases communication with the downstream distributions.
 
+TIP: There is no need to create the tarball in advance if the native package format is used.  The native Debian package can be created by setting the *debian/source/format* file to ``*3.0 (native)*'', setting the *debian/changelog* file to have the version without the Debian revision (*1.0* instead of *1.0-1*), and invoking the ``*dpkg-source -b .*'' within the source tree.

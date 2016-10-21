@@ -22,10 +22,12 @@ NOTE: Examples of creating Debian package from other complicated build systems a
 
 The big picture for building a single non-native Debian package from the upstream tarball *debhello-0.0.tar.gz* can be summarized as:
 
-* The maintainer obtains the upstream tarball and untar its contents.
-* The *debmake* command debianize the upstream source tree by adding template files to it.
-* The maintainer customizes template files.
+* The maintainer obtains the upstream tarball *debhello-0.0.tar.gz* and untar its contents to *debhello-0.0* directory.
+* The *debmake* command debianize the upstream source tree by adding template files only in the *debian* directory.
+** The *debhello_0.0.orig.tar.gz* symlink is created pointing to the *debhello-0.0.tar.gz* file.
+** The maintainer customizes template files.
 * The *debuild* command builds the binary package from the debianized source tree.
+** *debhello-0.0-1.debian.tar.xz* is created containing the *debian* directory.
 
 .Big picture of package building
 ----
@@ -34,6 +36,7 @@ The big picture for building a single non-native Debian package from the upstrea
  $ debmake
    ... manual customization
  $ debuild
+   ...
 ----
 
 TIP: The *debuild* command in this and following examples may be substituted by the equivalent commands such as the *pdebuild* command.
@@ -56,16 +59,18 @@ These features make Debian packaging with *debmake* simple and modern.
 
 Here is a summary of commands similar to the *debuild* command.
 
-* The *debian/rules* file defines how the Debian package is built.
-* The *dpkg-buildpackage* is the official command to invoke *debian/rules* to build the Debian package.  Notably, it executes itself with the *clean* target before the *binary* one for the normal package build.
-* The *debuild* command is a wrapper script of *dpkg-buidpackage* to build a package under the proper environment variables.
-* The *pdebuild* command is a wrapper script to build a package under the proper chroot environment with the proper environment variables.
-* The *git-pbuilder* command is another wrapper script to build a package under the proper chroot environment with the proper environment variables. This provides an easier command line UI to switch among different build environments.
+* The *debian/rules* file defines how the Debian binary package is built.
+* The *dpkg-buildpackage* is the official command to invoke *debian/rules* to build the Debian binary package.  Notably, it executes itself with the *clean* target before the *binary* one for the normal build.
+* The *debuild* command is a wrapper script of *dpkg-buidpackage* to build the Debian binary package under the proper environment variables.
+* The *pdebuild* command is a wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables.
+* The *git-pbuilder* command is another wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables. This provides an easier command line UI to switch among different build environments.
+
+NOTE: When building the Debian binary package, the *dpkg-buidpackage* command calls the *dpkg-source* command to create the Debian source package.
 
 [[step-upstream]]
-=== Step-by-step: upstream
+=== Step 1: Get the upstream source
 
-Let's get the source.
+Let's get the upstream source.
 
 .Download *debhello-0.0.tar.gz*
 ----
@@ -93,7 +98,7 @@ include::../debhello-0.0-pkg1/step102.slog[]
 NOTE: The *echo* of the *$(CFLAGS)* is used to verify the proper setting of the build flag in the following example.
 
 [[step-debmake]]
-=== Step-by-step: debmake
+=== Step 2: Generate template files with debmake
 
 TIP: If the *debmake* command is invoked with the *-T* option, more verbose comments are generated for the template files.
 
@@ -147,7 +152,7 @@ include::../debhello-0.0-pkg1/step204.slog[]
 ----
 
 [[step-maintainer]]
-=== Step-by-step: maintainer
+=== Step 3: Modification to the template files
 
 Some manual modification is required to make the proper Debian package as a maintainer.
 
@@ -190,9 +195,9 @@ include::../debhello-0.0-pkg1/step400.slog[]
 TIP: Configuration files used by the *dh_** commands from the *debhelper* package usually treat *#* as the start of the comment line.
 
 [[step-debuild]]
-=== Step-by-step: debuild
+=== Step 4: Building package with debuild
 
-You can create a non-native Debian package using the *debuild* command (or its equivalents) in this source tree.  The command output is very verbose and explains what it does as follows.
+You can create a non-native Debian package using the *debuild* command or its equivalents (see <<what-debuild>>) in this source tree.  The command output is very verbose and explains what it does as follows.
 
 ----
 sys::[head -n3  ../debhello-0.0-pkg1/step500.slog]
@@ -252,51 +257,87 @@ include::../debhello-0.0-pkg1/step702.slog[]
 
 CAUTION: Much more details need to be addressed before uploading the package to the Debian archive.
 
-NOTE: If manual adjustments of auto-generated configuration files are skipped, the generated binary package may lack meaningful package description and some of the policy requirements may be missed.  This sloppy package functions well under the *dpkg* command, and may be good enough for your local deployment.
+NOTE: If manual adjustments of auto-generated configuration files by the *debmake* command are skipped, the generated binary package may lack meaningful package description and some of the policy requirements may be missed.  This sloppy package functions well under the *dpkg* command, and may be good enough for your local deployment.
 
 [[alt-patch]]
-=== Alternative: patch files
+=== Step 3 (alternative): Modification to the upstream source
 
-The above step-by-step example did not touch the upstream source to make the proper Debian package.
+The above example did not touch the upstream source to make the proper Debian package.
 
-An alternative approach is to change the upstream source by creating the patch *000-prefix-usr.patch* which modifies the upstream *Makefile* to set the $(prefix) value to */usr* in advance.
+An alternative approach as the maintainer is to change the upstream source by modifying the upstream *Makefile* to set the $(prefix) value to */usr*.
 
-.create *000-prefix-usr.patch* by the *diff* command:
-----
-include::../debhello-0.0-pkg2/step120.slog[]
-----
+The packaging is practically the same as the above step-by-step example except for two points in <<step-maintainer>>:
 
-Please note that the upstream source tree is restored to the original state.
-
-The packaging is practically the same as the above step-by-step example except for 2 points of the maintainer modification.
-
-The maintainer modification to the *debian/rules* file doesn't have the *override_dh_auto_install* target as follows:
-
+* Store the maintainer modifications to the upstream source as the corresponding patch files in the *debian/patches/* directory and list their filenames in the *debian/patches/series* file as indicated in <<patches>>.
+There are several ways to generate patch files.  A few examples are given as below.
+** <<diff-u>>
+** <<dquilt>>
+** <<dpkg-source-commit>>
+* The maintainer modification to the *debian/rules* file doesn't have the *override_dh_auto_install* target as follows:
++
 .*debian/rules* (alternative maintainer version):
 ----
 include::../debhello-0.0-pkg2/step301.slog[]
 ----
 
-The maintainer modification to the upstream source during the package building process is enabled by adding the corresponding patch file in the *debian/patches/* directory and listing its file names in the *debian/patches/series* file.
+This alternative approach to the Debian packaging using a series of patch files may be less robust for the future upstream changes but more flexible to cope with the difficult upstream source.  (See <<deb3>>.)
 
-.Set of files to modify the upstream *Makefile*:
+NOTE: For this particular packaging case, the above <<step-maintainer>> using the *debian/rules* file is the better approach.  But let's keep on with this approach as a leaning process.
+
+TIP: For more complicated packaging cases, both <<step-maintainer>> and <<alt-patch>> approaches needs to be deploied.
+
+[[diff-u]]
+==== Patch by diff -u
+
+Here is an example to create *000-prefix-usr.patch* by the *diff* command.
+
+----
+include::../debhello-0.0-pkg2/step120.slog[]
+----
+
+Please note that the upstream source tree is restored to the original state and the patch file is available as *000-prefix-usr.patch*.
+
+This *000-prefix-usr.patch* is editted to be http://dep.debian.net/deps/dep3/[DEP-3] conformant and moved to the right location as below.
+
 ----
 include::../debhello-0.0-pkg2/step304.slog[]
 ----
 
-The rest of the packaging is the same as the step-by-step example.
+[[dquilt]]
+==== Patch by dquilt
 
-As indicated in <<patchapproach>>, there are several tools other than the *diff* command which generate patch files used for this alternative approach of packaging.  Most frequently used ones are the *dquilt* or *gbp-pq* commands.
+Here is an example to create *000-prefix-usr.patch* by the *dquilt* command which is a simple wrapper of the *quilt* program.  The syntax and function of the *dquilt* command  is the same as the *quilt*(1) command, except for the fact that the patch is stored in the *debian/patches/* directory.
 
-There is no need to create the patch file in advance for these commands since it can be generated as you make the maintainer modification.  Here is an example for the *dquilt* command.
-
-.patch file generation using the *dquilt* command:
 ----
 include::../debhello-0.0-pkg3/step304.slog[]
 ----
 
-TIP: If the package is maintained in the git repository using the *gbp* command, please use the *gbp-pq* command to manage patches.
+Here, *Makefile* in the upstream source tree doesn't need to be restored to the original state. The *dpkg-source* command invoked by the Debian packaging procedure in <<step-debuild>>, understands the patch application state recorded by the *dquilt* program in the *.pc/* directory.  As long as all the changes are committed by the *dquilt* command, the Debian source package can be build from the modified source tree.
 
-This alternative approach to the Debian packaging using a series of patch files may be less robust for the future upstream changes but more flexible to cope with the difficult upstream source.  (See <<deb3>>.)
+NOTE: If the *.pc/* directory is missing, the *dpkg-source* command assumes that no patch was applied.  That's why the more primitive patch generation methods like <<diff-u>> without generating the *.pc/* directory require the upstream source tree to be restored.
 
+[[dpkg-source-commit]]
+==== Patch by dpkg-source --commit
+
+Here is an example to create *000-prefix-usr.patch* by the ``*dpkg-source --commit*'' command.
+
+----
+include::../debhello-0.0-pkg4/step310.slog[]
+----
+
+Then commit changes using ``*dpkg-source --commit . 000-prefix-usr.patch*''.
+
+----
+sys::[head -n1  ../debhello-0.0-pkg4/step340.slog]
+... editor to edit the DEP-3 patch header
+...
+----
+
+Let's see the result.
+
+----
+include::../debhello-0.0-pkg4/step350.slog[]
+----
+
+Here, the *dpkg-source* command performs exactly the same as what the sequences of the *dquilt* command did in <<dquilt>>.
 

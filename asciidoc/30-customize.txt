@@ -1,56 +1,67 @@
 [[custom]]
-=== Package customization
+=== Customization of the Debian packaging
 
-Some upstream sources do not behave well and you may need to add customization to the build system of those upstream sources.
+Let's recap the customization of the Debian packaging.
 
-The package should be customized by the least invasive way to address the root cause of the Debian packaging problem.  Your packaging shall be more robust for the future upgrades in this way.  (You should also solve the root cause of the problem and send its patch to the upstream.)
+All customization data for the Debian package reside in the *debian/* directory.  A simple example is given in <<step-maintainer>>.  Normally, this customization involves combination of the followings:
 
-Here, there are a few technical approaches to customize the build system:
+* The Debian package build system can be customized through the *debian/rules* file (see <<customrules>>).
+* The Debian package installation path etc. can be customized through the addition of configuration files in the *debian/* directory for the *dh_** commands from the *debhelper* package (see <<debianconf>>).
 
-* *debian/rules* approach
-* *debian/*'bianrypackage'.* approach
-* *patches/** approach
+When these are not sufficient to make a good Debian package, the modification to the upstream source recorded as the *-p1* patches in the *debian/patches/* directory is deployed.  These patches are applied in the sequence defined in the *debian/patches/series* file before building the package (see <<patches>>).  A simple examples are given in <<alt-patch>>.
 
-[[rulesapproach]]
-==== debian/rules approach
+You should address the root cause of the Debian packaging problem by the least invasive way.  The generated package shall be more robust for the future upgrades in this way.
 
-The customization to the Debian package build system can be done through the *debian/rules* file.
+NOTE: Send the patch addressing the root cause to the upstream if it is useful to the upstream.
 
-See <<customrules>>.
+[[vcs]]
+=== Recording in VCS (standard)
 
-[[configapproach]]
-==== debian/binarypackage.* approach
+Typically, https://en.wikipedia.org/wiki/Git[Git] is used as https://en.wikipedia.org/wiki/Version_control[VCS] to record the Debian packaging activity with the following branches.
 
-Add customized configuration files for the *dh_** command from the *debhelper* package in the *debian/* directory.
+* *master* branch
+** Record the source tree used for the Debian packaging.
+** The upstream portion of the source tree is recorded unmodified.
+** The upstream modifications for the Debian packaging are recorded in the *debian/patches/* directory as the *-p1* patches.
+* *upstream* branch
+** Record the upstream source tree untared from the released upstream tarball.
 
-See <<debianconf>>.
+TIP: Its good idea to add the *.gitignore* file listing *.pc*.
 
-[[patchapproach]]
-==== patches/* approach
+TIP: Add *unapply-patches* and *abort-on-upstream-changes* to the *debian/source/local-options* file to keep the upstream portion unmodified
 
-Modifications to the upstream source before building it can be done by placing the collection of the *-p1* patches in the *patches/* directory and applying them in sequence defined in the  *patches/series* file.
+TIP: You may also track the upstream VCS data with a branch different from the *upstream* branch to ease cherry-picking of patches.
 
-There are several methods to prepare the required *-p1* patches for this.
+[[alt-vcs]]
+=== Recording in VCS (alternative)
 
-* The *diff* command (manual)
-* The ``*git format-patches*'' command (manual for the git repository)
-* The *dquilt* command (manual, elegant) (alias of the *quilt* command, see <<quilt-setup>>)
-* The *gbp-pq* command (specialized, simple)
-* The *git-dpm* command (specialized, elegant)
-* Patches used in other distros and floating on the mailing list
-* ...
+You may not wish to keep up with creating the *-p1* patch files for all upstream changes needed.  You can record the Debian packaging activity with the following branches.
 
-Wherever these patches come from, it is good idea to tag them with http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
+* *master* branch
+** Record the source tree used for the Debian packaging.
+** The upstream portion of the source tree is recorded with modifications for the Debian packaging.
+* *upstream* branch
+** Record the upstream source tree untared from the released upstream tarball.
 
-These patches should apply cleanly.  For new upstream releases, you must normalize them by the *dquilt* command (see <<quilt-setup>>).
+Adding few extra files in *debian/* directory enables you to do this.
 
-----
- $ while dquilt push; do dquilt refresh ; done
- $ dquilt pop -a
-----
+-----
+ $ tar -xvzf <package-version>.tar.gz
+ $ ln -sf <package_version>.orig.tar.gz 
+ $ cd <package-version>/
+ ... hack...hack...
+ $ echo "single-debian-patch" >> debian/source/local-options
+ $ cat >debian/source/local-patch-header <<END
+ This patch contains all the Debian-specific changes mixed
+ together. To review them separately, please inspect the VCS
+ history at https://git.debian.org/?=collab-maint/foo.git
+-----
 
-CAUTION:  Don't forget to normalize patches when you upgrade to the new upstream source or import the externally generated patches.
+Let the *dpkg-source* command invoked by the Debian package build process (*dpkg-buildpackage*, *debuild*, ...) to generate the *-p1* patch file *debian/patches/debian-changes* automatically.
 
-See  <<alt-patch>> for example.
+TIP: This approach can be adopted by any VCS tools.  If you wish to exclude VCS related files, please consider using *-I* and *-i* options for the *dpkg-source* command.
 
-NOTE: If you can avoid patching upstream source by customizing the build process via the upstream provided interface such as arguments to the *./configure* command, avoid applying Debian patches and make Debian package by customizing the *debian/rules* file.
+TIP: This approach is mean to be used with the public VCS.  Otherwise your patch becomes unreadable.
+
+WARNING: The *debian/source/local-options* and *debian/source/local-patch-header* files are not included in the Debian source package and are meant to be recorded in VCS.
+

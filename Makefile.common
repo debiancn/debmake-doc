@@ -10,6 +10,7 @@ export DEBEMAIL ?= osamu@debian.org
 export DEBFULLNAME ?= "Osamu Aoki"
 export BASEDIR ?= $(CURDIR)/tmp
 export TMPDIR ?= $(BASEDIR)/tmp
+export TERM := dumb
 #
 # Used as $(call check-command, <command>, <package>)
 define check-command

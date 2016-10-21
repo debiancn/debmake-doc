@@ -14,9 +14,8 @@ Author: Osamu Aoki <osamu@debian.org>
 EOF
 echo " ... hack, hack, hack, ..."
 echo  "Replaced header of patch 000-prefix-usr.patch"
-L "dquilt pop -a"
+#L "dquilt pop -a"
+L "tree -a"
 L "cat debian/patches/series"
 L "cat debian/patches/000-prefix-usr.patch"
-CD ..
-cd ..
 

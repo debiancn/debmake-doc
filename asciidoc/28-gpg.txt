@@ -1,5 +1,5 @@
 [[signing-key]]
-=== signing-key.pgp
+=== debian/upstream/signing-key.pgp
 
 Some packages are signed by the GPG key.
 
@@ -52,3 +52,17 @@ pgpsigurlmangle=s/$/.sig/  http://ftp.gnu.org/gnu/hello/ hello-(\d[\d.]*)\.tar\.
 ----
 
 Now the *uscan* command will check the authenticity of the package using the GPG signature.
+
+[[dfsg]]
+=== debian/watch and DFSG
+
+Debian takes software freedom seriously and follows the https://www.debian.org/social_contract.html#guidelines[DFSG].
+
+The non-https://www.debian.org/social_contract.html#guidelines[DFSG] components in the upstream source tarball can be easily removed when the *uscan* command is used to update the Debian package.
+
+* List the files to be removed in the *Files-Excluded* stanza of the  *debian/copyright* file.
+* List the URL to download the upstream tarball in the *debian/watch* file.
+* Run the *uscan* command to download the new upstream tarball.
+** Alternatively, use the ``*gbp import-orig --uscan --pristine-tar*'' command.
+* The resulting tarball has the version number with an additional suffix *+dfsg*.
+

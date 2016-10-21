@@ -12,6 +12,7 @@ TERM:=xterm
 TREE_COLORS:=
 LS_COLORS:=
 CDPATH:=
+NOANSI:=s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g
 FILTER :=s/\(^.............................................................................\).*$$/\1.../
 TGZ:=tar.gz
 export ROOTDIR TESTDIR COMMONDIR PATH PROJECT PROJECTDIR TREE_COLORS LS_COLORS TERM CDPATH TGZ
@@ -29,6 +30,7 @@ all:
 	ERR=$$? ; \
 	cat $(ROOTDIR)/$$i.log | col -b -x | \
 	grep -v -e '^Script started on' | \
+	sed -r '$(NOANSI)' | \
 	sed -e 's#$(TESTDIR)#/path/to#g' | \
 	sed -e '$(FILTER)' > $(ROOTDIR)/$$i.slog ; \
 	if [ x$$ERR != x0 ]; then exit 1 ; fi ; \

@@ -1,5 +1,7 @@
-echo " \$ vim ${PROJECT}/debian/rules"
+CD ${PROJECT}
+cd ${PROJECT}
+echo " \$ vim debian/rules"
 echo " ... hack, hack, hack, ..."
-cp -f ${COMMONDIR}/${PROJECT}/debian/rules-2 ${PROJECT}/debian/rules
-L "cat ${PROJECT}/debian/rules"
+cp -f ${COMMONDIR}/${PROJECT}/debian/rules-2 debian/rules
+L "cat debian/rules"
 

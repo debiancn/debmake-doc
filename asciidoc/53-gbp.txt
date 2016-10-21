@@ -28,3 +28,13 @@ See:
 * The *systemd* packaging practice documentation on http://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=blob;f=debian/README.source[Building from source].
 
 TIP:  Relax. You don't need to use all the wrapper tools.  Use only ones which match your needs.
+
+[[debsnap]]
+==== gbp import-dscs --debsnap
+
+For Debian source packages named '<source-package>' recorded in the http://snapshot.debian.org/[snapshot.debian.org] archive, an initial git repository with all of the Debian version history can be generated as follows.
+
+--------------
+$ gbp import-dscs --debsnap --pristine-tar '<source-package>'
+--------------
+

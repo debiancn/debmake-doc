@@ -19,7 +19,7 @@ Hints for the following can be found in the *dpkg-source*(1) manpage:
 * naming convention for the multiple upstream source tarballs
 ** 'packagename_version'**.orig.tar.gz**
 ** 'packagename_version'**.orig-**'componentname'**.tar.gz**
-* recording the Debian changes to the upstream binary file
+* recording the Debian changes to the upstream source package
 **  *dpkg-source --commit*
 
 [[other-distro]]
@@ -54,8 +54,18 @@ Many upstream tarballs contain the SPEC file named as 'packagename'.*spec* or 'p
 
 When you face build problems or core dumps of generated binary programs, you need to resolve them yourself.  That's *debug*.
 
-This is too deep a topic to describe here.  So, let me just list few pointers for some typical debug tools.
+This is too deep a topic to describe here.  So, let me just list few pointers and hints for some typical debug tools.
 
+* https://en.wikipedia.org/wiki/Core_dump[core dump]
+** ``*man core*''
+** Update the ``*/etc/security/limits.conf*'' file to include the following:
++
+-------
+* soft core unlimited
+-------
+** ``*ulimit -c unlimited*'' in *~/.bashrc*
+** ``*ulimit -a*'' to check
+** Press *Ctrl-\* or ``*kill -ABRT* 'PID''' to make a core dump file
 * *gdb* - The GNU Debugger
 ** ``*info gdb*''
 ** ``Debugging with GDB'' in */usr/share/doc/gdb-doc/html/gdb/index.html*
@@ -66,6 +76,7 @@ This is too deep a topic to describe here.  So, let me just list few pointers fo
 ** ``*man ltrace*''
 * ``*sh -x* 'script.sh''' - Trace a Shell script
 * ``*python -mtrace --trace* 'script.py''' - Trace a Python script
+* ``*perl -d:Trace* 'script.pl''' - Trace a Perl script
 * *lsof* - List open files by processes
 ** ``*man lsof*''
 
