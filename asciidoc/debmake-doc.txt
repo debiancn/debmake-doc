@@ -70,9 +70,11 @@ include::25-changelog.txt[]
 
 include::26-copyright.txt[]
 
-include::27-debconfig.txt[]
+include::27-patches.txt[]
 
 include::28-gpg.txt[]
+
+include::29-debconfig.txt[]
 
 include::30-customize.txt[]
 
@@ -82,9 +84,9 @@ include::32-debug.txt[]
 
 include::33-lib.txt[]
 
-include::34-multiarch.txt[]
+include::34-symbols.txt[]
 
-include::35-symbols.txt[]
+include::35-multiarch.txt[]
 
 include::36-harden.txt[]
 
@@ -118,23 +120,23 @@ include::47-toption.txt[]
 
 include::50-devs.txt[]
 
-include::51-gbp.txt[]
+include::53-gbp.txt[]
 
-include::52-gitrepo.txt[]
+include::55-gitrepo.txt[]
 
-include::53-chroot.txt[]
+include::57-chroot.txt[]
 
-include::54-newrev.txt[]
+include::60-newrev.txt[]
 
-include::55-newver.txt[]
+include::61-newver.txt[]
 
-include::56-deb3.txt[]
+include::65-deb3.txt[]
 
-include::57-cdbs.txt[]
+include::66-cdbs.txt[]
 
-include::58-utf8.txt[]
+include::67-utf8.txt[]
 
-include::60-origtar.txt[]
+include::68-origtar.txt[]
 
 include::69-adv.txt[]
 

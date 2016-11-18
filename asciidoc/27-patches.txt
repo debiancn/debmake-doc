@@ -1,0 +1,70 @@
+[[patches]]
+=== debian/patches/*
+
+The *-p1* patches in the *debian/patches/* directory are applied in the sequence defined in the *debian/patches/series* file to the upstream source tree before the *build* process.
+
+NOTE: The native Debian package (see <<native>>) doesn't use these files.
+
+There are several methods to prepare a series of *-p1* patches.
+
+* The *diff* command
+** See <<diff-u>>
+** Primitive but versatile method
+*** Patches may come from other distros, mailing list postings, or cherry-picked patches from the upstream *git* repository with the ``*git format-patches*'' command
+** Missing the *.pc/* directory
+** Unmodified upstream source tree
+** Manually update the *debian/patches/series* file
+* The *dquilt* command
+** See <<quilt-setup>>
+** Basic convenient method
+** Proper generation of the *.pc/* directory data
+** Modified upstream source tree
+* The ``*dpkg-source --commit*'' command
+** See <<dpkg-source-commit>>
+** Newer elegant method
+** Proper generation of the *.pc/* directory data
+** Modified upstream source tree
+* The automatic patch generation by the *dpkg-buildpackage*
+** See <<alt-vcs>>
+** Add *single-debian-patch* in the *debian/source/local-options* file
+** Set the *debian/source/local-patch-header* file
+** Missing the *.pc/* directory
+** Modified upstream source tree in the Debian branch (*master*)
+* The *gbp-pq* command
+** basic *git* work flow with the *git-buildpackage* package
+** Missing the *.pc/* directory
+** Modified upstream source tree in the through-away branch (*patch-queue/master*)
+** Unmodified upstream source tree in the Debian branch (*master*)
+* The *gbp-dpm* command
+** more elaborate *git* work flow with the *git-dpm* package
+** Missing the *.pc/* directory
+** Modified upstream source tree in the patched branch (*patched/*'whatever')
+** Unmodified upstream source tree in the Debian branch (*master/*'whatever')
+
+Wherever these patches come from, it is good idea to tag them with http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
+
+[[dpkg-source-x]]
+==== dpkg-source -x
+
+The ``*dpkg-source -x*'' command unpacks the Debian source package.
+
+It normally applies the patches in the *debian/patches/* directory to the source tree and records the patch state in the *.pc/* directory. 
+
+If you wish to keep the source tree unmodified (for example, for use in <<vcs>>), please use the *--skip-patches* option.
+
+[[quilt-dpkg]]
+==== dquilt and dpkg-source
+
+The *quilt* command (or its wrapped *dquilt* command) was needed to manage the *-p1* patches in the *debian/patches/* directory before the *--commit* feature was added to the *dpkg-source* command in 1.16.1.
+
+The patches should apply cleanly when using the *dpkg-source* command.  Thus you can't just copy the patches to the new packaging of the new upstream release if there are patch offset etc.
+
+The *dquilt* command (see <<quilt-setup>>) is more foregiving.  You can normalize the patches by the *dquilt* command.
+
+----
+ $ while dquilt push; do dquilt refresh ; done
+ $ dquilt pop -a
+----
+
+There is one advantage of using the *dpkg-source* command over the *dquilt* command.  While the *dquilt* command can not handle modified binary files automatically, the *dpkg-source* command detects modified binary files and lists them in the *debian/source/include-binaries* file to include them in the Debian tarball.
+
