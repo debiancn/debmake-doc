@@ -88,7 +88,7 @@ include::../debhello-2.1-pkg1/step304.slog[]
 
 Since this upstream source creates the proper auto-generated *Makefile*, there are no needs to create *debian/install* and *debian/manpages* files.
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=2.1):
 ----

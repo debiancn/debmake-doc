@@ -89,7 +89,7 @@ include::../debhello-0.2-pkg1/step303.slog[]
 include::../debhello-0.2-pkg1/step304.slog[]
 ----
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=0.2):
 ----

@@ -185,7 +185,7 @@ include::../debhello-0.0-pkg1/step302.slog[]
 include::../debhello-0.0-pkg1/step303.slog[]
 ----
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=0.0):
 ----
@@ -284,7 +284,7 @@ This alternative approach to the Debian packaging using a series of patch files 
 
 NOTE: For this particular packaging case, the above <<step-maintainer>> using the *debian/rules* file is the better approach.  But let's keep on with this approach as a leaning process.
 
-TIP: For more complicated packaging cases, both <<step-maintainer>> and <<alt-patch>> approaches needs to be deploied.
+TIP: For more complicated packaging cases, both <<step-maintainer>> and <<alt-patch>> approaches need to be deployed.
 
 [[diff-u]]
 ==== Patch by diff -u
