@@ -46,7 +46,7 @@ The *debian/copyright* file must be organized to list the generic file patterns 
 *-n*, *--native*::
 make a native Debian source package without *.orig.tar.gz*.  This makes the ``*3.0 (native)*'' format package.
 +
-If you are thinking to package a Debian specific source tree with *debian/** in it into a native Debian package, please think otherwise.  You can use  ``*debmake -d  -i debuild*'' or ``*debmake -t -i debuild*'' to make the ``*3.0 (quilt)*'' format non-native Debian package.  The only difference is that the *debian/changelog* file must use the  non-native version scheme: 'version-revision'.  The non-native package is more friendly to the downstream distributions.
+If you are thinking to package a Debian specific source tree with *debian/** in it into a native Debian package, please think otherwise.  You can use  the ``*debmake -d  -i debuild*'' or ``*debmake -t -i debuild*'' commands to make the ``*3.0 (quilt)*'' format non-native Debian package.  The only difference is that the *debian/changelog* file must use the  non-native version scheme: 'version-revision'.  The non-native package is more friendly to the downstream distributions.
 
 *-a* 'package-version'**.tar.gz**, *--archive* 'package-version'**.tar.gz**::
 use the upstream source tarball directly. (*-p*, *-u*, *-z*: overridden)
@@ -58,14 +58,14 @@ If the specified upstream tarball name contains uppercase letters, the Debian pa
 If the specified argument is the URL (http://, https://, or ftp://) to the upstream tarball, the upstream tarball is downloaded from the URL using *wget* or *curl*.
 
 *-d*, *--dist*::
-run ``make dist'' equivalent first to generate upstream tarball and use it.
+run the ``make dist'' command equivalents first to generate the upstream tarball and use it.
 +
-``*debmake -d*'' is designed to run in the 'package/' directory hosting the upstream VCS with the build system supporting ``*make dist*'' equivalents.  (automake/autoconf, Python distutils, ...)
+The ``*debmake -d*'' command is designed to run in the 'package/' directory hosting the upstream VCS with the build system supporting the ``*make dist*'' command equivalents.  (automake/autoconf, Python distutils, ...)
 
 *-t*, *--tar*::
-run ``*tar*'' to generate upstream tarball and use it
+run the ``*tar*'' command to generate the upstream tarball and use it.
 +
-``*debmake -t*'' is designed to run in the 'package/' directory hosting the upstream VCS.  Unless you provide the upstream version with the *-u* option or with the *debian/changelog* file, a snapshot upstream version is generated in the *0\~%y%m%d%H%M* format, e.g., '0~1403012359', from the UTC date and time.  The generated tarball excludes the *debian/* directory found in the upstream VCS. (It also excludes typical VCS directories: **.git/ .hg/ .svn/ .CVS/**)
+The ``*debmake -t*'' command is designed to run in the 'package/' directory hosting the upstream VCS.  Unless you provide the upstream version with the *-u* option or with the *debian/changelog* file, a snapshot upstream version is generated in the *0\~%y%m%d%H%M* format, e.g., '0~1403012359', from the UTC date and time.  The generated tarball excludes the *debian/* directory found in the upstream VCS. (It also excludes typical VCS directories: **.git/ .hg/ .svn/ .CVS/**)
 
 *-p* 'package', *--package* 'package'::
 set the Debian package name.
@@ -80,9 +80,9 @@ set the Debian package revision.
 set the tarball type, 'extension'=(*tar.gz*|*tar.bz2*|*tar.xz*) (alias: *z*, *b*, *x*)
 
 *-b* "'binarypackage[:type],...'", *--binaryspec* "'binarypackage[:type],...'"::
-set binary package specs by the comma separated list of 'binarypackage:type' pairs, e.g., in full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,libfoo-dev:dev*'' or in short form ``*,-doc,libfoo1,libfoo1-dbg, libfoo-dev*''.
+set the binary package specs by the comma separated list of 'binarypackage:type' pairs, e.g., in the full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,libfoo-dev:dev*'' or in the short form ``*,-doc,libfoo1,libfoo1-dbg, libfoo-dev*''.
 +
-Here, 'binarypackage' is the binary package name; and optional 'type' is chosen from the following 'type' values:
+Here, 'binarypackage' is the binary package name; and the optional 'type' is chosen from the following 'type' values:
 +
 --
 ** *bin*: C/C++ compiled ELF binary code package (any, foreign) (default, alias: *""*, i.e., 'null-string')
@@ -102,7 +102,7 @@ The pair values in the parentheses, such as (any, foreign), are the *Architectur
 +
 In many cases, the *debmake* command makes good guesses for 'type' from 'binarypackage'.  If 'type' is not obvious, 'type' is set to *bin*.  For example, *libfoo* sets 'type' to *lib*, and *font-bar* sets 'type' to *data*, ...
 +
-If the source tree contents do not match settings for 'type', *debmake* warns you.
+If the source tree contents do not match settings for 'type', the *debmake* command warns you.
 
 *-e* 'foo@example.org', *--email* 'foo@example.org'::
 set e-mail address.
@@ -193,9 +193,7 @@ output tutorial comment lines in template files.
 
 == EXAMPLES
 
-For  a  well  behaving  source, you can build a good-for-local-use installable single Debian binary package easily with one command.  Test install of such a package
-generated in this way offers a good alternative to traditional ``*make install*'' to the */usr/local* directory since the Debian package can be  removed  cleanly  by  the
-``*dpkg -P* '...''' command. Here are some examples of how to build such test packages. (These should work in most cases.  If the *-d* does not work, try *-t* instead.)
+For a well behaving source, you can build a good-for-local-use installable single Debian binary package easily with one command.  Test install of such a package generated in this way offers a good alternative to the traditional ``*make install*'' command to the */usr/local* directory since the Debian package can be  removed  cleanly  by  the ``*dpkg -P* '...''' command. Here are some examples of how to build such test packages. (These should work in most cases.  If the *-d* option does not work, try the *-t* option instead.)
 
 For a typical C program source tree packaged with autoconf/automake:
 
@@ -249,7 +247,7 @@ See the exact definition in http://www.debian.org/doc/debian-policy/ch-controlfi
 
 == DEBUG
 
-Please report bugs to *debmake* using *reportbug*.
+Please report bugs to the *debmake* package using the *reportbug* command.
 
 The character set in the environment variable *$DEBUG* determines the logging output level.
 

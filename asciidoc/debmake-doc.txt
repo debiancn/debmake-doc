@@ -101,9 +101,9 @@ include::39-pkgtest.txt[]
 
 include::40-aioption.txt[]
 
-include::41-dtoption.txt[]
+include::41-pymod.txt[]
 
-include::42-pymod.txt[]
+include::42-dtoption.txt[]
 
 include::43-coption.txt[]
 

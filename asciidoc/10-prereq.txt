@@ -199,7 +199,7 @@ Here:
 * For is_it_distributable(), check:
 ** The software must have a license and it should allow its distribution.
 
-You either need to file an ITP or adopt a package to start working on it.  See the ``Debian Developer's Reference'':
+You either need to file an *ITP* or adopt a package to start working on it.  See the ``Debian Developer's Reference'':
 
 * https://www.debian.org/doc/manuals/developers-reference/pkgs.html#newpackage[5.1. New packages].
 * https://www.debian.org/doc/manuals/developers-reference/pkgs.html#archive-manip[5.9. Moving, removing, renaming, orphaning, adopting, and reintroducing packages].

@@ -43,6 +43,8 @@ There are several methods to prepare a series of *-p1* patches.
 
 Wherever these patches come from, it is good idea to tag them with http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
 
+TIP: The *dgit* package offeres an alternative git integration tool with the Debian package archive.
+
 [[dpkg-source-x]]
 ==== dpkg-source -x
 

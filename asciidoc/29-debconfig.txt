@@ -262,7 +262,7 @@ See *dh_makeshlibs*(1) and <<symbols>>..
 This is the *debconf* *templates* file used for asking any questions necessary to configure the package.  See <<debconf>>.
 
 *tests/control*::
-This is the RFC822-style test metadata file defined in http://dep.debian.net/deps/dep8/[DEP-8].  See *adt-run*(1) and <<ci>>.
+This is the RFC822-style test meta data file defined in http://dep.debian.net/deps/dep8/[DEP-8].  See *adt-run*(1) and <<ci>>.
 
 *TODO*::
 Installed into the first binary package listed in the *debian/control* file as *usr/share/doc/*'binarypackage'*/TODO.Debian*.

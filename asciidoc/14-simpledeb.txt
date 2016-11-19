@@ -60,12 +60,22 @@ These features make Debian packaging with *debmake* simple and modern.
 Here is a summary of commands similar to the *debuild* command.
 
 * The *debian/rules* file defines how the Debian binary package is built.
-* The *dpkg-buildpackage* is the official command to invoke *debian/rules* to build the Debian binary package.  Notably, it executes itself with the *clean* target before the *binary* one for the normal build.
-* The *debuild* command is a wrapper script of *dpkg-buidpackage* to build the Debian binary package under the proper environment variables.
+* The *dpkg-buildpackage* is the official command to build the Debian binary package.  For normal binary build, it executes roughly:
+** ``*dpkg-source --before-build*'' (apply Debian patches)
+** ``*fakeroot debian/rules clean*''
+** ``*dpkg-source --build*'' (build the Debian source package)
+** ``*fakeroot debian/rules build*'' 
+** ``*fakeroot debian/rules binary*'' 
+** ``*dpkg-genbuildinfo*'' (generate a ***.buildinfo** file)
+** ``*dpkg-genchanges*'' (generate a ***.changes** file)
+** ``*fakeroot debian/rules clean*''
+** ``*dpkg-source --after-build*'' (unapply Debian patches)
+** ``*debsign*'' (unless *-us* and *-uc* are used)
+* The *debuild* command is a wrapper script of *dpkg-buildpackage* to build the Debian binary package under the proper environment variables.
 * The *pdebuild* command is a wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables.
 * The *git-pbuilder* command is another wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables. This provides an easier command line UI to switch among different build environments.
 
-NOTE: When building the Debian binary package, the *dpkg-buidpackage* command calls the *dpkg-source* command to create the Debian source package.
+NOTE: See *dpkg-buildpackage*(1) for exact details.
 
 [[step-upstream]]
 === Step 1: Get the upstream source
@@ -321,11 +331,13 @@ NOTE: If the *.pc/* directory is missing, the *dpkg-source* command assumes that
 
 Here is an example to create *000-prefix-usr.patch* by the ``*dpkg-source --commit*'' command.
 
+Let's edit the upstream source.
+
 ----
 include::../debhello-0.0-pkg4/step310.slog[]
 ----
 
-Then commit changes using ``*dpkg-source --commit . 000-prefix-usr.patch*''.
+Let's commit it.
 
 ----
 sys::[head -n1  ../debhello-0.0-pkg4/step340.slog]

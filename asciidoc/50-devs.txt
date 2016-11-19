@@ -45,7 +45,7 @@ You should install generated packages with the *piuparts* command to test it aut
 $ sudo piuparts package_version-rev_arch.changes
 ----
 
-NOTE: This is very slow proess with the remote APT package repository access.
+NOTE: This is very slow process with the remote APT package repository access.
 
 [[debsign]]
 === debsign

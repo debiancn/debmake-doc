@@ -9,5 +9,6 @@ The *debmake* command with the *-cc* option can make a summary of the copyright 
  $ debmake -cc | less
 ----
 
-With *-c*, this provides shorter report.
+With the *-c* option, this provides shorter report.
+
 
