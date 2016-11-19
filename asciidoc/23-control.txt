@@ -32,7 +32,7 @@ The *debmake* command with the *-b* option provides intuitive and flexible metho
 * *Depends:*
 * *Pre-Depends:*
 
-The *debmake* command also set an apropriate set of substvar used in each pertinent dependency stanza.
+The *debmake* command also set an appropriate set of substvar used in each pertinent dependency stanza.
 
 Let's quote the pertinent part from the *debmake* manpage here.
 

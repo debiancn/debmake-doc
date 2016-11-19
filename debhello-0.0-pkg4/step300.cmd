@@ -1,0 +1,2 @@
+CD ${PROJECT}
+cd ${PROJECT}

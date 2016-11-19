@@ -1,0 +1,4 @@
+Description: set prefix=/usr patch
+Author: Osamu Aoki <osamu@debian.org>
+Index: debhello-0.0/Makefile
+
