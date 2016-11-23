@@ -1,4 +1,6 @@
-It's time to learn the basic rules of the Debian packaging.
+The broad overview is presented here for the basic rules of the Debian packaging focusing on the non-native Debian package in the ``*3.0 (quilt)*'' format.
+
+NOTE: Some details are intentionally skipped for clarity.  Please read the manpages of the *dpkg-source*(1), *dpkg-buildpackage*(1), *dpkg*(1), dpkg-deb(1), *deb*(5), etc.
 
 The Debian source package is a set of input files used to build the Debian binary package and is not a single file.
 
@@ -6,7 +8,7 @@ The Debian binary package is a special archive file which holds a set of install
 
 A single Debian source package may generate multiple Debian binary packages defined in the *debian/control* file.
 
-The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  
 
 NOTE: There are many wrapper scripts.  Use them to streamline your workflow but make sure to understand the basics of their internals.
 

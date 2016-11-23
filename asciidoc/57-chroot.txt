@@ -54,7 +54,7 @@ TIP: A custom environment with some pre-loaded packages needed for the new exper
 
 TIP: If your old chroot is missing packages such as *libeatmydata1*, *ccache*, and *lintian*, you may want to install these with the ``*git-pbuilder login --save-after-login*'' command.
 
-TIP: The chroot filesystem can be cloned simply by copying with ``*cp -a base-*'dist'*.cow base-*'customdist'*.cow*''.  The new chroot can be accessed as ``*gbp buildpackage --git-dist=*'customdist''' and ``*DIST=*'customdist' *git-pbuilder ...*''.
+TIP: The chroot filesystem can be cloned simply by copying with the ``*cp -a base-*'dist'*.cow base-*'customdist'*.cow*'' command.  The new chroot can be accessed as ``*gbp buildpackage --git-dist=*'customdist''' and ``*DIST=*'customdist' *git-pbuilder ...*''.
 
 TIP: When the *orig.tar.gz* file needs to be upload for the Debian revision other than *0* and *1* (e.g., for the security upload), add the *-sa* option to the end of *dpkg-buildpackage*, *debuild*, *pdebuild*, and *git-pbuilder* commands.  For the ``*gbp buildpackage*'' command,  temporarily modify the *builder* setting of *~/.gbp.conf*.
 

@@ -1,3 +1,11 @@
+debmake-doc (1.6-1) unstable; urgency=medium
+
+  * Add "Rebuilding package without extraneous diffs".
+  * Move python module description.
+  * Refine text and fix typos.
+
+ -- Osamu Aoki <osamu@debian.org>  Wed, 23 Nov 2016 22:17:16 +0900
+
 debmake-doc (1.5-1) unstable; urgency=medium
 
   * Reorganize "Simple Example" section.

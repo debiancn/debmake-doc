@@ -59,7 +59,7 @@ Since this upstream source has the proper upstream *Makefile*, there are no need
 
 The *debian/control* file is exactly the same as the one in <<nomakefile>>.
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=1.0):
 ----
