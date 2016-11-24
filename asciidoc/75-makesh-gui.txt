@@ -60,7 +60,7 @@ Please note manually added *zenity*.
 
 The *debian/rules* file is exactly the same as the one in <<makefile-sh>>.
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=1.2):
 ----

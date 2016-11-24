@@ -1,7 +1,7 @@
 [[dt-option]]
 === Upstream snapshot (-d, -t)
 
-The upstream snapshot from the upstream source tree in VCS can be made with the *-d* option if the upstream supports the ``*make dist*'' equivalence.
+The upstream snapshot from the upstream source tree in the VCS can be made with the *-d* option if the upstream supports the ``*make dist*'' equivalence.
 
 ----
  $ cd /path/to/upstream-vcs

@@ -1,14 +1,14 @@
 [[newversion]]
 === New upstream release
 
-If a package *foo* is properly packaged in the modern ``*3.0 (native)*'' or ``*3.0 (quilt)*'' formats, packaging a new upstream release is essentially moving the old *debian/* directory to the new source. This can be done by running ``*tar -xvzf* '/path/to/foo_oldversion'*.debian.tar.gz*'' in the new extracted source. footnote:[If a package *foo* is packaged in the old *1.0* format, this can be done by running ``*zcat* '/path/to/foo_oldversion'*.diff.gz|patch -p1*'' in the new extracted source, instead.] Of course, you need to do some obvious chores.
+If a package *foo* is properly packaged in the modern ``*3.0 (native)*'' or ``*3.0 (quilt)*'' formats, packaging a new upstream release is essentially moving the old *debian/* directory to the new source. This can be done by running the ``*tar -xvzf* '/path/to/foo_oldversion'*.debian.tar.gz*'' command in the new extracted source. footnote:[If a *foo* package is packaged in the old *1.0* format, this can be done by running the ``*zcat* '/path/to/foo_oldversion'*.diff.gz|patch -p1*'' command in the new extracted source, instead.] Of course, you need to do some obvious chores.
 
 There are several tools to handle this situation.  After updating to the new upstream release with these tools, please make sure to describe concisely the changes in the new upstream release that fix reported bugs and close those bugs by adding ``*Closes: #*'bug_number''' in the *debian/changelog* file.
 
 [[uupdate]]
 ==== uupdate + tarball
 
-You can update to the new upstream source with the *uupdate* command from the *devscripts* package.  It requires to have the old Debian source package and the new upstream tarball.
+You can automatically update to the new upstream source with the *uupdate* command from the *devscripts* package.  It requires to have the old Debian source package and the new upstream tarball.
 
 ----
  $ wget http://example.org/foo/foo-newversion.tar.gz
@@ -23,7 +23,7 @@ You can update to the new upstream source with the *uupdate* command from the *d
 [[uscan]]
 ==== uscan
 
-You can update to the new upstream source with the *uscan* command from the *devscripts* package.  It requires to have the old Debian source package and the *debian/watch* file in it.
+You can automatically update to the new upstream source with the *uscan* command from the *devscripts* package.  It requires to have the old Debian source package and the *debian/watch* file in it.
 
 ----
  $ cd foo-oldversion
@@ -36,7 +36,7 @@ You can update to the new upstream source with the *uscan* command from the *dev
 [[gbp-orig]]
 ==== gbp
 
-You can update to the new upstream source with the ``*gbp import-orig --pristine-tar*'' command from the *git-buildpackage* package.  It requires to have the old Debian source in the git repository and the new upstream tarball.
+You can automatically update to the new upstream source with the ``*gbp import-orig --pristine-tar*'' command from the *git-buildpackage* package.  It requires to have the old Debian source in the git repository and the new upstream tarball.
 
 ----
  $ ln -sf foo-newversion.tar.gz foo_newversion.orig.tar.gz
@@ -60,7 +60,7 @@ TIP:  If upstream uses the git repository, please also use *--upstream-vcs-tag* 
 [[gbp-uscan]]
 ==== gbp + uscan
 
-You can update to the new upstream source with the ``*gbp import-orig --pristine-tar --uscan*'' command from the *git-buildpackage* package.  It requires to have the old Debian source in the git repository and the *debian/watch* file in it.
+You can automatically update to the new upstream source with the ``*gbp import-orig --pristine-tar --uscan*'' command from the *git-buildpackage* package.  It requires to have the old Debian source in the git repository and the *debian/watch* file in it.
 
 ----
  $ cd foo-vcs

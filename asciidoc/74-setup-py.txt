@@ -94,7 +94,7 @@ The *hello* command does not come with the upstream provided manpage, let's add 
 include::../debhello-1.1-pkg1/step303.slog[]
 ----
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 The rest of the packaging activities are practically the same as the one in <<makefile-sh>>.
 

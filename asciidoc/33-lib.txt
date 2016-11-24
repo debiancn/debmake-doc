@@ -20,4 +20,4 @@ For the historic background study, see:
 * http://debconf4.debconf.org/talks/dependency-hell/img1.html[Escaping the Dependency Hell] footnote:[This document was written before the introduction of the *symbols* file.]
 ** This encourages to have versioned symbols in the shared library.
 * http://www.netfort.gr.jp/\~dancer/column/libpkg-guide/libpkg-guide.html[Debian Library Packaging guide] footnote:[The strong preference to use the SONAME versioned *-dev* package names over the single *-dev* package name in its http://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html#devpkg[Chapter 6. Development (-DEV) packages] does not seem to be shared by the former ftp-master (Steve Langasek). This document was written before the introduction of the *multiarch* system and the *symbols* file.]
-** Please read the discussion thread following https://lists.debian.org/debian-devel/2004/06/msg00069.html[its announcenent], too.
+** Please read the discussion thread following https://lists.debian.org/debian-devel/2004/06/msg00069.html[its announcement], too.

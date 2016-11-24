@@ -3,7 +3,7 @@
 
 Hints for the following can be found in the *debhelper*(7) manpage:
 
-* differences of the debhelper tool behavior under ``*compat* \<= 8''
+* differences of the *debhelper* tool behavior under ``*compat* \<= 8''
 * building several binary packages with several different build conditions
 ** making multiple copies of the upstream source
 ** invoking multiple ``*dh_auto_configure -S ...*'' commands in the *override_dh_auto_configure* target

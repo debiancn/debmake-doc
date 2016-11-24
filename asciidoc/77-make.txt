@@ -65,7 +65,7 @@ If the *DEB_BUILD_MAINT_OPTIONS* is not exported in the *debian/rules*, the lint
 
 The *debian/control* file making it exactly the same as one in <<step-maintainer>>, since the *libm* library is always available as a part of the *libc6* (Priority: required).
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 .Template files under *debian/*. (v=1.4):
 ----

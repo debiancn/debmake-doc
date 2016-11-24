@@ -72,7 +72,7 @@ Let's make this Debian package better as the maintainer.
 include::../debhello-1.5-pkg1/step301.slog[]
 ----
 
-There are several other template files under the *debian/* directory.  These also needs to be updated.
+There are several other template files under the *debian/* directory.  These also need to be updated.
 
 The rest of the packaging activities are practically the same as the one in <<step-debuild>>.
 
