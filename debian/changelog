@@ -1,3 +1,10 @@
+debmake-doc (1.7-1) unstable; urgency=medium
+
+  * Add "Native Debian source package without extraneous files"
+  * Refine text and fix typos.
+
+ -- Osamu Aoki <osamu@debian.org>  Fri, 25 Nov 2016 23:32:40 +0900
+
 debmake-doc (1.6-1) unstable; urgency=medium
 
   * Add "Rebuilding package without extraneous diffs".

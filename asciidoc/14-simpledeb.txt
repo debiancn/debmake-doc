@@ -41,6 +41,8 @@ The big picture for building a single non-native Debian package from the upstrea
 
 TIP: The *debuild* command in this and following examples may be substituted by the equivalent commands such as the *pdebuild* command.
 
+TIP: If the upstream tarball in the ***.tar.xz* format is available, use it instead of the one in the ***.tar.gz* and ***.tar.bz2* formats. The *xz* compression offers the better compression than the *gzip* and *bzip2* compressions.
+
 [[what-debmake]]
 === What is debmake?
 
@@ -61,7 +63,7 @@ Here is a summary of commands similar to the *debuild* command.
 
 * The *debian/rules* file defines how the Debian binary package is built.
 * The *dpkg-buildpackage* is the official command to build the Debian binary package.  For normal binary build, it executes roughly:
-** ``*dpkg-source --before-build*'' (apply Debian patches)
+** ``*dpkg-source --before-build*'' (apply Debian patches, unless it is already applied)
 ** ``*fakeroot debian/rules clean*''
 ** ``*dpkg-source --build*'' (build the Debian source package)
 ** ``*fakeroot debian/rules build*'' 
@@ -69,9 +71,10 @@ Here is a summary of commands similar to the *debuild* command.
 ** ``*dpkg-genbuildinfo*'' (generate a ***.buildinfo** file)
 ** ``*dpkg-genchanges*'' (generate a ***.changes** file)
 ** ``*fakeroot debian/rules clean*''
-** ``*dpkg-source --after-build*'' (unapply Debian patches)
-** ``*debsign*'' (unless *-us* and *-uc* are used)
-* The *debuild* command is a wrapper script of *dpkg-buildpackage* to build the Debian binary package under the proper environment variables.
+** ``*dpkg-source --after-build*'' (unapply Debian patches, unless the *--unapply-patches* option is used)
+** ``*debsign*'' (sign the **\*.dsc** and ***.changes** files)
+*** If you followed <<devscripts-setup>> to set the *-us* and *-uc* options, this step is skipped and you must run the *debsign* command manually.
+* The *debuild* command is a wrapper script of the *dpkg-buildpackage* command to build the Debian binary package under the proper environment variables.
 * The *pdebuild* command is a wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables.
 * The *git-pbuilder* command is another wrapper script to build the Debian binary package under the proper chroot environment with the proper environment variables. This provides an easier command line UI to switch among different build environments.
 
