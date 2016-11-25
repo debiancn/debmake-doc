@@ -3,9 +3,9 @@ for f in \
 	libsharedlib1.install \
 	libsharedlib-dev.install \
 	; do
-echo " \$ vim debhello-3.3/debian/$f"
+echo " \$ vim ${PROJECT}/debian/$f"
 echo " ... hack, hack, hack, ..."
-cp -f ${COMMONDIR}/${PROJECT}/debian/$f debhello-3.3/debian/$f
-L "cat debhello-3.3/debian/$f"
+cp -f ${COMMONDIR}/${PROJECT}/debian/$f ${PROJECT}/debian/$f
+L "cat ${PROJECT}/debian/$f"
 done
 

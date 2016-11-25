@@ -113,6 +113,8 @@ DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"
 DEBSIGN_KEYID="Your_GPG_keyID"
 ----
 
+The *-I* option is intentionally skipped here for *DEBUILD_DPKG_BUILDPACKAGE_OPTS*. See <<rebuild-native>>.
+
 Currently, RSA key with 4096 bits is good idea.  See http://keyring.debian.org/creating-key.html[Creating a new GPG key].
 
 [[pbuilder-setup]]

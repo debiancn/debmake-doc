@@ -79,6 +79,8 @@ include::../debhello-0.2-pkg1/step301.slog[]
 include::../debhello-0.2-pkg1/step302.slog[]
 ----
 
+WARNING: If you leave ``*Section: unknown*'' in the template *debian/control* file unchanged, the *lintian* error may cause the build failure.
+
 .*debian/install* (maintainer version, v=0.2):
 ----
 include::../debhello-0.2-pkg1/step303.slog[]

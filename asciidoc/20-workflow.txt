@@ -1,6 +1,6 @@
 The broad overview is presented here for the basic rules of the Debian packaging focusing on the non-native Debian package in the ``*3.0 (quilt)*'' format.
 
-NOTE: Some details are intentionally skipped for clarity.  Please read the manpages of the *dpkg-source*(1), *dpkg-buildpackage*(1), *dpkg*(1), dpkg-deb(1), *deb*(5), etc.
+NOTE: Some details are intentionally skipped for clarity.  Please read the manpages of the *dpkg-source*(1), *dpkg-buildpackage*(1), *dpkg*(1), *dpkg-deb*(1), *deb*(5), etc.
 
 The Debian source package is a set of input files used to build the Debian binary package and is not a single file.
 
@@ -48,7 +48,7 @@ The copyright and license summary (see <<copyright>>)
 * Build the source using ``*debian/rules build*'' into *$(DESTDIR)*
 ** *DESTDIR=debian*/'binarypackage/' (single binary package)
 ** *DESTDIR=debian/tmp/* (multi binary package)
-* Create the Debian binary package using *dpkg-deb*(1), and *dpkg-genchanges*(1).
+* Create the Debian binary package using *dpkg-deb*(1), *dpkg-genbuildinfo*(1), and *dpkg-genchanges*(1).
 ** 'binarypackage_version-revision_arch'.*deb*
 ** ... (There may be multiple Debian binary package files.)
 ** 'package_version-revision_arch'.*changes*

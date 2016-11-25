@@ -29,7 +29,7 @@ If the upstream source tree in the VCS contains the **debian/*** files, the *deb
  $ debmake -t -p package -i debuild
 ----
 
-This Debian *non-native* binary package building scheme using the ``*debmake -t -i debuild*'' command may be considered as the *quasi-native* Debian package scheme since the packaging situation resembles the Debian *native* binary package building case using the *debuild* command without the upstream tarball.
+This *non-native* Debian binary package building scheme using the ``*debmake -t -i debuild*'' command may be considered as the *quasi-native* Debian package scheme since the packaging situation resembles the *native* Debian binary package building case using the *debuild* command without the upstream tarball.
 
 Use of the *non-native* Debian package helps to ease communication with the downstream distros such as Ubuntu for bug fixes etc.
 

@@ -1,5 +1,5 @@
 # make deb
-CD debhello-3.3
-cd debhello-3.3
+CD ${PROJECT}
+cd ${PROJECT}
 echo " \$ debuild"
 debuild -i -us -uc

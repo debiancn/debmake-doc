@@ -8,7 +8,7 @@ debmake - program to make the Debian source package
 
 == SYNOPSIS
 
-*debmake*  [*-h*]  [*-c* | *-k*] [*-n* | *-a* 'package-version'*.orig.tar.gz* | *-d* | *-t* ] [*-p* 'package'] [*-u* 'version'] [*-r* 'revision'] [*-z* 'extension'] [*-b* "'binarypackage'[:__type__]__, ...__]" [*-e* 'foo@example.org'] [*-f* "'firstname lastname'"] [*-i* "'buildtool'" | *-j*] [*-l* 'license_file'] [*-m*] [*-o* 'file'] [*-q*] [*-s*] [*-v*] [*-w* "'addon, ...'"] [*-x* [01234]] [*-y*] [*-P*] [*-T*]
+*debmake*  [*-h*]  [*-c* | *-k*] [*-n* | *-a* 'package-version'*.orig.tar.gz* | *-d* | *-t* ] [*-p* 'package'] [*-u* 'version'] [*-r* 'revision'] [*-z* 'extension'] [*-b* "'binarypackage'[:__type__]__, ...__]" [*-e* 'foo@example.org'] [*-f* "'firstname lastname'"] [*-i* "'buildtool'" | *-j*] [*-l* 'license_file'] [*-m*] [*-o* 'file'] [*-q*] [*-s*] [*-v*] [*-w* "'addon, ...'"] [*-x* [01234]] [*-y*] [*-L*] [*-P*] [*-T*]
 
 
 == DESCRIPTION
@@ -118,6 +118,8 @@ The default is taken from the value of the environment variable *$DEBFULLNAME*.
 invoke "'buildtool'" at the end of execution.  'buildtool' may be ``*dpkg-buildpackage*'', ``*debuild*'', ``*pdebuild*'', ``*pdebuild  --pbuilder cowbuilder*'', etc..
 +
 The default is not to execute any program.
++
+Setting this option automatically sets the *--local* option.
 
 *-j*, *--judge*::
 run *dpkg-depcheck* to judge build dependencies and identify file paths.  Log files are in the parent directory.
@@ -184,6 +186,9 @@ Existing configuration files are never overwritten.  If you wish to update some 
 
 *-y*, *--yes*::
 ``force yes'' for all prompts. (without option: ``ask [Y/n]''; doubled option: ``force no'')
+
+*-L*, *--local*::
+generate configuration files for the local package to fool *lintian*(1) checks.
 
 *-P*, *--pedantic*::
 pedantically check auto-generated files.

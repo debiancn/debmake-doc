@@ -12,6 +12,9 @@ include Makefile.dbk
 build: pkg
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
 
+update:
+	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
+
 install:
 	-mkdir -p $(TMPDIR)
 	-mkdir -p $(BASEDIR)/html
