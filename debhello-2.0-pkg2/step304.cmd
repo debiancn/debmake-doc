@@ -1,4 +1,4 @@
 echo " ... hack, hack, hack, ..."
-cp -f ${COMMONDIR}/${PROJECT}/debian/libsharedlib1.symbols debhello-3.3/debian/libsharedlib1.symbols
-L "cat debhello-3.3/debian/libsharedlib1.symbols"
+cp -f ${COMMONDIR}/${PROJECT}/debian/libsharedlib1.symbols ${PROJECT}/debian/libsharedlib1.symbols
+L "cat ${PROJECT}/debian/libsharedlib1.symbols"
 

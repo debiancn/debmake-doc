@@ -1,6 +1,6 @@
-L  "mkdir -p debhello-3.3/debian"
-echo  " $ vim debhello-3.3/debian/changelog"
+L  "mkdir -p ${PROJECT}/debian"
+echo  " $ vim ${PROJECT}/debian/changelog"
 echo " ... hack, hack, hack, ..."
-cp -f ../../debhello-3.3/debian/changelog debhello-3.3/debian/changelog
-L "cat debhello-3.3/debian/changelog"
+cp -f ../../${PROJECT}/debian/changelog ${PROJECT}/debian/changelog
+L "cat ${PROJECT}/debian/changelog"
 

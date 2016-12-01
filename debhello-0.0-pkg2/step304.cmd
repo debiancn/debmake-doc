@@ -1,7 +1,7 @@
 CD ${PROJECT}
 cd ${PROJECT}
 L "echo '000-prefix-usr.patch' >debian/patches/series"
-echo " \$ vim 000-prefix-usr.patch"
+echo " \$ vim ../000-prefix-usr.patch"
 echo " ... hack, hack, hack, ..."
 # add header
 echo  "From: Osamu Aoki <osamu@debian.org>" > debian/patches/000-prefix-usr.patch

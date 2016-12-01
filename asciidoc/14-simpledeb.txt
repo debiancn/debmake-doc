@@ -153,6 +153,8 @@ The *debian/control* file provides the main meta data for the Debian package.  H
 include::../debhello-0.0-pkg1/step203.slog[]
 ----
 
+WARNING: If you leave ``*Section: unknown*'' in the template *debian/control* file unchanged, the *lintian* error may cause the build failure.
+
 Since this is the ELF binary executable package, the *debmake* command sets ``*Architecture: any*'' and ``*Multi-Arch: foreign*''.  Also, it sets required *substvar* parameters as ``*Depends: $\{shlibs:Depends}, $\{misc:Depends}*''.  These are explained in <<basics>>.
 
 NOTE: Please note this *debian/control* file uses the RFC-822 style as documented in http://www.debian.org/doc/debian-policy/ch-controlfields.html#s-sourcecontrolfiles[5.2 Source package control files -- debian/control] of the ``Debian Policy Manual''. The use of the empty line and the leading space are significant.

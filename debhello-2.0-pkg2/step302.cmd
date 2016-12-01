@@ -1,5 +1,5 @@
-echo " \$ vim debhello-3.3/debian/control"
+echo " \$ vim ${PROJECT}/debian/control"
 echo " ... hack, hack, hack, ..."
-cp -f ${COMMONDIR}/${PROJECT}/debian/control debhello-3.3/debian/control
-L "cat debhello-3.3/debian/control"
+cp -f ${COMMONDIR}/${PROJECT}/debian/control ${PROJECT}/debian/control
+L "cat ${PROJECT}/debian/control"
 

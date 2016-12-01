@@ -5,6 +5,7 @@ for f in \
 	changelog \
 	watch \
 	compat \
+	control \
 	copyright \
 	source/format \
 	source/local-options \

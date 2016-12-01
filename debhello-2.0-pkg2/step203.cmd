@@ -1,2 +1,2 @@
-L "cat debhello-3.3/debian/control"
+L "cat ${PROJECT}/debian/control"
 

@@ -13,5 +13,5 @@ for f in \
 	debhello.preinst \
 	debhello.prerm \
 	; do
-L "rm -f  debhello-3.3/debian/$f"
+L "rm -f  ${PROJECT}/debian/$f"
 done

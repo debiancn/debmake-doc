@@ -4,7 +4,7 @@ debhello (0.3-1) unstable; urgency=medium
     - C source for a buggy executable.
     - Makefile with fixed install path /usr/local .
 
-  -- Osamu Aoki <osamu@debian.org>  Sun, 23 Oct 2016 16:56:42 +0900
+ -- Osamu Aoki <osamu@debian.org>  Sun, 23 Oct 2016 16:56:42 +0900
 
 debhello (0.2-1) unstable; urgency=low
 
