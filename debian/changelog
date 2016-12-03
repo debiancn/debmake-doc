@@ -2,6 +2,10 @@ debmake-doc (1.7-1) unstable; urgency=medium
 
   * Add "Native Debian source package without extraneous files"
   * Refine text and fix typos.
+  * Fix FTBFS due to missing lintian dependency.  Closes: #846734
+  * Update example scripts not to cause lintian errors.
+  * Add --local option to work with new debuild interaction with
+    lintian.
 
  -- Osamu Aoki <osamu@debian.org>  Fri, 25 Nov 2016 23:32:40 +0900
 
