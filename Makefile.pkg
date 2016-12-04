@@ -6,6 +6,7 @@ include Makefile.common
 #######################################################################
 pkg:
 	-mkdir -p $(TMPDIR)
+	echo "***$(DEBUG_VERSION)***"
 	#$(MAKE) prep     # prepare source tree for consistent changelog etc.
 	$(MAKE) tars     # make upstream tar files
 	$(MAKE) makes    # add Makefile
@@ -15,9 +16,15 @@ pkg:
 #######################################################################
 # Preparing upstream sources (prep, tars)
 ARCH := $(shell dpkg-architecture -q DEB_TARGET_ARCH)
+
+ifdef DEBUG_VERSION
+VERSIONS := $(DEBUG_VERSION)
+else
 VERSIONS := $(shell ls -d debhello-* | \
 	egrep -e '^debhello-[0-9]+\.[0-9]+$$' | \
 	sed -e 's/^debhello-//' )
+endif
+
 TARS := $(addsuffix .tar.gz, $(addprefix debhello-,$(VERSIONS)))
 ORIGTARS := $(addsuffix .orig.tar.gz, $(addprefix debhello_,$(VERSIONS)))
 CHANGELOGS := $(addsuffix /debian/changelog, $(addprefix debhello-,$(VERSIONS)))
@@ -44,6 +51,9 @@ tars: $(TARS) $(ORIGTARS)
 #######################################################################
 # Mock user sessions (makes, stamps)
 CMDS := $(wildcard debhello-*/step000.cmd)
+ifdef DEBUG_VERSION
+CMDS := $(filter debhello-$(DEBUG_VERSION)%,$(CMDS))
+endif
 MAKEFILEX := $(sort $(subst step000.cmd,Makefile, $(CMDS)))
 # MAKEFILES is the reserved variable for make !!!
 STAMPX := $(sort $(subst step000.cmd,.stamp, $(CMDS)))
@@ -107,6 +117,7 @@ debhello-%/Makefile: debian-template/Makefile
 	ln -sf ../$^ $@
 
 debhello-%/.stamp: debhello-%/Makefile
+	@echo "============= Build debhello-$* =============="
 	$(MAKE) -C debhello-$*
 	touch $@
 
