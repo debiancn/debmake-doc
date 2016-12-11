@@ -1,3 +1,9 @@
+debmake-doc (1.7-2) unstable; urgency=medium
+
+  * Fix Vcs-Git data. 
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 11 Dec 2016 10:32:29 +0900
+
 debmake-doc (1.7-1) unstable; urgency=medium
 
   * Add "Native Debian source package without extraneous files"
