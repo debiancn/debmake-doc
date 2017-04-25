@@ -168,7 +168,10 @@ List man pages to be installed.
 +
 See *dh_installman*(1).
 
-'binarypackage'*.menu* ^*-x2*^::
+'binarypackage'*.menu* (deprecated, no more installed)::
+https://bugs.debian.org/741573[tech-ctte #741573] decided "Debian should use
+*.desktop* files as appropriate".
++
 Debian menu file installed into *usr/share/menu/*'binarypackage' in 'binarypackage'.
 +
 See *menufile*(5) for its format.  See *dh_installmenu*(1).
