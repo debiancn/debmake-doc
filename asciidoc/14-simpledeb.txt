@@ -41,7 +41,7 @@ The big picture for building a single non-native Debian package from the upstrea
 
 TIP: The *debuild* command in this and following examples may be substituted by the equivalent commands such as the *pdebuild* command.
 
-TIP: If the upstream tarball in the ***.tar.xz* format is available, use it instead of the one in the ***.tar.gz* and ***.tar.bz2* formats. The *xz* compression offers the better compression than the *gzip* and *bzip2* compressions.
+TIP: If the upstream tarball in the *.tar.xz* format is available, use it instead of the one in the *.tar.gz* and *.tar.bz2* formats. The *xz* compression offers the better compression than the *gzip* and *bzip2* compressions.
 
 [[what-debmake]]
 === What is debmake?
