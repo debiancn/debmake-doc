@@ -45,9 +45,9 @@ packages generated.
 
 == .stamp
 
-The existance of .stamp file in each directory indicates all the files in the
+The existence of .stamp file in each directory indicates all the files in the
 directory has been generated via Makefile and up-to-date.  This is not
-commited to the VCS.
+committed to the VCS.
 
 == asciidoc/
 

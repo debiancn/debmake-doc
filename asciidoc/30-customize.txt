@@ -59,7 +59,7 @@ Adding few extra files in *debian/* directory enables you to do this.
 
 Let the *dpkg-source* command invoked by the Debian package build process (*dpkg-buildpackage*, *debuild*, ...) to generate the *-p1* patch file *debian/patches/debian-changes* automatically.
 
-TIP: This approach can be adopted for any VCS tools.  Since this approach merges all changes into a merged patch, it is desirable to keep the VCS data publically accessible.
+TIP: This approach can be adopted for any VCS tools.  Since this approach merges all changes into a merged patch, it is desirable to keep the VCS data publicly accessible.
 
 WARNING: The *debian/source/local-options* and *debian/source/local-patch-header* files are not included in the Debian source package and are meant to be recorded in the VCS.
 

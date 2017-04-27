@@ -19,7 +19,7 @@ If you have been exposed to the Debian packaging, this looks very much like the 
 The *debmake* command is designed with following features:
 
 * modern packaging style
-** *debian/copyright*: *DEP-5* complient
+** *debian/copyright*: *DEP-5* compliant
 ** *debian/control*: *substvar* support, *multiarch* support, multi binary packages, ...
 ** *debian/rules*: *dh* syntax, compiler hardening options, ...
 * flexibility

@@ -39,7 +39,7 @@ TIP: For C++ libraries and other cases where the tracking of the symbols is prob
 [[lib-trans]]
 ==== Library transition
 
-When you package a new library package version which affects other packages, you must file a transition bug report against the *release.debian.org* psuedo package using the *reportbug* command with the http://ben.debian.net/#_query_language[ben file] and wait for the approval for its upload from the https://wiki.debian.org/Teams/ReleaseTeam[Release Team].
+When you package a new library package version which affects other packages, you must file a transition bug report against the *release.debian.org* pseudo package using the *reportbug* command with the http://ben.debian.net/#_query_language[ben file] and wait for the approval for its upload from the https://wiki.debian.org/Teams/ReleaseTeam[Release Team].
 
 Release team has the https://release.debian.org/transitions/[transition tracker].  See https://wiki.debian.org/Teams/ReleaseTeam/Transitions[Transitions].
 
