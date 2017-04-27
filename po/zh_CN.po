@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-26 22:53+0800\n"
-"PO-Revision-Date: 2017-04-26 22:47+0800\n"
+"POT-Creation-Date: 2017-04-27 11:26+0800\n"
+"PO-Revision-Date: 2017-04-27 11:35+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -405,6 +405,10 @@ msgid ""
 "ulink-1/> and <_:ulink-2/>, can be done with the <emphasis role=\"strong"
 "\">debmake</emphasis> command as follows."
 msgstr ""
+"对 <emphasis>package-1.0</emphasis><emphasis role=\"strong\">.tar.gz</"
+"emphasis>，一个包含了简单的、符合 <_:ulink-1/> 和 <_:ulink-2/> 的 C 语言源代"
+"码的程序来说，它在 Debian 下打包工作可以按照下列流程，使用 <emphasis role="
+"\"strong\">debmake</emphasis> 命令进行："
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:201
@@ -414,6 +418,9 @@ msgid ""
 "functions well under the <emphasis role=\"strong\">dpkg</emphasis> command "
 "to be used for your local deployment."
 msgstr ""
+"如果跳过了对生成的配置文件的手工调整流程，则最终生成的二进制软件包将缺少有意"
+"义的软件包描述信息，但是仍然能为 <emphasis role=\"strong\">dpkg</emphasis> 命"
+"令所使用，在本地部署环境下正常工作。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:202
@@ -423,6 +430,9 @@ msgid ""
 "perfection to comply with the strict quality requirements of the Debian "
 "archive, if the generated package is intended for the general consumption."
 msgstr ""
+"这里的 <emphasis role=\"strong\">debmake</emphasis> 命令只提供一些不错的模板"
+"文件。如果生成的软件包需要发布出去供公众使用的话，这些模板文件必须手工调整至"
+"最佳状态以遵从 Debian 仓库的严格质量标准。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:203
@@ -430,6 +440,8 @@ msgid ""
 "If you are new to the Debian packaging, do not worry about the details and "
 "just get the big picture instead."
 msgstr ""
+"如果你在 Debian 打包方面还是个新手的话，此时不要过多在意细节问题，请先确立一"
+"个大致的印象。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:204
@@ -441,6 +453,12 @@ msgid ""
 "obsolete <emphasis role=\"strong\">debmake</emphasis> package which provided "
 "the <emphasis role=\"strong\">deb-make</emphasis> command."
 msgstr ""
+"历史上还存在过 <emphasis role=\"strong\">deb-make</emphasis> 命令，它在 "
+"<emphasis role=\"strong\">dh_make</empahsis> 之前曾经流行过。当前的 "
+"<emphasis role=\"strong\">debmake</emphasis> 软件包的版本从 <emphasis role="
+"\"strong\">4.0</emphasis> 起始，其目的便是避免和废弃的 <emphasis role="
+"\"strong\">debmake</emphasis> 软件包的版本产生重叠。旧有的对应软件包提供了 "
+"<emphasis role=\"strong\">deb-make</emphasis> 命令。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:204
@@ -451,6 +469,10 @@ msgid ""
 "replace functions offered historically by the <emphasis role=\"strong"
 "\">dh_make</emphasis> command. <_:footnote-1/>"
 msgstr ""
+"如果你曾经接触过 Debian 打包工作，你会注意到这和 <emphasis role=\"strong"
+"\">dh_make</emphasis> 命令很像。这是因为 <emphasis role=\"strong\">debmake</"
+"emphasis> 命令设计时便旨在替代历史上由 <emphasis role=\"strong\">dh_make</"
+"emphasis> 命令所提供的功能。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:205
@@ -458,18 +480,21 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is designed with "
 "following features:"
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令设计提供如下特性与功能："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:208
 msgid "modern packaging style"
-msgstr ""
+msgstr "现代的打包风格"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:213
 msgid ""
 "<emphasis role=\"strong\">debian/copyright</emphasis>: <emphasis role="
-"\"strong\">DEP-5</emphasis> complient"
+"\"strong\">DEP-5</emphasis> compliant"
 msgstr ""
+"<emphasis role=\"strong\">debian/copyright</emphasis>：符合 <emphasis role="
+"\"strong\">DEP-5</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:218
@@ -478,6 +503,9 @@ msgid ""
 "\">substvar</emphasis> support, <emphasis role=\"strong\">multiarch</"
 "emphasis> support, multi binary packages, …"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis>：<emphasis role=\"strong"
+"\">substvar</emphasis> 支持、<emphasis role=\"strong\">multiarch</emphasis> "
+"支持、多个二进制软件包、……"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:223
@@ -485,11 +513,13 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis>: <emphasis role=\"strong"
 "\">dh</emphasis> syntax, compiler hardening options, …"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis>：<emphasis role=\"strong"
+"\">dh</emphasis> 语法、编译器加固选项、……"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:230
 msgid "flexibility"
-msgstr ""
+msgstr "灵活性"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:235
@@ -497,16 +527,18 @@ msgid ""
 "many options (<xref linkend=\"boption\"/>, <xref linkend=\"options\"/>, "
 "<xref linkend=\"manpage\"/>)"
 msgstr ""
+"许多选项（<xref linkend=\"boption\"/>、<xref linkend=\"options\"/>、<xref "
+"linkend=\"manpage\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:242
 msgid "sane default actions"
-msgstr ""
+msgstr "合理的默认行为"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:247
 msgid "execute non-stop with clean results"
-msgstr ""
+msgstr "执行过程不中断，输出干净的结果"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:252
@@ -514,6 +546,8 @@ msgid ""
 "generate the multiarch package, unless <emphasis role=\"strong\">-m</"
 "emphasis> option is explicitly specified."
 msgstr ""
+"生成多架构支持（multiarch）的软件包，除非明确指定了 <emphasis role=\"strong"
+"\">-m</emphasis> 选项。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:257
@@ -522,11 +556,13 @@ msgid ""
 "\">3.0 (quilt)</emphasis>” format, unless <emphasis role=\"strong\">-n</"
 "emphasis> option is explicitly specified."
 msgstr ""
+"生成非本土 Debian 软件包，使用“<emphasis role=\"strong\">3.0 (quilt)</"
+"emphasis>”格式，除非明确指定了 <emphasis role=\"strong\">-n</emphasis> 选项。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:264
 msgid "extra utility"
-msgstr ""
+msgstr "额外的功能"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:269
@@ -534,6 +570,8 @@ msgid ""
 "verification of the <emphasis role=\"strong\">debian/copyright</emphasis> "
 "file against the current source (<xref linkend=\"koption\"/>)"
 msgstr ""
+"根据当前源代码对 <emphasis role=\"strong\">debian/copyright</emphasis> 文件进"
+"行验证（<xref linkend=\"koption\"/>）"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:276
@@ -1967,15 +2005,21 @@ msgstr ""
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1116
+#, fuzzy
 msgid ""
-"If the upstream tarball in the <emphasis role=\"strong\"><emphasis role="
-"\"strong\">.tar.xz</emphasis> format is available, use it instead of the one "
-"in the </emphasis><emphasis role=\"strong\">.tar.gz</emphasis> and <emphasis "
-"role=\"strong\">*</emphasis>.tar.bz2* formats. The <emphasis role=\"strong"
-"\">xz</emphasis> compression offers the better compression than the "
-"<emphasis role=\"strong\">gzip</emphasis> and <emphasis role=\"strong"
-"\">bzip2</emphasis> compressions."
+"If the upstream tarball in the <emphasis role=\"strong\">.tar.xz</emphasis> "
+"format is available, use it instead of the one in the <emphasis role=\"strong"
+"\">.tar.gz</emphasis> and <emphasis role=\"strong\">.tar.bz2</emphasis> "
+"formats. The <emphasis role=\"strong\">xz</emphasis> compression offers the "
+"better compression than the <emphasis role=\"strong\">gzip</emphasis> and "
+"<emphasis role=\"strong\">bzip2</emphasis> compressions."
 msgstr ""
+"历史上还存在过 <emphasis role=\"strong\">deb-make</emphasis> 命令，它在 "
+"<emphasis role=\"strong\">dh_make</empahsis> 之前曾经流行过。当前的 "
+"<emphasis role=\"strong\">debmake</emphasis> 软件包的版本从 <emphasis role="
+"\"strong\">4.0</emphasis> 起始，其目的便是避免和废弃的 <emphasis role="
+"\"strong\">debmake</emphasis> 软件包的版本产生重叠。旧有的对应软件包提供了 "
+"<emphasis role=\"strong\">deb-make</emphasis> 命令。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1119
@@ -6858,7 +6902,7 @@ msgstr ""
 msgid ""
 "This approach can be adopted for any VCS tools. Since this approach merges "
 "all changes into a merged patch, it is desirable to keep the VCS data "
-"publically accessible."
+"publicly accessible."
 msgstr ""
 
 #. (itstool) path: warning/simpara
@@ -7737,7 +7781,7 @@ msgstr ""
 msgid ""
 "When you package a new library package version which affects other packages, "
 "you must file a transition bug report against the <emphasis role=\"strong"
-"\">release.debian.org</emphasis> psuedo package using the <emphasis role="
+"\">release.debian.org</emphasis> pseudo package using the <emphasis role="
 "\"strong\">reportbug</emphasis> command with the <_:ulink-1/> and wait for "
 "the approval for its upload from the <_:ulink-2/>."
 msgstr ""
