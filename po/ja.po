@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-27 11:26+0800\n"
+"POT-Creation-Date: 2017-04-29 01:09+0800\n"
 "PO-Revision-Date: 2015-05-05 18:17+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1477,8 +1477,9 @@ msgstr ""
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:896
 msgid ""
-"It is essential to use the <emphasis role=\"strong\">gitk</emphasis> command "
-"to work effectively with the history of the git repository."
+"It is essential to use some GUI git tools like <emphasis role=\"strong"
+"\">gitk</emphasis> or <emphasis role=\"strong\">gitg</emphasis> to work "
+"effectively with the history of the git repository."
 msgstr ""
 
 #. (itstool) path: section/title

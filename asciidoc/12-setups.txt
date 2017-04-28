@@ -61,7 +61,7 @@ You can check your global configuration as follows.
 $ git config --global --list
 ----
 
-TIP: It is essential to use the *gitk* command to work effectively with the history of the git repository.
+TIP: It is essential to use some GUI git tools like *gitk* or *gitg* to work effectively with the history of the git repository.
 
 [[quilt-setup]]
 === quilt
