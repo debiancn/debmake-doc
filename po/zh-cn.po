@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-27 11:26+0800\n"
-"PO-Revision-Date: 2017-04-28 20:25+0800\n"
+"POT-Creation-Date: 2017-04-29 01:43+0800\n"
+"PO-Revision-Date: 2017-04-29 10:21+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -356,7 +356,7 @@ msgid ""
 "\">debmake</emphasis> command making this guide simple. This guide also "
 "offers many packaging examples."
 msgstr ""
-"许多杂项事物和小提示都集成进了 <emphasis role=\"strong\">debmake</emphasis> "
+"许多杂项事务和小提示都集成进了 <emphasis role=\"strong\">debmake</emphasis> "
 "命令，以使本指导内容简单易懂。本指导同时提供了许多打包示例。"
 
 #. (itstool) path: caution/simpara
@@ -441,7 +441,7 @@ msgid ""
 "just get the big picture instead."
 msgstr ""
 "如果你在 Debian 打包方面还是个新手的话，此时不要过多在意细节问题，请先确立一"
-"个大致的印象。"
+"个大致流程的印象。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:204
@@ -1558,6 +1558,11 @@ msgid ""
 "LaTeX to U+201D RIGHT DOUBLE QUOTATION MARK, U+2019 RIGHT SINGLE QUOTATION "
 "MARK, and U+2018 LEFT SINGLE QUOTATION MARK."
 msgstr ""
+"从 PDF 格式的文档中复制粘贴内容对于 U+0022 QUOTATION MARK（ASCII 双引号）、U"
+"+0027 APOSTROPHE（ASCII 单引号）和 U+0060 GRAVE ACCENT（ASCII 反引号）会工作"
+"不正常，因为它们会被 LaTeX 转换为 U+201D RIGHT DOUBLE QUOTATION MARK（右双引"
+"号）、U+2019 RIGHT SINGLE QUOTATION MARK（右单引号）和 U+2018 LEFT SINGLE "
+"QUOTATION MARK（左单引号）。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:864
@@ -1576,6 +1581,8 @@ msgid ""
 "target. Please make sure to read the pertinent documentation and update the "
 "configuration as needed."
 msgstr ""
+"这里展示的工具配置方式仅作为示例提供，可能与系统上最新的软件包相比有所落后。"
+"Debian 的开发具有一个移动的目标。请确保阅读合适的文档并按照需要更新配置内容。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:867
@@ -1589,6 +1596,9 @@ msgid ""
 "use by the shell environment variables <emphasis role=\"strong\">$DEBEMAIL</"
 "emphasis> and <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
 msgstr ""
+"许多 Debian 维护工具识别并使用 shell 环境变量 <emphasis role=\"strong\">"
+"$DEBEMAIL</emphasis> 和 <emphasis role=\"strong\">$DEBFULLNAME</emphasis> 作"
+"为作为您的电子邮件地址和名称。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:869
@@ -1597,6 +1607,9 @@ msgid ""
 "login shell such as Z shell, use their corresponding configuration files "
 "instead of <emphasis role=\"strong\">~/.bashrc</emphasis>."
 msgstr ""
+"这里假设你正在使用 Bash 并以此作为登录默认 shell。如果你设置了其它登录 "
+"shell，例如 Z shell，请使用它们对应的配置文件替换 <emphasis role=\"lang\">~/."
+"bashrc</emphasis> 文件。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:869
@@ -1604,11 +1617,13 @@ msgid ""
 "Let’s setup these packages by adding the following lines to <emphasis role="
 "\"strong\">~/.bashrc</emphasis> <_:footnote-1/>."
 msgstr ""
+"我们可以通过将下面几行加入 <emphasis role=\"strong\">~/.bashrc</emphasis><_:"
+"footnote-1/> 的方式对这些软件进行配置。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:870 debmake-doc.en.xml:879 debmake-doc.en.xml:902
 msgid "Add to the <emphasis role=\"strong\">~/.bashrc</emphasis> file"
-msgstr ""
+msgstr "添加至 <emphasis role=\"strong\">~/.bashrc</emphasis> 文件"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:877
@@ -1625,6 +1640,12 @@ msgid ""
 "role=\"strong\">dpkg-deb</emphasis> command as its back-end. Let’s setup it "
 "to support easy <emphasis role=\"strong\">chdir</emphasis> as follows."
 msgstr ""
+"<emphasis role=\"strong\">mc</emphasis> 命令提供了管理文件的简单途径。它可以"
+"打开二进制 <emphasis role=\"strong\">deb</emphasis> 文件，并仅需对二进制 "
+"<emphasis role=\"strong\">deb</emphasis> 文件按下回车键便能检查其内容。它调用"
+"了 <emphasis role=\"strong\">dpkg-deb</emphasis> 命令作为其后端。我们可以按照"
+"下列方式对其配置，以支持简易 <emphasis role=\"strong\">chdir</emphasis> 操"
+"作。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:886
@@ -1637,6 +1658,8 @@ msgid ""
 "Nowadays, the <emphasis role=\"strong\">git</emphasis> command is the "
 "essential tool to manage the source tree with history."
 msgstr ""
+"如今 <emphasis role=\"strong\">git</emphasis> 命令已成为管理带历史的源码树的"
+"必要工具。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:888
@@ -1645,6 +1668,9 @@ msgid ""
 "emphasis> command such as your name and email address can be set in "
 "<emphasis role=\"strong\">~/.gitconfig</emphasis> as follows."
 msgstr ""
+"<emphasis role=\"strong\">git</emphasis> 命令的用户级全局配置，如你的名字和电"
+"子邮件地址，保存在 <emphasis role=\"strong\">~/.gitconfig</emphasis> 文件中，"
+"且可以使用如下方式配置："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:891
@@ -1652,18 +1678,24 @@ msgid ""
 "If you are too accustomed to the CVS or Subversion commands, you may wish to "
 "set several command aliases as follows."
 msgstr ""
+"如果你仍然只习惯 CVS 或者 Subversion 的命令风格，你可以使用如下方式设置几个命"
+"令别名。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:894
 msgid "You can check your global configuration as follows."
-msgstr ""
+msgstr "你可以使用如下命令检查全局配置。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:896
 msgid ""
-"It is essential to use the <emphasis role=\"strong\">gitk</emphasis> command "
-"to work effectively with the history of the git repository."
+"It is essential to use some GUI git tools like <emphasis role=\"strong"
+"\">gitk</emphasis> or <emphasis role=\"strong\">gitg</emphasis> to work "
+"effectively with the history of the git repository."
 msgstr ""
+"有必要使用某些图形界面 git 工具，例如 <emphasis role=\"strong\">gitk</"
+"emphasis> 或 <emphasis role=\"strong\">gitg</emphasis> 命令来有效地处理 git "
+"仓库的历史。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:899
@@ -1679,6 +1711,10 @@ msgid ""
 "patches/</emphasis> directory instead of its default <emphasis role=\"strong"
 "\">patches/</emphasis> directory."
 msgstr ""
+"<emphasis role=\"strong\">quilt</emphasis> 命令提供了记录修改的一个基本方式。"
+"对 Debian 打包来说，该工具需要进行自定义，从而在 <emphasis role=\"strong"
+"\">debian/patches/</emphasis> 目录内记录修改内容，而非使用默认的 <emphasis "
+"role=\"strong\">patches/</emphasis> 目录。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:901
@@ -1691,6 +1727,12 @@ msgid ""
 "role=\"strong\">quilt</emphasis> command to the <emphasis role=\"strong"
 "\">dquilt</emphasis> command."
 msgstr ""
+"为了避免改变 <emphasis role=\"strong\">quilt</emphasis> 命令自身的行为，我们"
+"在这里创建一个用于 Debian 打包工作的命令别名：<emphasis role=\"strong"
+"\">dquilt</emphasis>。之后，我们将对应内容写入 <emphasis role=\"strong\">~/."
+"bashrc</emphasis> 文件。下面给出的第二行为 <emphasis role=\"strong\">dquilt</"
+"emphasis> 命令提供与 <emphasis role=\"strong\">quilt</emphasis> 命令相同的命"
+"令行补全功能。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:906
@@ -1698,11 +1740,13 @@ msgid ""
 "Then let’s create <emphasis role=\"strong\">~/.quiltrc-dpkg</emphasis> as "
 "follows."
 msgstr ""
+"然后我们来创建具有如下内容的 <emphasis role=\"strong\">~/.quiltrc-dpkg</"
+"emphasis> 文件。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:920
 msgid "How To Survive With Many Patches or Introduction to Quilt"
-msgstr ""
+msgstr "处理大量补丁的方法暨对 Quilt 的介绍"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:920
@@ -1710,11 +1754,13 @@ msgid ""
 "See <emphasis role=\"strong\">quilt</emphasis>(1) and <_:ulink-1/> on how to "
 "use the <emphasis role=\"strong\">quilt</emphasis> command."
 msgstr ""
+"请参考 <emphasis role=\"strong\">quilt</emphasis>(1) 和 <_:ulink-1/> 以了解如"
+"何使用 <emphasis role=\"strong\">quilt</emphasis> 命令。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:921
 msgid "See <xref linkend=\"alt-patch\"/> for example usages."
-msgstr ""
+msgstr "要获取使用示例，请查看 <xref linkend=\"alt-patch\"/>。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:924
@@ -1728,6 +1774,9 @@ msgid ""
 "<emphasis role=\"strong\">devscripts</emphasis> package, is used to sign the "
 "Debian package with your private GPG key."
 msgstr ""
+"<emphasis role=\"strong\">debsign</emphasis> 命令由 <emphasis role=\"strong"
+"\">devscripts</emphasis> 软件包提供，它可以使用用户的 GPG 私钥对 Debian 软件"
+"包进行签名。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:926
@@ -1738,6 +1787,10 @@ msgid ""
 "command. It is useful to have verbose outputs from the <emphasis role="
 "\"strong\">lintian</emphasis> command."
 msgstr ""
+"<emphasis role=\"strong\">debuild</emphasis> 命令同样由 <emphasis role="
+"\"strong\">devscripts</emphasis> 软件包提供，它可以构建二进制软件包并使用 "
+"<emphasis role=\"strong\">lintian</emphasis> 命令对其进行检查。<emphasis "
+"role=\"strong\">lintian</emphasis> 命令的详细输出通常都很实用。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:927
@@ -1745,6 +1798,8 @@ msgid ""
 "You can setup these by the <emphasis role=\"strong\">~/.devscripts</"
 "emphasis> as follows."
 msgstr ""
+"你可以使用如下方式写入 <emphasis role=\"strong\">~/.devscripts</emphasis> 文"
+"件来进行配置。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:931
@@ -1757,12 +1812,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:932
 msgid "Creating a new GPG key"
-msgstr ""
+msgstr "创建一个新 GPG 密钥"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:932
 msgid "Currently, RSA key with 4096 bits is good idea. See <_:ulink-1/>."
-msgstr ""
+msgstr "当前情况下，使用 4096 位的 RSA 密钥是较好的做法。请见 <_:ulink-1/>。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:935
@@ -1775,6 +1830,7 @@ msgid ""
 "The <emphasis role=\"strong\">sbuild</emphasis> package provides an "
 "alternative chroot platform."
 msgstr ""
+"<emphasis role=\"strong\">sbuild</emphasis> 软件包提供了另一套 chroot 平台。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:936
@@ -1783,11 +1839,13 @@ msgid ""
 "room (<emphasis role=\"strong\">chroot</emphasis>) build environment. <_:"
 "footnote-1/>"
 msgstr ""
+"<emphasis role=\"strong\">pbuilder</emphasis> 软件包提供了净室（干净的）"
+"（<emphasis role=\"strong\">chroot</emphasis>）构建环境。<_:footnote-1/>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:937
 msgid "Let’s customize it with several helper packages."
-msgstr ""
+msgstr "我们可以搭配使用另外几个辅助软件包对其自定义。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:940
@@ -1795,6 +1853,8 @@ msgid ""
 "The <emphasis role=\"strong\">cowbuilder</emphasis> package to boost the "
 "chroot creation speed."
 msgstr ""
+"<emphasis role=\"strong\">cowbuilder</emphasis> 软件包能加速 chroot 创建过"
+"程。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:945
@@ -1802,6 +1862,8 @@ msgid ""
 "The <emphasis role=\"strong\">lintian</emphasis> package to find bugs in the "
 "package."
 msgstr ""
+"<emphasis role=\"strong\">lintian</emphasis> 软件包能找到所构建软件包中的缺"
+"陷。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:950
@@ -1810,6 +1872,9 @@ msgid ""
 "emphasis>, and <emphasis role=\"strong\">vim</emphasis> packages in case "
 "build fails."
 msgstr ""
+"<emphasis role=\"strong\">bash</emphasis>、<emphasis role=\"strong\">mc</"
+"emphasis> 和 <emphasis role=\"strong\">vim</emphasis> 软件包在构建失败时用来"
+"查找问题。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:955
@@ -1817,6 +1882,8 @@ msgid ""
 "The <emphasis role=\"strong\">ccache</emphasis> package to boost the "
 "<emphasis role=\"strong\">gcc</emphasis> speed. (optional)"
 msgstr ""
+"<emphasis role=\"strong\">ccache</emphasis> 软件包可以加速 <emphasis role="
+"\"strong\">gcc</emphasis>。（可选）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:960
@@ -1824,6 +1891,8 @@ msgid ""
 "The <emphasis role=\"strong\">libeatmydata1</emphasis> package to boost the "
 "<emphasis role=\"strong\">dpkg</emphasis> speed. (optional)"
 msgstr ""
+"<emphasis role=\"strong\">libeatmydata1</emphasis> 软件包可以加速 <emphasis "
+"role=\"strong\">dpkg</emphasis>。（可选）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:965
@@ -1831,13 +1900,14 @@ msgid ""
 "The parallel <emphasis role=\"strong\">make</emphasis> to boost the build "
 "speed. (optional)"
 msgstr ""
+"并行运行 <emphasis role=\"strong\">make</emphasis> 以提高构建速度。（可选）"
 
 #. (itstool) path: warning/simpara
 #: debmake-doc.en.xml:970
 msgid ""
 "The optional customization may cause negative effects. In case of doubts, "
 "disable them."
-msgstr ""
+msgstr "可选的自定义项可能造成负面影响。如果有疑问，请禁用它们。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:971
@@ -1845,6 +1915,8 @@ msgid ""
 "Let’s create <emphasis role=\"strong\">~/.pbuilderrc</emphasis> as follows "
 "(all optional features are disabled)."
 msgstr ""
+"我们使用如下给出的内容来创建 <emphasis role=\"strong\">~/.pbuilderrc</"
+"emphasis> 文件（所有可选功能均已禁用）。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:992
@@ -1853,11 +1925,14 @@ msgid ""
 "<emphasis role=\"strong\">/home/&lt;user&gt;/.pbuilderrc</emphasis> may help "
 "for the consistent experience."
 msgstr ""
+"可以考虑创建从 <emphasis role=\"strong\">/root/.pbuilderrc</emphasis> 到 "
+"<emphasis role=\"strong\">/home/&lt;user&gt;/.pbuilderrc</emphasis> 以获得一"
+"致的体验。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:993
 msgid "Bug #606542"
-msgstr ""
+msgstr "缺陷 #606542"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:993
@@ -1866,6 +1941,8 @@ msgid ""
 "<emphasis role=\"strong\">EXTRAPACKAGES</emphasis> into the chroot. See "
 "<xref linkend=\"chroot\"/>."
 msgstr ""
+"由于 <_:ulink-1/>，你可能需要手动将 <emphasis role=\"strong\">EXTRAPACKAGES</"
+"emphasis> 列出的软件包安装进入 chroot。请见 <xref linkend=\"chroot\"/>。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:994
@@ -1875,6 +1952,9 @@ msgid ""
 "\">libeatmydata1</emphasis>. This may cause the race condition with some "
 "build systems."
 msgstr ""
+"应当在 chroot 环境内外同时安装上 <emphasis role=\"strong\">libeatmydata1</"
+"emphasis> (&gt;=82-2)，否则即为禁用 <emphasis role=\"strong\">libeatmydata1</"
+"emphasis>。该软件包在某些构建系统中可能导致竞争情况（race condition）发生。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:995
@@ -1882,28 +1962,33 @@ msgid ""
 "The parallel <emphasis role=\"strong\">make</emphasis> may fail for some "
 "existing packages and may make the build log difficult to read."
 msgstr ""
+"并行的 <emphasis role=\"strong\">make</emphasis> 可能在某些已有软件包上运行失"
+"败，它同样会使得构建日志难以阅读。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:996
 msgid "Let’s create a hook scripts as follows."
-msgstr ""
+msgstr "我们可以按如下方式创建钩子脚本："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:997
 msgid ""
 "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/A10ccache</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">/var/cache/pbuilder/hooks/A10ccache</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1004
 msgid ""
 "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/B90lintian</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">/var/cache/pbuilder/hooks/B90lintian</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1011
 msgid "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/C10shell</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">/var/cache/pbuilder/hooks/C10shell</emphasis>"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1018
@@ -1911,6 +1996,8 @@ msgid ""
 "All these scripts need to be set world executable: “<emphasis role=\"strong"
 "\">-rwxr-xr-x 1 root root</emphasis>”."
 msgstr ""
+"所有这些脚本都需要设置为全局可执行：“<emphasis role=\"strong\">-rwxr-xr-x 1 "
+"root root</emphasis>”。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1019
@@ -1921,6 +2008,11 @@ msgid ""
 "the <emphasis role=\"strong\">pbuilder</emphasis> command. You should be "
 "aware of associated security concerns."
 msgstr ""
+"<emphasis role=\"strong\">ccache</emphasis> 的缓存目录 <emphasis role="
+"\"strong\">/var/cache/pbuilder/cache</emphasis> 需要为了 <emphasis role="
+"\"strong\">pbuilder</emphasis> 命令的使用设置为全局可写：“<emphasis role="
+"\"strong\">-rwxrwxrwx 1 root root</emphasis>”。你需要意识到这样会带来相关的安"
+"全隐患。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1022 debmake-doc.en.xml:5100
@@ -1933,6 +2025,8 @@ msgid ""
 "You may wish to set several global configurations in <emphasis role=\"strong"
 "\">~/.gbp.conf</emphasis>"
 msgstr ""
+"你也可能需要在 <emphasis role=\"strong\">~/.gbp.conf</emphasis> 中设置全局配"
+"置信息"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1033
@@ -1940,6 +2034,8 @@ msgid ""
 "The <emphasis role=\"strong\">gbp</emphasis> command is the alias of the "
 "<emphasis role=\"strong\">git-buildpackage</emphasis> command."
 msgstr ""
+"这里的 <emphasis role=\"strong\">gbp</emphasis> 命令是 <emphasis role="
+"\"strong\">git-buildpackage</emphasis> 命令的一个别名。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1036
@@ -1952,6 +2048,8 @@ msgid ""
 "You should set up a local HTTP caching proxy to save the bandwidth for the "
 "Debian package repository access. There are several choices:"
 msgstr ""
+"你应当在本地设置 HTTP 缓存代理以节约访问 Debian 软件仓库的带宽。你有几种选"
+"择："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1040
@@ -1959,6 +2057,8 @@ msgid ""
 "Simple HTTP caching proxy using the <emphasis role=\"strong\">squid</"
 "emphasis> package."
 msgstr ""
+"简单的 HTTP 缓存代理，使用 <emphasis role=\"strong\">squid</emphasis> 软件"
+"包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1045
@@ -1966,6 +2066,8 @@ msgid ""
 "Specialized HTTP caching proxy using the <emphasis role=\"strong\">apt-"
 "cacher-ng</emphasis> package."
 msgstr ""
+"特化的 HTTP 缓存代理，使用 <emphasis role=\"strong\">apt-cacher-ng</"
+"emphasis> 软件包。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1052
@@ -1978,6 +2080,8 @@ msgid ""
 "You can set up a private Debian package repository with the <emphasis role="
 "\"strong\">reprepro</emphasis> package."
 msgstr ""
+"你可以使用 <emphasis role=\"strong\">reprepro</emphasis> 软件包搭建私有 "
+"Debian 仓库。"
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:1057
@@ -1991,6 +2095,7 @@ msgid ""
 "praecepta, breve et efficax per exempla</emphasis>” (“It’s a long way by the "
 "rules, but short and efficient with examples”)."
 msgstr ""
+"有一句古罗马谚语说得好：“<emphasis role=\"strong\">一例胜千言！</emphasis>”"
 
 #. (itstool) path: chapter/simpara
 #. (itstool) path: section/simpara
@@ -2000,6 +2105,8 @@ msgid ""
 "source using the <emphasis role=\"strong\">Makefile</emphasis> as its build "
 "system."
 msgstr ""
+"这里给出了从简单的 C 语言源代码创建简单的 Debian 软件包的例子，并假设上游使用"
+"了 <emphasis role=\"strong\">Makefile</emphasis> 作为其构建系统。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1060
@@ -2007,13 +2114,15 @@ msgid ""
 "Let’s assume this upstream tarball to be <emphasis role=\"strong"
 "\">debhello-0.0.tar.gz</emphasis>."
 msgstr ""
+"我们假设上游源码压缩包（tarball）名称为 <emphasis role=\"strong"
+"\">debhello-0.0.tar.gz</emphasis>。"
 
 #. (itstool) path: chapter/simpara
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1061 debmake-doc.en.xml:6350 debmake-doc.en.xml:6478
 #: debmake-doc.en.xml:6990
 msgid "This type of source is meant to be installed as a non-system file as:"
-msgstr ""
+msgstr "这一类源代码设计可以用这样的方式安装成为非系统文件："
 
 #. (itstool) path: chapter/simpara
 #. (itstool) path: section/simpara
@@ -2024,6 +2133,9 @@ msgid ""
 "location instead of the normal location under <emphasis role=\"strong\">/usr/"
 "local</emphasis>."
 msgstr ""
+"Debian 的打包需要对“<emphasis role=\"strong\">make install</emphasis>”流程进"
+"行改变，从而将文件安装至系统镜像所在位置，而非通常使用的 <emphasis role="
+"\"strong\">/usr/local</emphasis> 下的位置。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1067
@@ -2031,11 +2143,13 @@ msgid ""
 "Examples of creating Debian package from other complicated build systems are "
 "described in <xref linkend=\"more\"/>."
 msgstr ""
+"在其它更加复杂的构建系统下构建 Debian 软件包的例子可以在 <xref linkend=\"more"
+"\"/> 找到。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1069
 msgid "Big picture"
-msgstr ""
+msgstr "大致流程"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1070
@@ -2044,6 +2158,8 @@ msgid ""
 "upstream tarball <emphasis role=\"strong\">debhello-0.0.tar.gz</emphasis> "
 "can be summarized as:"
 msgstr ""
+"从上游源码压缩包 <emphasis role=\"strong\">debhello-0.0.tar.gz</emphasis> 构"
+"建单个非本土 Debian 软件包的大致流程可以总结如下："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1073
@@ -2052,6 +2168,9 @@ msgid ""
 "\">debhello-0.0.tar.gz</emphasis> and untar its contents to <emphasis role="
 "\"strong\">debhello-0.0</emphasis> directory."
 msgstr ""
+"维护者获取上游源码压缩包 <emphasis role=\"strong\">debhello-0.0.tar.gz</"
+"emphasis> 并将其内容解压缩至 <emphasis role=\"strong\">debhello-0.0</"
+"emphasis> 目录中。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1078
@@ -2060,6 +2179,9 @@ msgid ""
 "upstream source tree by adding template files only in the <emphasis role="
 "\"strong\">debian</emphasis> directory."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令对上游源码树进行 debian 化"
+"（debianize），具体来说，是创建一个 <emphasis role=\"strong\">debian</"
+"emphasis> 目录并仅向该目录中添加各类模板文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1083
@@ -2068,11 +2190,13 @@ msgid ""
 "created pointing to the <emphasis role=\"strong\">debhello-0.0.tar.gz</"
 "emphasis> file."
 msgstr ""
+"名为 <emphasis role=\"strong\">debhello_0.0.orig.tar.gz</emphasis> 的符号链接"
+"被创建并指向 <emphasis role=\"strong\">debhello-0.0.tar.gz</emphasis> 文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1088
 msgid "The maintainer customizes template files."
-msgstr ""
+msgstr "维护者须自行编辑修改模板文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1095
@@ -2080,6 +2204,8 @@ msgid ""
 "The <emphasis role=\"strong\">debuild</emphasis> command builds the binary "
 "package from the debianized source tree."
 msgstr ""
+"<emphasis role=\"strong\">debuild</emphasis> 命令基于已 debian 化的源码树构建"
+"二进制软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1100
@@ -2087,11 +2213,13 @@ msgid ""
 "<emphasis role=\"strong\">debhello-0.0-1.debian.tar.xz</emphasis> is created "
 "containing the <emphasis role=\"strong\">debian</emphasis> directory."
 msgstr ""
+"<emphasis role=\"strong\">debhello-0.0-1.debian.tar.xz</emphasis> 将被创建，"
+"它包含了 <emphasis role=\"strong\">debian</emphasis> 目录及。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1107
 msgid "Big picture of package building"
-msgstr ""
+msgstr "软件包构建的大致流程"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1115
@@ -2100,10 +2228,11 @@ msgid ""
 "following examples may be substituted by the equivalent commands such as the "
 "<emphasis role=\"strong\">pdebuild</emphasis> command."
 msgstr ""
+"此处和下面例子中的 <emphasis role=\"strong\">debuild</emphasis> 命令可使用等"
+"价的命令进行替换，例如 <emphasis>pdebuild</emphasis> 命令。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1116
-#, fuzzy
 msgid ""
 "If the upstream tarball in the <emphasis role=\"strong\">.tar.xz</emphasis> "
 "format is available, use it instead of the one in the <emphasis role=\"strong"
@@ -2112,17 +2241,16 @@ msgid ""
 "better compression than the <emphasis role=\"strong\">gzip</emphasis> and "
 "<emphasis role=\"strong\">bzip2</emphasis> compressions."
 msgstr ""
-"历史上还存在过 <emphasis role=\"strong\">deb-make</emphasis> 命令，它在 "
-"<emphasis role=\"strong\">dh_make</empahsis> 之前曾经流行过。当前的 "
-"<emphasis role=\"strong\">debmake</emphasis> 软件包的版本从 <emphasis role="
-"\"strong\">4.0</emphasis> 起始，其目的便是避免和废弃的 <emphasis role="
-"\"strong\">debmake</emphasis> 软件包的版本产生重叠。旧有的对应软件包提供了 "
-"<emphasis role=\"strong\">deb-make</emphasis> 命令。"
+"如果上游源码压缩包提供了 <emphasis role=\"strong\">.tar.xz</emphasis> 格式，"
+"请使用这样的压缩包来替代 <emphasis role=\"strong\">.tar.gz</emphasis> 或 "
+"<emphasis role=\"strong\">.tar.bz2</emphasis> 格式。<emphasis role=\"strong"
+"\">xz</emphasis> 压缩与 <emphasis role=\"strong\">gzip</emphasis> 或 "
+"<emphasis role=\"strong\">zip2</emphasis> 压缩相比提供了更好的压缩比。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1119
 msgid "What is debmake?"
-msgstr ""
+msgstr "什么是 debmake？"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1120
@@ -2130,6 +2258,8 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is the helper "
 "script for the Debian packaging."
 msgstr ""
+"文中的 <emphasis role=\"strong\">debmake</emphasis> 命令是用于 Debian 打包的"
+"一个帮助脚本。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1123
@@ -2302,7 +2432,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1242
 msgid "Step 1: Get the upstream source"
-msgstr ""
+msgstr "第一步：获取上游源代码"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1243
@@ -2371,7 +2501,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1317
 msgid "Step 2: Generate template files with debmake"
-msgstr ""
+msgstr "第二步：使用 debmake 产生模板文件"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1318
@@ -2527,7 +2657,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1513
 msgid "Step 3: Modification to the template files"
-msgstr ""
+msgstr "第三步：编辑模板文件"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1514
@@ -2663,7 +2793,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1612
 msgid "Step 4: Building package with debuild"
-msgstr ""
+msgstr "第四步：使用 debuild 构建软件包"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1613
@@ -2807,7 +2937,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1748
 msgid "Step 3 (alternative): Modification to the upstream source"
-msgstr ""
+msgstr "第三步（备选）：修改上游源代码"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1749
@@ -2883,7 +3013,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1800
 msgid "Patch by diff -u"
-msgstr ""
+msgstr "使用 diff -u 处理补丁"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1801
@@ -2915,7 +3045,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1838
 msgid "Patch by dquilt"
-msgstr ""
+msgstr "使用 dquilt 处理补丁"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1839
@@ -2957,7 +3087,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1899
 msgid "Patch by dpkg-source --commit"
-msgstr ""
+msgstr "使用 dpkg-source --commit 处理补丁"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1900
@@ -2993,7 +3123,7 @@ msgstr ""
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:1983
 msgid "Basics"
-msgstr ""
+msgstr "基本内容"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1984
@@ -3051,7 +3181,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1992
 msgid "Packaging workflow"
-msgstr ""
+msgstr "打包工作流"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1993
@@ -3412,7 +3542,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2249
 msgid "Package name and version"
-msgstr ""
+msgstr "软件包名称和版本"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2250
@@ -3601,7 +3731,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2312
 msgid "Native Debian package"
-msgstr ""
+msgstr "本土 Debian 软件包"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2313
@@ -3861,7 +3991,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2430
 msgid "Simple debian/rules"
-msgstr ""
+msgstr "简单的 debian/rules"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2431
