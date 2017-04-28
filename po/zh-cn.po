@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-04-27 11:26+0800\n"
-"PO-Revision-Date: 2017-04-27 21:49+0800\n"
+"PO-Revision-Date: 2017-04-28 20:25+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -624,14 +624,14 @@ msgstr ""
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:282
 msgid "Prerequisites"
-msgstr "必备条件"
+msgstr "预备知识"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:283
 msgid ""
 "Here are the prerequisites which you need to understand before you to get "
 "involved with Debian."
-msgstr "这里给出你在投入 Debian 相关工作之前应当理解掌握的一些必备知识与条件。"
+msgstr "这里给出你在投入 Debian 相关工作之前应当理解掌握的一些必备的预备知识。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:285
@@ -1082,6 +1082,8 @@ msgid ""
 "Before you decide to ask your question in some public place, please do your "
 "parts of efforts, i.e., read the fine documentation:"
 msgstr ""
+"在你决定在某些公共场合问出你的问题之前，请先做好自己应做的事，例如，查看这些"
+"文档与信息："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:577
@@ -1090,6 +1092,9 @@ msgid ""
 "\">aptitude</emphasis>, <emphasis role=\"strong\">apt-cache</emphasis>, and "
 "<emphasis role=\"strong\">dpkg</emphasis> commands."
 msgstr ""
+"软件包的信息可以使用 <emphasis role=\"strong\">aptitude</emphasis>、"
+"<emphasis role=\"strong\">apt-cache</emphasis> 以及 <emphasis role=\"strong"
+"\">dpkg</emphasis> 命令进行查看。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:582
@@ -1097,6 +1102,8 @@ msgid ""
 "files in <emphasis role=\"strong\">/usr/share/doc/</"
 "emphasis><emphasis>package</emphasis> for all pertinent packages."
 msgstr ""
+"所有相关软件包在 <emphasis role=\"strong\">/usr/share/doc/</"
+"emphasis><emphasis>软件包名</emphasis> 目录下的文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:587
@@ -1104,6 +1111,8 @@ msgid ""
 "contents of <emphasis role=\"strong\">man</emphasis> <emphasis>command</"
 "emphasis> for all pertinent commands."
 msgstr ""
+"所有相关命令在 <emphasis role=\"strong\">man</emphasis> <emphasis>命令</"
+"emphasis> 下输出的内容。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:592
@@ -1111,6 +1120,8 @@ msgid ""
 "contents of <emphasis role=\"strong\">info</emphasis> <emphasis>command</"
 "emphasis> for all pertinent commands."
 msgstr ""
+"所有相关命令在 <emphasis role=\"strong\">info</emphasis> <emphasis>命令</"
+"emphasis> 下输出的内容。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:598
@@ -1120,12 +1131,12 @@ msgstr "debian-mentors@lists.debian.org 邮件列表存档"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:597 debmake-doc.en.xml:602
 msgid "contents of <_:ulink-1/>."
-msgstr ""
+msgstr "<_:ulink-1/> 的内容。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:603
 msgid "debian-devel@lists.debian.org mailing list archive"
-msgstr ""
+msgstr "debian-devel@lists.debian.org 邮件列表存档"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:607
@@ -1134,6 +1145,9 @@ msgid ""
 "search string such as “keyword <emphasis role=\"strong\">site:lists.debian."
 "org</emphasis>” to limit the search domain of the web search engine."
 msgstr ""
+"要获取你所需要的信息，一种有效的方法是在网页搜索引擎中构建类似“关键字 "
+"<emphasis role=\"strong\">site:lists.debian.org</emphasis>”这样具有限制条件的"
+"搜索字符串来限定搜索的域名。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:608
@@ -1142,69 +1156,71 @@ msgid ""
 "Inspecting existing well maintained packages is the best way to learn how "
 "other people make packages."
 msgstr ""
+"制作一个小型测试用软件包也是了解打包细节的一个好办法。对当前已有的维护良好的"
+"软件包进行检查则是了解其他人如何制作软件包的最好方法。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:609
 msgid ""
 "If you still have questions about the packaging, you can ask them "
 "interactively:"
-msgstr ""
+msgstr "如果你对打包仍然存在疑问，你可以使用以下方式与他人进行沟通："
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:613
 msgid "debian-mentors@lists.debian.org"
-msgstr ""
+msgstr "debian-mentors@lists.debian.org"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:612
 msgid "<_:ulink-1/> mailing list. (This mailing list is for the novice.)"
-msgstr ""
+msgstr "<_:ulink-1/> 邮件列表。（这个邮件列表为专为新手答疑解惑。）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:618
 msgid "debian-devel@lists.debian.org"
-msgstr ""
+msgstr "debian-devel@lists.debian.org"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:617
 msgid "<_:ulink-1/> mailing list. (This mailing list is for the expert.)"
-msgstr ""
+msgstr "<_:ulink-1/> 邮件列表。（这个邮件列表针对熟练用户和高级开发者。）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:623
 msgid "IRC"
-msgstr ""
+msgstr "IRC"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:622
 msgid "<_:ulink-1/> such as #debian-mentors."
-msgstr ""
+msgstr "<_:ulink-1/> 例如 #debian-mentors。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:628
 msgid "https://wiki.debian.org/Teams"
-msgstr ""
+msgstr "https://wiki.debian.org/Teams"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:627
 msgid ""
 "Teams focusing on a specific set of packages. (Full list at <_:ulink-1/>)"
-msgstr ""
+msgstr "专注某个特定软件包集合的团队。（完整列表请见 <_:ulink-1/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:632
 msgid "Language-specific mailing lists."
-msgstr ""
+msgstr "特定语言的邮件列表。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:638
 msgid "debian-devel-{french,italian,portuguese,spanish}@lists.debian.org"
-msgstr ""
+msgstr "debian-devel-{french,italian,portuguese,spanish}@lists.debian.org"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:643
 msgid "debian-devel@debian.or.jp"
-msgstr ""
+msgstr "debian-devel@debian.or.jp"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:649
@@ -1212,6 +1228,8 @@ msgid ""
 "The more experienced Debian developers will gladly help you, if you ask "
 "properly after making your required efforts."
 msgstr ""
+"如果你在做好功课后能在这些场合中合适地提出你的疑问的话，那些更有经验的 "
+"Debian 开发者会很愿意帮助你。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:650
@@ -1219,35 +1237,37 @@ msgid ""
 "Debian development is a moving target. Some information found on the web may "
 "be outdated, incorrect, and not-applicable. Please use them carefully."
 msgstr ""
+"Debian 的开发具有一个不断移动的目标。你在网上找到的某些信息可能是过时的、不正"
+"确的或者不适用的，使用时请留意。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:653
 msgid "Archive situation"
-msgstr ""
+msgstr "仓库状况"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:654
 msgid "Please realize the situation of the Debian archive."
-msgstr ""
+msgstr "请了解 Debian 仓库的当前状况。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:657
 msgid "Debian already has packages for most kinds of programs."
-msgstr ""
+msgstr "Debian 已经包含了绝大多数种类程序的软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:662
 msgid ""
 "The number of packages already in the Debian archive is several tens of "
 "times greater than that of active maintainers."
-msgstr ""
+msgstr "Debian 仓库内软件包的数量是活跃维护者的数十倍。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:667
 msgid ""
 "Unfortunately, some packages lack appropriate level of attention by the "
 "maintainer."
-msgstr ""
+msgstr "遗憾的是，某些软件包缺乏维护者的足够关注。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:672
@@ -1256,6 +1276,8 @@ msgid ""
 "appreciated (and more likely to receive sponsorship for the uploading) by "
 "other maintainers."
 msgstr ""
+"因此，对已经存在于仓库内的软件包做出贡献是十分欢迎的，也更有可能得到其他维护"
+"者的感谢、支持和协助上传。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:673
@@ -1264,11 +1286,14 @@ msgid ""
 "<emphasis role=\"strong\">devscripts</emphasis> package can check for "
 "installed packages up for adoption or orphaned."
 msgstr ""
+"来自 <emphasis role=\"strong\">devscripts</emphasis> 软件包的 <emphasis role="
+"\"strong\">wnpp-alert</emphasis> 命令可以检查已安装软件中需要接手或已被丢弃的"
+"软件包。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:676
 msgid "Contribution approaches"
-msgstr ""
+msgstr "贡献流程"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:677
@@ -1276,91 +1301,93 @@ msgid ""
 "Here is a pseudo-Python code for your contribution approaches to Debian with "
 "a <emphasis role=\"strong\">program</emphasis>:"
 msgstr ""
+"这里使用类 Python 伪代码，给出了向 Debian 贡献名为 <emphasis role=\"strong"
+"\">program</emphasis> 的软件所走的贡献流程："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:713
 msgid "Here:"
-msgstr ""
+msgstr "其中："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:716
 msgid "For exist_in_debian(), and is_team_maintained(); check:"
-msgstr ""
+msgstr "对 exist_in_debian() 和 is_team_maintained()，需检查："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:721
 msgid "the <emphasis role=\"strong\">aptitude</emphasis> command"
-msgstr ""
+msgstr "<emphasis role=\"strong\">aptitude</emphasis> 命令"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:727
 msgid "Debian packages"
-msgstr ""
+msgstr "Debian 软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:726
 msgid "<_:ulink-1/> web page"
-msgstr ""
+msgstr "<_:ulink-1/> 网页"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:732
 msgid "Teams"
-msgstr ""
+msgstr "团队"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:738
 msgid "For is_orphaned(), is_RFA(), and is_ITPed_by_others(); check:"
-msgstr ""
+msgstr "对 is_orphaned()、is_RFA() 和 is_ITPed_by_others()，需检查："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:743
 msgid ""
 "The output of the <emphasis role=\"strong\">wnpp-alert</emphasis> command."
-msgstr ""
+msgstr "<emphasis role=\"strong\">wnpp-alert</emphasis> 命令的输出。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:749
 msgid "Work-Needing and Prospective Packages"
-msgstr ""
+msgstr "需要投入精力和未来的软件包（WNPP）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:754
 msgid "Debian Bug report logs: Bugs in pseudo-package wnpp in unstable"
-msgstr ""
+msgstr "Debian 缺陷报告记录：在 unstable 版本中 wnpp 伪软件包的缺陷记录"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:759
 msgid "Debian Packages that Need Lovin'"
-msgstr ""
+msgstr "需要“关爱”的 Debian 软件包"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:764
 msgid "Browse wnpp bugs based on debtags"
-msgstr ""
+msgstr "基于 debtags 浏览 wnpp 缺陷记录"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:770
 msgid "For is_good_program(), check:"
-msgstr ""
+msgstr "对于 is_good_program()，请检查："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:775
 msgid "The program should be useful."
-msgstr ""
+msgstr "这个程序应当有用。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:780
 msgid ""
 "The program should not introduce security and maintenance concerns to the "
 "Debian system."
-msgstr ""
+msgstr "这个程序不应当向 Debian 系统引入安全和维护上的问题。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:785
 msgid ""
 "The program should be well documented and its code needs to be "
 "understandable (i.e. not obfuscated)."
-msgstr ""
+msgstr "这个程序应当有良好的文档，其源代码需要可被理解（即，未经混淆）。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:791
@@ -1369,38 +1396,40 @@ msgid ""
 "resource drains for us all. The friendly upstream can be consulted to solve "
 "any problems with the program."
 msgstr ""
+"这一条不是绝对的要求，但请注意遇上不友好的上游可能需要大家为此投入大量精力。"
+"一个友好的上游则能协助解决程序的各类问题。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:790
 msgid ""
 "The program’s authors agree with the packaging and are amicable to Debian. "
 "<_:footnote-1/>"
-msgstr ""
+msgstr "这个程序的作者同意软件被打包，且对 Debian 态度友好。<_:footnote-1/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:797
 msgid "For is_it_DFSG(), and is_its_dependency_DFSG(); check:"
-msgstr ""
+msgstr "对 is_it_DFSG()，及 is_its_dependency_DFSG()，请检查："
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:803
 msgid "Debian Free Software Guidelines"
-msgstr ""
+msgstr "Debian 自由软件指导方针"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:802
 msgid "<_:ulink-1/> (DFSG)."
-msgstr ""
+msgstr "<_:ulink-1/>（DFSG）。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:809
 msgid "For is_it_distributable(), check:"
-msgstr ""
+msgstr "对 is_it_distributable()，请检查："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:814
 msgid "The software must have a license and it should allow its distribution."
-msgstr ""
+msgstr "该软件必须有一个许可证，其中应当允许软件被发行。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:821
@@ -1408,35 +1437,38 @@ msgid ""
 "You either need to file an <emphasis role=\"strong\">ITP</emphasis> or adopt "
 "a package to start working on it. See the “Debian Developer’s Reference”:"
 msgstr ""
+"你或是需要填写并提交一份 <emphasis role=\"storng\">ITP</emphasis>，或是需"
+"要“收养”一个软件包并开始为其工作。请见“Debian 开发者参考（Debian Developer's "
+"Reference）”文档："
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:825
 msgid "5.1. New packages"
-msgstr ""
+msgstr "5.1. 新软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:824 debmake-doc.en.xml:829
 msgid "<_:ulink-1/>."
-msgstr ""
+msgstr "<_:ulink-1/>。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:830
 msgid ""
 "5.9. Moving, removing, renaming, orphaning, adopting, and reintroducing "
 "packages"
-msgstr ""
+msgstr "5.9. 移动、删除、重命名、丢弃、接手和重新引入软件包"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:836
 msgid "Novice maintainer"
-msgstr ""
+msgstr "新手维护者"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:837
 msgid ""
 "The novice maintainer should avoid packaging programs with the high security "
 "exposure:"
-msgstr ""
+msgstr "新手维护者应当避免打包具有潜在高度安全隐患的程序："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:840
@@ -1444,11 +1476,13 @@ msgid ""
 "<emphasis role=\"strong\">setuid</emphasis> or <emphasis role=\"strong"
 "\">setgid</emphasis> program"
 msgstr ""
+"<emphasis role=\"strong\">setuid</emphasis> 或 <emphasis role=\"strong"
+"\">setgid</emphasis> 程序"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:845
 msgid "<emphasis role=\"strong\">daemon</emphasis> program"
-msgstr ""
+msgstr "<emphasis role=\"strong\">守护进程（daemon）</emphasis>程序"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:850
@@ -1456,18 +1490,20 @@ msgid ""
 "program installed in the <emphasis role=\"strong\">/sbin/</emphasis> or "
 "<emphasis role=\"strong\">/usr/sbin/</emphasis> directories"
 msgstr ""
+"安装至 <emphasis role=\"strong\">/sbin/</emphasis> 或 <emphasis role=\"strong"
+"\">/usr/sbin/</emphasis> 目录的程序"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:855
 msgid ""
 "When you gain more experience in packaging, you’ll be able to package such "
 "programs."
-msgstr ""
+msgstr "在积累足够的打包经验后，你可以再尝试打包这样的程序。"
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:859
 msgid "Tool Setups"
-msgstr ""
+msgstr "工具的配置"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:860
@@ -1475,6 +1511,8 @@ msgid ""
 "The <emphasis role=\"strong\">build-essential</emphasis> package must be "
 "installed in the build environment."
 msgstr ""
+"<emphasis role=\"strong\">build-essential</emphasis> 软件包必须在构建环境内预"
+"先安装。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:861
@@ -1482,6 +1520,8 @@ msgid ""
 "The <emphasis role=\"strong\">devscripts</emphasis> package should be "
 "installed on the maintainer environment."
 msgstr ""
+"<emphasis role=\"strong\">devscripts</emphasis> 软件包应当安装在维护者的工作"
+"环境中。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:862
@@ -1491,11 +1531,14 @@ msgid ""
 "chapter on the maintainer environment. This enables us to share the common "
 "baseline working environment."
 msgstr ""
+"尽管这个不是绝对的要求，但是在维护者的工作环境内装上并配置好本章节提到的各个"
+"软件包会有助于维护者高效投入工作。这些软件可以构成我们共同确立的一个基准工作"
+"环境。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:863
 msgid "Overview of Debian Maintainer Tools"
-msgstr ""
+msgstr "Debian 维护者工具概览"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:863
@@ -1503,6 +1546,8 @@ msgid ""
 "Please install the tools mentioned in the <_:ulink-1/> of the “Debian "
 "Developer’s Reference”, as needed, too."
 msgstr ""
+"如有需要，请按需安装在“Debian 开发者参考”文中 <_:ulink-1/> 一节提到的各个工"
+"具。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:864
@@ -1520,6 +1565,8 @@ msgid ""
 "For the cut-and-paste from the code listing part, use this document in the "
 "HTML format. <_:footnote-1/>"
 msgstr ""
+"如需从本指导文档中复制粘贴某些代码片段，请使用本指导 HTML 格式的文档。<_:"
+"footnote-1/>"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:865
@@ -1533,7 +1580,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:867
 msgid "Email address"
-msgstr ""
+msgstr "电子邮件地址"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:868
@@ -1566,7 +1613,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:877
 msgid "mc"
-msgstr ""
+msgstr "mc"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:878
@@ -1582,7 +1629,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:886
 msgid "git"
-msgstr ""
+msgstr "git"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:887
@@ -1621,7 +1668,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:899
 msgid "quilt"
-msgstr ""
+msgstr "quilt"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:900
@@ -1672,7 +1719,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:924
 msgid "devscripts"
-msgstr ""
+msgstr "devscripts"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:925
@@ -1720,7 +1767,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:935
 msgid "pbuilder"
-msgstr ""
+msgstr "pbuilder"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:936
@@ -1878,7 +1925,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1022 debmake-doc.en.xml:5100
 msgid "git-buildpackage"
-msgstr ""
+msgstr "git-buildpackage"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1023
@@ -1897,7 +1944,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1036
 msgid "HTTP proxy"
-msgstr ""
+msgstr "HTTP 代理"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1037
@@ -1923,7 +1970,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1052
 msgid "Private Debian repository"
-msgstr ""
+msgstr "私有 Debian 仓库"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1053
@@ -1935,7 +1982,7 @@ msgstr ""
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:1057
 msgid "Simple Example"
-msgstr ""
+msgstr "简单例子"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1058
@@ -7218,7 +7265,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4158
 msgid "Autotools Tutorial"
-msgstr ""
+msgstr "Autotools 教程"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4163
@@ -7234,7 +7281,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4174 debmake-doc.en.xml:4204
 msgid "CMake"
-msgstr ""
+msgstr "CMake"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4175
