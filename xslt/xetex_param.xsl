@@ -7,6 +7,11 @@
     ############################################################################ -->
 
   <xsl:param name="xetex.font">
+    <!-- Workaround to disable curved quotation mark in listing env -->
+    <xsl:text>\usepackage{listings}&#10;</xsl:text>
+    <xsl:text>\lstset{upquote=true,basicstyle=\ttfamily}&#10;</xsl:text>
+    <xsl:text>\defaultfontfeatures{}&#10;</xsl:text>
+
     <!-- Western centric Adobe PostScript looks-alike: gsfonts: missing some odd codes, mono is thin
     <xsl:text>\setmainfont{Nimbus Roman No9 L}&#10;</xsl:text>
     <xsl:text>\setsansfont{Nimbus Sans L}&#10;</xsl:text>
@@ -26,7 +31,7 @@
 
     <xsl:choose>
       <xsl:when test="$lingua = 'zh-cn' or $lingua = 'zh_CN' or $lingua = 'zh_cn'">
-	<!-- zh_CN centric: fonts-arphic-gbsn00lp, fonts-wqy-zenhei -->
+    <!-- zh_CN centric: fonts-arphic-gbsn00lp, fonts-wqy-zenhei -->
     <!-- TODO: perhaps replace with fonts-noto-cjk or Fandol fonts from
          texlive-lang-chinese? -->
         <xsl:text>\usepackage{xeCJK}&#10;</xsl:text>

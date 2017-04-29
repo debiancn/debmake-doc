@@ -6,8 +6,6 @@ Although this is not necessary the absolute requirement, it is a good idea to in
 
 Please install the tools mentioned in the https://www.debian.org/doc/manuals/developers-reference/tools.html[Overview of Debian Maintainer Tools] of the ``Debian Developer's Reference'', as needed, too.
 
-TIP: For the cut-and-paste from the code listing part, use this document in the HTML format.  footnote:[The cut-and-paste from the PDF format does not function well for U+0022 QUOTATION MARK (ASCII double quote), U+0027 APOSTROPHE (ASCII single quote), and U+0060 GRAVE ACCENT (ASCII back tick) since they are converted by the LaTeX to U+201D RIGHT DOUBLE QUOTATION MARK, U+2019 RIGHT SINGLE QUOTATION MARK, and U+2018 LEFT SINGLE QUOTATION MARK.]
-
 CAUTION: Tool setups presented here are only meant as an example and may not be up-to-date with the latest packages on the system.  Debian development is a moving target.  Please make sure to read the pertinent documentation and update the configuration as needed.
 
 [[email-setup]]
