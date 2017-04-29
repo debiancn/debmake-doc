@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-29 17:22+0800\n"
+"POT-Creation-Date: 2017-04-30 14:07+0800\n"
 "PO-Revision-Date: 2015-05-05 18:17+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3461,7 +3461,7 @@ msgstr ""
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2329
 msgid ""
-"Use of the “<emphasis role=\"strong\">debameke -t …</emphasis>” command can "
+"Use of the “<emphasis role=\"strong\">debmake -t …</emphasis>” command can "
 "help this workflow. See <xref linkend=\"dt-option\"/>."
 msgstr ""
 
