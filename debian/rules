@@ -1,6 +1,10 @@
 #!/usr/bin/make -f
 export DH_VERBOSE = 1
 
+# quilt output is affected by locale; setting explicitly
+LC_ALL := C.UTF-8
+export LC_ALL
+
 # no translation at this moment
 export LANGPO :=
 # UTF-8 locale
