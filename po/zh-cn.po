@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-04-29 01:43+0800\n"
-"PO-Revision-Date: 2017-04-29 10:21+0800\n"
+"PO-Revision-Date: 2017-04-29 10:41+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -1926,8 +1926,8 @@ msgid ""
 "for the consistent experience."
 msgstr ""
 "可以考虑创建从 <emphasis role=\"strong\">/root/.pbuilderrc</emphasis> 到 "
-"<emphasis role=\"strong\">/home/&lt;user&gt;/.pbuilderrc</emphasis> 以获得一"
-"致的体验。"
+"<emphasis role=\"strong\">/home/&lt;user&gt;/.pbuilderrc</emphasis> 的符号链"
+"接以获得一致的体验。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:993
@@ -2010,9 +2010,9 @@ msgid ""
 msgstr ""
 "<emphasis role=\"strong\">ccache</emphasis> 的缓存目录 <emphasis role="
 "\"strong\">/var/cache/pbuilder/cache</emphasis> 需要为了 <emphasis role="
-"\"strong\">pbuilder</emphasis> 命令的使用设置为全局可写：“<emphasis role="
-"\"strong\">-rwxrwxrwx 1 root root</emphasis>”。你需要意识到这样会带来相关的安"
-"全隐患。"
+"\"strong\">pbuilder</emphasis> 命令的使用而设置为全局可写：“<emphasis role="
+"\"strong\">-rwxrwxrwx 1 root root</emphasis>”。你需要明白这样会带来相关的安全"
+"隐患。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1022 debmake-doc.en.xml:5100
@@ -2048,8 +2048,8 @@ msgid ""
 "You should set up a local HTTP caching proxy to save the bandwidth for the "
 "Debian package repository access. There are several choices:"
 msgstr ""
-"你应当在本地设置 HTTP 缓存代理以节约访问 Debian 软件仓库的带宽。你有几种选"
-"择："
+"你应当在本地设置 HTTP 缓存代理以节约访问 Debian 软件仓库的带宽。可以考虑以下"
+"几种选项："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1040
