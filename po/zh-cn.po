@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-04-30 14:07+0800\n"
-"PO-Revision-Date: 2017-05-01 01:13+0800\n"
+"PO-Revision-Date: 2017-05-05 18:24+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -2777,6 +2777,10 @@ msgid ""
 "this example but should be harmless. The lintian seems to produce false "
 "positive warning for this case which has no linked library."
 msgstr ""
+"这里的做法是为了进行加固而强制启用只读重定位链接，以此避免 lintian 的警"
+"告“<emphasis role=\"strong\">W: debhello: hardening-no-relro usr/bin/hello</"
+"emphasis>”。其实它在本例中并不是必要的，但加上也没有什么坏处。对于没有外部链"
+"接库的本例来说，lintian 似乎给出了误报的警告。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1532
@@ -2786,6 +2790,9 @@ msgid ""
 "ENVIRONMENT” in <emphasis role=\"strong\">dpkg-buildflags</emphasis>(1). <_:"
 "footnote-1/>"
 msgstr ""
+"如上导出 <emphasis role=\"strong\">DEB_BUILD_MAINT_OPTION</emphasis> 变量可以"
+"如 <emphasis role=\"strong\">dpkg-buildflags</emphasis>(1) 手册页中“FEATURE "
+"AREAS/ENVIRONMENT”部分所说，对加固选项进行设置。<_:footnote-1/>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1533
@@ -2793,6 +2800,8 @@ msgid ""
 "Exporting the <emphasis role=\"strong\">DEB_CFLAGS_MAINT_APPEND</emphasis> "
 "as above forces C compiler to emit all the warnings."
 msgstr ""
+"如上导出 <emphasis role=\"strong\">DEB_CFLAGS_MAINT_APPEND</emphasis> 可以强"
+"制 C 编译器给出所有类型的警告内容。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:1534
@@ -2801,6 +2810,8 @@ msgid ""
 "case such as Gnome programs. This is not really needed for this simple "
 "example but should be harmless."
 msgstr ""
+"这里的做法是为了避免在依赖库情况复杂的情况下过度链接，例如某些 GNOME 程序。这"
+"样做对这里的简单例子来说并不是必要的，但应当是无害的。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1534
@@ -2809,6 +2820,8 @@ msgid ""
 "as above forces linker to link only when the library is actually needed. <_:"
 "footnote-1/>"
 msgstr ""
+"如上导出 <emphasis role=\"strong\">DEB_LDFLAGS_MAINT_APPEND</emphasis> 可以强"
+"制链接器只对真正需要的库进行链接。<_:footnote-1/>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1535
@@ -2820,6 +2833,10 @@ msgid ""
 "its behavior to “<emphasis role=\"strong\">$(MAKE) install DESTDIR=debian/"
 "debhello prefix=/usr</emphasis>”."
 msgstr ""
+"对基于 Makefile 的构建系统来说，<emphasis role=\"strong\">dh_auto_install</"
+"emphasis> 命令所做的基本上就是“<emphasis role=\"strong\">$(MAKE) install "
+"DESTDIR=debian/debhello</emphasis>”。这里创建的 <emphasis role=\"strong"
+"\">override_dh_auto_install</"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1536
@@ -2828,18 +2845,20 @@ msgid ""
 "control</emphasis> and <emphasis role=\"strong\">debian/copyright</emphasis> "
 "files."
 msgstr ""
+"这里是维护者版本的 <emphasis role=\"strong\">debian/control</emphasis> 和 "
+"<emphasis role=\"strong\">debian/copyright</emphasis> 文件。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1537
 msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (maintainer version):"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/control</emphasis>（维护者版本）："
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1560
 msgid ""
 "<emphasis role=\"strong\">debian/copyright</emphasis> (maintainer version):"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/copyright</emphasis>（维护者版本）："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1589 debmake-doc.en.xml:6205 debmake-doc.en.xml:6452
@@ -2850,12 +2869,15 @@ msgid ""
 "There are several other template files under the <emphasis role=\"strong"
 "\">debian/</emphasis> directory. These also need to be updated."
 msgstr ""
+"在 <emphasis role=\"strong\">debian/</emphasis> 目录下还有一些其它的模板文"
+"件。它们也需要进行更新。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1590
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=0.0):"
 msgstr ""
+"<emphasis role=\"strong\">debian/</emphasis>. 下面的模板文件（0.0 版）："
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1608
@@ -2865,6 +2887,9 @@ msgid ""
 "usually treat <emphasis role=\"strong\">#</emphasis> as the start of the "
 "comment line."
 msgstr ""
+"对于来自 <emphasis role=\"strong\">debhelper</emphasis> 软件包的各个 "
+"<emphasis role=\"strong\">dh_</emphasis>* 命令来说，它们在读取所使用的配置文"
+"件时通常把以 # 开头的行视为注释行。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1611
@@ -2879,6 +2904,9 @@ msgid ""
 "debuild\"/>) in this source tree. The command output is very verbose and "
 "explains what it does as follows."
 msgstr ""
+"你可以使用 <emphasis role=\"strong\">debuild</emphasis> 或者等效的命令工具"
+"（参见 <xref linkend=\"what-debuild\"/>）在这个源码树内构建一个非本土 Debian "
+"软件包。命令的输出通常十分详细，如下所示，它会对构建中执行的操作进行解释。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1641
