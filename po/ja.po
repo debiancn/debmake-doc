@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-30 14:07+0800\n"
+"POT-Creation-Date: 2017-05-10 23:25+0800\n"
 "PO-Revision-Date: 2015-05-05 18:17+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,8 +28,9 @@ msgstr "<personname> 青木 修 </personname>"
 
 #. (itstool) path: bookinfo/date
 #: debmake-doc.en.xml:18
-msgid "2016-12-11"
-msgstr ""
+#, fuzzy
+msgid "2017-05-01"
+msgstr "2015-05-25"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:20
@@ -304,7 +305,7 @@ msgid ""
 "modern requirements. The result is the <emphasis role=\"strong\">debmake</"
 "emphasis> (version: 4.2.9) package and this updated “Guide for Debian "
 "Maintainers” in the <emphasis role=\"strong\">debmake-doc</emphasis> "
-"(version: 1.7-2) package."
+"(version: 1.7.1-1) package."
 msgstr ""
 
 #. (itstool) path: preface/simpara
@@ -13201,6 +13202,3 @@ msgid ""
 "\">gbp-pq</emphasis>(1), and <emphasis role=\"strong\">git-pbuilder</"
 "emphasis>(1) manpages."
 msgstr ""
-
-#~ msgid "2015-05-25"
-#~ msgstr "2015-05-25"

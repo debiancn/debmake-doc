@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-30 14:07+0800\n"
-"PO-Revision-Date: 2017-05-05 18:24+0800\n"
+"POT-Creation-Date: 2017-05-09 21:47+0800\n"
+"PO-Revision-Date: 2017-05-10 23:21+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -29,8 +29,8 @@ msgstr "<personname> 青木 修 </personname>"
 
 #. (itstool) path: bookinfo/date
 #: debmake-doc.en.xml:18
-msgid "2016-12-11"
-msgstr "2016-12-11"
+msgid "2017-05-01"
+msgstr "2017-05-01"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:20
@@ -340,13 +340,13 @@ msgid ""
 "modern requirements. The result is the <emphasis role=\"strong\">debmake</"
 "emphasis> (version: 4.2.9) package and this updated “Guide for Debian "
 "Maintainers” in the <emphasis role=\"strong\">debmake-doc</emphasis> "
-"(version: 1.7-2) package."
+"(version: 1.7.1-1) package."
 msgstr ""
 "作者在更新原有的使用 <emphasis role=\"strong\">dh-make</emphasis> 软件包的“新"
 "维护者手册”时感受到了文档的局限性。因此，作者决定创建一个替代工具并编写其对应"
 "的文档以解决某些现代的需求。其成果便是 <emphasis role=\"strong\">debmake</"
 "emphasis>（当前版本：4.2.9）软件包，以及这篇更新的“Debian 维护者指导”，可从 "
-"<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：1.7-2）软件包获"
+"<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：1.7.1-1）软件包获"
 "取。"
 
 #. (itstool) path: preface/simpara
@@ -2836,7 +2836,8 @@ msgstr ""
 "对基于 Makefile 的构建系统来说，<emphasis role=\"strong\">dh_auto_install</"
 "emphasis> 命令所做的基本上就是“<emphasis role=\"strong\">$(MAKE) install "
 "DESTDIR=debian/debhello</emphasis>”。这里创建的 <emphasis role=\"strong"
-"\">override_dh_auto_install</"
+"\">override_dh_auto_install</emphasis> 目标将其行为修改为“<emphasis role="
+"\"strong\">$(MAKE) install DESTDIR=debian/debhello prefix=/usr</emphasis>”。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1536
@@ -2916,6 +2917,10 @@ msgid ""
 "\"strong\">-pedantic</emphasis> by the <emphasis role=\"strong"
 "\">DEB_CFLAGS_MAINT_APPEND</emphasis> variable."
 msgstr ""
+"这里验证了 <emphasis role=\"strong\">CFLAGS</emphasis> 已经添加了 <emphasis "
+"role=strong\">-Wall</emphasis> 和 <emphasis role=\"strong\">-pendatic</"
+"emphasis> 参数，用到的便是 <emphasis role=\"strong"
+"\">DEB_CFLAGS_MAINT_APPEND</emphasis> 变量。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1642
@@ -2924,11 +2929,14 @@ msgid ""
 "\"strong\">lintian</emphasis> package as shown in the later examples (see "
 "<xref linkend=\"more\"/>). Let’s move on for now."
 msgstr ""
+"根据 <emphasis role=\"strong\">lintian</emphasis> 的报告，你应该如同后文中的"
+"例子那样（请见 <xref linkend=\"more\"/>）为软件包添加 man 手册页。我们这里暂"
+"且跳过这部分内容。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1643 debmake-doc.en.xml:6250
 msgid "Let’s inspect the result."
-msgstr ""
+msgstr "现在我们来看看成果如何。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1644
@@ -2937,11 +2945,14 @@ msgid ""
 "<emphasis role=\"strong\">0.0</emphasis> by the <emphasis role=\"strong"
 "\">debuild</emphasis> command:"
 msgstr ""
+"<emphasis role=\"strong\">debhello</emphasis> <emphasis role=\"strong\">0.0</"
+"emphasis> 版使用 <emphasis role=\"strong\">debuild</emphasis> 命令产生的文"
+"件："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1661 debmake-doc.en.xml:6267
 msgid "You see all the generated files."
-msgstr ""
+msgstr "你可以看见生成的全部文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1664
@@ -2949,6 +2960,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0.orig.tar.gz</emphasis> is a "
 "symlink to the upstream tarball."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0.orig.tar.gz</emphasis> 是指向上游源码"
+"压缩包的符号链接。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1669
@@ -2956,6 +2969,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1.debian.tar.xz</emphasis> "
 "contains the maintainer generated contents."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1.debian.tar.xz</emphasis> 包含了维护"
+"者生成的内容。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1674
@@ -2963,6 +2978,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1.dsc</emphasis> is the meta data "
 "file for the Debian source package."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1.dsc</emphasis> 是 Debian 源码包的元"
+"数据文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1679
@@ -2970,6 +2987,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> is the "
 "Debian binary package."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> 是 Debian 二进"
+"制软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1684
@@ -2977,6 +2996,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1_amd64.changes</emphasis> is the "
 "meta data file for the Debian binary package."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1_amd64.changes</emphasis> 是 Debian "
+"二进制软件包的元数据文件。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1689
@@ -2984,6 +3005,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1.debian.tar.xz</emphasis> "
 "contains the Debian changes to the upstream source as follows."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1.debian.tar.xz</emphasis> 包含了 "
+"Debian 对上游源代码的修改，具体如下所示。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1690
@@ -2991,6 +3014,8 @@ msgid ""
 "The compressed archive contents of <emphasis role=\"strong\">debhello_0.0-1."
 "debian.tar.xz</emphasis>:"
 msgstr ""
+"压缩文件 <emphasis role=\"strong\">debhello_0.0-1.debian.tar.xz</emphasis> 的"
+"内容："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1711
@@ -2998,6 +3023,8 @@ msgid ""
 "The <emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> contains "
 "the files to be installed as follows."
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> 包含了将要安装"
+"至系统中的文件，如下所示。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1712
@@ -3005,6 +3032,8 @@ msgid ""
 "The binary package contents of <emphasis role=\"strong"
 "\">debhello_0.0-1_amd64.deb</emphasis>:"
 msgstr ""
+"<emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> 二进制软件包的"
+"内容："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1736
@@ -3012,6 +3041,8 @@ msgid ""
 "The generated dependency of <emphasis role=\"strong\">debhello_0.0-1_amd64."
 "deb</emphasis> is as follows."
 msgstr ""
+"自动产生的 <emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> 的依"
+"赖关系如下所示。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1737
@@ -3019,13 +3050,15 @@ msgid ""
 "The generated dependency of <emphasis role=\"strong\">debhello_0.0-1_amd64."
 "deb</emphasis>:"
 msgstr ""
+"自动产生的 <emphasis role=\"strong\">debhello_0.0-1_amd64.deb</emphasis> 的依"
+"赖关系："
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:1743
 msgid ""
 "Much more details need to be addressed before uploading the package to the "
 "Debian archive."
-msgstr ""
+msgstr "在将软件包上传至 Debian 仓库之前，仍然有很多细节需要进行处理。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1744
@@ -3037,6 +3070,10 @@ msgid ""
 "<emphasis role=\"strong\">dpkg</emphasis> command, and may be good enough "
 "for your local deployment."
 msgstr ""
+"如果跳过了对 <emphasis role=\"strong\">debmake</emphasis> 命令自动生成的配置"
+"文件的手工调整步骤，所生成的二进制软件包可能缺少有用的软件包描述信息，某些政"
+"策的要求也无法满足。这个不正式的软件包对于 <emphasis role=\"strong\">dpkg</"
+"emphasis> 命令来说可以正常处理，也许这样对你本地的部署来说已经足够好了。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1747
@@ -3048,7 +3085,7 @@ msgstr "第三步（备选）：修改上游源代码"
 msgid ""
 "The above example did not touch the upstream source to make the proper "
 "Debian package."
-msgstr ""
+msgstr "上面的例子中，在创建合适的 Debian 软件包时没有修改上游的源代码。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1749
@@ -3057,6 +3094,9 @@ msgid ""
 "by modifying the upstream <emphasis role=\"strong\">Makefile</emphasis> to "
 "set the $(prefix) value to <emphasis role=\"strong\">/usr</emphasis>."
 msgstr ""
+"作为维护者，另一个备选的方案是对上游源代码做改动，如修改上游的 <emphasis "
+"role=\"strong\">Makefile</emphasis> 以将 $(prefix) 的值设定为 <emphasis role="
+"\"strong\">/usr</emphasis>。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1750
@@ -3064,6 +3104,8 @@ msgid ""
 "The packaging is practically the same as the above step-by-step example "
 "except for two points in <xref linkend=\"step-maintainer\"/>:"
 msgstr ""
+"打包操作基本上和上面的分步示例相同，除了在 <xref linkend=\"step-maintainer\"/"
+"> 中的两点："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1753
@@ -3075,6 +3117,10 @@ msgid ""
 "\"patches\"/>. There are several ways to generate patch files. A few "
 "examples are given as below."
 msgstr ""
+"要将维护者对上游源代码的修改形成对应的补丁文件存放在 <emphasis role=\"strong"
+"\">debian/patches/</emphasis> 目录内，并将它们的文件名写入 <emphasis role="
+"\"strong\">debian/patches/series</emphasis> 文件，如 <xref linkend=\"patches"
+"\"/> 所述。有数种生成补丁文件的方式。下面给出了几种例子。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1776
