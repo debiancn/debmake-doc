@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-05-10 23:25+0800\n"
+"POT-Creation-Date: 2017-05-11 11:46+0800\n"
 "PO-Revision-Date: 2015-05-05 18:17+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2832,7 +2832,7 @@ msgstr ""
 #: debmake-doc.en.xml:1988
 msgid ""
 "The non-native Debian package in the “<emphasis role=\"strong\">3.0 (quilt)</"
-"emphasis>” format is the most normal Debian binary package format."
+"emphasis>” format is the most normal Debian source package format."
 msgstr ""
 
 #. (itstool) path: note/simpara
@@ -3401,7 +3401,7 @@ msgstr ""
 #: debmake-doc.en.xml:2312
 msgid ""
 "The non-native Debian package in the “<emphasis role=\"strong\">3.0 (quilt)</"
-"emphasis>” format is the most normal Debian binary package format. The "
+"emphasis>” format is the most normal Debian source package format. The "
 "<emphasis role=\"strong\">debian/source/format</emphasis> file should have "
 "“<emphasis role=\"strong\">3.0 (quilt)</emphasis>” in it as described in "
 "<emphasis role=\"strong\">dpkg-source</emphasis>(1). The above workflow and "

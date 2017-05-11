@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-05-09 21:47+0800\n"
-"PO-Revision-Date: 2017-05-11 11:17+0800\n"
+"POT-Creation-Date: 2017-05-11 11:46+0800\n"
+"PO-Revision-Date: 2017-05-11 11:50+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -2918,7 +2918,7 @@ msgid ""
 "\">DEB_CFLAGS_MAINT_APPEND</emphasis> variable."
 msgstr ""
 "这里验证了 <emphasis role=\"strong\">CFLAGS</emphasis> 已经添加了 <emphasis "
-"role=strong\">-Wall</emphasis> 和 <emphasis role=\"strong\">-pendatic</"
+"role=\"strong\">-Wall</emphasis> 和 <emphasis role=\"strong\">-pendatic</"
 "emphasis> 参数，用到的便是 <emphasis role=\"strong"
 "\">DEB_CFLAGS_MAINT_APPEND</emphasis> 变量。"
 
@@ -3229,9 +3229,9 @@ msgstr ""
 "这里的例子使用 <emphasis role=\"strong\">dquilt</emphasis> 命令（一个 "
 "<emphasis role=\"strong\">quilt</emphasis> 程序的简单封装）创建 <emphasis "
 "role=\"strong\">000-prefix-usr.patch</emphasis>。<emphasis role=\"strong"
-"\">dquilt</emphasis</emphasis> 命令的语法和功能与 <emphasis role=\"strong"
-"\">quilt</emphasis>(1) 命令相同，唯一的区别在于补丁存储在 <emphasis role="
-"\"strong\">debian/patches/</emphasis> 目录中。"
+"\">dquilt</emphasis> 命令的语法和功能与 <emphasis role=\"strong\">quilt</"
+"emphasis>(1) 命令相同，唯一的区别在于补丁存储在 <emphasis role=\"strong"
+"\">debian/patches/</emphasis> 目录中。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1894
@@ -3346,6 +3346,7 @@ msgid ""
 "The Debian source package is a set of input files used to build the Debian "
 "binary package and is not a single file."
 msgstr ""
+"Debian 源码包是一组用于构建 Debian 二进制软件包的输入文件，而非单个文件。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1986
@@ -3353,6 +3354,8 @@ msgid ""
 "The Debian binary package is a special archive file which holds a set of "
 "installable binary data with their associated information."
 msgstr ""
+"Debian 二进制软件包是一个特殊的档案文件，其中包含了一系列可安装的二进制数据及"
+"与它们相关的信息。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1987
@@ -3360,13 +3363,17 @@ msgid ""
 "A single Debian source package may generate multiple Debian binary packages "
 "defined in the <emphasis role=\"strong\">debian/control</emphasis> file."
 msgstr ""
+"单个 Debian 源码包可能根据 <emphasis role=\"strong\">debian/control</"
+"emphasis> 文件定义的内容产生多个 Debian 二进制软件包。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1988
 msgid ""
 "The non-native Debian package in the “<emphasis role=\"strong\">3.0 (quilt)</"
-"emphasis>” format is the most normal Debian binary package format."
+"emphasis>” format is the most normal Debian source package format."
 msgstr ""
+"使用 “<emphasis role=\"strong\">3.0 (quilt)</emphasis>”格式的非本土 Debian 软"
+"件包是最普通的 Debian 源码包格式。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1989
@@ -3934,7 +3941,7 @@ msgstr "本土 Debian 软件包"
 #: debmake-doc.en.xml:2312
 msgid ""
 "The non-native Debian package in the “<emphasis role=\"strong\">3.0 (quilt)</"
-"emphasis>” format is the most normal Debian binary package format. The "
+"emphasis>” format is the most normal Debian source package format. The "
 "<emphasis role=\"strong\">debian/source/format</emphasis> file should have "
 "“<emphasis role=\"strong\">3.0 (quilt)</emphasis>” in it as described in "
 "<emphasis role=\"strong\">dpkg-source</emphasis>(1). The above workflow and "
