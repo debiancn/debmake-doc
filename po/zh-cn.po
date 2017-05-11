@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-09 21:47+0800\n"
-"PO-Revision-Date: 2017-05-10 23:21+0800\n"
+"PO-Revision-Date: 2017-05-11 11:17+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -3129,6 +3129,9 @@ msgid ""
 "emphasis> file doesn’t have the <emphasis role=\"strong"
 "\">override_dh_auto_install</emphasis> target as follows:"
 msgstr ""
+"此时维护者对 <emphasis role=\"strong\">debian/rules</emphasis> 文件的修改如下"
+"所示，它不包含 <emphasis role=\"strong\">override_dh_auto_install</emphasis> "
+"目标："
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1779
@@ -3136,6 +3139,7 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (alternative maintainer "
 "version):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis>（备选的维护者版本）："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1795
@@ -3144,6 +3148,9 @@ msgid ""
 "files may be less robust for the future upstream changes but more flexible "
 "to cope with the difficult upstream source. (See <xref linkend=\"deb3\"/>.)"
 msgstr ""
+"这个使用一系列补丁文件进行 Debian 打包的备选方案对于应对上游未来的改变可能不"
+"够健壮，但是在应对更为复杂的上游源代码时可以更灵活。（参见 <xref linkend="
+"\"deb3\"/>。）"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1796
@@ -3152,6 +3159,9 @@ msgid ""
 "\"/> using the <emphasis role=\"strong\">debian/rules</emphasis> file is the "
 "better approach. But let’s keep on with this approach as a leaning process."
 msgstr ""
+"对当前这个特定的打包场景，前文的 <xref linkend=\"step-maintainer\"/> 中使用 "
+"<emphasis role=\"strong\">debian/rules</emphasis> 文件的方式更好一些。但为了"
+"演示起见，此时我们先使用本节的方式继续操作。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1797
@@ -3159,6 +3169,8 @@ msgid ""
 "For more complicated packaging cases, both <xref linkend=\"step-maintainer\"/"
 "> and <xref linkend=\"alt-patch\"/> approaches need to be deployed."
 msgstr ""
+"对更复杂的打包场景，可能需要同时应用 <xref linkend=\"step-maintainer\"/> 和 "
+"<xref linkend=\"alt-patch\"/> 中的方式。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1799
@@ -3171,6 +3183,8 @@ msgid ""
 "Here is an example to create <emphasis role=\"strong\">000-prefix-usr.patch</"
 "emphasis> by the <emphasis role=\"strong\">diff</emphasis> command."
 msgstr ""
+"这里我们使用 <emphasis role=\"strong\">diff</emphasis> 命令创建一个 "
+"<emphasis role=\"strong\">000-prefix-usr.patch</emphasis> 文件作为例子。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1817
@@ -3179,11 +3193,13 @@ msgid ""
 "and the patch file is available as <emphasis role=\"strong\">000-prefix-usr."
 "patch</emphasis>."
 msgstr ""
+"请注意，上游的源码树应当恢复到原始状态，补丁文件此时的名字为 <emphasis role="
+"\"strong\">000-prefix-usr.patch</emphasis>。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:1818 debmake-doc.en.xml:3222
 msgid "DEP-3"
-msgstr ""
+msgstr "DEP-3"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1818
@@ -3191,6 +3207,8 @@ msgid ""
 "This <emphasis role=\"strong\">000-prefix-usr.patch</emphasis> is editted to "
 "be <_:ulink-1/> conformant and moved to the right location as below."
 msgstr ""
+"这个 <emphasis role=\"strong\">000-prefix-usr.patch</emphasis> 文件随后应当进"
+"行编辑以使其符合 <_:ulink-1/>，并照如下方式移动至正确的位置。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1837
@@ -3208,6 +3226,12 @@ msgid ""
 "emphasis>(1) command, except for the fact that the patch is stored in the "
 "<emphasis role=\"strong\">debian/patches/</emphasis> directory."
 msgstr ""
+"这里的例子使用 <emphasis role=\"strong\">dquilt</emphasis> 命令（一个 "
+"<emphasis role=\"strong\">quilt</emphasis> 程序的简单封装）创建 <emphasis "
+"role=\"strong\">000-prefix-usr.patch</emphasis>。<emphasis role=\"strong"
+"\">dquilt</emphasis</emphasis> 命令的语法和功能与 <emphasis role=\"strong"
+"\">quilt</emphasis>(1) 命令相同，唯一的区别在于补丁存储在 <emphasis role="
+"\"strong\">debian/patches/</emphasis> 目录中。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1894
@@ -3222,6 +3246,13 @@ msgid ""
 "\"strong\">dquilt</emphasis> command, the Debian source package can be build "
 "from the modified source tree."
 msgstr ""
+"这里，上游源码树中的 <emphasis role=\"strong\">Makefile</emphasis> 文件没有恢"
+"复到原始状态的必要。在 <xref linkend=\"step-debuild\"/> 描述的 Debian 打包过"
+"程中调用的 <emphasis role=\"strong\">dpkg-source</emphasis> 命令能够理解由 "
+"<emphasis role=\"strong\">dquilt</emphasis> 程序在 <emphasis role=\"strong"
+"\">.pc/</emphasis> 目录中记录的补丁应用情况。只要所有这些修改都是由 "
+"<emphasis role=\"strong\">dquilt</emphasis> 命令完成的，那么 Debian 源码包就"
+"可以从经过修改的源码树中进行构建。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1895
@@ -3233,6 +3264,10 @@ msgid ""
 "\"strong\">.pc/</emphasis> directory require the upstream source tree to be "
 "restored."
 msgstr ""
+"如果 <emphasis role=\"strong\">.pc/</emphasis> 目录不存在，<emphasis role="
+"\"strong\">dpkg-source</emphasis> 命令就会假定没有应用任何补丁。这就是更为原"
+"始的补丁生成方法，例如 <xref linkend=\"diff-u\"/> 中未生成 <emphasis role="
+"\"strong\">.pc/</emphasis> 目录的情况下要求将上游源码树进行恢复的原因。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1898
@@ -3246,21 +3281,23 @@ msgid ""
 "emphasis> by the “<emphasis role=\"strong\">dpkg-source --commit</emphasis>” "
 "command."
 msgstr ""
+"这里给出使用”<emphasis role=\"strong\">dpkg-source --commit</emphasis>“命令生"
+"成 <emphasis role=\"strong\">000-prefix-usr.patch</emphasis> 的例子："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1900
 msgid "Let’s edit the upstream source."
-msgstr ""
+msgstr "我们先来编辑上游源代码。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1928
 msgid "Let’s commit it."
-msgstr ""
+msgstr "我们来进行提交。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1932
 msgid "Let’s see the result."
-msgstr ""
+msgstr "我们来看看效果如何。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1977
@@ -3269,6 +3306,9 @@ msgid ""
 "exactly the same as what the sequences of the <emphasis role=\"strong"
 "\">dquilt</emphasis> command did in <xref linkend=\"dquilt\"/>."
 msgstr ""
+"这里，<emphasis role=\"strong\">dpkg-source</emphasis> 命令完成了与 <xref "
+"linkend=\"dquilt\"/> 一节中使用 <emphasis role=\"strong\">dquilt</emphasis> "
+"命令完全相同的流程。"
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:1982
@@ -3282,6 +3322,8 @@ msgid ""
 "packaging focusing on the non-native Debian package in the “<emphasis role="
 "\"strong\">3.0 (quilt)</emphasis>” format."
 msgstr ""
+"这里展示了 Debian 打包工作中针对非本土软件包使用”<emphasis role=\"strong"
+"\">3.0 (quilt)</emphasis>”格式进行打包所遵循基本规则的一个全局性概览。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1984
@@ -3292,6 +3334,11 @@ msgid ""
 "emphasis>(1), <emphasis role=\"strong\">dpkg-deb</emphasis>(1), <emphasis "
 "role=\"strong\">deb</emphasis>(5), etc."
 msgstr ""
+"为简明起见，某些细节被有意跳过。请按需查阅对应命令的手册页，例如<emphasis "
+"role=\"strong\">dpkg-source</emphasis>(1)、<emphasis role=\"strong\">dpkg-"
+"buildpackage</emphasis>(1)、<emphasis role=\"strong\">dpkg</emphasis>(1)、"
+"<emphasis role=\"strong\">dpkg-deb</emphasis>(1)、<emphasis role=\"strong"
+"\">deb</emphasis>(5)，等等。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1985
