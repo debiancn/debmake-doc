@@ -39,7 +39,7 @@ One tricky case occurs when the upstream releases *hello-0.9.12-ReleaseCandidate
 [[native]]
 === Native Debian package
 
-The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  The *debian/source/format* file should have ``*3.0 (quilt)*'' in it as described in *dpkg-source*(1).  The above workflow and the following packaging examples always use this format.
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian source package format.  The *debian/source/format* file should have ``*3.0 (quilt)*'' in it as described in *dpkg-source*(1).  The above workflow and the following packaging examples always use this format.
 
 The native Debian package is the rare Debian binary package format.  It may be used only when the package is useful and valuable only for Debian.  Thus, its use is generally deprecated.
 

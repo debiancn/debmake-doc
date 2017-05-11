@@ -8,7 +8,7 @@ The Debian binary package is a special archive file which holds a set of install
 
 A single Debian source package may generate multiple Debian binary packages defined in the *debian/control* file.
 
-The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian binary package format.  
+The non-native Debian package in the ``*3.0 (quilt)*'' format is the most normal Debian source package format.
 
 NOTE: There are many wrapper scripts.  Use them to streamline your workflow but make sure to understand the basics of their internals.
 
