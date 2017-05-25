@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-11 11:46+0800\n"
-"PO-Revision-Date: 2017-05-11 11:50+0800\n"
+"PO-Revision-Date: 2017-05-25 18:41+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -3381,6 +3381,8 @@ msgid ""
 "There are many wrapper scripts. Use them to streamline your workflow but "
 "make sure to understand the basics of their internals."
 msgstr ""
+"有许多封装脚本可用。合理使用它们可以帮助你理顺工作流程，但是请确保你能理解它"
+"们内部的基本工作原理。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1991
@@ -3394,13 +3396,15 @@ msgid ""
 "generating several specifically named files (see <xref linkend=\"name-version"
 "\"/>) as defined in the “Debian Policy Manual”."
 msgstr ""
+"创建 Debian 二进制软件包的 Debian 打包工作流涉及创建数个特定名称的文件（参见 "
+"<xref linkend=\"name-version\"/>）。“Debian 政策手册”对此进行了定义。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1993
 msgid ""
 "The oversimplified method for the Debian packaging workflow can be "
 "summarized in 5 steps as follows."
-msgstr ""
+msgstr "一个极其简化的 Debian 打包工作流可以概括为以下五步。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1996 debmake-doc.en.xml:8745
@@ -3408,6 +3412,8 @@ msgid ""
 "The upstream tarball is downloaded as the <emphasis>package-version</"
 "emphasis><emphasis role=\"strong\">.tar.gz</emphasis> file."
 msgstr ""
+"下载上游源码压缩包（tarball）并命名为 <emphasis>package-version</"
+"emphasis><emphasis role=\"strong\">.tar.gz</emphasis> 文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2001
@@ -3416,6 +3422,8 @@ msgid ""
 "<emphasis>package-version</emphasis><emphasis role=\"strong\">/</emphasis> "
 "directory."
 msgstr ""
+"使上游提供的源码压缩包解压缩后的所有文件存储在 <emphasis>package-version</"
+"emphasis><emphasis role=\"strong\">/</emphasis> 目录中。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2006
@@ -3424,6 +3432,9 @@ msgid ""
 "<emphasis>packagename_version</emphasis><emphasis role=\"strong\">.orig.tar."
 "gz</emphasis>."
 msgstr ""
+"上游的源码压缩包被复制（或符号链接）至一个特定的文件名 "
+"<emphasis>packagename_version</emphasis><emphasis role=\"strong\">.orig.tar."
+"gz</emphasis>。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2011
@@ -3432,12 +3443,15 @@ msgid ""
 "emphasis> is changed from <emphasis role=\"strong\">-</emphasis> (hyphen) to "
 "<emphasis role=\"strong\">_</emphasis> (underscore)"
 msgstr ""
+"分隔 <emphasis>package</emphasis> 和 <emphasis>version</emphasis> 的符号从 "
+"<emphasis role=\"strong\">-</emphasis>（连字符）更改为 <emphasis role="
+"\"strong\">_</emphasis>（下划线）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2016
 msgid ""
 "<emphasis role=\"strong\">.orig</emphasis> is added in the file extension."
-msgstr ""
+msgstr "文件扩展名添加了 <emphasis role=\"strong\">.orig</emphasis> 部分。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2023
@@ -3446,30 +3460,32 @@ msgid ""
 "under the <emphasis>package-version</emphasis><emphasis role=\"strong\">/"
 "debian/</emphasis> directory."
 msgstr ""
+"Debian 软件包规范文件将被添加至上游源代码中，存放在 <emphasis>package-"
+"version</emphasis><emphasis role=\"strong\">/debian/</emphasis> 目录下。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2028
 msgid ""
 "Required specification files under the <emphasis role=\"strong\">debian/</"
 "emphasis>*:"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/</emphasis>* 位置下的必要规范文件："
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2033
 msgid "<emphasis role=\"strong\">debian/rules</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/rules</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2037
 msgid ""
 "The executable script for building the Debian package (see <xref linkend="
 "\"rules\"/>)"
-msgstr ""
+msgstr "构建 Debian 软件包所需的可执行脚本（参见 <xref linkend=\"rules\"/>）"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2043
 msgid "<emphasis role=\"strong\">debian/control</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/control</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2047
@@ -3478,11 +3494,13 @@ msgid ""
 "source build dependency, the binary package name, the binary dependency, "
 "etc. (see <xref linkend=\"control\"/>)"
 msgstr ""
+"软件包配置文件，包含了源码包名称、源码构建依赖、二进制软件包名称、二进制软件"
+"包依赖，等等。（参见 <xref linkend=\"control\"/>）"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2053
 msgid "<emphasis role=\"strong\">debian/changelog</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/changelog</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2057
@@ -3490,16 +3508,18 @@ msgid ""
 "The Debian package history file defining the upstream package version and "
 "the Debian revision in its first line (see <xref linkend=\"changelog\"/>)"
 msgstr ""
+"Debian 软件包历史文件，其中第一行定义了上游软件包版本号和 Debian 修订版本号"
+"（参见 <xref linkend=\"changelog\"/>）"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2063
 msgid "<emphasis role=\"strong\">debian/copyright</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/copyright</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2067
 msgid "The copyright and license summary (see <xref linkend=\"copyright\"/>)"
-msgstr ""
+msgstr "版权和许可证摘要信息（参看 <xref linkend=\"copyright\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2075
@@ -3507,6 +3527,8 @@ msgid ""
 "Optional specification files under the <emphasis role=\"strong\">debian/</"
 "emphasis>* (see <xref linkend=\"debianconf\"/>):"
 msgstr ""
+"在 <emphasis role=\"strong\">debian/</emphasis>* 下的可选配置文件（参见 "
+"<xref linkend=\"debianconf\"/>）："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2080
@@ -3515,6 +3537,8 @@ msgid ""
 "<emphasis>package-version/</emphasis> directory provides the initial set of "
 "these template configuration files."
 msgstr ""
+"在 <emphasis>package-version/</emphasis> 目录中调用 <emphasis role=\"strong"
+"\">debmake</emphasis> 命令将会提供这些配置文件的一套模板。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2085
@@ -3522,6 +3546,8 @@ msgid ""
 "Required specification files are generated even with the <emphasis role="
 "\"strong\">-x0</emphasis> option."
 msgstr ""
+"必备的配置文件总会生成，无论是否提供 <emphasis role=\"strong\">-x0</"
+"emphasis> 选项。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2090
@@ -3529,6 +3555,8 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command does not overwrite "
 "any existing configuration files."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令永远不会覆写任何已经存在的配"
+"置文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2097
@@ -3536,6 +3564,8 @@ msgid ""
 "These files must be manually edited to their perfection according to the "
 "“Debian Policy Manual” and “Debian Developer’s Reference”."
 msgstr ""
+"这些文件必须手工编辑以达到理想状态。请使用“Debian 政策手册”和“Debian 开发者参"
+"考”作为编辑依据。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2104
@@ -3546,6 +3576,11 @@ msgid ""
 "version/</emphasis> directory to make the Debian source and binary packages "
 "by invoking the <emphasis role=\"strong\">debian/rules</emphasis> script."
 msgstr ""
+"<emphasis role=\"strong\">dpkg-buildpackage</emphasis> 命令（通常由它的封装命"
+"令 <emphasis role=\"strong\">debuild</emphasis> 或 <emphasis role=\"strong"
+"\">pdebuild</emphasis> 所使用）会在 <emphasis>package-version/</emphasis> 目"
+"录中被调用，进而以调用 <emphasis role=\"strong\">debian/rules</emphasis> 脚本"
+"的方式制作 Debian 源码包和二进制软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2109
@@ -3553,6 +3588,8 @@ msgid ""
 "The current directory is set as: <emphasis role=\"strong\">$(CURDIR)=</"
 "emphasis><emphasis>/path/to/package-version/</emphasis>"
 msgstr ""
+"当前工作目录会被设为：<emphasis role=\"strong\">$(CURDIR)=</"
+"emphasis><emphasis>/path/to/package-version/</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2114
@@ -4600,7 +4637,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2627
 msgid "debmake -b"
-msgstr ""
+msgstr "debmake -b"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2628
