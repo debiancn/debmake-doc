@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-11 11:46+0800\n"
-"PO-Revision-Date: 2017-05-25 18:41+0800\n"
+"PO-Revision-Date: 2017-06-04 18:18+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -1784,6 +1784,9 @@ msgid ""
 "here for <emphasis role=\"strong\">DEBUILD_DPKG_BUILDPACKAGE_OPTS</"
 "emphasis>. See <xref linkend=\"rebuild-native\"/>."
 msgstr ""
+"这里在 <emphasis role=\"strong\">DEBUILD_DPKG_BUILDPACKAGE_OPTS</emphasis> 中"
+"特意跳过了 <emphasis role=\"strong\">-I</emphasis> 选项。参见 <xref linkend="
+"\"rebuild-native\"/>。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:931
@@ -3598,6 +3601,8 @@ msgid ""
 "(quilt)</emphasis>” format using <emphasis role=\"strong\">dpkg-source</"
 "emphasis>(1)"
 msgstr ""
+"使用 <emphasis role=\"strong\">dpkg-source</emphasis>(1) 以“<emphasis role="
+"\"strong\">3.0 (quilt)</emphasis>”格式创建 Debian 源码包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2119
@@ -3606,6 +3611,9 @@ msgid ""
 "emphasis> (copy or symlink of <emphasis>package-version</emphasis>.<emphasis "
 "role=\"strong\">tar.gz</emphasis>)"
 msgstr ""
+"<emphasis>package_version</emphasis>.<emphasis role=\"strong\">orig.tar.gz</"
+"emphasis>（<emphasis>package-version</emphasis>.<emphasis role=\"strong"
+"\">tar.gz</emphasis> 的副本或符号链接）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2124
@@ -3614,6 +3622,9 @@ msgid ""
 "\">debian.tar.xz</emphasis> (tarball of <emphasis>package-version</emphasis>/"
 "<emphasis role=\"strong\">debian/</emphasis>*)"
 msgstr ""
+"<emphasis>package_version-revision</emphasis>.<emphasis role=\"strong"
+"\">debian.tar.xz</emphasis>（<emphasis>package-version</emphasis>/<emphasis "
+"role=\"strong\">debian/</emphasis>* 的 tar 压缩包，即 tarball）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2129
@@ -3621,6 +3632,8 @@ msgid ""
 "<emphasis>package_version-revision</emphasis>.<emphasis role=\"strong\">dsc</"
 "emphasis>"
 msgstr ""
+"<emphasis>package_version-revision</emphasis>.<emphasis role=\"strong\">dsc</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2136
@@ -3628,6 +3641,8 @@ msgid ""
 "Build the source using “<emphasis role=\"strong\">debian/rules build</"
 "emphasis>” into <emphasis role=\"strong\">$(DESTDIR)</emphasis>"
 msgstr ""
+"使用“<emphasis role=\"strong\">debian/rules build</emphasis>”构建源代码并安装"
+"到 <emphasis role=\"strong\">$(DESTDIR)</emphasis> 中"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2141
@@ -3635,6 +3650,8 @@ msgid ""
 "<emphasis role=\"strong\">DESTDIR=debian</emphasis>/<emphasis>binarypackage/"
 "</emphasis> (single binary package)"
 msgstr ""
+"<emphasis role=\"strong\">DESTDIR=debian</emphasis>/<emphasis>binarypackage/"
+"</emphasis>（单二进制包）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2146
@@ -3642,6 +3659,7 @@ msgid ""
 "<emphasis role=\"strong\">DESTDIR=debian/tmp/</emphasis> (multi binary "
 "package)"
 msgstr ""
+"<emphasis role=\"strong\">DESTDIR=debian/tmp/</emphasis>（多个二进制包）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2153
@@ -3650,6 +3668,9 @@ msgid ""
 "emphasis>(1), <emphasis role=\"strong\">dpkg-genbuildinfo</emphasis>(1), and "
 "<emphasis role=\"strong\">dpkg-genchanges</emphasis>(1)."
 msgstr ""
+"使用 <emphasis role=\"strong\">dpkg-deb</emphasis>(1)、<emphasis role="
+"\"strong\">dpkg-genbuildinfo</emphasis>(1) 和 <emphasis role=\"strong\">dpkg-"
+"genchanges</emphasis>(1) 创建 Debian 二进制软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2158
@@ -3657,11 +3678,13 @@ msgid ""
 "<emphasis>binarypackage_version-revision_arch</emphasis>.<emphasis role="
 "\"strong\">deb</emphasis>"
 msgstr ""
+"<emphasis>binarypackage_version-revision_arch</emphasis>.<emphasis role="
+"\"strong\">deb</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2163
 msgid "… (There may be multiple Debian binary package files.)"
-msgstr ""
+msgstr "……（可能有多个 Debian 二进制包文件。）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2168
@@ -3669,6 +3692,8 @@ msgid ""
 "<emphasis>package_version-revision_arch</emphasis>.<emphasis role=\"strong"
 "\">changes</emphasis>"
 msgstr ""
+"<emphasis>package_version-revision_arch</emphasis>.<emphasis role=\"strong"
+"\">changes</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2177
@@ -3676,41 +3701,43 @@ msgid ""
 "Check the quality of the Debian package with the <emphasis role=\"strong"
 "\">lintian</emphasis> command. (recommended)"
 msgstr ""
+"使用 <emphasis role=\"strong\">lintian</emphasis> 命令检查 Debian 软件包的质"
+"量。（推荐）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2183
 msgid "ftp-master"
-msgstr ""
+msgstr "ftp-master"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2182
 msgid "Follow the rejection guideline from <_:ulink-1/>."
-msgstr ""
+msgstr "遵守 <_:ulink-1/> 的拒绝（rejection）指导方针。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2188
 msgid "REJECT-FAQ"
-msgstr ""
+msgstr "软件包被拒绝常见问题解答（REJECT-FAQ）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2193
 msgid "NEW checklist"
-msgstr ""
+msgstr "新软件包（NEW）检查清单"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2198
 msgid "Lintian Autorejects"
-msgstr ""
+msgstr "Lintian 自动拒绝（autoreject）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2198
 msgid "lintian tag list"
-msgstr ""
+msgstr "lintian 标签列表"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2197
 msgid "<_:ulink-1/> (<_:ulink-2/>)"
-msgstr ""
+msgstr "<_:ulink-1/>（<_:ulink-2/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2206
@@ -3720,6 +3747,10 @@ msgid ""
 "emphasis>.<emphasis role=\"strong\">changes</emphasis> with the <emphasis "
 "role=\"strong\">debsign</emphasis> command using your private GPG key."
 msgstr ""
+"使用 <emphasis role=\"strong\">debsign</emphasis> 命令，用您的 GPG 私钥为 "
+"<emphasis>package_version-revision</emphasis>.<emphasis role=\"strong\">dsc</"
+"emphasis> 和 <emphasis>package_version-revision_arch</emphasis>.<emphasis "
+"role=\"strong\">changes</emphasis> 进行签名。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2211
@@ -3727,17 +3758,19 @@ msgid ""
 "Upload the set of the Debian source and binary package files with the "
 "<emphasis role=\"strong\">dput</emphasis> command to the Debian archive."
 msgstr ""
+"使用 <emphasis role=\"strong\">dput</emphasis> 命令向 Debian 仓库上传一套 "
+"Debian 源码包和二进制软件包文件。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2216
 msgid "Here, please replace each part of the filename as:"
-msgstr ""
+msgstr "这里，请将文件名中对应的部分使用下面的方式进行替换："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2219
 msgid ""
 "the <emphasis>package</emphasis> part with the Debian source package name"
-msgstr ""
+msgstr "将 <emphasis>package</emphasis> 部分替换为 Debian 源码包名称"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2224
@@ -3745,21 +3778,22 @@ msgid ""
 "the <emphasis>binarypackage</emphasis> part with the Debian binary package "
 "name"
 msgstr ""
+"将 <emphasis>binarypackage</emphasis> 部分替换为 Debian 二进制软件包名称"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2229
 msgid "the <emphasis>version</emphasis> part with the upstream version"
-msgstr ""
+msgstr "将 <emphasis>version</emphasis> 部分替换为上游版本号"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2234
 msgid "the <emphasis>revision</emphasis> part with the Debian revision"
-msgstr ""
+msgstr "将 <emphasis>revision</emphasis> 部分替换为 Debian 修订号"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2239
 msgid "the <emphasis>arch</emphasis> part with the package architecture"
-msgstr ""
+msgstr "将 <emphasis>arch</emphasis> 部分替换为软件包对应架构"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2244
@@ -3767,11 +3801,13 @@ msgid ""
 "Many patch management and VCS usage strategies for the Debian packaging are "
 "practiced. You don’t need to use all of them."
 msgstr ""
+"有很多种通过实践摸索而得到的补丁管理方法和版本控制系统的使用策略与技巧。您没"
+"有必要将它们全部用上。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2245
 msgid "Chapter 6. Best Packaging Practices"
-msgstr ""
+msgstr "第 6 章 最佳打包实践"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2245
@@ -3779,6 +3815,8 @@ msgid ""
 "There is very extensive documentation in <_:ulink-1/> of the “Debian "
 "Developer’s Reference”. Please read it."
 msgstr ""
+"在“Debian 开发者参考”一文的 <_:ulink-1/> 部分有十分详尽的相关文档。请读一读这"
+"些内容。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2248
@@ -3793,6 +3831,9 @@ msgid ""
 "the upstream source package name and <emphasis role=\"strong\">0.9.12</"
 "emphasis> as the upstream version."
 msgstr ""
+"如果所获取上游源代码的形式为 <emphasis role=\"strong\">hello-0.9.12.tar.gz</"
+"emphasis>，您可以将 <emphasis role=\"strong\">hello</emphasis> 作为上游源代码"
+"名称，并将 <emphasis role=\"strong\">0.9.12</emphasis> 作为上游版本号。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2250 debmake-doc.en.xml:9286
@@ -3802,6 +3843,8 @@ msgid ""
 "<emphasis role=\"strong\">#</emphasis> contain the tutorial text. You must "
 "remove or edit such comment lines before uploading to the Debian archive."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 的目的是为软件包维护者提供开始工"
+"作的模板文件。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2251 debmake-doc.en.xml:9287
