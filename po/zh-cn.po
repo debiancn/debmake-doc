@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-11 11:46+0800\n"
-"PO-Revision-Date: 2017-07-09 10:57+0800\n"
+"PO-Revision-Date: 2017-07-09 22:51+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -4018,6 +4018,9 @@ msgid ""
 "plus (<emphasis role=\"strong\">+</emphasis>), and tilde (<emphasis role="
 "\"strong\">~</emphasis>) characters, as follows."
 msgstr ""
+"对于某些字符，如句点（<emphasis role=\"strong\">.</emphasis>）、加号（<emphasis"
+" role=\"strong\">+</emphasis>）和波浪号（<emphasis role=\"strong\">~</emphasis"
+">），有如下的特殊规则。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2308
@@ -4028,6 +4031,11 @@ msgid ""
 "Debian package upgrade to work properly by renaming the upstream source to "
 "<emphasis role=\"strong\">hello-0.9.12~rc99.tar.gz</emphasis>."
 msgstr ""
+"有一个稍需注意的情况，即当上游将 <emphasis role=\"strong\""
+">hello-0.9.12-ReleaseCandidate-99.tar.gz</emphasis> 这样的版本当作预发布版本，而将 <emphasis"
+" role=\"strong\">hello-0.9.12.tar.gz</emphasis> 作为正式版本时。为了确保 Debian"
+" 软件包升级能够顺畅进行，您应当修改版本号命名，如将上游源代码压缩包重命名为 <emphasis role=\"strong\""
+">hello-0.9.12~rc99.tar.gz</emphasis>。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2311
@@ -4044,6 +4052,10 @@ msgid ""
 "<emphasis role=\"strong\">dpkg-source</emphasis>(1). The above workflow and "
 "the following packaging examples always use this format."
 msgstr ""
+"使用“<emphasis role=\"strong\">3.0 (quilt)</emphasis>”格式的非本土 Debian 软件包是最常见最标准的"
+" Debian 源码包格式。根据 <emphasis role=\"strong\">dpkg-source</emphasis>(1) 的描述，此时的"
+" <emphasis role=\"strong\">debian/source/format</emphasis> 文件应当包含“<emphasis"
+" role=\"strong\">3.0 (quilt)</emphasis> 的文字内容。上述的工作流和接下来给出的打包示例都使用了这种格式。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2313
@@ -4052,6 +4064,8 @@ msgid ""
 "be used only when the package is useful and valuable only for Debian. Thus, "
 "its use is generally deprecated."
 msgstr ""
+"而本土 Debian 软件包是较罕见的一种 Debian 软件包格式。它通常只用于打包仅对 Debian"
+" 项目有价值、有意义的软件。因此，该格式的使用通常不被提倡。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:2314
@@ -4064,6 +4078,14 @@ msgid ""
 "with “<emphasis role=\"strong\">-</emphasis>” instead of the correct one "
 "with “<emphasis role=\"strong\">_</emphasis>”."
 msgstr ""
+"在上游 tarball 压缩包无法使用其正确名称 <emphasis>package_version</emphasis>.<emphasis"
+" role=\"strong\">orig.tar.gz</emphasis> 被 <emphasis role=\"strong\""
+">dpkg-buildpackage</emphasis> 获取到的时候，会出现意外地构建了本土 Debian"
+" 软件包的情况。这是新手常见的一个错误，通常是因构建中错误地在符号链接名称中使用了“<emphasis role=\"strong\">-<"
+"/emphasis>”字符而非正确的“<emphasis role=\"strong\">_</emphasis"
+">”字符。[译注：此处仍然假设打包的场景是已经获取或形成了名为 <emphasis role=\"strong\">package-version<"
+"/emphasis>.<emphasis role=\"strong\">tar.gz</emphasis> 的上游源码 tarball。Debian"
+" 的打包工作很大程度上是以上游源码 tarball 作为基础的，这一点须时刻牢记在心。]"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2315
@@ -4072,6 +4094,8 @@ msgid ""
 "\"strong\">upstream code</emphasis> and the <emphasis role=\"strong\">Debian "
 "changes</emphasis> and consists only with the following:"
 msgstr ""
+"本土 Debian 软件包不对 <emphasis role=\"strong\">上游代码</emphasis> 和 <emphasis"
+" role=\"strong\">Debian 的修改</emphasis> 进行区分，仅包含以下内容："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2318
@@ -4081,12 +4105,18 @@ msgid ""
 "role=\"strong\">tar.gz</emphasis> with <emphasis role=\"strong\">debian/</"
 "emphasis>* files.)"
 msgstr ""
+"<emphasis>package_version</emphasis>.<emphasis role=\"strong\">tar.gz</"
+"emphasis>（<emphasis>package-version</emphasis>.<emphasis "
+"role=\"strong\">tar.gz</emphasis> 文件的副本或符号链接，包含 <emphasis role=\"strong\""
+">debian/</"
+"emphasis>* 的各个文件。）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2323
 msgid ""
 "<emphasis>package_version</emphasis>.<emphasis role=\"strong\">dsc</emphasis>"
 msgstr ""
+"<emphasis>package_version</emphasis>.<emphasis role=\"strong\">dsc</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2328
@@ -4095,6 +4125,8 @@ msgid ""
 "role=\"strong\">3.0 (native)</emphasis>” format using <emphasis role=\"strong"
 "\">dpkg-source</emphasis>(1)."
 msgstr ""
+"如果你需要手动创建本土 Debian 软件包，可以使用 <emphasis role=\"strong\">dpkg-source</emphasis"
+">(1) 工具以“<emphasis role=\"strong\">3.0 (native)</emphasis>”格式进行创建。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2329
@@ -4102,6 +4134,8 @@ msgid ""
 "Use of the “<emphasis role=\"strong\">debmake -t …</emphasis>” command can "
 "help this workflow. See <xref linkend=\"dt-option\"/>."
 msgstr ""
+"使用“<emphasis role=\"strong\">debmake -t …</emphasis>”命令可以辅助这一工作流。参见 <xref"
+" linkend=\"dt-option\"/>。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2329
@@ -4113,6 +4147,9 @@ msgid ""
 "\"/>. <_:footnote-1/> They claim that the use of non-native package format "
 "eases communication with the downstream distributions."
 msgstr ""
+"某些人希望推行对那些即使是仅针对 Debian 编写的那些软件也使用非本土软件包格式的做法。这种做法所需要的不包含 <emphasis"
+" role=\"strong\">debian/</emphasis>* 文件的 tarball 压缩包事先需要手动生成以符合在 <xref"
+" linkend=\"workflow\"/> 中的标准工作流。他们声称使用非本土软件包格式可以方便与下游发行版之间的沟通与交流。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2330
@@ -4127,6 +4164,13 @@ msgid ""
 "\">dpkg-source -b .</emphasis>” command within the source tree. The tarball "
 "containing the source is generated by this."
 msgstr ""
+"如果使用本土软件包格式，没有必要事先创建 tarball 压缩包。要创建一个本土 Debian 软件包，应当将 <emphasis"
+" role=\"strong\">debian/source/format</emphasis> 文件的内容设置为“<emphasis"
+" role=\"strong\">3.0 (native)</emphasis>”，适当编写 <emphasis role=\"strong\""
+">debian/changelog</emphasis> 文件使得版本号中不包含 Debian 修订号（例如，<emphasis"
+" role=\"strong\">1.0</emphasis> 而非 <emphasis role=\"strong\">1.0-1</emphasis"
+">），最后在源码树中调用“<emphasis role=\"strong\">dpkg-source -b .</emphasis"
+">”命令。这样做便可以自动生成包含源代码的 tarball。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2333
@@ -4139,6 +4183,7 @@ msgid ""
 "The <emphasis role=\"strong\">debian/rules</emphasis> script is the "
 "executable script to build the Debian package."
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> 脚本是用于实际构建 Debian 软件包的可执行脚本。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2337
@@ -4948,12 +4993,12 @@ msgstr ""
 #: debmake-doc.en.xml:2772 debmake-doc.en.xml:2779 debmake-doc.en.xml:2786
 #: debmake-doc.en.xml:2793 debmake-doc.en.xml:2807
 msgid "any"
-msgstr ""
+msgstr "any"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2773 debmake-doc.en.xml:2780 debmake-doc.en.xml:2787
 msgid "same"
-msgstr ""
+msgstr "same"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2774
@@ -13837,3 +13882,5 @@ msgid ""
 "\">gbp-pq</emphasis>(1), and <emphasis role=\"strong\">git-pbuilder</"
 "emphasis>(1) manpages."
 msgstr ""
+
+
