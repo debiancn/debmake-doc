@@ -1,8 +1,9 @@
+# Boyuan Yang <073plan@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-11 11:46+0800\n"
-"PO-Revision-Date: 2017-06-04 18:29+0800\n"
+"PO-Revision-Date: 2017-07-09 10:57+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -479,8 +480,7 @@ msgstr ""
 msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is designed with "
 "following features:"
-msgstr ""
-"<emphasis role=\"strong\">debmake</emphasis> 命令设计提供如下特性与功能："
+msgstr "<emphasis role=\"strong\">debmake</emphasis> 命令设计提供如下特性与功能："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:208
@@ -1808,8 +1808,7 @@ msgstr "pbuilder"
 msgid ""
 "The <emphasis role=\"strong\">sbuild</emphasis> package provides an "
 "alternative chroot platform."
-msgstr ""
-"<emphasis role=\"strong\">sbuild</emphasis> 软件包提供了另一套 chroot 平台。"
+msgstr "<emphasis role=\"strong\">sbuild</emphasis> 软件包提供了另一套 chroot 平台。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:935
@@ -1878,8 +1877,7 @@ msgstr ""
 msgid ""
 "The parallel <emphasis role=\"strong\">make</emphasis> to boost the build "
 "speed. (optional)"
-msgstr ""
-"并行运行 <emphasis role=\"strong\">make</emphasis> 以提高构建速度。（可选）"
+msgstr "并行运行 <emphasis role=\"strong\">make</emphasis> 以提高构建速度。（可选）"
 
 #. (itstool) path: warning/simpara
 #: debmake-doc.en.xml:969
@@ -2073,8 +2071,7 @@ msgid ""
 "There is an old Latin saying: “<emphasis role=\"strong\">Longum iter est per "
 "praecepta, breve et efficax per exempla</emphasis>” (“It’s a long way by the "
 "rules, but short and efficient with examples”)."
-msgstr ""
-"有一句古罗马谚语说得好：“<emphasis role=\"strong\">一例胜千言！</emphasis>”"
+msgstr "有一句古罗马谚语说得好：“<emphasis role=\"strong\">一例胜千言！</emphasis>”"
 
 #. (itstool) path: chapter/simpara
 #. (itstool) path: section/simpara
@@ -2469,8 +2466,7 @@ msgstr "下载 <emphasis role=\"strong\">debhello-0.0.tar.gz</emphasis>"
 msgid ""
 "Here, the C source <emphasis role=\"strong\">hello.c</emphasis> is a very "
 "simple one."
-msgstr ""
-"这里的 C 源代码 <emphasis role=\"strong\">hello.c</emphasis> 非常的简单。"
+msgstr "这里的 C 源代码 <emphasis role=\"strong\">hello.c</emphasis> 非常的简单。"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1259
@@ -2880,8 +2876,7 @@ msgstr ""
 #: debmake-doc.en.xml:1590
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=0.0):"
-msgstr ""
-"<emphasis role=\"strong\">debian/</emphasis>. 下面的模板文件（0.0 版）："
+msgstr "<emphasis role=\"strong\">debian/</emphasis>. 下面的模板文件（0.0 版）："
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1608
@@ -3141,8 +3136,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (alternative maintainer "
 "version):"
-msgstr ""
-"<emphasis role=\"strong\">debian/rules</emphasis>（备选的维护者版本）："
+msgstr "<emphasis role=\"strong\">debian/rules</emphasis>（备选的维护者版本）："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1795
@@ -3348,8 +3342,7 @@ msgstr ""
 msgid ""
 "The Debian source package is a set of input files used to build the Debian "
 "binary package and is not a single file."
-msgstr ""
-"Debian 源码包是一组用于构建 Debian 二进制软件包的输入文件，而非单个文件。"
+msgstr "Debian 源码包是一组用于构建 Debian 二进制软件包的输入文件，而非单个文件。"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:1986
@@ -3658,8 +3651,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">DESTDIR=debian/tmp/</emphasis> (multi binary "
 "package)"
-msgstr ""
-"<emphasis role=\"strong\">DESTDIR=debian/tmp/</emphasis>（多个二进制包）"
+msgstr "<emphasis role=\"strong\">DESTDIR=debian/tmp/</emphasis>（多个二进制包）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2153
@@ -3777,8 +3769,7 @@ msgstr "将 <emphasis>package</emphasis> 部分替换为 Debian 源码包名称"
 msgid ""
 "the <emphasis>binarypackage</emphasis> part with the Debian binary package "
 "name"
-msgstr ""
-"将 <emphasis>binarypackage</emphasis> 部分替换为 Debian 二进制软件包名称"
+msgstr "将 <emphasis>binarypackage</emphasis> 部分替换为 Debian 二进制软件包名称"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2229
@@ -3857,6 +3848,10 @@ msgid ""
 "\"strong\">devscripts</emphasis> package in conjunction with <emphasis role="
 "\"strong\">debmake</emphasis>."
 msgstr ""
+"许可证信息的提取和指派过程应用了大量启发式操作，因此在某些情况下可能不会正常"
+"工作。强烈建议您搭配使用其它工具，例如来自 <emphasis role=\"strong"
+"\">devscripts</emphasis> 软件包的 <emphasis role=\"strong\">licensecheck</"
+"emphasis> 工具，以配合 <emphasis role=\"strong\">debmake</emphasis> 的使用。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2252 debmake-doc.en.xml:9288
@@ -3865,27 +3860,29 @@ msgid ""
 "Debian package. The most notable limitation is the prohibition of uppercase "
 "letters in the package name. Here is the summary in the regular expression."
 msgstr ""
+"组成 Debian 软件包名称的字符选取存在一定的限制。最明显的限制应当是软件包名称"
+"中禁止出现大写字母。下面给出正则表达式形式的规则总结。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2255 debmake-doc.en.xml:9291
 msgid ""
 "Upstream package name (<emphasis role=\"strong\">-p</emphasis>): [-+.a-z0-9]"
 "{2,}"
-msgstr ""
+msgstr "上游软件包名称（<emphasis role=\"strong\">-p</emphasis>）：[-+.a-z0-9]{2,}"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2260 debmake-doc.en.xml:9296
 msgid ""
 "Binary package name (<emphasis role=\"strong\">-b</emphasis>): [-+.a-z0-9]"
 "{2,}"
-msgstr ""
+msgstr "二进制软件包名称（<emphasis role=\"strong\">-b</emphasis>）：[-+.a-z0-9]{2,}"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2265 debmake-doc.en.xml:9301
 msgid ""
 "Upstream version (<emphasis role=\"strong\">-u</emphasis>): [0-9][-+.:~a-"
 "z0-9A-Z]*"
-msgstr ""
+msgstr "上游版本号（<emphasis role=\"strong\">-u</emphasis>）：[0-9][-+.:~a-z0-9A-Z]*"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2270 debmake-doc.en.xml:9306
@@ -3893,16 +3890,18 @@ msgid ""
 "Debian revision (<emphasis role=\"strong\">-r</emphasis>): [0-9][+.~a-z0-9A-"
 "Z]*"
 msgstr ""
+"Debian 修订版本（<emphasis role=\"strong\">-r</emphasis>）： [0-9][+.~a-"
+"z0-9A-Z]*"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2275 debmake-doc.en.xml:2597 debmake-doc.en.xml:9311
 msgid "Chapter 5 - Control files and their fields"
-msgstr ""
+msgstr "第 5 章 - Control 文件及其字段"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2275 debmake-doc.en.xml:9311
 msgid "See the exact definition in <_:ulink-1/> of the “Debian Policy Manual”."
-msgstr ""
+msgstr "请在“Debian 政策手册”的 <_:ulink-1/> 一节中查看其精确定义。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2276 debmake-doc.en.xml:9312
@@ -3912,13 +3911,16 @@ msgid ""
 "be \"<emphasis role=\"strong\">Architecture: all</emphasis>\". This is not "
 "always true."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis>"
+" 所假设的打包情景是相对简单的。因此，所有与解释器相关的程序都会默认为“<emphasis role=\"strong\">Architecture:"
+" all</emphasis>”的情况。当然，这个假设并非总是成立。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2277
 msgid ""
 "You must adjust the package name and upstream version accordingly for the "
 "Debian packaging."
-msgstr ""
+msgstr "您必须为 Debian 打包工作适当地调整软件包名称和上游版本号。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2278
@@ -3927,6 +3929,7 @@ msgid ""
 "characters; the upstream version is equal or less than 10 characters and the "
 "Debian revision is equal or less than 3 characters."
 msgstr ""
+"对九成以上的软件包来说，软件包名称都不会超过 24 个字符；上游版本号通常不超过 10 个字符，而 Debian 修订版本号也通常不超过 3 个字符。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2278
@@ -3937,13 +3940,15 @@ msgid ""
 "be equal or less than 30 characters; and the total length of version and "
 "revision to be equal or less than 14 characters. <_:footnote-1/>"
 msgstr ""
+"为了能有效地使用一些流行的工具（如 <emphasis role=\"strong\">aptitude</emphasis"
+">）管理软件包名称和版本信息，最好能将软件包名称保持在 30 字符以下；版本号和修订号加起来最好能不超过 14 个字符。<_:footnote-1/>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2279
 msgid ""
 "In order to avoid name collisions, the user visible binary package name "
 "should not be chosen from any generic words."
-msgstr ""
+msgstr "为了避免命名冲突，对用户可见的二进制软件包名称不应选择任何常用的单词。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2280
@@ -3963,38 +3968,48 @@ msgid ""
 "\">0~YYMMDD</emphasis> format such as <emphasis role=\"strong\">0~110429</"
 "emphasis> as upstream version, instead."
 msgstr ""
+"如果上游没有使用像 <emphasis role=\"strong\">2.30.32</emphasis> 这样正常的版本编号方案，而是使用了诸如 <"
+"emphasis role=\"strong\">11Apr29</emphasis>"
+" 这样包含日期、某些代号或者一个版本控制系统散列值等字符串作为版本号的一部分的话，请在上游版本号中将这些部分移除。这些信息可以稍后在 <emphasis"
+" role=\"strong\">debian/changelog</emphasis> 文件中进行记录。如果你需要为软件设计一个版本字符串，可以使用 <"
+"emphasis role=\"strong\">YYYYMMDD</emphasis> 格式，如 <emphasis role=\"strong\""
+">20110429</emphasis> 的字符串作为上游版本号。这样能保证 <emphasis role=\"strong\">dpkg<"
+"/emphasis> 命令在升级时能正确地读取版本信息。如果你想要确保万一上游在未来重新采纳正常版本编号方案，例如 <emphasis"
+" role=\"strong\">0.1</emphasis> 时能够做到顺畅地迁移，可以另行使用 <emphasis role=\"strong\""
+">0~YYMMDD</emphasis> 的格式，如 <emphasis role=\"strong\">0~110429</emphasis>"
+" 作为上游版本号。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2281
 msgid ""
 "Version strings can be compared using the <emphasis role=\"strong\">dpkg</"
 "emphasis> command as follows."
-msgstr ""
+msgstr "版本字符串可以按如下的方式使用 <emphasis role=\"strong\">dpkg</emphasis> 命令进行比较。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2283
 msgid "The version comparison rule can be summarized as:"
-msgstr ""
+msgstr "版本比较的规则可以归纳如下："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2286
 msgid "Strings are compared from the head to the tail."
-msgstr ""
+msgstr "字符串按照起始到末尾的顺序进行比较。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2291
 msgid "Letters are larger than digits."
-msgstr ""
+msgstr "字符比数字大。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2296
 msgid "Numbers are compared as integers."
-msgstr ""
+msgstr "数字按照整数顺序进行比较。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2301
 msgid "Letters are compared in ASCII code order."
-msgstr ""
+msgstr "字符按照 ASCII 编码的顺序进行比较。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2306
