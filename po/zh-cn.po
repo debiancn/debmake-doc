@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-11 11:46+0800\n"
-"PO-Revision-Date: 2017-07-09 22:51+0800\n"
+"PO-Revision-Date: 2017-07-13 13:35+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -4194,6 +4194,9 @@ msgid ""
 "file of the generated files as the <emphasis role=\"strong\">deb</emphasis> "
 "file."
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> 脚本重新封装了上游的构建系统（参见 <xref"
+" linkend=\"build\"/>）以达到将文件安装至 <emphasis role=\"strong\">$(DESTDIR)</emphasis"
+">并将生成的文件存入各个 <emphasis role=\"strong\">deb</emphasis> 格式文件中的目的。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2342
@@ -4202,6 +4205,8 @@ msgid ""
 "distribution and installed to the system using the <emphasis role=\"strong"
 "\">dpkg</emphasis> command."
 msgstr ""
+"这里的 <emphasis role=\"strong\">deb</emphasis> 文件用于二进制的文件分发，并将被 <emphasis"
+" role=\"strong\">dpkg</emphasis> 命令所使用以将软件安装至系统中。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2349
@@ -4210,13 +4215,15 @@ msgid ""
 "front-end to the build system inside the <emphasis role=\"strong\">debian/"
 "rules</emphasis> script."
 msgstr ""
+"<emphasis role=\"strong\">dh</emphasis> 命令通常在 <emphasis role=\"strong\""
+">debian/rules</emphasis> 脚本中使用，用作构建系统的一个前端。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2354
 msgid ""
 "<emphasis role=\"strong\">$(DESTDIR)</emphasis> path depends on the build "
 "type."
-msgstr ""
+msgstr "<emphasis role=\"strong\">$(DESTDIR)</emphasis> 路径具体值依赖于构建的类型。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2359
@@ -4224,13 +4231,15 @@ msgid ""
 "<emphasis role=\"strong\">$(DESTDIR)=debian/</"
 "emphasis><emphasis>binarypackage</emphasis> (single binary package)"
 msgstr ""
+"<emphasis role=\"strong\">$(DESTDIR)=debian/</"
+"emphasis><emphasis>binarypackage</emphasis>（单个二进制软件包）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2364
 msgid ""
 "<emphasis role=\"strong\">$(DESTDIR)=debian/tmp</emphasis> (multiple binary "
 "package)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">$(DESTDIR)=debian/tmp</emphasis>（多个二进制软件包）"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2372
@@ -4247,32 +4256,36 @@ msgid ""
 "policy stipulated targets of the <emphasis role=\"strong\">debian/rules</"
 "emphasis> file."
 msgstr ""
+"由 <emphasis role=\"strong\">debhelper</emphasis> 软件包提供的 <emphasis"
+" role=\"strong\">dh</emphasis> 命令与一些相关的软件包共同工作，作为典型的上游构建系统的一层封装，同时它支持所有"
+" Debian 政策（Debian Policy）规定必须在 <emphasis role=\"strong\">debian/rules<"
+"/emphasis> 实现的目标（target），以此提供一个统一的访问接口。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2376
 msgid ""
 "<emphasis role=\"strong\">dh clean</emphasis> : clean files in the source "
 "tree."
-msgstr ""
+msgstr "<emphasis role=\"strong\">dh clean</emphasis>：清理源码树中的文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2381
 msgid "<emphasis role=\"strong\">dh build</emphasis> : build the source tree"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dh build</emphasis>：在源码树中进行构建"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2386
 msgid ""
 "<emphasis role=\"strong\">dh build-arch</emphasis> : build the source tree "
 "for architecture dependent packages"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dh build-arch</emphasis>：在源码树中构建架构相关的软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2391
 msgid ""
 "<emphasis role=\"strong\">dh build-indep</emphasis> : build the source tree "
 "for architecture independent packages"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dh build-indep</emphasis>：在源代码中构建架构无关的软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2396
@@ -4280,6 +4293,8 @@ msgid ""
 "<emphasis role=\"strong\">dh install</emphasis> : install the binary files "
 "to <emphasis role=\"strong\">$(DESTDIR)</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">dh install</emphasis>：将二进制文件安装至 <emphasis"
+" role=\"strong\">$(DESTDIR)</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2401
@@ -4288,6 +4303,8 @@ msgid ""
 "files to <emphasis role=\"strong\">$(DESTDIR)</emphasis> for architecture "
 "dependent packages"
 msgstr ""
+"<emphasis role=\"strong\">dh install-arch</emphasis>：为架构相关的软件包将二进制文件安装至 <"
+"emphasis role=\"strong\">$(DESTDIR)</emphasis> 中"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2406
@@ -4296,6 +4313,8 @@ msgid ""
 "files to <emphasis role=\"strong\">$(DESTDIR)</emphasis> for architecture "
 "independent packages"
 msgstr ""
+"<emphasis role=\"strong\">dh install-indep</emphasis>：为架构无关的软件包将二进制文件安装进入 <"
+"emphasis role=\"strong\">$(DESTDIR)</emphasis> 中"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2411
@@ -4303,6 +4322,8 @@ msgid ""
 "<emphasis role=\"strong\">dh binary</emphasis> : generate the <emphasis role="
 "\"strong\">deb</emphasis> file"
 msgstr ""
+"<emphasis role=\"strong\">dh binary</emphasis>：产生 <emphasis role=\"strong\""
+">deb</emphasis> 文件"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2416
@@ -4310,6 +4331,8 @@ msgid ""
 "<emphasis role=\"strong\">dh binary-arch</emphasis> : generate the <emphasis "
 "role=\"strong\">deb</emphasis> file for architecture dependent packages"
 msgstr ""
+"<emphasis role=\"strong\">dh binary-arch</emphasis>：为架构相关的软件包产生 <emphasis"
+" role=\"strong\">deb</emphasis> 文件"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2421
@@ -4318,6 +4341,8 @@ msgid ""
 "<emphasis role=\"strong\">deb</emphasis> file for architecture independent "
 "packages"
 msgstr ""
+"<emphasis role=\"strong\">dh binary-indep：为架构无关的软件包产生 <emphasis"
+" role=\"strong\">deb</emphasis> 文件"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:2426
@@ -4333,6 +4358,15 @@ msgid ""
 "\">set_buildflags</emphasis> defined in the <emphasis role=\"strong"
 "\">Debian::Debhelper::Dh_Lib</emphasis> module.)"
 msgstr ""
+"对使用了 <emphasis role=\"strong\">debhelper</emphasis>“compat &gt;=9”的情况，<"
+"emphasis role=\"strong\">dh</emphasis> 命令将在编译参数未事先设置的情况下根据 <emphasis"
+" role=\"strong\">dpkg-buildflags</emphasis> 命令返回的值设置并导出各个编译参数（如 <emphasis"
+" role=\"strong\">CFLAGS</emphasis>、<emphasis role=\"strong\">CXXFLAGS<"
+"/emphasis>、<emphasis role=\"strong\">FFLAGS</emphasis>、<emphasis"
+" role=\"strong\">CPPFLAGS</emphasis> 和 <emphasis role=\"strong\">LDFLAGS<"
+"/emphasis>）。（<emphasis role=\"strong\">dh</emphasis> 命令将调用在 <emphasis"
+" role=\"strong\">Debian::Debhelper::Dh_Lib</emphasis> 模块中定义的 <emphasis"
+" role=\"strong\">set_buildflags</emphasis>。）"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2429
@@ -4346,6 +4380,9 @@ msgid ""
 "\"strong\">debhelper</emphasis> package. This guide assumes the use of the "
 "<emphasis role=\"strong\">debhelper</emphasis> version 9 or newer."
 msgstr ""
+"这个简化形式在 <emphasis role=\"strong\">debhelper</emphasis>"
+" 软件包第七版或更新的版本中可用。本指导内容假设您在使用 <emphasis role=\"strong\">debhelper</emphasis>"
+" 第九版或更新的版本。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2430
@@ -4354,6 +4391,8 @@ msgid ""
 "more complicated <emphasis role=\"strong\">debian/rules</emphasis> file. But "
 "this is the core part."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令会产生稍微复杂一些的 <emphasis"
+" role=\"strong\">debian/rules</emphasis> 文件。虽然如此，其核心结构没有什么变化。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2430
@@ -4363,11 +4402,14 @@ msgid ""
 "\">debian/rules</emphasis> file supporting all the required targets can be "
 "written as simple as <_:footnote-2/>:"
 msgstr ""
+"受益于 <emphasis role=\"strong\">dh</emphasis> 命令对构建目标的抽象化 <_:footnote-1/>，一个符合"
+" Debian 政策而支持所有必需目标（target）的 <emphasis role=\"strong\">debian/rules</emphasis"
+"> 文件可以简单地写成如下形式<_:footnote-2/>："
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:2431
 msgid "Simple <emphasis role=\"strong\">debian/rules</emphasis>:"
-msgstr ""
+msgstr "简单的 <emphasis role=\"strong\">debian/rules</emphasis>："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2438
@@ -4376,6 +4418,8 @@ msgid ""
 "as the sequencer to call all required <emphasis role=\"strong\">dh_</"
 "emphasis>* commands at the right moment."
 msgstr ""
+"从本质上来看，这里的 <emphasis role=\"strong\">dh</emphasis>"
+" 命令的作用是作为一个序列化工具，在合适的时候调用所有所需的 <emphasis role=\"strong\">dh_</emphasis>* 命令。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:2439
@@ -4386,6 +4430,10 @@ msgid ""
 "\"strong\">debian/compat</emphasis> file with “<emphasis role=\"strong\">9</"
 "emphasis>”."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令会在 <emphasis role=\"strong\""
+">debian/control</emphasis> 文件中写入“<emphasis role=\"strong\">Build-Depends:"
+" debhelper (&gt;=9)</emphasis>”，并在 <emphasis role=\"strong\">debian/compat<"
+"/emphasis> 文件中写入“<emphasis role=\"strong\">9</emphasis>”。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2440
@@ -4394,11 +4442,13 @@ msgid ""
 "every command that modifies files on the build system. Also it enables "
 "verbose build logs for some build systems."
 msgstr ""
+"设置“<emphasis role=\"strong\">export DH_VERBOSE = 1</emphasis"
+">”会输出构建系统中每一条会修改文件内容的命令。它同时会在某些构建系统中启用详细输出构建日志的选项。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2443
 msgid "Customized debian/rules"
-msgstr ""
+msgstr "自定义 debian/rules"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2444
@@ -4407,6 +4457,8 @@ msgid ""
 "emphasis> script is realized by adding appropriate <emphasis role=\"strong"
 "\">override_dh_</emphasis>* targets and their rules."
 msgstr ""
+"对 <emphasis role=\"strong\">debian/rules</emphasis> 脚本的灵活定制可以以添加合适的 <emphasis"
+" role=\"strong\">override_dh_</emphasis>* 目标（target）及其规则的形式实现。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2445
@@ -4418,6 +4470,11 @@ msgid ""
 "\">override_dh_</emphasis><emphasis>foo</emphasis> in the <emphasis role="
 "\"strong\">debian/rules</emphasis> file."
 msgstr ""
+"如果需要在 <emphasis role=\"strong\">dh</emphasis> 命令调用某些特定的 <emphasis"
+" role=\"strong\">dh_</emphasis><emphasis>foo</emphasis>"
+" 命令时采取某些特别的操作，则任何自动执行的操作军可以被在 <emphasis role=\"strong\">debian/rules<"
+"/emphasis> 中额外添加的 <emphasis role=\"strong\">override_dh_</emphasis><emphasis"
+">foo</emphasis> 这样的 Makefile 目标所覆写。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2446
