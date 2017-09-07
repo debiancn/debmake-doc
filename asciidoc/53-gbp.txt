@@ -5,10 +5,10 @@ The *git-buildpackage* package offers many commands to automate packaging activi
 
 * *gbp import-dsc*: import the previous Debian source package to the git repository.
 * *gbp import-orig*: import the new upstream tar to the git repository.
+** The *--pristine-tar* option for the *git import-orig* command enables to store the upstream tarball in the same git repository.
+** The *--uscan* option as the last argument of the *gbp import-orig* command enables to download and commit the new upstream tarball into the git repository.
 * *gbp dch*: generate the Debian changelog from the git commit messages.
-* *gbp buildpackage*: build the Debian binary package from the git repository. (alias *gbp*)
-** The *--pristine-tar* option for the *git-buildpackage* command enables to store the upstream tarball in the same git repository.
-** The *--uscan* option for the *git-buildpackage* command enables to download and commit the new upstream tarball into the git repository.
+* *gbp buildpackage*: build the Debian binary package from the git repository.
 * *gbp pull*: update the *debian*, *upstream* and *pristine-tar* branches safely from the remote repository.
 * *git-pbuilder*: build the Debian binary package from the git repository using the *pbuilder* package.
 ** The *cowbuilder* package is used as its backend.
