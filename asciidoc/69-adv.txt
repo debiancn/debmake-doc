@@ -74,11 +74,21 @@ This is too deep a topic to describe here.  So, let me just list few pointers an
 ** ``*man strace*''
 * *ltrace* - Trace library calls
 ** ``*man ltrace*''
+* ``*sh -n* 'script.sh''' - Syntax check of a Shell script
 * ``*sh -x* 'script.sh''' - Trace a Shell script
+* ``*python -m py_compile* 'script.py''' - Syntax check of a Python script
 * ``*python -mtrace --trace* 'script.py''' - Trace a Python script
+* ``*perl -I ../libpath -c* 'script.pl''' - Syntax check of a Perl script
 * ``*perl -d:Trace* 'script.pl''' - Trace a Perl script
+** Install the *libterm-readline-gnu-perl* package or its equivalent to add the input line editing capability with history support.
 * *lsof* - List open files by processes
 ** ``*man lsof*''
 
+TIP: The *script* command helps recording console outputs. 
 
+TIP: The *screen* and *tmux* commands offer the robust remote connection terminal.
+
+TIP: Python and Shell like REPL (=READ + EVAL + PRINT + LOOP) environment for Perl is offered by the *reply* command from the *libreply-perl* (new) and the *re.pl* command from the *libdevel-repl-perl* (old).
+
+TIP: The *rlwrap* and *rlfe* commands add the input line editing capability with history support to any interactive commands.  E.g. ``*rlwrap dash -i*''' .
 
