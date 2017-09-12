@@ -1,13 +1,14 @@
 [[bootstrap]]
 === Bootstrapping
 
-https://wiki.debian.org/DebianBootstrap[Bootstrapping] is needed to support new
-ports or flavour.  It is enabled by profile builds which add support for
-minimal/reduced/staged builds to packages involved in build-dependency loops,
-so that build loops are broken. Also ensure packages cross-build properly so
-that an initial minimal native-building system can be produced.
+Debian cares about supporting new ports or flavours.  The new ports or flavours
+require https://wiki.debian.org/DebianBootstrap[bootstrapping] operation for
+the cross-build of initial minimal native-building system.  In order to avoid
+build-dependency loops during bootstrapping, the build-dependency needs to be
+reduced using the https://wiki.debian.org/BuildProfileSpec[profile] builds
+feature.
 
-TIP: If packages are required only in the `test` target, you can safely mark
-the *Build-Depends* entries of such packages with *<!nocheck>* to avoid build
-loops.
-
+TIP: If a core package `foo` build depends on a package `bar` with deep build
+dependency chains but `bar` is only used in the *test* target in `foo`, you can
+safely mark the `bar` with *<!nocheck>* in the *Build-depends* of `foo` to
+avoid build loops.
