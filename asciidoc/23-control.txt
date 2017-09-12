@@ -72,21 +72,23 @@ WARNING: If the binary library package isn't renamed, many dependent packages in
 The *-dev* package must follow one of the following naming rules:
 
 * Use the *unversioned -dev* package name: *lib*'foo'*-dev*
-** This is the normal case.
+** This is the typical for the leaf library packages.
 ** Only one version of the library source package is allowed in the archive.
 *** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent the dependency breakage in the *unstable* archive during the library transition.
-** This approach must be used if the simple binNMU resolves the library dependency. (http://en.wikipedia.org/wiki/Application_binary_interface[ABI] change)
-** This approach is still a good idea if manual code updates, etc. can be coordinated. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+** This approach should be used if the simple binNMU resolves the library dependency quickly for all affected packages. (http://en.wikipedia.org/wiki/Application_binary_interface[ABI] change by dropping the deprecated http://en.wikipedia.org/wiki/Application_programming_interface[API] while keeping the active API unchanged.)
+** This approach may still be a good idea if manual code updates, etc. can be coordinated and manageable within limited packages. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
 
 * Use the *versioned -dev* package names: *lib*'foo7'*-dev* and *lib*'foo8'*-dev*
-** This is the special case.
+** This is typical for the many major library packages.
 ** Two versions of the library source packages are allowed simultaneously in the archive.
 *** Make all dependent packages depend on *lib*'foo'*-dev*.
 *** Make both *lib*'foo7'*-dev* and *lib*'foo8'*-dev* provide *lib*'foo'*-dev*.
 *** The source package needs to be renamed as *lib*'foo7-7.0'*.tar.gz* and *lib*'foo8-8.0'*.tar.gz* respectively from *lib*'foo-?.0'*.tar.gz*.
 *** The package specific install file path including *lib*'foo7' and *lib*'foo8' respectively for header files etc. needs to be chosen to make them co-installable.
-** Do not use this approach, if possible.
-** This approach may be useful if the update of dependent packages require major manual code updates, etc. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)
+** Do not use this heavy handed approach, if possible.
+** This approach should be used if the update of multiple dependent packages require manual code updates, etc. (http://en.wikipedia.org/wiki/Application_programming_interface[API] change)  Otherwise, the affected packages becomes RC buggy with FTBFS.
+
+TIP: If data encoding scheme changes (e.g., latin1 to utf-8), the same care as the API change needs to be taken.
 
 See <<lib>>.
 
