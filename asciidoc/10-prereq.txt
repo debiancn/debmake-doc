@@ -103,7 +103,7 @@ Before you decide to ask your question in some public place, please do your part
 * contents of http://lists.debian.org/debian-mentors/[debian-mentors@lists.debian.org mailing list archive].
 * contents of http://lists.debian.org/debian-devel/[debian-devel@lists.debian.org mailing list archive].
 
-Your desired information can be found effectively by using the well-formend search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
+Your desired information can be found effectively by using the well-formed search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
 
 Making a small test package is a good way to learn details of the packaging. Inspecting existing well maintained packages is the best way to learn how other people make packages.
 
