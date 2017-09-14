@@ -9,11 +9,16 @@ include Makefile.common
 include Makefile.pkg
 include Makefile.dbk
 
+# Normal doc content build generating full packaging log
 build: pkg
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
 
+# Quick doc content build without touching packaging log for proofing
 update:
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
+	-mkdir -p $(TMPDIR)
+	-mkdir -p $(BASEDIR)/html
+	$(MAKE) css html # build docs from XML
 
 install:
 	-mkdir -p $(TMPDIR)
