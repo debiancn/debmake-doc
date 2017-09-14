@@ -5,8 +5,9 @@ export DH_VERBOSE = 1
 LC_ALL := C.UTF-8
 export LC_ALL
 
-# no translation at this moment
-export LANGPO :=
+# translation for package (Override Makefile.dbk)
+export LANGPO := zh-cn
+
 # UTF-8 locale
 export LC_ALL:= C.UTF-8
 

@@ -74,9 +74,19 @@ url.ent: $(BASEXML)
 	@$(call check-command, xsltproc, xsltproc)
 	$(XSLT) $(XSLT_DIR)/urls.xsl $^ | sort | uniq | sed -e "s/&/\&amp;/g"> $@
 	# Check duplicates
+#ifndef DEBUG
 	@DUPLICATE="$$(sed -ne 's/<[^ ]* \([^ ]*\) .*$$/\1/p' $@ | uniq -d)" ; \
 		if [ "$${DUPLICATE}" != "" ]; then \
-		echo "W: duplicate entity = $${DUPLICATE}"; fi
+		echo "E: duplicate entity = $${DUPLICATE}"; false; \
+		fi
+#else
+	@DUPLICATE="$$(sed -ne 's/<[^ ]* \([^ ]*\) .*$$/\1/p' $@ | uniq -d)" ; \
+		if [ "$${DUPLICATE}" != "" ]; then \
+		echo "W: #######################################################################"; \
+		echo "W: duplicate entity = $${DUPLICATE}"; \
+		echo "W: #######################################################################"; \
+		fi
+#endif
 
 common.ent:
 	echo "<!ENTITY  debmakeversion \"$(DEBMAKEVERSION)\">" >$@
@@ -133,6 +143,10 @@ doc-clean:
 	-rm -f fuzzy.log
 
 clean:: doc-clean
+
+#######################################################################
+.PHONY: xml
+xml: $(SRC_XML) $(ENT_ALL)
 
 #######################################################################
 .PHONY: doc-all
