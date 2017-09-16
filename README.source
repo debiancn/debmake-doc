@@ -4,6 +4,17 @@ All files included in this source tree are under the MIT license with its text
 in the LICENSE file except for the files which explicitly claim differently in
 them.
 
+If DEBUG is set, this source build requires 2 steps.
+ $ export DEBUG=1
+ $ make pkg
+ $ make css html
+
+If you are checking English and translated contents, this saves time since
+updating English source or PO requires you to do only
+ $ make css html
+to check their goodness when rebuilding.  (Long package example build results
+are kept and reused.)
+
 == po
 
 This directory contain po files for translator.
@@ -45,9 +56,9 @@ packages generated.
 
 == .stamp
 
-The existance of .stamp file in each directory indicates all the files in the
+The existence of .stamp file in each directory indicates all the files in the
 directory has been generated via Makefile and up-to-date.  This is not
-commited to the VCS.
+committed to the VCS.
 
 == asciidoc/
 

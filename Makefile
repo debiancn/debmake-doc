@@ -3,22 +3,35 @@
 
 # run "make prep" before commit
 
+#ifndef DEBUG
+PKG =
+#else
+PKG = pkg
+#endif
+
 all: build
 
 include Makefile.common
 include Makefile.pkg
 include Makefile.dbk
 
-build: pkg
-	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
 
-update:
-	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML documentation
+# Normal doc content as xml and prepare install directory
+$(BASEXML):
+	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
 
-install:
+build: $(PKG) $(BASEXML)
+	echo "DEBUG='$(DEBUG)'"
+	echo "LANGPO='$(LANGPO)'"
+	echo "LANGALL='$(LANGALL)'"
+	echo "NOPDF='$(NOPDF)'"
+	echo "BASEDIR='$(BASEDIR)'"
+	echo "TMPDIR='$(TMPDIR)'"
+	$(MAKE) xml	                # XML docs for all PO
 	-mkdir -p $(TMPDIR)
 	-mkdir -p $(BASEDIR)/html
-	$(MAKE) css html pdf epub txt # build docs from XML
+
+install: css html pdf epub txt # build docs from XML
 #ifndef DEBUG
 	-rm -rf $(TMPDIR) # remove all $(TMPDIR) contents
 #endif

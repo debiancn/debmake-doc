@@ -5,7 +5,7 @@ The Debian package is built with the debugging information but packaged into the
 
 See
 
-* http://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html#bpp-dbg[6.7.9. Best practices for debug packages] of the ``Debian Developer's Reference''.
+* https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html#bpp-dbg[6.7.9. Best practices for debug packages] of the ``Debian Developer's Reference''.
 * https://sourceware.org/gdb/current/onlinedocs/gdb/Separate-Debug-Files.html#Separate-Debug-Files[18.2 Debugging Information in Separate Files] of the ``Debugging with gdb''
 * *dh_strip*(1)
 * *strip*(1)

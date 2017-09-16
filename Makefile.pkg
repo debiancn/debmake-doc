@@ -17,6 +17,9 @@ pkg:
 # Preparing upstream sources (prep, tars)
 ARCH := $(shell dpkg-architecture -q DEB_TARGET_ARCH)
 
+TERM = dumb
+export TERM
+
 ifdef DEBUG_VERSION
 VERSIONS := $(DEBUG_VERSION)
 else
@@ -64,11 +67,12 @@ makes: $(MAKEFILEX)
 
 stamps: $(STAMPX)
 
-clean:: $(CMDSCL)
+clean::
+	# don't clean packages
+
+distclean:: $(CMDSDCL) $(CMDSCL)
 	-rm -f *.tar.xz *.tar.gz
 	-rm -f *.dsc *.changes *.build *.deb *~
-
-distclean:: $(CMDSDCL)
 
 .PHONY: makes stamps clean distclean
 #######################################################################
@@ -123,12 +127,13 @@ debhello-%/.stamp: debhello-%/Makefile
 
 #######################################################################
 debhello-%-clean:
+	# don't clean packages
+
+debhello-%-distclean:
 	if [ -e debhello-$*/Makefile ]; then \
 	$(MAKE) -C debhello-$* clean ; \
 	fi
 	-rm -f debhello-$*/.stamp
-
-debhello-%-distclean:
 	if [ -e debhello-$*/Makefile ]; then \
 	$(MAKE) -C debhello-$* distclean ;\
 	rm -f debhello-$*/Makefile ; \

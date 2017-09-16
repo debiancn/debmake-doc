@@ -7,7 +7,7 @@ This should also serve as introductory examples for many programing topics.
 
 * Programing in the POSIX shell, Python3, and C.
 * Method to create the desktop GUI program launcher with the icon graphics.
-* Conversion of command from http://en.wikipedia.org/wiki/Command-line_interface[CLI] to http://en.wikipedia.org/wiki/Graphical_user_interface[GUI].
+* Conversion of command from https://en.wikipedia.org/wiki/Command-line_interface[CLI] to https://en.wikipedia.org/wiki/Graphical_user_interface[GUI].
 * Conversion of program to use *gettext* for http://en.wikipedia.org/wiki/Internationalization_and_localization[internationalization and localization]: POSIX shell, Python3, and C sources.
 * Overview of many build systems: Makefile, Python distutils, Autotools, and CMake.
 
@@ -23,8 +23,6 @@ Please note Debian takes few things serious.
 The typical packaging example presented in <<simple>> is the prerequisite for this chapter.
 
 Some details are intentionally left vague in the following.  Please try to read the pertinent documentation and practice yourself to find them out.
-
-TIP: The detailed log of all the package build examples can be obtained by following the instruction in <<details>>.
 
 TIP:  The best source of the packaging example is the current Debian archive itself.  Please use the ``https://codesearch.debian.net/[Debian Code Search]'' service to find pertinent examples.
 

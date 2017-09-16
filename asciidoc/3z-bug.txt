@@ -14,3 +14,6 @@ The *dh_bugfiles* command installs these files from the template files in the *d
 
 See *dh_bugfiles*(1) and file:///usr/share/doc/reportbug/README.developers.gz[reportbug's Features for Developers]
 
+TIP: If you always remind something to the bug reporter or ask them about their
+situation, use these to automate it.
+

@@ -1,0 +1,14 @@
+[[bootstrap]]
+=== Bootstrapping
+
+Debian cares about supporting new ports or flavours.  The new ports or flavours
+require https://wiki.debian.org/DebianBootstrap[bootstrapping] operation for
+the cross-build of initial minimal native-building system.  In order to avoid
+build-dependency loops during bootstrapping, the build-dependency needs to be
+reduced using the https://wiki.debian.org/BuildProfileSpec[profile] builds
+feature.
+
+TIP: If a core package `foo` build depends on a package `bar` with deep build
+dependency chains but `bar` is only used in the *test* target in `foo`, you can
+safely mark the `bar` with *<!nocheck>* in the *Build-depends* of `foo` to
+avoid build loops.

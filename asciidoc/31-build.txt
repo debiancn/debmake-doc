@@ -21,10 +21,10 @@ The package maintainer may wish to take care all steps 1 to 4.  This is realized
 
 If you wish to learn more on the Autotools, please see:
 
-* http://www.gnu.org/software/automake/manual/index.html[GNU Automake documentation]
-* http://www.gnu.org/software/autoconf/manual/index.html[GNU Autoconf documentation]
+* https://www.gnu.org/software/automake/manual/index.html[GNU Automake documentation]
+* https://www.gnu.org/software/autoconf/manual/index.html[GNU Autoconf documentation]
 * https://www.lrde.epita.fr/~adl/autotools.html[Autotools Tutorial]
-* http://www.dwheeler.com/autotools/introduction-autotools.pdf[Introduction to the autotools (autoconf, automake, and libtool)]
+* https://www.dwheeler.com/autotools/introduction-autotools.pdf[Introduction to the autotools (autoconf, automake, and libtool)]
 * https://autotools.io/index.html[Autotools Mythbuster]
 
 [[cmake]]
@@ -43,8 +43,8 @@ The package maintainer needs to take care steps 2 to 4.
 
 If you wish to learn more on the CMake, please see:
 
-* http://www.cmake.org/[CMake]
-* http://www.cmake.org/cmake-tutorial/[CMake tutorial]
+* https://cmake.org/[CMake]
+* https://cmake.org/cmake-tutorial/[CMake tutorial]
 
 [[distutils]]
 ==== Python distutils
