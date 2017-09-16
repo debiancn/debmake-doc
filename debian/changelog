@@ -1,3 +1,24 @@
+debmake-doc (1.8-1) unstable; urgency=medium
+
+  [ Boyuan Yang ]
+  * Add initial Simplified Chinese translation.
+  * Fix a few typos in asciidoc documents.
+  * Workaround quotation mark problem for PDF documents.
+  * Use HTTPS in d/copyright.
+  * Drop version restriction for asciidoc in d/control.
+  * Point dummy d/watch file to anonscm.debian.org website.
+  * Update XeTeX font selection descriptions.
+  * Refresh translation PO files.
+  * Various text fixes.
+
+  [ Osamu Aoki ]
+  * Deprecate d/menu files.
+  * Update build system.
+  * Use https URLs and fix xref.  Closes: #861417
+  * Fix typo and update customization contents.  Closes: #873441
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 01:07:17 +0900
+
 debmake-doc (1.7-2) unstable; urgency=medium
 
   * Fix Vcs-Git data. 

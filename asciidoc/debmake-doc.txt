@@ -90,11 +90,13 @@ include::35-multiarch.txt[]
 
 include::36-harden.txt[]
 
-include::37-bug.txt[]
+include::37-debconf.txt[]
 
-include::38-debconf.txt[]
+include::38-pkgtest.txt[]
 
-include::39-pkgtest.txt[]
+include::39-bootstrap.txt[]
+
+include::3z-bug.txt[]
 
 [[options]]
 == debmake options

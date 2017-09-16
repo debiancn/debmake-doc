@@ -24,7 +24,7 @@ These are useful to identify what has been changed in the source packages and to
 You can download the set of files for the Debian source package with the *dget* command.
 
 ----
-$ dget http://www.example.org/path/to/package_version-rev.dsc
+$ dget https://www.example.org/path/to/package_version-rev.dsc
 ----
 
 [[debc]]
@@ -68,7 +68,7 @@ $ dput package_version-rev_arch.changes
 [[bts]]
 === bts
 
-After uploading the package, you will receive bug reports.  It is an important duty of a package maintainer to manage these bugs properly as described in http://www.debian.org/doc/manuals/developers-reference/pkgs.html#bug-handling[5.8. Handling bugs] of the ``Debian Developer's Reference''.
+After uploading the package, you will receive bug reports.  It is an important duty of a package maintainer to manage these bugs properly as described in https://www.debian.org/doc/manuals/developers-reference/pkgs.html#bug-handling[5.8. Handling bugs] of the ``Debian Developer's Reference''.
 
 The *bts* command is a handy tool to manage bugs on https://www.debian.org/Bugs/[Debian Bug Tracking System].
 

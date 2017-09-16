@@ -11,7 +11,7 @@ There are several tools to handle this situation.  After updating to the new ups
 You can automatically update to the new upstream source with the *uupdate* command from the *devscripts* package.  It requires to have the old Debian source package and the new upstream tarball.
 
 ----
- $ wget http://example.org/foo/foo-newversion.tar.gz
+ $ wget https://example.org/foo/foo-newversion.tar.gz
  $ cd foo-oldversion
  $ uupdate -v newversion ../foo-newversion.tar.gz
  ...

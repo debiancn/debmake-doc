@@ -1,8 +1,13 @@
 #!/usr/bin/make -f
 export DH_VERBOSE = 1
 
-# no translation at this moment
-export LANGPO :=
+# quilt output is affected by locale; setting explicitly
+LC_ALL := C.UTF-8
+export LC_ALL
+
+# translation for package (Override Makefile.dbk)
+export LANGPO := zh-cn
+
 # UTF-8 locale
 export LC_ALL:= C.UTF-8
 

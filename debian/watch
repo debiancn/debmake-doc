@@ -1,3 +1,11 @@
+version=4
 # This is a dummy watch file.
 # debmake is quasi-native package and has no external upstream source.
 # It is *quasi* just because its package version uses the non-native format.
+opts="mode=git" \
+ https://anonscm.debian.org/git/collab-maint/debmake-doc.git \
+ refs/tags/upstream/([\d\.]+) debian
+# An alternative uscan approach is provided as well
+#opts="" \
+#http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/refs/tags \
+#/cgit/collab-maint/debmake-doc\.git/tag/\?h=upstream/([\d\.]+) debian

@@ -59,28 +59,33 @@ Adding few extra files in *debian/* directory enables you to do this.
 
 Let the *dpkg-source* command invoked by the Debian package build process (*dpkg-buildpackage*, *debuild*, ...) to generate the *-p1* patch file *debian/patches/debian-changes* automatically.
 
-TIP: This approach can be adopted for any VCS tools.  Since this approach merges all changes into a merged patch, it is desirable to keep the VCS data publically accessible.
+TIP: This approach can be adopted for any VCS tools.  Since this approach merges all changes into a merged patch, it is desirable to keep the VCS data publicly accessible.
 
-WARNING: The *debian/source/local-options* and *debian/source/local-patch-header* files are not included in the Debian source package and are meant to be recorded in the VCS.
+TIP: The *debian/source/local-options* and *debian/source/local-patch-header* files are meant to be recorded in the VCS.  These aren't included in the Debian source package.
 
-[[rebuild]]
-=== Rebuilding non-native package without extraneous diffs
+[[build-noextra]]
+=== Building package without extraneous contents
 
-The upstream source tarball may contain some auto-generated files which are overwritten by the build process.  When the package is rebuilt from the same source tree, the generated Debian source package may contain extraneous diffs for such auto-generated files.
+There are a few cases which cause the inclusion of the undesirable contents in the generated Debian source package.
 
-Inclusion of such unneeded diffs makes it difficult to review the package and should be avoided.  There are a few methods to fix this problem.
+* The upstream source tree may be placed under the version control system.  When the package is rebuilt from this source tree, the generated Debian source package contains extraneous contents from the version control system files.
+* The upstream source tree may contain some auto-generated files.  When the package is rebuilt from this source tree, the generated Debian source package contains extraneous contents from the auto-generated files.
+
+Normally, the *-i* and *-I* options set in <<devscripts-setup>> for the *dpkg-source* command should avoid these.  Here, the *-i* option is aimed at the non-native package while the *-I* is aimed at the native package.  See *dpkg-source*(1) and the ``*dpkg-source --help*'' output.
+
+There are several methods to avoid inclusion of the undesirable contents.
 
 [[rules-clean]]
 ==== Fix by debian/rules clean
 
-The problem of extraneous diffs can be fixed by removing such auto-generated files in the ``*debian/rules clean*'' target.
+The problem of extraneous contents can be fixed by removing such files in the ``*debian/rules clean*'' target.  This is also useful for auto-generated files
 
-This is because the ``*debian/rules clean*'' target is called before the ``*dpkg-source --build*'' command by the *dpkg-buildpackage* command and the ``*dpkg-source --build*'' command ignores removed files.
+NOTE: The ``*debian/rules clean*'' target is called before the ``*dpkg-source --build*'' command by the *dpkg-buildpackage* command and the ``*dpkg-source --build*'' command ignores removed files.
 
 [[git-clean]]
 ==== Fix using VCS
 
-The problem of extraneous diffs can be fixed by restoring the source tree by committing the source tree to the VCS before the first build.
+The problem of extraneous contents can be fixed by restoring the source tree by committing the source tree to the VCS before the first build.
 
 You can restore the source tree before the second package build.  For example:
 
@@ -90,16 +95,18 @@ You can restore the source tree before the second package build.  For example:
  $ debuild
 -----
 
-This works because the simple *-i* option is set if you followed <<devscripts-setup>> to make the *dpkg-source* command skip making diffs for the typical VCS files in the source tree.  The actual default regex used by the simple *-i* option can be found by in the ``*dpkg-source -h*'' output.
+This works because the *dpkg-source* command ignores the contents of the typical VCS files in the source tree with the setting in <<devscripts-setup>>.
 
-If the source tree is not managed by the VCS, you should run ``*git init; git add -A .; git commit*'' before the first build.
+TIP: If the source tree is not managed by the VCS, you should run ``*git init; git add -A .; git commit*'' before the first build.
 
 [[extend-diff-ignore]]
 ==== Fix by extend-diff-ignore
 
-The problem of extraneous diffs can be fixed by ignoring changes made to parts of the source tree using the *--extend-diff-ignore* option of the *dpkg-source*(1) command.
+This is for the non-native package.
 
-For example, in order to ignore changes to the *config.sub*, *config.guess* and *Makefile* files, their matching regex can be added to the *debian/source/options* file as:
+The problem of extraneous diffs can be fixed by ignoring changes made to parts of the source tree by adding the ``*extend-diff-ignore=...*'' line in the *debian/source/options* file. 
+
+For excluding the *config.sub*, *config.guess* and *Makefile* files:
 
 ----
 # Don't store changes on autogenerated files
@@ -108,14 +115,14 @@ extend-diff-ignore = "(^|/)(config\.sub|config\.guess|Makefile)$"
 
 NOTE: This approach always works, even when you can’t remove the file. So it saves you having to make a backup of the unmodified file just to be able to restore it before the next build.
 
-TIP: If the non-standard VCS files interfere with your packaging, you can ignore such files by tweaking the regex by adding the ``*extend-diff-ignore=...*'' line in the *debian/source/local-options* file.
+TIP: If the *debian/source/local-options* file is used instead, you can hide this setting from the generated source package.  This may be useful when the local non-standard VCS files interfere with your packaging.
 
 [[tar-ignore]]
-=== Native Debian source package without extraneous files
+==== Fix by tar-ignore
 
-If you are making the native Debian source package instead of the normal non-native Debian source package and wish to exclude some files in the source tree from the generated tarball, you can exclude such files by tweaking the file glob.
+This is for the native package.
 
-Normally, changing the <<devscripts-setup>> example to use ``*DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -I -us -uc"*'' should give decent default globs.  The actual default globs used by the simple *-I* option can be found by in the ``*dpkg-source -h*'' output.
+You can exclude some files in the source tree from the generated tarball by tweaking the file glob by adding the ``**tar-ignore=...**'' lines in the **debian/source/options** or **debian/source/local-options** files.
 
-If, for example, the source package needs ***.o** as a part of the test data, the default globs may be problematic.  You can work around this problem by adding the ``**tar-ignore=...**'' lines in the **debian/source/local-options** file to customize the globs for each package to work around this problem.
+NOTE: If, for example, the source package of a native package needs files with the file extension *.o* as a part of the test data, the setting in <<devscripts-setup>> is too aggressive.  You can work around this problem by dropping the *-I* option for *DEBUILD_DPKG_BUILDPACKAGE_OPTS* in <<devscripts-setup>> while adding the ``*tar-ignore=...*'' lines in the *debian/source/local-options* file for each package.
 

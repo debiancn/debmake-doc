@@ -16,5 +16,5 @@ NOTE: If you are working with a https://wiki.debian.org/Teams[team] of maintaine
 When converting packages from the *CDBS* to the *dh* syntax, please use the following as your reference:
 
 * http://cdbs-doc.duckcorp.org/en/cdbs-doc.xhtml[CDBS Documentation]
-* http://meetings-archive.debian.net/pub/debian-meetings/2009/fosdem/slides/The_Common_Debian_Build_System_CDBS/[The Common Debian Build System (CDBS), FOSDEM 2009]
+* https://meetings-archive.debian.net/pub/debian-meetings/2009/fosdem/slides/The_Common_Debian_Build_System_CDBS/[The Common Debian Build System (CDBS), FOSDEM 2009]
 

@@ -6,8 +6,6 @@ Although this is not necessary the absolute requirement, it is a good idea to in
 
 Please install the tools mentioned in the https://www.debian.org/doc/manuals/developers-reference/tools.html[Overview of Debian Maintainer Tools] of the ``Debian Developer's Reference'', as needed, too.
 
-TIP: For the cut-and-paste from the code listing part, use this document in the HTML format.  footnote:[The cut-and-paste from the PDF format does not function well for U+0022 QUOTATION MARK (ASCII double quote), U+0027 APOSTROPHE (ASCII single quote), and U+0060 GRAVE ACCENT (ASCII back tick) since they are converted by the LaTeX to U+201D RIGHT DOUBLE QUOTATION MARK, U+2019 RIGHT SINGLE QUOTATION MARK, and U+2018 LEFT SINGLE QUOTATION MARK.]
-
 CAUTION: Tool setups presented here are only meant as an example and may not be up-to-date with the latest packages on the system.  Debian development is a moving target.  Please make sure to read the pertinent documentation and update the configuration as needed.
 
 [[email-setup]]
@@ -61,7 +59,7 @@ You can check your global configuration as follows.
 $ git config --global --list
 ----
 
-TIP: It is essential to use the *gitk* command to work effectively with the history of the git repository.
+TIP: It is essential to use some GUI git tools like *gitk* or *gitg* to work effectively with the history of the git repository.
 
 [[quilt-setup]]
 === quilt
@@ -108,14 +106,14 @@ The *debuild* command, included in the *devscripts* package, builds the binary p
 You can setup these by the *~/.devscripts* as follows.
 
 ----
-DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -us -uc"
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -I -us -uc"
 DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"
 DEBSIGN_KEYID="Your_GPG_keyID"
 ----
 
-The *-I* option is intentionally skipped here for *DEBUILD_DPKG_BUILDPACKAGE_OPTS*. See <<rebuild-native>>.
+The *-i* and *-I* options in *DEBUILD_DPKG_BUILDPACKAGE_OPTS* for the *dpkg-source* command help rebuilding of Debian packages without extraneous contents (see <<build-noextra>>).
 
-Currently, RSA key with 4096 bits is good idea.  See http://keyring.debian.org/creating-key.html[Creating a new GPG key].
+Currently, RSA key with 4096 bits is good idea.  See https://keyring.debian.org/creating-key.html[Creating a new GPG key].
 
 [[pbuilder-setup]]
 === pbuilder
@@ -139,7 +137,7 @@ Let's create *~/.pbuilderrc* as follows (all optional features are disabled).
 AUTO_DEBSIGN="${AUTO_DEBSIGN:-no}"
 PDEBUILD_PBUILDER=cowbuilder
 HOOKDIR="/var/cache/pbuilder/hooks"
-MIRRORSITE="http://httpredir.debian.org/debian/"
+MIRRORSITE="http://deb.debian.org/debian/"
 #APTCACHE=/var/cache/pbuilder/aptcache
 APTCACHE=/var/cache/apt/archives
 #BUILDRESULT=/var/cache/pbuilder/result/

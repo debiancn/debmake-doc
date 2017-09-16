@@ -1,6 +1,6 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: debmake-doc
-Source: http://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/tree/base
+Source: https://anonscm.debian.org/cgit/collab-maint/debmake-doc.git/tree/
 
 Files:     *
 Copyright: 2015 Osamu Aoki <osamu@debian.org>
@@ -33,7 +33,7 @@ License:   public-domain
  - direct use (= no modification): public domain
  - light modification (colors): it's a derivative work and I keep them
    under the public domain licence.
-Commemt:
+Comment:
  Osamu made further changes to some icons using other public domain icons
  from the tango-icon-theme package.
 

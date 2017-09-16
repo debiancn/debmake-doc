@@ -5,10 +5,10 @@ The *git-buildpackage* package offers many commands to automate packaging activi
 
 * *gbp import-dsc*: import the previous Debian source package to the git repository.
 * *gbp import-orig*: import the new upstream tar to the git repository.
+** The *--pristine-tar* option for the *git import-orig* command enables to store the upstream tarball in the same git repository.
+** The *--uscan* option as the last argument of the *gbp import-orig* command enables to download and commit the new upstream tarball into the git repository.
 * *gbp dch*: generate the Debian changelog from the git commit messages.
-* *gbp buildpackage*: build the Debian binary package from the git repository. (alias *gbp*)
-** The *--pristine-tar* option for the *git-buildpackage* command enables to store the upstream tarball in the same git repository.
-** The *--uscan* option for the *git-buildpackage* command enables to download and commit the new upstream tarball into the git repository.
+* *gbp buildpackage*: build the Debian binary package from the git repository.
 * *gbp pull*: update the *debian*, *upstream* and *pristine-tar* branches safely from the remote repository.
 * *git-pbuilder*: build the Debian binary package from the git repository using the *pbuilder* package.
 ** The *cowbuilder* package is used as its backend.
@@ -21,11 +21,11 @@ The package history management with the *git-buildpackage* package is becoming t
 
 See:
 
-* http://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.html[Building Debian Packages with git-buildpackage]
+* https://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.html[Building Debian Packages with git-buildpackage]
 * https://wiki.debian.org/GitPackagingWorkflow
 * https://wiki.debian.org/GitPackagingWorkflow/DebConf11BOF
-* http://raphaelhertzog.com/2010/11/18/4-tips-to-maintain-a-3-0-quilt-debian-source-package-in-a-vcs/
-* The *systemd* packaging practice documentation on http://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=blob;f=debian/README.source[Building from source].
+* https://raphaelhertzog.com/2010/11/18/4-tips-to-maintain-a-3-0-quilt-debian-source-package-in-a-vcs/
+* The *systemd* packaging practice documentation on https://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=blob;f=debian/README.source[Building from source].
 
 TIP:  Relax. You don't need to use all the wrapper tools.  Use only ones which match your needs.
 
