@@ -1,4 +1,4 @@
-debmake-doc (1.7.1-1) UNRELEASED; urgency=medium
+debmake-doc (1.8-1) unstable; urgency=medium
 
   [ Boyuan Yang ]
   * Add initial Simplified Chinese translation.
@@ -13,8 +13,11 @@ debmake-doc (1.7.1-1) UNRELEASED; urgency=medium
 
   [ Osamu Aoki ]
   * Deprecate d/menu files.
+  * Update build system.
+  * Use https URLs and fix xref.  Closes: #861417
+  * Fix typo and update customization contents.  Closes: #873441
 
- -- Boyuan Yang <073plan@gmail.com>  Mon, 01 May 2017 10:57:54 +0800
+ -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 01:07:17 +0900
 
 debmake-doc (1.7-2) unstable; urgency=medium
 
