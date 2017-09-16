@@ -22,11 +22,11 @@ Please note that you do not need to create any new packages to become an officia
 
 Please refer to the following to learn how to contribute to Debian:
 
-* http://www.debian.org/intro/help[How can you help Debian?] (official)
-* http://www.debian.org/doc/FAQ/ch-contributing[The Debian GNU/Linux FAQ, Chapter 13 - "Contributing to the Debian Project"] (semi-official)
-* http://wiki.debian.org/HelpDebian[Debian Wiki, HelpDebian] (supplemental)
+* https://www.debian.org/intro/help[How can you help Debian?] (official)
+* https://www.debian.org/doc/FAQ/ch-contributing[The Debian GNU/Linux FAQ, Chapter 13 - "Contributing to the Debian Project"] (semi-official)
+* https://wiki.debian.org/HelpDebian[Debian Wiki, HelpDebian] (supplemental)
 * https://nm.debian.org/[Debian New Member site] (official)
-* http://wiki.debian.org/DebianMentorsFaq[Debian Mentors FAQ] (supplemental)
+* https://wiki.debian.org/DebianMentorsFaq[Debian Mentors FAQ] (supplemental)
 
 [[social]]
 === Social dynamics of Debian
@@ -72,9 +72,9 @@ NOTE: Debugging of software tends to consume more time than writing the initial 
 Please make yourself ready to read the pertinent part of the official Debian documentation together with this guide as needed to generate perfect Debian packages:
 
 * ``Debian Policy Manual''
-** ``must follow'' rules (http://www.debian.org/doc/devel-manuals#policy)
+** ``must follow'' rules (https://www.debian.org/doc/devel-manuals#policy)
 * ``Debian Developer's Reference''
-** ``best practice'' document (http://www.debian.org/doc/devel-manuals#devref)
+** ``best practice'' document (https://www.debian.org/doc/devel-manuals#devref)
 
 If this guide contradicts with the official Debian documentation, they are correct. Please file a bug report on the *debmake-doc* package using the *reportbug* command.
 
@@ -100,8 +100,8 @@ Before you decide to ask your question in some public place, please do your part
 * files in */usr/share/doc/*'package' for all pertinent packages.
 * contents of *man* 'command' for all pertinent commands.
 * contents of *info* 'command' for all pertinent commands.
-* contents of http://lists.debian.org/debian-mentors/[debian-mentors@lists.debian.org mailing list archive].
-* contents of http://lists.debian.org/debian-devel/[debian-devel@lists.debian.org mailing list archive].
+* contents of https://lists.debian.org/debian-mentors/[debian-mentors@lists.debian.org mailing list archive].
+* contents of https://lists.debian.org/debian-devel/[debian-devel@lists.debian.org mailing list archive].
 
 Your desired information can be found effectively by using the well-formed search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
 
@@ -111,7 +111,7 @@ If you still have questions about the packaging, you can ask them interactively:
 
 * debian-mentors@lists.debian.org mailing list. (This mailing list is for the novice.)
 * debian-devel@lists.debian.org mailing list. (This mailing list is for the expert.)
-* http://www.debian.org/support#irc[IRC] such as #debian-mentors.
+* https://www.debian.org/support#irc[IRC] such as #debian-mentors.
 * Teams focusing on a specific set of packages. (Full list at https://wiki.debian.org/Teams)
 * Language-specific mailing lists.
 ** https://lists.debian.org/devel.html[debian-devel-{french,italian,portuguese,spanish}@lists.debian.org]
@@ -187,8 +187,8 @@ Here:
 ** The output of the *wnpp-alert* command.
 ** https://www.debian.org/devel/wnpp/[Work-Needing and Prospective Packages]
 ** https://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=wnpp;dist=unstable[Debian Bug report logs: Bugs in pseudo-package wnpp in unstable]
-** http://wnpp.debian.net/[Debian Packages that Need Lovin']
-** http://wnpp-by-tags.debian.net/[Browse wnpp bugs based on debtags]
+** https://wnpp.debian.net/[Debian Packages that Need Lovin']
+** https://wnpp-by-tags.debian.net/[Browse wnpp bugs based on debtags]
 * For is_good_program(), check:
 ** The program should be useful.
 ** The program should not introduce security and maintenance concerns to the Debian system.

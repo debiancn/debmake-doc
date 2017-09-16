@@ -33,7 +33,7 @@ The leveraging of information from other distributions is an option to address a
 
 If the other distribution in interest is a Debian derivative one, it is trivial to reuse it.
 
-If the other distribution in interest is a http://en.wikipedia.org/wiki/RPM_Package_Manager[RPM] based distribution, see https://wiki.debian.org/Repackage_srcrpm[Repackage src.rpm].
+If the other distribution in interest is a https://en.wikipedia.org/wiki/RPM_Package_Manager[RPM] based distribution, see https://wiki.debian.org/Repackage_srcrpm[Repackage src.rpm].
 
 Downloading and opening of the *src.rpm* file can be done with the *rget* command.  (Place the *rget* script in your PATH.)
 

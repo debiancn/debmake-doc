@@ -1,4 +1,4 @@
-The Debian packaging of the 'package-1.0'*.tar.gz*, containing a simple C source following the http://www.gnu.org/prep/standards/[GNU Coding Standards] and http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard[FHS], can be done with the *debmake* command as follows.
+The Debian packaging of the 'package-1.0'*.tar.gz*, containing a simple C source following the https://www.gnu.org/prep/standards/[GNU Coding Standards] and https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard[FHS], can be done with the *debmake* command as follows.
 
 ----
  $ tar -xvzf package-1.0.tar.gz
@@ -36,6 +36,8 @@ The *debmake* command delegates most of the heavy lifting to its back-end packag
 TIP: Make sure to protect the arguments of the *-b*, *-f*, *-l*, and *-w* options from the shell interference by quoting them properly.
 
 TIP: The non-native Debian package is the normal Debian package.
+
+TIP: The detailed log of all the package build examples in this document can be obtained by following the instruction in <<details>>.
 
 NOTE: The generation of the *debian/copyright* file, and the outputs from the *-c* (<<coption>>) and *-k* (<<koption>>) options involve heuristic operations on the copyright and license information.  They may produce some erroneous results.
 

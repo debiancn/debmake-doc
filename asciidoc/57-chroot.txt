@@ -1,7 +1,7 @@
 [[chroot]]
 === chroot
 
-The http://en.wikipedia.org/wiki/Chroot[chroot] for the clean package build environment can be created and managed using the tools described in <<setup>>.
+The https://en.wikipedia.org/wiki/Chroot[chroot] for the clean package build environment can be created and managed using the tools described in <<setup>>.
 footnote:[The *git-pbuilder* style organization is deployed here.  See https://wiki.debian.org/git-pbuilder .  Be careful since many HOWTOs use different organization.]
 
 Here is a quick summary of available package build commands.  There are many ways to do the same thing.

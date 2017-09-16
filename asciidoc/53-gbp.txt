@@ -21,11 +21,11 @@ The package history management with the *git-buildpackage* package is becoming t
 
 See:
 
-* http://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.html[Building Debian Packages with git-buildpackage]
+* https://honk.sigxcpu.org/projects/git-buildpackage/manual-html/gbp.html[Building Debian Packages with git-buildpackage]
 * https://wiki.debian.org/GitPackagingWorkflow
 * https://wiki.debian.org/GitPackagingWorkflow/DebConf11BOF
-* http://raphaelhertzog.com/2010/11/18/4-tips-to-maintain-a-3-0-quilt-debian-source-package-in-a-vcs/
-* The *systemd* packaging practice documentation on http://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=blob;f=debian/README.source[Building from source].
+* https://raphaelhertzog.com/2010/11/18/4-tips-to-maintain-a-3-0-quilt-debian-source-package-in-a-vcs/
+* The *systemd* packaging practice documentation on https://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=blob;f=debian/README.source[Building from source].
 
 TIP:  Relax. You don't need to use all the wrapper tools.  Use only ones which match your needs.
 

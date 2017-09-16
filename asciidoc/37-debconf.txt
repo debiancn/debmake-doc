@@ -20,5 +20,5 @@ All user interactions for the package installation must be handled by this *debc
 ** *debian/*'binarypackage'*.postinst*
 ** *debian/*'binarypackage'*.postrm*
 
-See *dh_installdebconf*(1), *debconf*(7), *debconf-devel*(7) and http://www.debian.org/doc/debian-policy/ch-binary.html#s-maintscriptprompt[3.9.1 Prompting in maintainer scripts] of the ``Debian Policy Manual''.
+See *dh_installdebconf*(1), *debconf*(7), *debconf-devel*(7) and https://www.debian.org/doc/debian-policy/ch-binary.html#s-maintscriptprompt[3.9.1 Prompting in maintainer scripts] of the ``Debian Policy Manual''.
 

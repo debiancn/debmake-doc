@@ -70,4 +70,4 @@ Here, please replace each part of the filename as:
 
 TIP: Many patch management and VCS usage strategies for the Debian packaging are practiced.  You don't need to use all of them.
 
-TIP: There is very extensive documentation in http://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html[Chapter 6. Best Packaging Practices] of the ``Debian Developer's Reference''.  Please read it.
+TIP: There is very extensive documentation in https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html[Chapter 6. Best Packaging Practices] of the ``Debian Developer's Reference''.  Please read it.

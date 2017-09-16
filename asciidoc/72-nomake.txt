@@ -28,7 +28,7 @@ Here, the POSIX shell script *hello* is a very simple one.
 include::../debhello-0.2-pkg1/step101.slog[]
 ----
 
-Here, the *hello.desktop* supports http://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/[Desktop Entry Specification].
+Here, the *hello.desktop* supports https://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/[Desktop Entry Specification].
 
 .*hello.desktop* (v=0.2)
 ----

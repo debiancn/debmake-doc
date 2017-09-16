@@ -20,7 +20,7 @@ The oversimplified method for the library packaging is as follows.
 
 For the details, you should read the following primary references.
 
-* http://www.debian.org/doc/debian-policy/ch-sharedlibs.html#s-sharedlibs-symbols[8.6.3 The symbols system] of the ``Debian Policy Manual''
+* https://www.debian.org/doc/debian-policy/ch-sharedlibs.html#s-sharedlibs-symbols[8.6.3 The symbols system] of the ``Debian Policy Manual''
 * *dh_makeshlibs*(1)
 * *dpkg-gensymbols*(1)
 * *dpkg-shlibdeps*(1)
@@ -30,7 +30,7 @@ Yous should also check:
 
 * Debian wiki https://wiki.debian.org/UsingSymbolsFiles[UsingSymbolsFiles]
 * Debian wiki https://wiki.debian.org/Projects/ImprovedDpkgShlibdeps[Projects/ImprovedDpkgShlibdeps]
-* Debian kde team http://pkg-kde.alioth.debian.org/symbolfiles.html[Working with symbols files]
+* Debian kde team https://pkg-kde.alioth.debian.org/symbolfiles.html[Working with symbols files]
 * <<autotools-multi>>
 * <<cmake-multi>>
 
@@ -39,7 +39,7 @@ TIP: For C++ libraries and other cases where the tracking of the symbols is prob
 [[lib-trans]]
 ==== Library transition
 
-When you package a new library package version which affects other packages, you must file a transition bug report against the *release.debian.org* pseudo package using the *reportbug* command with the http://ben.debian.net/#_query_language[ben file] and wait for the approval for its upload from the https://wiki.debian.org/Teams/ReleaseTeam[Release Team].
+When you package a new library package version which affects other packages, you must file a transition bug report against the *release.debian.org* pseudo package using the *reportbug* command with the https://ben.debian.net/#_query_language[ben file] and wait for the approval for its upload from the https://wiki.debian.org/Teams/ReleaseTeam[Release Team].
 
 Release team has the https://release.debian.org/transitions/[transition tracker].  See https://wiki.debian.org/Teams/ReleaseTeam/Transitions[Transitions].
 

@@ -106,14 +106,14 @@ The *debuild* command, included in the *devscripts* package, builds the binary p
 You can setup these by the *~/.devscripts* as follows.
 
 ----
-DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -us -uc"
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -I -us -uc"
 DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"
 DEBSIGN_KEYID="Your_GPG_keyID"
 ----
 
-The *-I* option is intentionally skipped here for *DEBUILD_DPKG_BUILDPACKAGE_OPTS*. See <<rebuild-native>>.
+The *-i* and *-I* options in *DEBUILD_DPKG_BUILDPACKAGE_OPTS* for the *dpkg-source* command help rebuilding of Debian packages without extraneous contents (see <<build-noextra>>).
 
-Currently, RSA key with 4096 bits is good idea.  See http://keyring.debian.org/creating-key.html[Creating a new GPG key].
+Currently, RSA key with 4096 bits is good idea.  See https://keyring.debian.org/creating-key.html[Creating a new GPG key].
 
 [[pbuilder-setup]]
 === pbuilder
@@ -137,7 +137,7 @@ Let's create *~/.pbuilderrc* as follows (all optional features are disabled).
 AUTO_DEBSIGN="${AUTO_DEBSIGN:-no}"
 PDEBUILD_PBUILDER=cowbuilder
 HOOKDIR="/var/cache/pbuilder/hooks"
-MIRRORSITE="http://httpredir.debian.org/debian/"
+MIRRORSITE="http://deb.debian.org/debian/"
 #APTCACHE=/var/cache/pbuilder/aptcache
 APTCACHE=/var/cache/apt/archives
 #BUILDRESULT=/var/cache/pbuilder/result/

@@ -3,7 +3,7 @@
 
 Debian takes the copyright and license matters very seriously. The ``Debian Policy Manual'' enforces to have summary of them in the *debian/copyright* file in the package.
 
-You should format it as the http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/[machine-readable debian/copyright file] (DEP-5).
+You should format it as the https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/[machine-readable debian/copyright file] (DEP-5).
 
 CAUTION: The *debian/copyright* file should be sorted to keep the generic file patterns at the top of the list.  See <<koption>>.
 

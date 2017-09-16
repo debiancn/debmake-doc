@@ -15,7 +15,7 @@ export LC_ALL
 [[utf-8-conv]]
 === UTF-8 conversion
 
-If upstream documents are encoded in old encoding schemes, converting them to http://en.wikipedia.org/wiki/UTF-8[UTF-8] is a good idea.
+If upstream documents are encoded in old encoding schemes, converting them to https://en.wikipedia.org/wiki/UTF-8[UTF-8] is a good idea.
 
 Use the *iconv* command in the *libc-bin* package to convert encodings of plain text files.
 
