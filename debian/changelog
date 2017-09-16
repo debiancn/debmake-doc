@@ -1,3 +1,14 @@
+debmake-doc (1.9-1) unstable; urgency=medium
+
+  * Drop cover image. 
+  * Update advice to novice.
+  * Update and add workflow with debhelper.
+  * Add reminder for non-debmake workflow.
+  * Mention ssh as TIP.
+  * Enable CJ PDF build.  (Needs more translation.) 
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 08:04:25 +0900
+
 debmake-doc (1.8-1) unstable; urgency=medium
 
   [ Boyuan Yang ]

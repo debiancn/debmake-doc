@@ -56,6 +56,8 @@ The *debmake* command is the helper script for the Debian packaging.
 
 These features make Debian packaging with *debmake* simple and modern.
 
+NOTE: The *debmake* command isn't the only way to make a Debian package.  Many packages are packaged using only a text editor while imitating how other similar packages are packaged.
+
 [[what-debuild]]
 === What is debuild?
 
