@@ -20,7 +20,7 @@ include Makefile.dbk
 $(BASEXML):
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
 
-build: $(PKG) $(BASEXML)
+build: $(PKG) $(BASEXML) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	echo "DEBUG='$(DEBUG)'"
 	echo "LANGPO='$(LANGPO)'"
 	echo "LANGALL='$(LANGALL)'"
