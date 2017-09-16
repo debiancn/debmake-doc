@@ -88,12 +88,5 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</simpara>
 </itemizedlist>
 <simpara>Newer versions of this guide should always be available in the <emphasis role="strong">debmake-doc</emphasis> package.</simpara>
     </legalnotice>
-    <cover>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="debian-openlogo.png"/>
-        </imageobject>
-      </mediaobject>
-    </cover>
   </bookinfo>
 

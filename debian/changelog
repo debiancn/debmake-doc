@@ -1,3 +1,9 @@
+debmake-doc (1.9-1) UNRELEASED; urgency=medium
+
+  * Drop cover image. 
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 01:45:29 +0900
+
 debmake-doc (1.8-1) unstable; urgency=medium
 
   [ Boyuan Yang ]
