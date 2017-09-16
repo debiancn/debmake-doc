@@ -226,12 +226,19 @@ $(BASEDIR)/$(MANUAL).%.txt.gz: $(MANUAL).%.xml $(ENT_ALL)
 #######################################################################
 # $ make pdf       # update all PDF in $(BASEDIR)
 #######################################################################
-.PHONY: pdf
+.PHONY: pdf nopdf
 pdf:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).pdf)
 
-$(foreach LX, $(NOPDF), $(BASEDIR)/$(MANUAL).$(LX).pdf):
-	-mkdir -p $(BASEDIR)
-	echo "PDF generation skipped." >$@
+nopdf: $(TMPDIR)/nopdf.pdf
+
+$(TMPDIR)/nopdf.pdf: nopdf.tex
+	cp -f nopdf.tex $(TMPDIR)/nopdf.tex 
+	cd "$(TMPDIR)"; \
+	xelatex nopdf.tex
+
+$(foreach LX, $(NOPDF), $(BASEDIR)/$(MANUAL).$(LX).pdf): $(TMPDIR)/nopdf.pdf
+	cp $(TMPDIR)/nopdf.pdf $@
+
 
 # dblatex.xsl provide work around for hidden URL links by appending them explicitly.
 $(BASEDIR)/$(MANUAL).%.pdf: $(MANUAL).%.xml $(ENT_ALL)

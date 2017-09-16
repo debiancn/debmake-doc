@@ -1,0 +1,55 @@
+% -----------------------------------------  
+% LaTeX file: PDF not available PDF
+% -----------------------------------------  
+%%<params>
+%% document.language en
+%%</params>
+\documentclass{report}
+\usepackage{ifthen}
+\newboolean{DBKIsBook}
+\setboolean{DBKIsBook}{true}
+\IfFileExists{ifxetex.sty}{%
+    \usepackage{ifxetex}%
+  }{%
+    \newif\ifxetex
+    \xetexfalse
+  }
+  \ifxetex
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
+\usepackage{xeCJK}
+\setCJKmainfont{VL PGothic}
+\setCJKsansfont{VL PGothic}
+\setCJKmonofont{VL Gothic}
+\else
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\fi
+\usepackage{fancybox}
+\usepackage{makeidx}
+\usepackage[hyperlink]{docbook}
+\renewcommand{\DBKreleaseinfo}{}
+\title{PDF file not generated}
+\author{}
+\hypersetup{%
+pdfcreator={DBLaTeX-0.3.9-1},%
+pdftitle={PDF file not generated},%
+pdfauthor={}}
+% ------------------
+% Collaborators
+% ------------------
+\renewcommand{\DBKindexation}{
+\begin{DBKindtable}
+\DBKinditem{\writtenby}{}
+\end{DBKindtable}
+}
+\begin{document}
+\mainmatter
+
+This PDF file is not build due to tool chain issues.
+
+\end{document}
