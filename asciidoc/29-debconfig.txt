@@ -3,6 +3,8 @@
 
 Optional configuration files may be added under the *debian/* directory.  Most of them are to control *dh_** commands offered by the *debhelper* package but there are some for *dpkg-source*, *lintian* and *gbp* commands.
 
+TIP: Check *debhelper*(7) for the latest available set of the *dh_** commands.
+
 These **debian/**'binarypackage'**.*** files provide very powerful means to set the installation path of files.  Even an upstream source without its build system can be packaged just by using these files.  See <<nomakefile>> as an example.
 
 Here is the alphabetical list of notable optional configuration files.

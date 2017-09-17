@@ -204,7 +204,34 @@ You either need to file an *ITP* or adopt a package to start working on it.  See
 * https://www.debian.org/doc/manuals/developers-reference/pkgs.html#newpackage[5.1. New packages].
 * https://www.debian.org/doc/manuals/developers-reference/pkgs.html#archive-manip[5.9. Moving, removing, renaming, orphaning, adopting, and reintroducing packages].
 
-=== Novice maintainer
+[[novice]]
+=== Novice contributor and maintainer
+
+The novice contributor and maintainer may wonder what to learn to start your contribution to Debian.  Here are my suggestions depending on your focus:
+
+* Packaging
+** Basics of *POSIX shell* and *make*.
+** Some rudimentary knowledge of *Perl* and *Python*.
+* Translation
+** Basics of how PO based translation system.
+* Documentation
+** Basics of text markups (XML, ReST, Wiki, ...).
+
+The novice contributor and maintainer may wonder where to start your contribution to Debian.  Here are my suggestions depending on your skills:
+
+* *POSIX shell*, *Perl*, and *Python* skills:
+** Send patches to the Debian Installer.
+** Send patches to the Debian packaging helper scripts such as *devscripts*, *pbuilder*, etc. mentioned in this document.
+* *C* and *C++* skills:
+** Send patches to the packages with the *required* and *important* priorities.
+* Non-English skills:
+** Send patches to the PO file of the Debian Installer.
+** Send patches to the PO file of the packages with the *required* and *important* priorities.
+* Documentation skills:
+** Update contents on https://wiki.debian.org/[Debian Wiki].
+** Send patches to the existing https://www.debian.org/doc/[Debian Documentation].
+
+These activities should give you good exposure to the other Debian people to establish your credibility.
 
 The novice maintainer should avoid packaging programs with the high security exposure:
 
@@ -213,5 +240,4 @@ The novice maintainer should avoid packaging programs with the high security exp
 * program installed in the */sbin/* or */usr/sbin/* directories
 
 When you gain more experience in packaging, you'll be able to package such programs.
-
 
