@@ -86,7 +86,7 @@ This is too deep a topic to describe here.  So, let me just list few pointers an
 
 TIP: The *script* command helps recording console outputs. 
 
-TIP: The *screen* and *tmux* commands offer the robust remote connection terminal.
+TIP: The *screen* and *tmux* commands used with the *ssh* command offer the secure and robust remote connection terminal.
 
 TIP: Python and Shell like REPL (=READ + EVAL + PRINT + LOOP) environment for Perl is offered by the *reply* command from the *libreply-perl* (new) and the *re.pl* command from the *libdevel-repl-perl* (old).
 
