@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-09-17 17:24+0900\n"
-"PO-Revision-Date: 2017-07-19 13:22+0800\n"
+"PO-Revision-Date: 2017-09-18 21:37+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -30,9 +30,8 @@ msgstr "<personname> 青木 修 </personname>"
 
 #. (itstool) path: bookinfo/date
 #: debmake-doc.en.xml:17
-#, fuzzy
 msgid "2017-09-17"
-msgstr "2017-05-01"
+msgstr "2017-09-17"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:19
@@ -978,7 +977,6 @@ msgstr "“Debian 政策手册”"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:495
-#, fuzzy
 msgid "https://www.debian.org/doc/devel-manuals#policy"
 msgstr "https://www.debian.org/doc/devel-manuals#policy"
 
@@ -1464,9 +1462,8 @@ msgstr "5.9. 移动、删除、重命名、丢弃、接手和重新引入软件�
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:829
-#, fuzzy
 msgid "Novice contributor and maintainer"
-msgstr "新手维护者"
+msgstr "新手贡献者和维护者"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:830
@@ -1521,7 +1518,7 @@ msgstr "Debian 文档"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:867
 msgid "Basics of text markups (XML, ReST, Wiki, …)."
-msgstr ""
+msgstr "文本标记语言的基础知识（XML、ReST、Wiki 等）。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:874
@@ -1606,9 +1603,8 @@ msgstr "Debian 文档"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:929
-#, fuzzy
 msgid "Debian Wiki"
-msgstr "Debian Wiki, HelpDebian"
+msgstr "Debian Wiki"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:928
@@ -1618,7 +1614,6 @@ msgstr "<_:ulink-1/> 的内容。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:934
-#, fuzzy
 msgid "Debian Documentation"
 msgstr "Debian 文档"
 
@@ -4908,7 +4903,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2646
 msgid "<emphasis role=\"strong\">architecture.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">architecture.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2650
@@ -4924,7 +4919,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2658
 msgid "<emphasis role=\"strong\">buildflags.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">buildflags.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2662
@@ -5085,7 +5080,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2740
 msgid "Split of the Debian binary package"
-msgstr ""
+msgstr "Debian 二进制软件包的拆分"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2741
@@ -5807,12 +5802,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3113
 msgid "binNMU safe"
-msgstr ""
+msgstr "binNMU 安全"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3114
 msgid "binNMU"
-msgstr ""
+msgstr "binNMU（二进制非维护者上传）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3114
@@ -6302,7 +6297,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3373
 msgid "dquilt and dpkg-source"
-msgstr ""
+msgstr "dquilt 和 dpkg-source"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3374
@@ -6825,7 +6820,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3628 debmake-doc.en.xml:3750
 msgid "See <emphasis role=\"strong\">dh_installinit</emphasis>(1)."
-msgstr ""
+msgstr "参见 <emphasis role=\"strong\">dh_installinit</emphasis>(1)。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3632
@@ -8337,12 +8332,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4397
 msgid "Python3"
-msgstr ""
+msgstr "Python3"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4402 debmake-doc.en.xml:6719
 msgid "distutils"
-msgstr ""
+msgstr "distutils"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4409
@@ -8599,7 +8594,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4547
 msgid "Escaping the Dependency Hell"
-msgstr ""
+msgstr "逃离依赖地狱"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:4547
@@ -8616,7 +8611,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4559
 msgid "Debian Library Packaging guide"
-msgstr ""
+msgstr "Debian 库打包指导"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4559
@@ -8722,7 +8717,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4625
 msgid "Re-build the binary package."
-msgstr ""
+msgstr "重新构建二进制软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4632
@@ -8744,7 +8739,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4650
 msgid "8.6.3 The symbols system"
-msgstr ""
+msgstr "8.6.3 符号（symbols）系统"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4654
@@ -8789,7 +8784,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4687
 msgid "Debian kde team <_:ulink-1/>"
-msgstr ""
+msgstr "Debian kde 团队 <_:ulink-1/>"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4702
@@ -8811,17 +8806,17 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4705
 msgid "Library transition"
-msgstr ""
+msgstr "库变迁"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4706
 msgid "ben file"
-msgstr ""
+msgstr "ben 文件"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4706
 msgid "Release Team"
-msgstr ""
+msgstr "发行团队"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4706
@@ -8997,17 +8992,17 @@ msgstr "amd64 多体系结构路径"
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4806
 msgid "<emphasis role=\"strong\">/lib/</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">/lib/</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4807
 msgid "<emphasis role=\"strong\">/lib/i386-linux-gnu/</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">/lib/i386-linux-gnu/</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4808
 msgid "<emphasis role=\"strong\">/lib/x86_64-linux-gnu/</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">/lib/x86_64-linux-gnu/</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4811
@@ -9143,7 +9138,7 @@ msgstr ""
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4856
 msgid "<emphasis role=\"strong\">/usr/include/</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">/usr/include/</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:4857
@@ -9423,12 +9418,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5005
 msgid "Continuous integration"
-msgstr ""
+msgstr "持续集成"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5006
 msgid "continuous integration"
-msgstr ""
+msgstr "持续集成"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5006
@@ -9777,7 +9772,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5133
 msgid "debmake -cc"
-msgstr ""
+msgstr "debmake -cc"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5134
@@ -10045,7 +10040,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5239
 msgid "dget"
-msgstr ""
+msgstr "dget"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5240
@@ -10130,7 +10125,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5267
 msgid "Debian Bug Tracking System"
-msgstr ""
+msgstr "Debian 缺陷追踪系统"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5267
@@ -10316,7 +10311,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5378
 msgid "snapshot.debian.org"
-msgstr ""
+msgstr "snapshot.debian.org"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5378
@@ -10329,7 +10324,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5383
 msgid "Upstream git repository"
-msgstr ""
+msgstr "上游 git 仓库"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5384
@@ -10378,7 +10373,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5392
 msgid "https://wiki.debian.org/git-pbuilder"
-msgstr ""
+msgstr "https://wiki.debian.org/git-pbuilder"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:5392
@@ -10514,7 +10509,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:5478
 msgid "<emphasis role=\"strong\">git-pbuilder</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">git-pbuilder</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:5483
@@ -10986,7 +10981,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5745
 msgid "CDBS"
-msgstr ""
+msgstr "CDBS"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5746
@@ -11061,7 +11056,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5756
 msgid "CDBS Documentation"
-msgstr ""
+msgstr "CDBS 文档"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5761
@@ -11071,7 +11066,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5767
 msgid "Build under UTF-8"
-msgstr ""
+msgstr "在 UTF-8 环境下构建"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5768
@@ -11618,11 +11613,10 @@ msgstr ""
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:6093
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">script</emphasis> command helps recording "
 "console outputs."
-msgstr "<emphasis role=\"strong\">aptitude</emphasis> 命令"
+msgstr "<emphasis role=\"strong\">script</emphasis> 命令帮助记录控制台输出。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:6094
@@ -14433,12 +14427,12 @@ msgstr "osamu@debian.org"
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9595
 msgid "Copyright © 2014-2015 Osamu Aoki &lt;<_:ulink-1/>&gt;"
-msgstr ""
+msgstr "版权 © 2014-2015 Osamu Aoki &lt;<_:ulink-1/>&gt;"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:9598
 msgid "LICENSE"
-msgstr ""
+msgstr "许可证"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9599
