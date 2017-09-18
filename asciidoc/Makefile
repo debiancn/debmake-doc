@@ -17,14 +17,18 @@ MANUAL := debmake-doc
 GENTXT := 99-manpage.txt binary.txt caveat.txt
 ALLTXT := $(wildcard *.txt) $(GENTXT)
 
+# These are used as test build target
 all: man html
 
 test: test.html
 
-xml: $(MANUAL).xml
-
 html: $(MANUAL).html
 
+# This is used from the parent directory to build debmake-doc
+xml: $(MANUAL).xml
+
+# This is used to make manpage for debmake
+# Copy result to debmake
 man: debmake.1
 
 check:
@@ -52,6 +56,16 @@ $(MANUAL).xml: $(ALLTXT)
 		-a date="$(DEBDATE)" \
 		$(MANUAL).txt
 
+test.xml: test.txt
+	@$(call check-command, asciidoc, asciidoc)
+	asciidoc --doctype book\
+		-b docbook \
+		-a 'newline=\n' \
+		-a debmakeversion="$(DEBMAKEVERSION)" \
+		-a revision="$(DEBVERSION)" \
+		-a date="$(DEBDATE)" \
+		$<
+
 %.html: $(ALLTXT)
 	cp -f $(MANUAL).txt $(MANUAL).keep
 	sed -i -e 's/^\/\/####//' $(MANUAL).txt
@@ -62,13 +76,14 @@ $(MANUAL).xml: $(ALLTXT)
 		-a revision="$(DEBVERSION)" \
 		-a date="$(DEBDATE)" \
 		$*.txt
-	cp -f $(MANUAL).keep $(MANUAL).txt
+	mv -f $(MANUAL).keep $(MANUAL).txt
 
 debmake.1: manpage.txt
 	a2x --doctype manpage --format manpage \
 		-a debmakeversion="$(DEBMAKEVERSION)" \
 		manpage.txt
 
+# This PDF is not used by debmake-doc
 $(MANUAL).pdf: $(ALLTXT)
 	@$(call check-command, asciidoc, asciidoc)
 	a2x -v --doctype book --format pdf --dblatex-opts="-b xetex"\

@@ -4,16 +4,29 @@ All files included in this source tree are under the MIT license with its text
 in the LICENSE file except for the files which explicitly claim differently in
 them.
 
-If DEBUG is set, this source build requires 2 steps.
- $ export DEBUG=1
- $ make pkg
- $ make css html
+Package generation can be automated with debmake as:
+ $ make package
+This runs build in chroot.  So not so easy for the debug build.
 
-If you are checking English and translated contents, this saves time since
-updating English source or PO requires you to do only
+If DEBUG is set, the debug build of this source via XML can be done in 2 steps.
+ $ export DEBUG=1
+ $ make pkg       # building packaging log example
+ $ make css html  # building page just like the one in package
+Results are found under tmp/
+
+For checking updated English ASCIIDOC and translation PO contents, this
+DEBUG=1 saves time.  You only build html page with existing packaging logs.
  $ make css html
 to check their goodness when rebuilding.  (Long package example build results
 are kept and reused.)
+
+If you are checking ASCIIDOC markup issue and wish to test build without going
+through XML, there is an alternative html build method:
+ $ export DEBUG=1
+ $ make pkg       # building packaging log example
+ $ cd asciidoc
+ $ make
+The result is asciidoc/debameke-doc.html
 
 == po
 
@@ -23,7 +36,7 @@ In order to keep the translation in sync with the English, po/pot files are
 generated in the way not to contain <screen> contents and url attribute of
 <ulink>.
 
-This is done by the itstool (not po4a).
+This is done directory by the itstool from gettext (without using po4a).
 
 == debian-template/
 
@@ -46,13 +59,19 @@ command while excluding the debian/ directory.
 These are used to generate the packaging process example.
 
 These contain step<number>.cmd files which are executed sequentially and the
-results are logged to the step<number>.raw files.
+results are logged to the step<number>.log files with the script program.
 
-Since the step<number>.raw files are terminated by <CR><LF>, may contain
-<TAB>, and may be too long, the filtered step<number>.log files are generated.
+Since the step<number>.log files are terminated by <CR><LF>, may contain
+<TAB>, and may be too long, the filtered step<number>.slog files are generated.
 
-The <revision> is usually 1 and it matches the Debian revison of the binary
+The <revision> is usually 1 and it matches the Debian revision of the binary
 packages generated.
+
+If you wish to run script-by-script, you can do the following
+ $ make step<number>.raw
+
+Some cmd files running program which waits user input uses the expect command
+to automate it to move forward.
 
 == .stamp
 
@@ -63,7 +82,6 @@ committed to the VCS.
 == asciidoc/
 
 This contain the source text files written in the asciidoc markup. Their
-extenstion is usually .txt .
-
+extension is usually .txt .
 
 // vim:se tw=78 sts=4 ts=4 et ai:

@@ -10,17 +10,81 @@
 
   <!-- This header part covers all bookinfo section -->
   <bookinfo>
+    <cover>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="xslt/debian-openlogo.png"/>
+        </imageobject>
+      </mediaobject>
+    </cover>
     <title>Guide for Debian Maintainers</title>
     <author>
       <personname> Osamu Aoki</personname>
     </author>
     <date>&debdate;</date>
+
+    <copyright>
+      <year>2014-2017</year>
+      <holder>Osamu Aoki</holder>
+    </copyright>
+
+    <legalnotice>
+
+<simpara>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:</simpara>
+<simpara>The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.</simpara>
+<simpara>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</simpara>
+
+<simpara>This guide was made using the following previous documents as its reference:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+“Making a Debian Package (AKA the Debmake Manual)”, copyright © 1997 Jaldhar Vyas.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+“The New-Maintainer’s Debian Packaging Howto”, copyright © 1997 Will Lowe.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, 2005-2017 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The latest version of this guide should be available:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+in the <ulink url="https://tracker.debian.org/pkg/debmake-doc">debmake-doc package</ulink> and
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+at the <ulink url="https://www.debian.org/doc/devel-manuals#debmake-doc">Debian Documentation web site</ulink>.
+</simpara>
+</listitem>
+</itemizedlist>
+    </legalnotice>
     <abstract>
-<simpara>This tutorial document describes the building of the Debian
+<simpara>This “Guide for Debian Maintainers” (&debdate;) 
+tutorial guide describes the building of the Debian
 package to ordinary Debian users and prospective developers using
 the <emphasis role="strong">debmake</emphasis> command.</simpara>
 
-<simpara>It is focused on the modern packaging style and comes with many simple examples.</simpara>
+<simpara>This guide focuses on the modern packaging style and comes with many simple examples.</simpara>
 
 <itemizedlist>
 <listitem>
@@ -45,48 +109,7 @@ multiple binary packages with shared library etc.
 </listitem>
 </itemizedlist>
 
-<simpara>This “Guide for Debian Maintainers” (&debversion; &debdate;) can be considered as the successor to the “Debian New Maintainers’ Guide”.</simpara>
+<simpara>This “Guide for Debian Maintainers” can be considered as the successor to the “Debian New Maintainers’ Guide”.</simpara>
     </abstract>
-    <copyright>
-      <year>2014-2017</year>
-      <holder>Osamu Aoki</holder>
-    </copyright>
-    <legalnotice>
-
-<simpara>Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:</simpara>
-<simpara>The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.</simpara>
-<simpara>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</simpara>
-<simpara>This guide was made using the following previous documents as its reference:</simpara>
-<itemizedlist>
-<listitem>
-<simpara>
-“Making a Debian Package (AKA the Debmake Manual)”, copyright © 1997 Jaldhar Vyas.
-</simpara>
-</listitem>
-<listitem>
-<simpara>
-“The New-Maintainer’s Debian Packaging Howto”, copyright © 1997 Will Lowe.
-</simpara>
-</listitem>
-<listitem>
-<simpara>
-“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, 2005-2014 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog.
-</simpara>
-</listitem>
-</itemizedlist>
-<simpara>Newer versions of this guide should always be available in the <emphasis role="strong">debmake-doc</emphasis> package.</simpara>
-    </legalnotice>
   </bookinfo>
 

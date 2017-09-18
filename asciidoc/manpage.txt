@@ -283,7 +283,7 @@ See README.developer in the source for more.
 
 == AUTHOR
 
-Copyright © 2014-2015 Osamu Aoki <osamu@debian.org>
+Copyright © 2014-2017 Osamu Aoki <osamu@debian.org>
 
 == LICENSE
 

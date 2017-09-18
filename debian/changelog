@@ -3,6 +3,7 @@ debmake-doc (1.10-1) UNRELEASED; urgency=medium
   [ Osamu Aoki ]
   * Update debian/changelog documentation.  Closes: #851456
   * Use --allow-downgrades for apt-get as in the BTS: #868279
+  * Restore debian-openlogo.png as in the BTS: #871493
 
   [ Boyuan Yang ]
   * Use Priority: optional instead of Priority: extra globally.

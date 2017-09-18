@@ -4,6 +4,8 @@
 include Makefile.common
 
 #######################################################################
+# Update release names below for every Debian stable release
+#######################################################################
 # Document translation strategy: use itstool instead of po4a
 # 1. Generate $(BASEXML) using AsciiDoc with docbook4 backend
 #    (Ease of writing main cantents)
@@ -98,7 +100,7 @@ common.ent:
 
 pot: $(PO_DIR)/templates.pot
 
-$(PO_DIR)/templates.pot: $(MANUAL).en.xml
+$(PO_DIR)/templates.pot: $(MANUAL).en.xml .FORCE
 	$(ITSTOOL) $< -o - | $(MSGCAT) - -o $@
 
 $(MANUAL).%.xml: $(PO_DIR)/%.po $(MANUAL).en.xml
@@ -115,7 +117,7 @@ po: $(SRC_PO)
 .PHONY: po pot
 
 # Always update
-$(PO_DIR)/%.po: $(PO_DIR)/templates.pot .FORCE
+$(PO_DIR)/%.po: $(PO_DIR)/templates.pot
 	@$(call check-command, msgmerge, gettext)
 	$(MSGMERGE) -U $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
 	MESS1="no-obsolete  $*  `$(MSGATTRIB) --no-obsolete  $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
