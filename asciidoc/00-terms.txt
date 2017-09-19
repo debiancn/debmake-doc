@@ -27,5 +27,7 @@ This guide was made using the following previous documents as its reference:
 * ``The New-Maintainer’s Debian Packaging Howto'', copyright © 1997 Will Lowe.
 * ``Debian New Maintainers’ Guide'', copyright © 1998-2002 Josip Rodin, 2005-2014 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog.
 
-Newer versions of this guide should always be available in the *debmake-doc* package.
+The latest version of this guide should always be available:
 
+* in the https://tracker.debian.org/pkg/debmake-doc[debmake-doc] package and
+* at the https://www.debian.org/doc/devel-manuals#debmake-doc[Debian Documentation web site].

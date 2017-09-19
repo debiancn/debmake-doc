@@ -92,9 +92,9 @@ common.ent:
 	echo "<!ENTITY  debmakeversion \"$(DEBMAKEVERSION)\">" >$@
 	echo "<!ENTITY  debversion \"$(DEBVERSION)\">" >>$@
 	echo "<!ENTITY  debdate \"$(DEBDATE)\">" >>$@
-	echo "<!ENTITY  codeoldstable \"wheezy\">" >>$@
-	echo "<!ENTITY  codestable \"jessie\">" >>$@
-	echo "<!ENTITY  codetesting \"stretch\">" >>$@
+	echo "<!ENTITY  codeoldstable \"jessie\">" >>$@
+	echo "<!ENTITY  codestable \"stretch\">" >>$@
+	echo "<!ENTITY  codetesting \"buster\">" >>$@
 
 pot: $(PO_DIR)/templates.pot
 

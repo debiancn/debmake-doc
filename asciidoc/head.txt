@@ -45,10 +45,10 @@ multiple binary packages with shared library etc.
 </listitem>
 </itemizedlist>
 
-<simpara>This “Guide for Debian Maintainers” can be considered as the successor to the “Debian New Maintainers’ Guide”.</simpara>
+<simpara>This “Guide for Debian Maintainers” (&debversion; &debdate;) can be considered as the successor to the “Debian New Maintainers’ Guide”.</simpara>
     </abstract>
     <copyright>
-      <year>2014-2015</year>
+      <year>2014-2017</year>
       <holder>Osamu Aoki</holder>
     </copyright>
     <legalnotice>
