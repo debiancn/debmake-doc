@@ -21,7 +21,7 @@ MANUAL := debmake-doc
 BASEXML := $(ASCIIDOC_DIR)/$(MANUAL).xml
 HEADXML := $(ASCIIDOC_DIR)/head.txt
 # languages translated with PO files (not used now)
-LANGPO ?= ja zh-cn
+LANGPO ?= ja zh-cn de
 # languages to skip generation of PDF files (not used now)
 NOPDF ?=
 # languages to build document
