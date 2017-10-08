@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2017-09-24 18:42+0200\n"
-"PO-Revision-Date: 2017-09-24 19:01+0200\n"
+"PO-Revision-Date: 2017-10-08 10:15+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,6 +40,9 @@ msgid ""
 "ordinary Debian users and prospective developers using the <emphasis role="
 "\"strong\">debmake</emphasis> command."
 msgstr ""
+"Diese Anleitung beschreibt normalen Benutzern und zukünftigen Entwicklern den "
+"Bau von Debian-Paketen mittels des Befehls <emphasis role=\"strong\">debmake</"
+"emphasis>."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:23
@@ -47,26 +50,28 @@ msgid ""
 "It is focused on the modern packaging style and comes with many simple "
 "examples."
 msgstr ""
+"Sie konzentriert sich auf den modernen Paketierstil und enthält viele "
+"einfache Beispiele."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:27
 msgid "POSIX shell script packaging"
-msgstr ""
+msgstr "POSIX-Shell-Skript-Paketierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:32
 msgid "Python3 script packaging"
-msgstr ""
+msgstr "Python3-Skript-Paketierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:37
 msgid "C with Makefile/Autotools/CMake"
-msgstr ""
+msgstr "C mit Makefile/Autotools/CMake"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:42
 msgid "multiple binary packages with shared library etc."
-msgstr ""
+msgstr "mehrere Binärpakete mit Laufzeitbibliotheken usw."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:48
@@ -78,7 +83,7 @@ msgstr ""
 #. (itstool) path: bookinfo/copyright
 #: debmake-doc.en.xml:50
 msgid "<year>2014-2015</year> <holder>Osamu Aoki</holder>"
-msgstr ""
+msgstr "<year>2014-2015</year> <holder>Osamu Aoki</holder>"
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:56
@@ -115,6 +120,8 @@ msgstr ""
 msgid ""
 "This guide was made using the following previous documents as its reference:"
 msgstr ""
+"Diese Anleitung wurde mittels folgender vorhergehender Dokumente als Referenz "
+"erstellt:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:74
@@ -142,11 +149,13 @@ msgid ""
 "Newer versions of this guide should always be available in the <emphasis "
 "role=\"strong\">debmake-doc</emphasis> package."
 msgstr ""
+"Neuere Versionen dieser Anleitung sollten immer im Paket <emphasis "
+"role=\"strong\">debmake-doc</emphasis> verfügbar sein."
 
 #. (itstool) path: preface/title
 #: debmake-doc.en.xml:94
 msgid "Preface"
-msgstr ""
+msgstr "Vorwort"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:95
