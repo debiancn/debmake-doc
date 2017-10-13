@@ -15,5 +15,5 @@ NOTE: If you find issues with this license checker, please file a bug report to 
 
 NOTE: The *debmake* command focuses on bunching up same copyright and license claims in details to create template for *debian/copyright*.  In order to do this within reasonable time, it only picks the first section which looks like copyright and license claims.  So its license assignment may not be optimal.  Please also use other tools such as *licensecheck*.
 
-TIP:  You are highly encourage to check the license status with the *licensecheck*(1) command and, as needed, with your manual code review.
+TIP:  You are highly encouraged to check the license status with the *licensecheck*(1) command and, as needed, with your manual code review.
 
