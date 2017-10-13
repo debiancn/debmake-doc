@@ -1,9 +1,9 @@
 # Boyuan Yang <073plan@gmail.com>, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: debmake-doc 1.7\n"
 "POT-Creation-Date: 2017-09-17 17:24+0900\n"
-"PO-Revision-Date: 2017-10-08 15:49+0800\n"
+"PO-Revision-Date: 2017-10-13 23:27+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -5465,7 +5465,7 @@ msgstr "共享库文档"
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2946
 msgid "<emphasis>bar</emphasis>"
-msgstr ""
+msgstr "<emphasis>bar</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2950
@@ -5475,7 +5475,7 @@ msgstr "编译好的程序文件，不可共同安装"
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2953
 msgid "<emphasis>bar</emphasis><emphasis role=\"strong\">-doc</emphasis>"
-msgstr ""
+msgstr "<emphasis>bar</emphasis><emphasis role=\"strong\">-doc</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2957
@@ -5485,7 +5485,7 @@ msgstr "程序的配套文档文件"
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2960
 msgid "<emphasis>baz</emphasis>"
-msgstr ""
+msgstr "<emphasis>baz</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2961
@@ -5500,7 +5500,7 @@ msgstr "解释型程序文件"
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2971
 msgid "The library package name"
-msgstr ""
+msgstr "库软件包名称"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2972
@@ -5687,7 +5687,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3067
 msgid "variable substitutions mechanism"
-msgstr ""
+msgstr "变量替换机制"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3067
@@ -6054,7 +6054,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3179
 msgid "debian/patches/*"
-msgstr ""
+msgstr "debian/patches/*"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3180
