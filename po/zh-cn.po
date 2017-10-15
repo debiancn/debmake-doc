@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.7\n"
 "POT-Creation-Date: 2017-09-17 17:24+0900\n"
-"PO-Revision-Date: 2017-10-13 23:27+0800\n"
+"PO-Revision-Date: 2017-10-16 01:00+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -991,7 +991,6 @@ msgstr "“Debian 开发者参考”"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:507
-#, fuzzy
 msgid "https://www.debian.org/doc/devel-manuals#devref"
 msgstr "https://www.debian.org/doc/devel-manuals#devref"
 
@@ -5110,12 +5109,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2757
 msgid "<xref linkend=\"autotools-multi\"/> (Autotools based)"
-msgstr ""
+msgstr "<xref linkend=\"autotools-multi\"/>（基于 Autotools）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2762
 msgid "<xref linkend=\"cmake-multi\"/> (CMake based)"
-msgstr ""
+msgstr "<xref linkend=\"cmake-multi\"/>（基于 CMake）"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2768
@@ -5963,7 +5962,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3168
 msgid "debian/copyright"
-msgstr ""
+msgstr "debian/copyright"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3169
@@ -5972,11 +5971,14 @@ msgid ""
 "Policy Manual” enforces to have summary of them in the <emphasis role="
 "\"strong\">debian/copyright</emphasis> file in the package."
 msgstr ""
+"Debian 以十分严肃的态度对待版权和许可证信息。“Debian 政策手册”强制规定软件包"
+"的 <emphasis role=\"strong\">debian/copyright</emphasis> 文件中需要提供相关信"
+"息的摘要。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3170
 msgid "machine-readable debian/copyright file"
-msgstr ""
+msgstr "机器可解析的 debian/copyright 文件"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3170
@@ -6157,7 +6159,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3256
 msgid "See <xref linkend=\"dpkg-source-commit\"/>"
-msgstr ""
+msgstr "参见 <xref linkend=\"dpkg-source-commit\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3261
@@ -6266,7 +6268,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3367
 msgid "dpkg-source -x"
-msgstr ""
+msgstr "dpkg-source -x"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3368
@@ -6431,7 +6433,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3427
 msgid "debian/watch and DFSG"
-msgstr ""
+msgstr "debian/watch 和 DFSG"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3428 debmake-doc.en.xml:3429
@@ -6887,7 +6889,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3662 debmake-doc.en.xml:3896 debmake-doc.en.xml:4027
 msgid "See <emphasis role=\"strong\">dh_installdocs</emphasis>(1)."
-msgstr ""
+msgstr "参见 <emphasis role=\"strong\">dh_installdocs</emphasis>(1)。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3666
@@ -6908,7 +6910,7 @@ msgstr ""
 #: debmake-doc.en.xml:3673 debmake-doc.en.xml:3684 debmake-doc.en.xml:3695
 #: debmake-doc.en.xml:3706
 msgid "See <emphasis role=\"strong\">dh_installemacsen</emphasis>(1)."
-msgstr ""
+msgstr "参见 <emphasis role=\"strong\">dh_installemacsen</emphasis>(1)。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3677
@@ -7697,7 +7699,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4110
 msgid "Customization of the Debian packaging"
-msgstr ""
+msgstr "Debian 打包的定制化"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4111
@@ -8196,12 +8198,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4304
 msgid "GNU Automake documentation"
-msgstr ""
+msgstr "GNU Automake 文档"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4309
 msgid "GNU Autoconf documentation"
-msgstr ""
+msgstr "GNU Autoconf 文档"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4314
@@ -8339,7 +8341,7 @@ msgstr "distutils"
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4409
 msgid "Debugging information"
-msgstr ""
+msgstr "调试信息"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4410
@@ -8428,7 +8430,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4460
 msgid "New -dbgsym package (Strech 9.0 and after)"
-msgstr ""
+msgstr "新的 -dbgsym 软件包（Stretch 9.0 或更新）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4461
@@ -8458,7 +8460,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4476
 msgid "Old -dbg package (Jessie 8.0 or before)"
-msgstr ""
+msgstr "旧的 -dbg 软件包（Jessie 8.0 或更旧）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4477
@@ -8639,7 +8641,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4571
 msgid "Library symbols"
-msgstr ""
+msgstr "库符号"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4572
@@ -10365,7 +10367,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5390 debmake-doc.en.xml:5391
 msgid "chroot"
-msgstr ""
+msgstr "chroot"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5392
@@ -10815,7 +10817,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5660
 msgid "uscan"
-msgstr ""
+msgstr "uscan"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5661
@@ -10867,7 +10869,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5707
 msgid "3.0 source format"
-msgstr ""
+msgstr "3.0 源代码格式"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5708
@@ -10956,7 +10958,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5741
 msgid "DEP - Debian Enhancement Proposals"
-msgstr ""
+msgstr "DEP——Debian 增强提议"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5741
@@ -11704,7 +11706,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:6122
 msgid "internationalization and localization"
-msgstr ""
+msgstr "国际化和本地化"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6121
@@ -11728,7 +11730,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6134
 msgid "Free software (a.k.a. Libre software)"
-msgstr ""
+msgstr "自由软件"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6139
@@ -12783,7 +12785,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:7499
 msgid "Autotools (single-binary)"
-msgstr ""
+msgstr "Autotools（单个二进制文件）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:7500
@@ -13219,7 +13221,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:8522
 msgid "Internationalization"
-msgstr ""
+msgstr "国际化"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:8523
@@ -14176,7 +14178,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:9412
 msgid "EXAMPLES"
-msgstr ""
+msgstr "示例"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9413
@@ -14303,7 +14305,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:9514
 msgid "DEBUG"
-msgstr ""
+msgstr "除错"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9515
@@ -14409,7 +14411,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9591
 msgid "See README.developer in the source for more."
-msgstr ""
+msgstr "查看源码中的 README.developer 文件以了解更多。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:9594
