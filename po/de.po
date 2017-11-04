@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2017-09-24 18:42+0200\n"
-"PO-Revision-Date: 2017-09-24 19:01+0200\n"
+"PO-Revision-Date: 2017-11-04 13:34+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,6 +40,9 @@ msgid ""
 "ordinary Debian users and prospective developers using the <emphasis role="
 "\"strong\">debmake</emphasis> command."
 msgstr ""
+"Diese Anleitung beschreibt gewöhnlichen Debian-Benutzern und angehenden "
+"Entwicklern den Bau des Debian-Pakets mittels des Befehls <emphasis role="
+"\"strong\">debmake</emphasis>."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:23
@@ -47,38 +50,41 @@ msgid ""
 "It is focused on the modern packaging style and comes with many simple "
 "examples."
 msgstr ""
+"Sie konzentriert sich auf die moderne Paketierart und enthält viele Beispiele."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:27
 msgid "POSIX shell script packaging"
-msgstr ""
+msgstr "POSIX-Shell-Skript-Paketierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:32
 msgid "Python3 script packaging"
-msgstr ""
+msgstr "Python3-Skript-Paketierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:37
 msgid "C with Makefile/Autotools/CMake"
-msgstr ""
+msgstr "C mit Makefile/Autotools/CMake"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:42
 msgid "multiple binary packages with shared library etc."
-msgstr ""
+msgstr "mehrere Binärpakete mit Laufzeitbibliotheken usw."
 
+#, fuzzy
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:48
 msgid ""
 "This “Guide for Debian Maintainers” can be considered as the successor to "
 "the “Debian New Maintainers’ Guide”."
 msgstr ""
+"Diese »Anleitung für Debian-Betreuer« kann als Nachfolger der FIXME angesehen werden."
 
 #. (itstool) path: bookinfo/copyright
 #: debmake-doc.en.xml:50
 msgid "<year>2014-2015</year> <holder>Osamu Aoki</holder>"
-msgstr ""
+msgstr "<year>2014-2015</year> <holder>Osamu Aoki</holder>"
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:56
@@ -115,19 +121,24 @@ msgstr ""
 msgid ""
 "This guide was made using the following previous documents as its reference:"
 msgstr ""
+"Diese Anleitung wurde mit den nachfolgenden Dokumenten als Referenz erstellt:"
 
+# FIXME: Check nach deutschen Namen
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:74
 msgid ""
 "“Making a Debian Package (AKA the Debmake Manual)”, copyright © 1997 Jaldhar "
 "Vyas."
 msgstr ""
+"»Making a Debian Package (AKA the Debmake Manual)«, Copyright © 1997 Jaldhar "
+"Vyas."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:79
 msgid ""
 "“The New-Maintainer’s Debian Packaging Howto”, copyright © 1997 Will Lowe."
 msgstr ""
+"»The New-Maintainer’s Debian Packaging Howto«, Copyright © 1997 Will Lowe."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:84
@@ -135,6 +146,8 @@ msgid ""
 "“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, "
 "2005-2014 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog."
 msgstr ""
+"»Debian New Maintainers’ Guide«, Copyright © 1998-2002 Josip Rodin, "
+"2005-2014 Osamu Aoki, 2010 Craig Small und 2010 Raphaël Hertzog."
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:89
@@ -142,16 +155,18 @@ msgid ""
 "Newer versions of this guide should always be available in the <emphasis "
 "role=\"strong\">debmake-doc</emphasis> package."
 msgstr ""
+"Neuere Versionen dieser Anleitung sollten immer im Paket <emphasis "
+"role=\"strong\">debmake-doc</emphasis> enthalten sein."
 
 #. (itstool) path: preface/title
 #: debmake-doc.en.xml:94
 msgid "Preface"
-msgstr ""
+msgstr "Vorwort"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:95
 msgid "Debian Reference"
-msgstr ""
+msgstr "Debian-Referenz"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:95
@@ -161,6 +176,10 @@ msgid ""
 "system from the <_:ulink-1/>. It contains some pointers to learn about Unix "
 "programming, too."
 msgstr ""
+"Sie müssen ein bisschen über Unix-Programmierung wissen, aber Sie müssen "
+"definitiv kein Meister sein. Über den grundlegenden Umgang mit einem Debian-"
+"System können Sie in <_:ulink-1/> mehr erfahren. Es enthält auch einige "
+"Hinweise zum Lernen der Unix-Programmierung."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:95
@@ -168,6 +187,8 @@ msgid ""
 "If you are a somewhat experienced Debian user <_:footnote-1/>, you may have "
 "encountered following situations:"
 msgstr ""
+"Falls Sie ein etwas erfahrener Debian-Benutzer <_:footnote-1/> sind, könnten "
+"Ihnen die folgenen Situationen bekannt vorkommen:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:98
@@ -175,16 +196,20 @@ msgid ""
 "You wish to install a certain software package not yet found in the Debian "
 "archive."
 msgstr ""
+"Sie möchten ein bestimmtes, noch nicht im Debian-Archiv verfügbares "
+"Softwarepaket installieren."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:103
 msgid "You wish to update a Debian package with the newer upstream release."
 msgstr ""
+"Sie möchten ein Debian-Paket mit einer neueren Version der Originalautoren "
+"aktualisieren."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:108
 msgid "You wish to fix bugs of a Debian package with some patches."
-msgstr ""
+msgstr "Sie möchten Fehler in einem Debian-Paket mit Patches korrigieren."
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:113
@@ -194,6 +219,10 @@ msgid ""
 "upstream source package into <emphasis role=\"strong\">/usr/local/</"
 "emphasis>."
 msgstr ""
+"Falls Sie nicht daran interessiert sind, das Debian-Paket anderen zugänglich "
+"zu machen, können Sie natürlich Ihre lokale Situation auch dadurch beheben, "
+"dass Sie die korrigierten Quellen der Originalautoren übersetzen und in "
+"<emphasis role=\"strong\">/usr/local/</emphasis> installieren."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:113
@@ -203,6 +232,10 @@ msgid ""
 "guide as a prospective Debian maintainer. <_:footnote-1/> Welcome to the "
 "Debian community."
 msgstr ""
+"Falls Sie ein Debian-Paket erstellen möchten, um diese Wünsche zu erfüllen "
+"und Ihre Arbeit der Debian-Gemeinschaft zur Verfügung stellen wollen, dann "
+"sind Sie die Zielgruppe dieser Anleitung als angehender Debian-Betreuer. "
+"<_:footnote-1/> Willkommen in der Debian-Gemeinschaft."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:114
@@ -212,41 +245,46 @@ msgid ""
 "huge array of packaging tools and archive maintenance tools to build "
 "consistent set of binary packages addressing many technical objectives:"
 msgstr ""
+"Debian muss vielen sozialen und technischen Regeln und Konventionen folgen, "
+"da es eine große Organisation Freiwilliger mit einer Geschichte ist. Debian "
+"hat auch eine große Anzahl an Paketierungswerkzeugen und "
+"Archivverwaltungswerkzeugen entwickelt, um eine konsistente Menge an "
+"Binärpaketen zu bauen, die viele technische Ziele adressieren:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:117
 msgid "clean build under clearly specified package dependencies and patches"
-msgstr ""
+msgstr "sauberer Bau unter klar festgelegten Paketabhängigkeiten und -Patches"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:122
 msgid "packages build across many architectures"
-msgstr ""
+msgstr "Paketbau unter vielen Architekturen"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:127
 msgid "optimal splits into multiple binary packages"
-msgstr ""
+msgstr "optimale Trennung in mehrere Binärpakete"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:132
 msgid "smooth library transitions"
-msgstr ""
+msgstr "reibungslose Bibliotheksübergänge"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:137
 msgid "security enhancement using specific compiler flags"
-msgstr ""
+msgstr "Sicherheitserweiterung mittels bestimmter Compiler-Schalter"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:142
 msgid "multiarch support"
-msgstr ""
+msgstr "Unterstützung von Multiarch"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:147
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:152
@@ -255,6 +293,9 @@ msgid ""
 "maintainers to get involved with Debian. This guide tries to provide entry "
 "points for them to get started. It describes as follows:"
 msgstr ""
+"Dies ist für viele angehende Debian-Entwickler beim Einstieg in Debian etwas "
+"überwältigend. Diese Anleitung versucht, für ihren Start Einstiegspunkte "
+"bereitzustellen. Sie beschreibt folgendes:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:155
@@ -262,26 +303,29 @@ msgid ""
 "What you should know before getting involved with Debian as a prospective "
 "maintainer."
 msgstr ""
+"Was Sie wissen sollten, bevor Sie als angehender Betreuer bei Debian "
+"mitmachen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:160
 msgid "What it looks like to make a simple Debian package."
-msgstr ""
+msgstr "Wie es ausschaut, ein einfaches Debian-Paket zu erstellen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:165
 msgid "What kind of rules exist for making the Debian package."
-msgstr ""
+msgstr "Welche Art von Regeln für das Erstellen des Debian-Pakets existieren."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:170
 msgid "Tips for making the Debian package."
-msgstr ""
+msgstr "Tipps zur Erstellung des Debian-Pakets."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:175
 msgid "Examples of making Debian packages for several typical scenarios."
 msgstr ""
+"Beispiele für das Erstellen von Debian-Paketen für mehrere typische Szenarien."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:180
@@ -294,6 +338,13 @@ msgid ""
 "Maintainers” in the <emphasis role=\"strong\">debmake-doc</emphasis> "
 "(version: 1.9-1) package."
 msgstr ""
+"Der Autor bemerkte Einschränkungen beim Aktualisieren des ursprünglichen »New "
+"Maintainers' Guide« mit dem Paket <emphasis role=\"strong\">dh-make</"
+"emphasis> und entschied sich, ein alternatives Werkzeug und die dazugehörige "
+"Dokumentation zu erstellen, um moderne Anforderungen zu adressieren. Das "
+"Ergebnis ist das Paket <emphasis role=\"strong\">debmake</emphasis> (version: "
+") und dieser aktualisierte »Guide for Debian Maintainers« in dem Paket "
+"<emphasis role=\"strong\">debmake-doc</emphasis> (Version: 1.9-1)."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:181
@@ -302,6 +353,9 @@ msgid ""
 "\">debmake</emphasis> command making this guide simple. This guide also "
 "offers many packaging examples."
 msgstr ""
+"Viele Aufgaben und Tipps sind im Befehl <emphasis role=\"strong\">debmake</"
+"emphasis> integriert. Daher ist die Anleitung einfach. Diese Anleitung bietet "
+"auch viele Paketierbeispiele."
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:182
@@ -310,6 +364,9 @@ msgid ""
 "Debian maintainer must be <emphasis role=\"strong\">both technically "
 "competent and diligent</emphasis> to take up this challenge."
 msgstr ""
+"Es bedarf vieler Stunden, um Debian-Pakete zu erstellen und zu betreuen. Der "
+"Debian-Betreuer muss <emphasis role=\"strong\">sowohl technisch kompentent "
+"als auch sorgfältig</emphasis> sein, um diese Herausforderung zu meistern."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:183
@@ -319,21 +376,25 @@ msgid ""
 "topics are only covered by the external pointers. These are intentional "
 "choices to keep this guide simple and maintainable."
 msgstr ""
+"Einige wichtige Themen sind im Detail erklärt. Einige mögen Ihnen unwichtig "
+"erscheinen. Seien Sie geduldig. Einige Sonderfälle werden nur durch "
+"Referenzen auf externe Dokumente berücksichtigt. Dies passiert absichtlich, "
+"um diese Anleitung einfach und wartbar zu halten."
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:186
 msgid "Overview"
-msgstr ""
+msgstr "Überblick"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:187 debmake-doc.en.xml:1355
 msgid "GNU Coding Standards"
-msgstr ""
+msgstr "GNU-Programmier-Standard"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:187 debmake-doc.en.xml:1355
 msgid "FHS"
-msgstr ""
+msgstr "FHS"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:187
@@ -343,6 +404,10 @@ msgid ""
 "ulink-1/> and <_:ulink-2/>, can be done with the <emphasis role=\"strong"
 "\">debmake</emphasis> command as follows."
 msgstr ""
+"Das Debian-Paket für <emphasis>package-1.0</emphasis><emphasis role=\"strong"
+"\">.tar.gz</emphasis>, das eine einzige, einfache C-Quelle enthält, die <_:"
+"ulink-1/> and <_:ulink-2/> folgt, kann mit dem Befehl <emphasis role=\"strong"
+"\">debmake</emphasis> wie folgt erstellt werden:"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:193
@@ -352,6 +417,10 @@ msgid ""
 "functions well under the <emphasis role=\"strong\">dpkg</emphasis> command "
 "to be used for your local deployment."
 msgstr ""
+"Falls die manuellen Anpassungen der erstellten Konfigurationsdateien "
+"übersprungen werden, fehlt dem erstellten Binärpaket eine sinnvolle "
+"Paketbeschreibung. Es funktioniert aber dennoch unter dem Befehl <emphasis "
+"role=\"strong\">dpkg</emphasis> gut für Ihren lokalen Einsatz."
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:194
@@ -361,6 +430,11 @@ msgid ""
 "perfection to comply with the strict quality requirements of the Debian "
 "archive, if the generated package is intended for the general consumption."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> stellt nur gute "
+"Vorlagendateien bereit. Diese Vorlagendateien müssen durch manuelle "
+"Anpassungen perfektioniert werden, um den strengen Qualitätsanforderungen des "
+"Debian-Archivs zu genügen, falls das Paket für die allgemeine Verwendung "
+"gedacht ist."
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:195
@@ -368,6 +442,8 @@ msgid ""
 "If you are new to the Debian packaging, do not worry about the details and "
 "just get the big picture instead."
 msgstr ""
+"Falls Sie beim Debian-Paketieren neu sind, machen Sie sich keine Kopf über "
+"die Details und erkennen Sie nur das große Ganze."
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:196
@@ -379,6 +455,12 @@ msgid ""
 "obsolete <emphasis role=\"strong\">debmake</emphasis> package which provided "
 "the <emphasis role=\"strong\">deb-make</emphasis> command."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">deb-make</emphasis> war vor dem Befehl "
+"<emphasis role=\"strong\">dh_make</emphasis> beliebt. Das aktuelle Paket "
+"<emphasis role=\"strong\">debmake</emphasis> beginnt seine Version bei "
+"<emphasis role=\"strong\">4.0</emphasis>, um Überlappungen mit dem veralteten "
+"Paket <emphasis role=\"strong\">debmake</emphasis>, das den Befehl <emphasis "
+"role=\"strong\">deb-make</emphasis> bereitstellte, zu vermeiden."
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:196
@@ -389,6 +471,11 @@ msgid ""
 "replace functions offered historically by the <emphasis role=\"strong"
 "\">dh_make</emphasis> command. <_:footnote-1/>"
 msgstr ""
+"Falls Sie schon Berührungen mit der Debian-Paketierung hatten, sieht dies dem "
+"Befehl <emphasis role=\"strong\">dh_make</emphasis> sehr ähnlich. Dies kommt "
+"daher, dass der Befehl <emphasis role=\"strong\">debmake</emphasis> dazu "
+"gedacht ist, die historisch von dem Befehl <emphasis role=\"strong\">dh_make</"
+"emphasis> angebotenen Funktionen zu ersetzen. <_:footnote-1/>"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:197
@@ -396,11 +483,13 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is designed with "
 "following features:"
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> wurde mit den "
+"folgenden Funktionalitäten gestaltet:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:200
 msgid "modern packaging style"
-msgstr ""
+msgstr "moderner Paketierstil"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:205
@@ -408,6 +497,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/copyright</emphasis>: <emphasis role="
 "\"strong\">DEP-5</emphasis> compliant"
 msgstr ""
+"<emphasis role=\"strong\">debian/copyright</emphasis>: <emphasis role="
+"\"strong\">DEP-5</emphasis>-konform"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:210
@@ -416,6 +507,9 @@ msgid ""
 "\">substvar</emphasis> support, <emphasis role=\"strong\">multiarch</"
 "emphasis> support, multi binary packages, …"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis>: <emphasis role=\"strong"
+"\">substvar</emphasis>-Unterstützung, <emphasis role=\"strong\">multiarch</"
+"emphasis>-Unterstützung, mehrere Binärpakete, …"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:215
@@ -423,11 +517,13 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis>: <emphasis role=\"strong"
 "\">dh</emphasis> syntax, compiler hardening options, …"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis>: <emphasis role=\"strong"
+"\">dh</emphasis>-Syntax, Compiler-Härtungsoptionen, …"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:222
 msgid "flexibility"
-msgstr ""
+msgstr "Flexibilität"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:227
@@ -435,16 +531,18 @@ msgid ""
 "many options (<xref linkend=\"boption\"/>, <xref linkend=\"options\"/>, "
 "<xref linkend=\"manpage\"/>)"
 msgstr ""
+"viele Optionen (<xref linkend=\"boption\"/>, <xref linkend=\"options\"/>, "
+"<xref linkend=\"manpage\"/>)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:234
 msgid "sane default actions"
-msgstr ""
+msgstr "vernünftige Standardaktionen"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:239
 msgid "execute non-stop with clean results"
-msgstr ""
+msgstr "Ausführung ohne Unterbrechung mit sauberen Ergebnissen"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:244
@@ -452,6 +550,8 @@ msgid ""
 "generate the multiarch package, unless <emphasis role=\"strong\">-m</"
 "emphasis> option is explicitly specified."
 msgstr ""
+"Erstellung des Multiarch-Pakets, außer die Option <emphasis role=\"strong\">-"
+"m</emphasis> wird explizit angegeben"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:249
@@ -460,11 +560,14 @@ msgid ""
 "\">3.0 (quilt)</emphasis>” format, unless <emphasis role=\"strong\">-n</"
 "emphasis> option is explicitly specified."
 msgstr ""
+"Erstellung des nicht-nativen Debian-Pakets im Format »<emphasis role=\"strong"
+"\">3.0 (quilt)</emphasis>«, außer die Option <emphasis role=\"strong\">-n</"
+"emphasis> wird explizit angegeben"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:256
 msgid "extra utility"
-msgstr ""
+msgstr "zusätzliche Nützlichkeiten"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:261
@@ -472,6 +575,8 @@ msgid ""
 "verification of the <emphasis role=\"strong\">debian/copyright</emphasis> "
 "file against the current source (<xref linkend=\"koption\"/>)"
 msgstr ""
+"Überprüfung der Datei <emphasis role=\"strong\">debian/copyright</emphasis> "
+"mit den aktuellen Quellen (<xref linkend=\"koption\"/>)"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:268
@@ -492,11 +597,15 @@ msgid ""
 "\">-l</emphasis>, and <emphasis role=\"strong\">-w</emphasis> options from "
 "the shell interference by quoting them properly."
 msgstr ""
+"Stellen Sie sicher, dass die Argumente <emphasis role=\"strong\">-b</"
+"emphasis>, <emphasis role=\"strong\">-f</emphasis>, <emphasis role=\"strong"
+"\">-l</emphasis> und <emphasis role=\"strong\">-w</emphasis> durch Maskieren "
+"vor dem Einfluss der Shell geschützt sind."
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:270
 msgid "The non-native Debian package is the normal Debian package."
-msgstr ""
+msgstr "Das nicht-native Debian-Paket ist das normale Debian-Paket."
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:271
@@ -504,6 +613,8 @@ msgid ""
 "The detailed log of all the package build examples in this document can be "
 "obtained by following the instruction in <xref linkend=\"details\"/>."
 msgstr ""
+"Das detaillierte Protokoll aller Paketbaubeispiele in diesem Dokument kann "
+"durch Folgen der Anweisungen in <xref linkend=\"details\"/> erhalten werden."
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:272
@@ -514,11 +625,17 @@ msgid ""
 "(<xref linkend=\"koption\"/>) options involve heuristic operations on the "
 "copyright and license information. They may produce some erroneous results."
 msgstr ""
+"Die Erstellung der Datei <emphasis role=\"strong\">debian/copyright</"
+"emphasis> und die Ausgabe der Optionen <emphasis role=\"strong\">-c</"
+"emphasis> (<xref linkend=\"coption\"/>) und <emphasis role=\"strong\">-k</"
+"emphasis> (<xref linkend=\"koption\"/>) beinhalten heuristische Aktionen "
+"bezüglich der Copyright- und Lizenzinformationen. Sie können fehlerhafte "
+"Ausgaben erstellen."
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:275
 msgid "Prerequisites"
-msgstr ""
+msgstr "Voraussetzungen"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:276
@@ -623,12 +740,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:326
 msgid "How can you help Debian?"
-msgstr ""
+msgstr "Wie können Sie Debian helfen?"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:325 debmake-doc.en.xml:340
 msgid "<_:ulink-1/> (official)"
-msgstr ""
+msgstr "<_:ulink-1/> (offiziell)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:331
@@ -823,7 +940,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:485
 msgid "Debian documentation"
-msgstr ""
+msgstr "Debian-Dokumentation"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:486
@@ -841,7 +958,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:495
 msgid "https://www.debian.org/doc/devel-manuals#policy"
-msgstr ""
+msgstr "https://www.debian.org/doc/devel-manuals#policy"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:494
@@ -1268,13 +1385,13 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:818
 msgid "5.1. New packages"
-msgstr ""
+msgstr "5.1. Neue Pakete"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:817 debmake-doc.en.xml:822 debmake-doc.en.xml:2213
 #: debmake-doc.en.xml:2218
 msgid "<_:ulink-1/>."
-msgstr ""
+msgstr "<_:ulink-1/>."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:823
@@ -1489,7 +1606,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:967
 msgid "Overview of Debian Maintainer Tools"
-msgstr ""
+msgstr "Überblick über die Werkzeuge der Debian-Verwalter"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:967
@@ -1497,6 +1614,8 @@ msgid ""
 "Please install the tools mentioned in the <_:ulink-1/> of the “Debian "
 "Developer’s Reference”, as needed, too."
 msgstr ""
+"Bitte installieren Sie auch die benötigten Werkzeuge, die in der »Debian "
+"Developer’s Reference« erwähnt werden."
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:968
@@ -2305,7 +2424,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1379
 msgid "Step 2: Generate template files with debmake"
-msgstr ""
+msgstr "Schritt 2: Mit Debmake erstellte Vorlagendateien"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1380
@@ -2314,6 +2433,9 @@ msgid ""
 "the <emphasis role=\"strong\">-T</emphasis> option, more verbose comments "
 "are generated for the template files."
 msgstr ""
+"Falls der Befehl <emphasis role=\"strong\">debmake</emphasis> mit der Option "
+"<emphasis role=\"strong\">-T</emphasis> aufgerufen wird, werden in den "
+"Vorlagendateien ausführlichere Kommentare erstellt."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1381
@@ -2368,7 +2490,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1416 debmake-doc.en.xml:5685
 msgid "Let’s inspect generated template files."
-msgstr ""
+msgstr "Lassen Sie uns die erstellten Vorlagendateien anschauen."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1417
@@ -2376,6 +2498,8 @@ msgid ""
 "The source tree after the basic <emphasis role=\"strong\">debmake</emphasis> "
 "execution."
 msgstr ""
+"Der Quellbaum, nach der grundlegenden Ausführung von <emphasis "
+"role=\"strong\">debmake</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1420
@@ -2628,7 +2752,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1478 debmake-doc.en.xml:5753
 msgid "Let’s inspect the result."
-msgstr ""
+msgstr "Lassen Sie uns die Ergebnisse anschauen."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.xml:1479
@@ -2637,6 +2761,9 @@ msgid ""
 "<emphasis role=\"strong\">0.0</emphasis> by the <emphasis role=\"strong"
 "\">debuild</emphasis> command:"
 msgstr ""
+"Die durch den Befehl<emphasis role=\"strong\">debuild</emphasis> erstellten "
+"Dateien von <emphasis role=\"strong\">debhello</emphasis> Version <emphasis "
+"role=\"strong\">0.0</emphasis>:"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1482 debmake-doc.en.xml:5757
@@ -3057,7 +3184,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:1647
 msgid "<emphasis role=\"strong\">debian/rules</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debian/rules</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:1651
@@ -3065,6 +3192,8 @@ msgid ""
 "The executable script for building the Debian package (see <xref linkend="
 "\"rules\"/>)"
 msgstr ""
+"Das ausführbare Skript zum Bau des Debian-Pakets (siehe <xref linkend="
+"\"rules\"/>)"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:1657
@@ -3404,7 +3533,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1880
 msgid "Package name and version"
-msgstr ""
+msgstr "Paketname und -version"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1881
@@ -3414,6 +3543,10 @@ msgid ""
 "the upstream source package name and <emphasis role=\"strong\">0.9.12</"
 "emphasis> as the upstream version."
 msgstr ""
+"Falls die Quellen der Originalautoren als <emphasis role=\"strong\">hello-0.9."
+"12.tar.gz</emphasis> vorliegen, könen Sie <emphasis role=\"strong\">hello</"
+"emphasis> als Namen des Quellpakets der Originalautoren und <emphasis "
+"role=\"strong\">0.9.12</emphasis> als Version der Originalautoren nehmen."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1882 debmake-doc.en.xml:6965
@@ -12027,7 +12160,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:6142
 msgid "Autotools (multi-binary)"
-msgstr ""
+msgstr "Autotools (mehrere Programme)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:6143
@@ -13276,7 +13409,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6897
 msgid "<emphasis role=\"strong\">debmake -d -i debuild</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">debmake -d -i debuild</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:6902
@@ -13288,6 +13421,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debmake -s -d -b\":python\" -i debuild</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">debmake -s -d -b\":python\" -i debuild</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:6910
@@ -13368,7 +13502,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6957
 msgid "etc."
-msgstr ""
+msgstr "usw."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:6964
@@ -13509,7 +13643,7 @@ msgstr "LIZENZ"
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:7079
 msgid "Expat License"
-msgstr ""
+msgstr "Expat-Lizenz"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:7082
@@ -13536,6 +13670,8 @@ msgid ""
 "Also, please read the original <_:ulink-1/> provided by the the <emphasis "
 "role=\"strong\">maint-guide</emphasis> package."
 msgstr ""
+"Bitte lesen Sie auch das ursprünglich <_:ulink-1/>. Es wird durch das Paket "
+"<emphasis role=\"strong\">maint-guide</emphasis> bereitgestellt."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:7085
