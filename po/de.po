@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2017-09-24 18:42+0200\n"
-"PO-Revision-Date: 2017-11-04 13:34+0100\n"
+"PO-Revision-Date: 2017-11-22 19:07+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -643,11 +643,13 @@ msgid ""
 "Here are the prerequisites which you need to understand before you to get "
 "involved with Debian."
 msgstr ""
+"Hier sind die Voraussetzungen, die Sie verstehen müssen, um bei Debian "
+"mitzumachen."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:278
 msgid "People around Debian"
-msgstr ""
+msgstr "Leute bei Debian"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:279
@@ -662,6 +664,8 @@ msgid ""
 "<emphasis role=\"strong\">upstream author</emphasis>: the person who made "
 "the original program."
 msgstr ""
+"<emphasis role=\"strong\">Originalautor</emphasis>: die Person, die das "
+"ursprüngliche Programm erstellte."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:287
@@ -669,6 +673,8 @@ msgid ""
 "<emphasis role=\"strong\">upstream maintainer</emphasis>: the person who "
 "currently maintains the program."
 msgstr ""
+"<emphasis role=\"strong\">Originalbetreuer</emphasis>: Die Person, die "
+"derzeit das Programm betreut."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:292
@@ -676,6 +682,8 @@ msgid ""
 "<emphasis role=\"strong\">maintainer</emphasis>: the person making the "
 "Debian package of the program."
 msgstr ""
+"<emphasis role=\"strong\">Betreuer</emphasis>: Die Person, die das Debian-"
+"Paket des Programms erstellt."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:297
@@ -684,6 +692,9 @@ msgid ""
 "to upload packages to the official Debian package archive (after checking "
 "their contents)."
 msgstr ""
+"<emphasis role=\"strong\">Sponsor</emphasis>: Eine Person, die den Betreuern "
+"beim Hochladen (nach Prüfen des Inhalts) des Pakets in das offizielle Debian-"
+"Paketarchiv hilft."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:302
@@ -691,6 +702,8 @@ msgid ""
 "<emphasis role=\"strong\">mentor</emphasis>: a person who helps novice "
 "maintainers with packaging etc."
 msgstr ""
+"<emphasis role=\"strong\">Mentor</emphasis>: Eine Person, die neuen Betreuern "
+"beim Paketieren usw. hilft."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:307
@@ -699,6 +712,9 @@ msgid ""
 "Debian project with full upload rights to the official Debian package "
 "archive."
 msgstr ""
+"<emphasis role=\"strong\">Debian-Entwickler</emphasis> (DD): ein Mitglied des "
+"Debian-Projekts mit vollen Hochlade-Rechten in das offizielle Debian-"
+"Paketarchiv."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:312
@@ -706,6 +722,8 @@ msgid ""
 "<emphasis role=\"strong\">Debian Maintainer</emphasis> (DM): a person with "
 "limited upload rights to the official Debian package archive."
 msgstr ""
+"<emphasis role=\"strong\">Debian-Betreuer</emphasis> (DM): Eine Person, mit "
+"begrenzten Hochladerechten in das offizielle Debian-Paketarchiv."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:317
@@ -730,7 +748,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:321
 msgid "How to contribute"
-msgstr ""
+msgstr "Wie Sie beitragen können"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:322
