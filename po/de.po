@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2017-09-24 18:42+0200\n"
-"PO-Revision-Date: 2017-11-22 19:07+0100\n"
+"PO-Revision-Date: 2017-11-23 20:48+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -735,6 +735,13 @@ msgid ""
 "\">maintainer</emphasis> through a <emphasis role=\"strong\">sponsor</"
 "emphasis> or as a <emphasis role=\"strong\">Debian Maintainer</emphasis>."
 msgstr ""
+"Bitte beachten Sie, dass Sie nicht über Nacht ein offizieller <emphasis role="
+"\"strong\">Debian-Entwickler</emphasis> (DD) werden können, da es mehr als "
+"technischer Fähigkeit bedarf. Seien Sie davon nicht entmutigt. Falls es für "
+"andere nützlich ist, können Sie dennoch Ihre Pakete hochladen, entweder als "
+"<emphasis role=\"strong\">Betreuer</emphasis> durch einen <emphasis role="
+"\"strong\">Sponsor</emphasis> oder als ein <emphasis role=\"strong\">Debian-"
+"Betreuer</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:318
@@ -744,6 +751,11 @@ msgid ""
 "a path to becoming an official Debian Developer too. There are many packages "
 "waiting for good maintainers (see <xref linkend=\"approaches\"/>)."
 msgstr ""
+"Bitte beachten Sie, dass Sie keine neuen Pakete erstellen müssen, um ein "
+"offizieller Debian-Entwickler zu werden. Auch Beiträge zu bestehenden Paketen "
+"können ein Weg sein, ein offizieller Debian-Entwickler zu werden. Es gibt "
+"viele Pakete, die auf gute Betreuer warten (siehe <xref linkend=\"approaches"
+"\"/>)."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:321
@@ -754,6 +766,8 @@ msgstr "Wie Sie beitragen können"
 #: debmake-doc.en.xml:322
 msgid "Please refer to the following to learn how to contribute to Debian:"
 msgstr ""
+"Bitte lesen Sie die folgenden Dokumenten, um zu verstehen, wie Sie zu Debian "
+"beitragen können:"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:326
@@ -765,26 +779,28 @@ msgstr "Wie können Sie Debian helfen?"
 msgid "<_:ulink-1/> (official)"
 msgstr "<_:ulink-1/> (offiziell)"
 
+#, fuzzy
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:331
 msgid ""
 "The Debian GNU/Linux FAQ, Chapter 13 - \"Contributing to the Debian Project\""
 msgstr ""
+"Die Debian GNU/Linux FAQ, Kapitel 13 - FIXME"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:330
 msgid "<_:ulink-1/> (semi-official)"
-msgstr ""
+msgstr "<_:ulink-1/> (semi-offiziell)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:336
 msgid "Debian Wiki, HelpDebian"
-msgstr ""
+msgstr "Debian Wiki, HelpDebian"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:335 debmake-doc.en.xml:345
 msgid "<_:ulink-1/> (supplemental)"
-msgstr ""
+msgstr "<_:ulink-1/> (ergänzend)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:341
@@ -799,7 +815,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:352
 msgid "Social dynamics of Debian"
-msgstr ""
+msgstr "Soziale Dynamik von Debian"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:353
@@ -811,17 +827,17 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:356
 msgid "We all are volunteers."
-msgstr ""
+msgstr "Wir sind alle Freiwillige."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:361
 msgid "You can’t impose on others what to do."
-msgstr ""
+msgstr "Sie können anderen nicht vorschreiben, was getan werden soll."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:366
 msgid "You should be motivated to do things by yourself."
-msgstr ""
+msgstr "Sie sollten motiviert sein, die Dinge selbst zu tun."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:373
