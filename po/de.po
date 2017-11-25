@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2017-09-24 18:42+0200\n"
-"PO-Revision-Date: 2017-11-23 20:48+0100\n"
+"PO-Revision-Date: 2017-11-25 15:02+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -842,48 +842,50 @@ msgstr "Sie sollten motiviert sein, die Dinge selbst zu tun."
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:373
 msgid "Friendly cooperation is the driving force."
-msgstr ""
+msgstr "Freundliche Zusammenarbeit ist der Motor."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:378
 msgid "Your contribution should not over-strain others."
-msgstr ""
+msgstr "Ihr Beitrag sollte Andere nicht überlasten."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:383
 msgid "Your contribution is valuable only when others appreciate it."
-msgstr ""
+msgstr "Ihr Beitrag hat nur Wert, wenn ihn andere wertschätzen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:390
 msgid ""
 "Debian is not your school where you get automatic attention of teachers."
 msgstr ""
+"Debian ist nicht Ihre Schule, bei der die Lehrer sich automatisch um Sie "
+"kümmern."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:395
 msgid "You should be able to learn many things by yourself."
-msgstr ""
+msgstr "Sie sollten vieles selbst lernen können."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:400
 msgid "Attention from other volunteers is a very scarce resource."
-msgstr ""
+msgstr "Aufmerksamkeit von anderen Freiwilligen ist ein rares Gut."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:407
 msgid "Debian is constantly improving."
-msgstr ""
+msgstr "Debian verbessert sich ständig."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:412
 msgid "You are expected to make high quality packages."
-msgstr ""
+msgstr "Es wird erwartet, dass Sie hochqualitative Pakete erstellen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:417
 msgid "You should adapt yourself to the change."
-msgstr ""
+msgstr "Sie sollten sich der Änderung anpassen."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:424
@@ -892,21 +894,25 @@ msgid ""
 "this guide, please refer to the following to understand the social dynamics "
 "of Debian:"
 msgstr ""
+"Da in der restlichen Anleitung nur auf die technischen Aspekte der "
+"Paketierung fokusiert wird, wird auf folgendes zum Verständnis der sozialen "
+"Dynamik von Debian verwiesen:"
 
+#, fuzzy
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:428
 msgid "Debian: 17 years of Free Software, “do-ocracy”, and democracy"
-msgstr ""
+msgstr "Debian: 17 Jahre Freie Software, »« und Demokratie"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:427
 msgid "<_:ulink-1/> (Introductory slides by the ex-DPL)"
-msgstr ""
+msgstr "<_:ulink-1/> (Einleitende Folien vom ehemaligen DPL)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:434
 msgid "Technical reminders"
-msgstr ""
+msgstr "Technische Erinnerungen"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:435
@@ -915,16 +921,19 @@ msgid ""
 "on your package easily and effectively to maximize the output of Debian as a "
 "whole."
 msgstr ""
+"Es folgen ein paar technische Erinnerungen, die anderen Betreuern bei der "
+"Arbeit an Ihrem Paket helfen und das Ergebnis von Debian insgesamt effektiv "
+"maximieren."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:438
 msgid "Make your package easy to debug."
-msgstr ""
+msgstr "Ermöglichen Sie in Ihrem Paket eine leichte Fehlersuche."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:443
 msgid "Keep your package simple."
-msgstr ""
+msgstr "Halten Sie Ihr Paket einfach."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:448
@@ -934,22 +943,22 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:455
 msgid "Keep your package well-documented."
-msgstr ""
+msgstr "Halten Sie Ihr Paket gut dokumentiert."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:460
 msgid "Use readable code style."
-msgstr ""
+msgstr "Verwenden Sie einen lesbaren Code-Stil."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:465
 msgid "Make comments in code."
-msgstr ""
+msgstr "Fügen Sie in den Code Kommentare ein."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:470
 msgid "Format code consistently."
-msgstr ""
+msgstr "Formatieren Sie Code konsistent."
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:476
@@ -958,11 +967,14 @@ msgid ""
 "\">git</emphasis> over other VCS systems such as <emphasis role=\"strong"
 "\">hg</emphasis>, <emphasis role=\"strong\">bzr</emphasis>, etc."
 msgstr ""
+"Die überwältigende Mehrheit der Debian-Betreuer verwenden <emphasis role="
+"\"strong\">git</emphasis> statt anderer VCS-Systeme wie <emphasis role="
+"\"strong\">hg</emphasis>, <emphasis role=\"strong\">bzr</emphasis>, usw."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:475
 msgid "Maintain the git repository <_:footnote-1/> of the package."
-msgstr ""
+msgstr "Verwalten Sie das Git-Depot <_:footnote-1/> des Pakets."
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:482
@@ -970,6 +982,8 @@ msgid ""
 "Debugging of software tends to consume more time than writing the initial "
 "working software."
 msgstr ""
+"Die Fehlersuche in Software kann mehr Zeit verbrauchen, als die eigentliche "
+"Erstellung."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:485
@@ -1022,6 +1036,10 @@ msgid ""
 "doc</emphasis> package using the <emphasis role=\"strong\">reportbug</"
 "emphasis> command."
 msgstr ""
+"Falls dieser Leitfaden der offiziellen Debian-Dokumentation widerspricht, "
+"dann ist diese korrekt. Bitte reichen Sie mittels des Befehls <emphasis role="
+"\"strong\">reportbug</emphasis> (auf englisch) einen Fehlerbericht gegen das "
+"Paket <emphasis role=\"strong\">debmake-doc</emphasis> ein."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:514
@@ -1029,6 +1047,8 @@ msgid ""
 "Here are alternative tutorial documents which you may read along with this "
 "guide:"
 msgstr ""
+"Hier sind alternative Anleitungen, die Sie zusammen mit diesem Leitfaden "
+"lesen können:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:517
@@ -1038,12 +1058,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:523
 msgid "https://www.debian.org/doc/devel-manuals#maint-guide"
-msgstr ""
+msgstr "https://www.debian.org/doc/devel-manuals#maint-guide"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:528
 msgid "https://packages.qa.debian.org/m/maint-guide.html"
-msgstr ""
+msgstr "https://packages.qa.debian.org/m/maint-guide.html"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:534
@@ -1053,12 +1073,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:540
 msgid "https://www.debian.org/doc/devel-manuals#packaging-tutorial"
-msgstr ""
+msgstr "https://www.debian.org/doc/devel-manuals#packaging-tutorial"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:545
 msgid "https://packages.qa.debian.org/p/packaging-tutorial.html"
-msgstr ""
+msgstr "https://packages.qa.debian.org/p/packaging-tutorial.html"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:551
@@ -1068,7 +1088,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:557
 msgid "http://packaging.ubuntu.com/html/"
-msgstr ""
+msgstr "http://packaging.ubuntu.com/html/"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:563
@@ -1077,6 +1097,9 @@ msgid ""
 "\"strong\">debmake</emphasis> command in place of the <emphasis role=\"strong"
 "\">dh_make</emphasis> command for better template files."
 msgstr ""
+"Wenn Sie diese Anleitungen lesen, sollten Sie in Erwägung ziehen, den Befehl "
+"<emphasis role=\"strong\">debmake</emphasis> an Stelle des Befehls <emphasis "
+"role=\"strong\">dh_make</emphasis> für bessere Vorlagendateien zu verwenden."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:566
