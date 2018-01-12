@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-01-09 16:00+0100\n"
-"PO-Revision-Date: 2018-01-09 16:19+0100\n"
+"PO-Revision-Date: 2018-01-12 11:40+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -5329,6 +5329,10 @@ msgid ""
 "\"strong\">changelog.Debian.gz</emphasis> by the <emphasis role=\"strong"
 "\">dh_installchangelogs</emphasis> command."
 msgstr ""
+"Dieser wird durch den Befehl <emphasis role=\"strong\">dh_installchangelogs</"
+"emphasis> als <emphasis role=\"strong\">changelog.Debian.gz</emphasis> in das "
+"Verzeichnis <emphasis role=\"strong\">/usr/share/doc/</"
+"emphasis><emphasis>Binärpaket</emphasis> installiert."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2705
@@ -5337,6 +5341,10 @@ msgid ""
 "share/doc/</emphasis><emphasis>binarypackage</emphasis> directory as "
 "<emphasis role=\"strong\">changelog.gz</emphasis>."
 msgstr ""
+"Der Changelog der Originalautoren wird als <emphasis role="
+"\"strong\">changelog.gz</emphasis> in das Verzeichnis <emphasis role="
+"\"strong\">/usr/share/doc/</emphasis><emphasis>Binärpaket</emphasis> "
+"installiert."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2706
@@ -5359,6 +5367,9 @@ msgid ""
 "sure to save this with the “<emphasis role=\"strong\">:wq</emphasis>” "
 "command."
 msgstr ""
+"Falls Sie den Editor <emphasis role=\"strong\">vim</emphasis> verwenden, "
+"stellen Sie sicher, dass Sie dies mit dem Befehl »<emphasis role=\"strong\">:"
+"wq</emphasis>« speichern."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2707
@@ -5370,12 +5381,20 @@ msgid ""
 "<_:footnote-1/> If you are packaging for the backports, security updates, "
 "LTS, etc., please use the appropriate distribution names, instead."
 msgstr ""
+"Nachdem Sie das Paketieren abgeschlossen und die Qualität geprüft haben, "
+"führen Sie bitte den Befehl »<emphasis role=\"strong\">dch -r</emphasis>« aus "
+"und speichern die finalisierte Datei <emphasis role=\"strong\">debian/"
+"changelog</emphasis>, bei der die Distribution normalerweise auf <emphasis "
+"role=\"strong\">unstable</emphasis> <_:footnote-1/> gesetzt ist. Falls Sie "
+"für Rückportierungen, Sicherheitsaktualisierungen, LTS usw. paketieren, "
+"verwenden Sie die stattdessen die zutreffenden Distributionsnamen."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2710
 msgid "debian/copyright"
-msgstr ""
+msgstr "debian/copyright"
 
+#, fuzzy
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2711
 msgid ""
@@ -5383,16 +5402,19 @@ msgid ""
 "Policy Manual” enforces to have summary of them in the <emphasis role="
 "\"strong\">debian/copyright</emphasis> file in the package."
 msgstr ""
+"Debian nimmt Urheberrecht-/Copyright- und Lizenzangelegenheiten sehr ernst. "
+"Das »FIXME« erzwingt eine Zusammenfassung davon in der Datei <emphasis role="
+"\"strong\">debian/copyright</emphasis> im Paket."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2712
 msgid "machine-readable debian/copyright file"
-msgstr ""
+msgstr "maschinenlesbare Datei debian/copyright"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2712
 msgid "You should format it as the <_:ulink-1/> (DEP-5)."
-msgstr ""
+msgstr "Sie sollten sie wie in <_:ulink-1/> (DEP-5) angegeben formatieren."
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:2713
@@ -5401,7 +5423,11 @@ msgid ""
 "sorted to keep the generic file patterns at the top of the list. See <xref "
 "linkend=\"koption\"/>."
 msgstr ""
+"Die Datei <emphasis role=\"strong\">debian/copyright</emphasis> sollte "
+"sortiert sein, um die generischen Dateimuster am Anfang der Liste zu "
+"behalten. Siehe <xref linkend=\"koption\"/>."
 
+#, fuzzy
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.xml:2714
 msgid ""
@@ -5411,6 +5437,8 @@ msgid ""
 "emphasis> command is provided in an independent <emphasis role=\"strong"
 "\">licensecheck</emphasis> package with a lot of improvements."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">licensecheck</emphasis> aus dem Paket "
+"<emphasis role=\"strong\">devscripts</emphasis> wurde zur "
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2714
@@ -5419,7 +5447,12 @@ msgid ""
 "DEP-5 compatible template file by scanning the entire source tree. It uses "
 "an internal license checker to classify each license text. <_:footnote-1/>"
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> erstellt die "
+"anfängliche, DEP-5-kompatible Vorlagendatei, indem er den gesamten Quellbaum "
+"überprüft. Er verwendet einen internen Lizenzprüfer, um jeden Lizenztext "
+"auszuwerten. <_:footnote-1/>"
 
+#, fuzzy
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2715
 msgid ""
@@ -5428,6 +5461,8 @@ msgid ""
 "command skips reporting for auto-generated files with permissive licenses to "
 "be practical."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> überspringt "
+"automatisch erstellte Dateien mit …"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:2716
@@ -5436,6 +5471,10 @@ msgid ""
 "the <emphasis role=\"strong\">debmake</emphasis> package with the "
 "problematic part of text containing the copyright and license."
 msgstr ""
+"Falls Sie Probleme mit diesem Lizenzprüfer feststellen, reichen Sie bitten "
+"gegen das Paket <emphasis role=\"strong\">debmake</emphasis> einen "
+"Fehlerbericht mit dem problematischen Teil des Textes, der das Copyright und "
+"die Lizenz enthält, ein."
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:2717
