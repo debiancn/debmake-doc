@@ -1,9 +1,13 @@
-debmake-doc (1.10-1) UNRELEASED; urgency=medium
+debmake-doc (1.10-1) unstable; urgency=medium
 
+  [ Osamu Aoki ]
   * Update debian/changelog documentation.  Closes: #851456
   * Use --allow-downgrades for apt-get as in the BTS: #868279
 
- -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 23:42:46 +0900
+  [ Boyuan Yang ]
+  * Use Priority: optional instead of Priority: extra globally.
+
+ -- Boyuan Yang <073plan@gmail.com>  Fri, 16 Feb 2018 18:14:14 +0800
 
 debmake-doc (1.9-1) unstable; urgency=medium
 
