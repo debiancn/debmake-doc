@@ -1,6 +1,6 @@
 Source: debhello
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Osamu Aoki <osamu@debian.org>
 Build-Depends: debhelper (>=9),
                dh-python,
