@@ -1,9 +1,9 @@
-# Boyuan Yang <073plan@gmail.com>, 2017.
+# Boyuan Yang <073plan@gmail.com>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.7\n"
 "POT-Creation-Date: 2017-09-17 17:24+0900\n"
-"PO-Revision-Date: 2017-10-16 01:00+0800\n"
+"PO-Revision-Date: 2018-02-16 13:36+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -11,12 +11,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Boyuan Yang <073plan@gmail.com>, 2017"
+msgstr "Boyuan Yang <073plan@gmail.com>, 2017-2018"
 
 #. (itstool) path: bookinfo/title
 #: debmake-doc.en.xml:13
@@ -603,6 +603,8 @@ msgid ""
 "The detailed log of all the package build examples in this document can be "
 "obtained by following the instruction in <xref linkend=\"details\"/>."
 msgstr ""
+"本文档中所有软件包构建示例的详细日志可以由 <xref linkend=\"details\"/> 一段给"
+"出的操作来获取。"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:272
@@ -1540,24 +1542,23 @@ msgstr "向 Debian 安装器提交补丁。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:887
-#, fuzzy
 msgid ""
 "Send patches to the Debian packaging helper scripts such as <emphasis role="
 "\"strong\">devscripts</emphasis>, <emphasis role=\"strong\">pbuilder</"
 "emphasis>, etc. mentioned in this document."
 msgstr ""
-"生成非本土 Debian 软件包，使用“<emphasis role=\"strong\">3.0 (quilt)</"
-"emphasis>”格式，除非明确指定了 <emphasis role=\"strong\">-n</emphasis> 选项。"
+"向 Debian 打包帮助脚本（如本文档中体提及的 <emphasis role=\"strong"
+"\">devscripts</emphasis>、<emphasis role=\"strong\">pbuilder</emphasis> 等项"
+"目）提交补丁。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:894
-#, fuzzy
 msgid ""
 "<emphasis role=\"strong\">C</emphasis> and <emphasis role=\"strong\">C++</"
 "emphasis> skills:"
 msgstr ""
-"<emphasis role=\"strong\">setuid</emphasis> 或 <emphasis role=\"strong"
-"\">setgid</emphasis> 程序"
+"<emphasis role=\"strong\">C</emphasis> 和 <emphasis role=\"strong\">C++</"
+"emphasis> 技能："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:899
@@ -1598,7 +1599,7 @@ msgstr "文档技能："
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:929
 msgid "Debian Wiki"
-msgstr "Debian Wiki"
+msgstr "Debian 维基（Wiki）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:928
@@ -4868,7 +4869,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2622
 msgid "<emphasis role=\"strong\">pkg-info.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">pkg-info.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2626
@@ -5046,7 +5047,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2724
 msgid "debian/control"
-msgstr ""
+msgstr "debian/control"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2725
@@ -5059,12 +5060,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2728
 msgid "meta data for the Debian source package"
-msgstr ""
+msgstr "Debian 源码包的元信息"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2733
 msgid "meta data for the Debian binary packages"
-msgstr ""
+msgstr "Debian 二进制软件包的元信息"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2738
@@ -5310,7 +5311,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2874
 msgid "Package split scenario and examples"
-msgstr ""
+msgstr "拆包的场景和例子"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2875
@@ -5359,12 +5360,12 @@ msgstr "软件包内容"
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2911
 msgid "<emphasis role=\"strong\">lib</emphasis><emphasis>foo1</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">lib</emphasis><emphasis>foo1</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2912
 msgid "<emphasis role=\"strong\">lib</emphasis><superscript>*</superscript>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">lib</emphasis><superscript>*</superscript>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2913 debmake-doc.en.xml:2920 debmake-doc.en.xml:2927
@@ -6090,7 +6091,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3190
 msgid "See <xref linkend=\"diff-u\"/>"
-msgstr ""
+msgstr "参见 <xref linkend=\"diff-u\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3195
@@ -6983,7 +6984,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3721
 msgid "<emphasis role=\"strong\">gbp.conf</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">gbp.conf</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3725
@@ -7536,7 +7537,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4015 debmake-doc.en.xml:5006
 msgid "DEP-8"
-msgstr ""
+msgstr "DEP-8"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4014
@@ -8788,7 +8789,7 @@ msgstr "Debian kde 团队 <_:ulink-1/>"
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4702
 msgid "8.6.4 The shlibs system"
-msgstr ""
+msgstr "8.6.4 shlibs 系统"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:4702
@@ -9297,7 +9298,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4922
 msgid "debconf"
-msgstr ""
+msgstr "debconf"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4923
@@ -9791,7 +9792,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5141
 msgid "debmake -k"
-msgstr ""
+msgstr "debmake -k"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5142
@@ -10286,7 +10287,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:5371
 msgid "Building from source"
-msgstr ""
+msgstr "从源码构建"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:5370
