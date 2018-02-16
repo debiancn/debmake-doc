@@ -4064,7 +4064,7 @@ msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2679
-msgid "<emphasis role=\"strong\">vender.mk</emphasis>"
+msgid "<emphasis role=\"strong\">vendor.mk</emphasis>"
 msgstr ""
 
 #. (itstool) path: listitem/simpara

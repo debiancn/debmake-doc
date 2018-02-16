@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-02-16 23:35+0800\n"
-"PO-Revision-Date: 2018-02-16 23:46+0800\n"
+"PO-Revision-Date: 2018-02-17 00:10+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -4874,6 +4874,9 @@ msgid ""
 "\">debian/rules</emphasis> can be found in files under <emphasis role="
 "\"strong\">/usr/share/dpkg/</emphasis>. Notably:"
 msgstr ""
+"某些对自定义 <emphasis role=\"strong\">debian/rules</emphasis> 有用的变量定义"
+"可以在 <emphasis role=\"strong\">/usr/share/dpkg/</emphasis> 目录下的文件中找"
+"到。比较重要的包括："
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2667
@@ -4891,11 +4894,18 @@ msgid ""
 "\">DEB_DISTRIBUTION</emphasis> variables. These are useful for the backport "
 "support etc.."
 msgstr ""
+"<emphasis role=\"strong\">DEB_SOURCE</emphasis>、<emphasis role=\"strong"
+"\">DEB_VERSION</emphasis>、<emphasis role=\"strong"
+"\">DEB_VERSION_EPOCH_UPSTREAM</emphasis>、<emphasis role=\"strong"
+"\">DEB_VERSION_UPSTREAM_REVISION</emphasis>、<emphasis role=\"strong"
+"\">DEB_VERSION_UPSTREAM</emphasis> 和 <emphasis role=\"strong"
+"\">DEB_DISTRIBUTION</emphasis> 变量。他们在向后移植（backport）支持等场景下能"
+"起到一定的作用。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2679
-msgid "<emphasis role=\"strong\">vender.mk</emphasis>"
-msgstr ""
+msgid "<emphasis role=\"strong\">vendor.mk</emphasis>"
+msgstr "<emphasis role=\"strong\">vendor.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2683
@@ -5442,7 +5452,7 @@ msgstr ""
 #: debmake-doc.en.xml:2980 debmake-doc.en.xml:2987 debmake-doc.en.xml:2994
 #: debmake-doc.en.xml:3001 debmake-doc.en.xml:3008
 msgid "foreign"
-msgstr "外来"
+msgstr "foreign"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2981
@@ -5464,7 +5474,7 @@ msgstr ""
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2986 debmake-doc.en.xml:3000 debmake-doc.en.xml:3007
 msgid "all"
-msgstr "全部"
+msgstr "all"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2988
@@ -6010,6 +6020,8 @@ msgid ""
 "sure to save this with the “<emphasis role=\"strong\">:wq</emphasis>” "
 "command."
 msgstr ""
+"如果您在使用 <emphasis role=\"strong\">vim</emphasis> 编辑器，请确保使"
+"用“<emphasis role=\"strong\">:wq</emphasis>”命令对内容进行保存。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3247
@@ -6046,7 +6058,7 @@ msgstr "机器可解析的 debian/copyright 文件"
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3252
 msgid "You should format it as the <_:ulink-1/> (DEP-5)."
-msgstr ""
+msgstr "您应当按照 <_:ulink-1/>（DEP-5）对其进行排版。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:3253
@@ -8651,7 +8663,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4625
 msgid "For the historic background study, see:"
-msgstr ""
+msgstr "如需研究其历史背景，请参见："
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4629
@@ -8664,11 +8676,13 @@ msgid ""
 "This document was written before the introduction of the <emphasis role="
 "\"strong\">symbols</emphasis> file."
 msgstr ""
+"该文档是在 <emphasis role=\"strong\">symbols</emphasis> 文件被引入之前写成"
+"的。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:4633
 msgid "This encourages to have versioned symbols in the shared library."
-msgstr ""
+msgstr "该文档鼓励在共享库中使用带版本的符号。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4641
@@ -9326,7 +9340,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4986
 msgid "Compiler hardening"
-msgstr ""
+msgstr "编译加固"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:4987
@@ -9335,16 +9349,18 @@ msgid ""
 "\">jessie</emphasis> (8.0, TBA) demands us to pay extra attention for the "
 "packaging."
 msgstr ""
+"对编译加固的支持从 Debian <emphasis role=\"strong\">jessie</emphasis>（准确地"
+"说是 8.0 版）开始成型，这要求我们在打包时额外进行注意。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4992
 msgid "Hardening"
-msgstr ""
+msgstr "Hardening（加固）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4997
 msgid "Hardening Walkthrough"
-msgstr ""
+msgstr "Hardening Walkthrough（加固指南）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:5001
@@ -9356,6 +9372,12 @@ msgid ""
 "role=\"strong\">DEB_LDFLAGS_MAINT_APPEND</emphasis> (see <xref linkend="
 "\"simple\"/> and <emphasis role=\"strong\">dpkg-buildflags</emphasis>(1))."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令会向 <emphasis role=\"strong"
+"\">debian/rules</emphasis> 文件中按需添加 <emphasis role=\"strong"
+"\">DEB_BUILD_MAINT_OPTIONS</emphasis>、<emphasis role=\"strong"
+"\">DEB_CFLAGS_MAINT_APPEND</emphasis> 和 <emphasis role=\"strong"
+"\">DEB_LDFLAGS_MAINT_APPEND</emphasis> 的项目（参见 <xref linkend=\"simple\"/"
+"> 和 <emphasis role=\"strong\">dpkg-buildflags</emphasis>(1)）。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:5004

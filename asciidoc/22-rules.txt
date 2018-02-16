@@ -82,7 +82,7 @@ Some variable definitions useful for customizing *debian/rules* can be found in 
   +
   These are useful for the backport support etc..
 
-*vender.mk*::
+*vendor.mk*::
   *DEB_VENDOR* and *DEB_PARENT_VENDOR* variables; and *dpkg_vendor_derives_from* macro.
   +
   These are useful for the vendor support (Debian, Ubuntu, ...).
