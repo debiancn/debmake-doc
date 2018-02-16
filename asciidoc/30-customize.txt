@@ -47,7 +47,7 @@ Adding few extra files in *debian/* directory enables you to do this.
 
 -----
  $ tar -xvzf <package-version>.tar.gz
- $ ln -sf <package_version>.orig.tar.gz 
+ $ ln -sf <package_version>.orig.tar.gz
  $ cd <package-version>/
  ... hack...hack...
  $ echo "single-debian-patch" >> debian/source/local-options
@@ -104,7 +104,7 @@ TIP: If the source tree is not managed by the VCS, you should run ``*git init; g
 
 This is for the non-native package.
 
-The problem of extraneous diffs can be fixed by ignoring changes made to parts of the source tree by adding the ``*extend-diff-ignore=...*'' line in the *debian/source/options* file. 
+The problem of extraneous diffs can be fixed by ignoring changes made to parts of the source tree by adding the ``*extend-diff-ignore=...*'' line in the *debian/source/options* file.
 
 For excluding the *config.sub*, *config.guess* and *Makefile* files:
 

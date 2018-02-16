@@ -232,7 +232,7 @@ pdf:	$(foreach LX, $(LANGALL), $(BASEDIR)/$(MANUAL).$(LX).pdf)
 nopdf: $(TMPDIR)/nopdf.pdf
 
 $(TMPDIR)/nopdf.pdf: nopdf.tex
-	cp -f nopdf.tex $(TMPDIR)/nopdf.tex 
+	cp -f nopdf.tex $(TMPDIR)/nopdf.tex
 	cd "$(TMPDIR)"; \
 	xelatex nopdf.tex
 

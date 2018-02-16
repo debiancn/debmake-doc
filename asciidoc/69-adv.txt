@@ -84,7 +84,7 @@ This is too deep a topic to describe here.  So, let me just list few pointers an
 * *lsof* - List open files by processes
 ** ``*man lsof*''
 
-TIP: The *script* command helps recording console outputs. 
+TIP: The *script* command helps recording console outputs.
 
 TIP: The *screen* and *tmux* commands used with the *ssh* command offer the secure and robust remote connection terminal.
 

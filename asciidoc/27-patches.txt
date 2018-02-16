@@ -50,7 +50,7 @@ TIP: The *dgit* package offeres an alternative git integration tool with the Deb
 
 The ``*dpkg-source -x*'' command unpacks the Debian source package.
 
-It normally applies the patches in the *debian/patches/* directory to the source tree and records the patch state in the *.pc/* directory. 
+It normally applies the patches in the *debian/patches/* directory to the source tree and records the patch state in the *.pc/* directory.
 
 If you wish to keep the source tree unmodified (for example, for use in <<vcs>>), please use the *--skip-patches* option.
 

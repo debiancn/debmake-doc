@@ -68,8 +68,8 @@ Here is a summary of commands similar to the *debuild* command.
 ** ``*dpkg-source --before-build*'' (apply Debian patches, unless it is already applied)
 ** ``*fakeroot debian/rules clean*''
 ** ``*dpkg-source --build*'' (build the Debian source package)
-** ``*fakeroot debian/rules build*'' 
-** ``*fakeroot debian/rules binary*'' 
+** ``*fakeroot debian/rules build*''
+** ``*fakeroot debian/rules binary*''
 ** ``*dpkg-genbuildinfo*'' (generate a ***.buildinfo** file)
 ** ``*dpkg-genchanges*'' (generate a ***.changes** file)
 ** ``*fakeroot debian/rules clean*''
