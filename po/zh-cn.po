@@ -1,9 +1,9 @@
 # Boyuan Yang <073plan@gmail.com>, 2017, 2018.
 msgid ""
 msgstr ""
-"Project-Id-Version: debmake-doc 1.7\n"
+"Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-02-16 17:03+0800\n"
-"PO-Revision-Date: 2018-02-16 13:36+0800\n"
+"PO-Revision-Date: 2018-02-16 23:04+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -72,17 +72,17 @@ msgstr "含有共享库的多个二进制软件包的打包，等等。"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:48
-#, fuzzy
 msgid ""
 "This “Guide for Debian Maintainers” (1.10-1 2017-09-17) can be considered as "
 "the successor to the “Debian New Maintainers’ Guide”."
-msgstr "本篇“Debian 维护者指导”可看作“Debian 新维护者手册”的继承文档。"
+msgstr ""
+"本篇“Debian 维护者指导”（1.10-1 2017-09-17）可看作“Debian 新维护者手册”的继承"
+"文档。"
 
 #. (itstool) path: bookinfo/copyright
 #: debmake-doc.en.xml:50
-#, fuzzy
 msgid "<year>2014-2017</year> <holder>Osamu Aoki</holder>"
-msgstr "<year>2014-2015</year> <holder>Osamu Aoki</holder>"
+msgstr "<year>2014-2017</year> <holder>Osamu Aoki</holder>"
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:56
@@ -326,7 +326,6 @@ msgstr "在某些典型场景下制作 Debian 软件包的示例。"
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.xml:180
-#, fuzzy
 msgid ""
 "The author felt limitations of updating the original “New Maintainers' "
 "Guide” with the <emphasis role=\"strong\">dh-make</emphasis> package and "
@@ -340,7 +339,7 @@ msgstr ""
 "维护者手册”时感受到了文档的局限性。因此，作者决定创建一个替代工具并编写其对应"
 "的文档以解决某些现代的需求。其成果便是 <emphasis role=\"strong\">debmake</"
 "emphasis>（当前版本：4.2.9）软件包，以及这篇更新的“Debian 维护者指导”，可从 "
-"<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：1.9-1）软件包获"
+"<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：1.10-1）软件包获"
 "取。"
 
 #. (itstool) path: preface/simpara
@@ -1143,7 +1142,6 @@ msgstr "debian-devel@lists.debian.org 邮件列表存档"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:600
-#, fuzzy
 msgid ""
 "Your desired information can be found effectively by using the well-formed "
 "search string such as “keyword <emphasis role=\"strong\">site:lists.debian."
@@ -1193,7 +1191,7 @@ msgstr "<_:ulink-1/> 邮件列表。（这个邮件列表针对熟练用户和�
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:616
 msgid "IRC"
-msgstr "IRC"
+msgstr "IRC（互联网中继聊天）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:615
@@ -1565,13 +1563,12 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:899
-#, fuzzy
 msgid ""
 "Send patches to the packages with the <emphasis role=\"strong\">required</"
 "emphasis> and <emphasis role=\"strong\">important</emphasis> priorities."
 msgstr ""
-"这里是维护者版本的 <emphasis role=\"strong\">debian/control</emphasis> 和 "
-"<emphasis role=\"strong\">debian/copyright</emphasis> 文件。"
+"向具有 <emphasis role=\"strong\">required</emphasis> 和 <emphasis role="
+"\"strong\">important</emphasis> 优先级的软件包提交补丁。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:906
@@ -1581,18 +1578,17 @@ msgstr "英语之外的技能："
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:911
 msgid "Send patches to the PO file of the Debian Installer."
-msgstr ""
+msgstr "向 Debian 安装器项目提交补丁。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:916
-#, fuzzy
 msgid ""
 "Send patches to the PO file of the packages with the <emphasis role=\"strong"
 "\">required</emphasis> and <emphasis role=\"strong\">important</emphasis> "
 "priorities."
 msgstr ""
-"这里是维护者版本的 <emphasis role=\"strong\">debian/control</emphasis> 和 "
-"<emphasis role=\"strong\">debian/copyright</emphasis> 文件。"
+"为具有 <emphasis role=\"strong\">required</emphasis> 和 <emphasis role="
+"\"strong\">important</emphasis> 优先级的软件包中的 PO 文件提交补丁。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:923
@@ -1606,9 +1602,8 @@ msgstr "Debian 维基（Wiki）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:928
-#, fuzzy
 msgid "Update contents on <_:ulink-1/>."
-msgstr "<_:ulink-1/> 的内容。"
+msgstr "更新 <_:ulink-1/> 中的内容。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:934
@@ -1618,7 +1613,7 @@ msgstr "Debian 文档"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:933
 msgid "Send patches to the existing <_:ulink-1/>."
-msgstr ""
+msgstr "向已有的 <_:ulink-1/> 提交补丁。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:940
@@ -1943,7 +1938,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1034
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">-i</emphasis> and <emphasis role=\"strong\">-"
 "I</emphasis> options in <emphasis role=\"strong"
@@ -1951,11 +1945,11 @@ msgid ""
 "\">dpkg-source</emphasis> command help rebuilding of Debian packages without "
 "extraneous contents (see <xref linkend=\"build-noextra\"/>)."
 msgstr ""
-"<emphasis role=\"strong\">ccache</emphasis> 的缓存目录 <emphasis role="
-"\"strong\">/var/cache/pbuilder/cache</emphasis> 需要为了 <emphasis role="
-"\"strong\">pbuilder</emphasis> 命令的使用而设置为全局可写：“<emphasis role="
-"\"strong\">-rwxrwxrwx 1 root root</emphasis>”。你需要明白这样会带来相关的安全"
-"隐患。"
+"用于 <emphasis role=\"strong\">dpkg-source</emphasis> 命令的 <emphasis role="
+"\"strong\">DEBUILD_DPKG_BUILDPACKAGE_OPTS</emphasis> 中可以额外使用 "
+"<emphasis role=\"strong\">-i</emphasis> 和 <emphasis role=\"strong\">-I</"
+"emphasis> 选项以帮助构建源码中具有外来无关内容的软件包（参见 <xref linkend="
+"\"build-noextra\"/>）。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:1035
