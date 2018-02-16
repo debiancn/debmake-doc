@@ -7,6 +7,8 @@ debmake-doc (1.10-1) UNRELEASED; urgency=medium
   [ Boyuan Yang ]
   * Use Priority: optional instead of Priority: extra globally.
   * Use Standards-Version: 4.1.3 globally.
+  * Do some proofreading and fix contents in debhelper section.
+  * More update for Simplified Chinese translation.
 
  -- Boyuan Yang <073plan@gmail.com>  Fri, 16 Feb 2018 18:16:25 +0800
 
