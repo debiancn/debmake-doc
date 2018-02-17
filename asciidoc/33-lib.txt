@@ -11,8 +11,8 @@ Packaging the library software requires you to perform much more work than usual
 
 Before packaging the shared library software, see:
 
-* https://www.debian.org/doc/debian-policy/ch-sharedlibs.html[Chapter 8 - Shared libraries] of the ``Debian Policy Manual''
-* https://www.debian.org/doc/debian-policy/ch-files.html[10.2 Libraries] of the ``Debian Policy Manual''
+* https://www.debian.org/doc/debian-policy/#document-ch-sharedlibs[Chapter 8 - Shared libraries] of the ``Debian Policy Manual''
+* https://www.debian.org/doc/debian-policy/#libraries[10.2 Libraries] of the ``Debian Policy Manual''
 * https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html#bpp-libraries[6.7.2. Libraries] of the ``Debian Developer's Reference''
 
 For the historic background study, see:

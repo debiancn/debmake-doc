@@ -6,7 +6,7 @@ The *debian/control* file consists of blocks of meta data separated by the blank
 * meta data for the Debian source package
 * meta data for the Debian binary packages
 
-See https://www.debian.org/doc/debian-policy/ch-controlfields.html[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual'' for the definition of each meta data.
+See https://www.debian.org/doc/debian-policy/#document-ch-controlfields[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual'' for the definition of each meta data.
 
 [[split]]
 ==== Split of the Debian binary package

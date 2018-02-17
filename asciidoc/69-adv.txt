@@ -9,7 +9,7 @@ Hints for the following can be found in the *debhelper*(7) manpage:
 ** invoking multiple ``*dh_auto_configure -S ...*'' commands in the *override_dh_auto_configure* target
 ** invoking multiple ``*dh_auto_build -S ...*'' commands in the *override_dh_auto_build* target
 ** invoking multiple ``*dh_auto_install -S ...*'' commands in the *override_dh_auto_install* target
-* building *udeb* packages with ``*Package-Type: udeb*'' in *debian/control* (see https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Package-Type[Package-Type])
+* building *udeb* packages with ``*Package-Type: udeb*'' in *debian/control* (see https://www.debian.org/doc/debian-policy/#s-f-package-type[Package-Type])
 * excluding some packages for the bootstrapping (see also https://wiki.debian.org/BuildProfileSpec[BuildProfileSpec])
 ** adding the *Build-Profiles* fields in binary package stanzas in *debian/control*
 ** building packages with the *DEB_BUILD_PROFILES* environment variable set to the pertinent profile name
