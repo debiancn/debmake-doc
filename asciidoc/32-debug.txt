@@ -1,7 +1,7 @@
 [[dbg]]
 === Debugging information
 
-The Debian package is built with the debugging information but packaged into the binary package after stripping the debugging information as required by https://www.debian.org/doc/debian-policy/ch-files.html[Chapter 10 - Files] of the ``Debian Policy Manual''.
+The Debian package is built with the debugging information but packaged into the binary package after stripping the debugging information as required by https://www.debian.org/doc/debian-policy/#document-ch-files[Chapter 10 - Files] of the ``Debian Policy Manual''.
 
 See
 

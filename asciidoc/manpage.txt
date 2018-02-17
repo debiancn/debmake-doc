@@ -246,7 +246,7 @@ There  are some limitations for what characters may be used as a part of the Deb
 * Upstream version (*-u*): [0-9][-+.:~a-z0-9A-Z]*
 * Debian revision (*-r*): [0-9][+.~a-z0-9A-Z]*
 
-See the exact definition in https://www.debian.org/doc/debian-policy/ch-controlfields.html[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual''.
+See the exact definition in https://www.debian.org/doc/debian-policy/#document-ch-controlfields[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual''.
 
 *debmake* assumes relatively simple packaging cases.  So all programs related to the interpreter are assumed to be "*Architecture: all*".  This is not always true.
 
