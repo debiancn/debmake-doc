@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-02-16 23:35+0800\n"
-"PO-Revision-Date: 2018-02-17 00:10+0800\n"
+"PO-Revision-Date: 2018-02-17 11:48+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -4031,32 +4031,29 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2403
-#, fuzzy
 msgid ""
 "The modern Debian packaging workflow can be organized into a simple modular "
 "workflow by:"
-msgstr "一个极其简化的 Debian 打包工作流可以概括为以下五步。"
+msgstr "现代化的 Debian 打包工作流可以组织成一个简单的模块化工作流，如下所示："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2406
-#, fuzzy
 msgid ""
 "using the <emphasis role=\"strong\">dh</emphasis> command to invoke many "
 "utility scripts automatically from the <emphasis role=\"strong\">debhelper</"
 "emphasis> package, and"
 msgstr ""
-"这里的 <emphasis role=\"strong\">gbp</emphasis> 命令是 <emphasis role="
-"\"strong\">git-buildpackage</emphasis> 命令的一个别名。"
+"使用 <emphasis role=\"strong\">dh</emphasis> 命令以自动调用来自 <emphasis "
+"role=\"strong\">debhelper</emphasis> 软件包的许多实用脚本，以及"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2411
-#, fuzzy
 msgid ""
 "configuring their behavior with declarative configuration files in the "
 "<emphasis role=\"strong\">debian/</emphasis> directory."
 msgstr ""
-"它不会覆写 <emphasis role=\"strong\">debian/</emphasis> 目录下已存在的配置文"
-"件。"
+"使用 <emphasis role=\"strong\">debian/</emphasis> 目录下的声明式配置文件配置"
+"它们的行为。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2416
@@ -4915,6 +4912,10 @@ msgid ""
 "\">dpkg_vendor_derives_from</emphasis> macro. These are useful for the "
 "vendor support (Debian, Ubuntu, …)."
 msgstr ""
+"<emphasis role=\"strong\">DEB_VENDOR</emphasis> 和 <emphasis role=\"strong"
+"\">DEB_PARENT_VENDOR</emphasis> 变量，以及 <emphasis role=\"strong"
+"\">dpkg_vendor_derives_from</emphasis> 宏。它们在系统提供方的支持方面"
+"（Debian、Ubuntu 等）有其特定用处。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2691
@@ -4923,6 +4924,7 @@ msgstr "<emphasis role=\"strong\">architecture.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2695
+#, fuzzy
 msgid ""
 "Set <emphasis role=\"strong\">DEB_HOST_</emphasis>* and <emphasis role="
 "\"strong\">DEB_BUILD_</emphasis>* variables. Only variables used explicitly "
@@ -4931,6 +4933,8 @@ msgid ""
 "need to include <emphasis role=\"strong\">architecture.mk</emphasis> in "
 "<emphasis role=\"strong\">debian/rules</emphasis>."
 msgstr ""
+"设置 <emphasis role=\"strong\">DEB_HOST_</emphasis>* 和 <emphasis role="
+"\"strong\">DEB_BUILD_</emphasis>* 变量。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2703
@@ -4948,6 +4952,13 @@ msgid ""
 "\">FCFLAGS</emphasis>, and <emphasis role=\"strong\">LDFLAGS</emphasis> "
 "build flags."
 msgstr ""
+"设置 <emphasis role=\"strong\">CFLAGS</emphasis>、<emphasis role=\"strong"
+"\">CPPFLAGS</emphasis>、<emphasis role=\"strong\">CXXFLAGS</emphasis>、"
+"<emphasis role=\"strong\">OBJCFLAGS</emphasis>、<emphasis role=\"strong"
+"\">OBJCXXFLAGS</emphasis>、<emphasis role=\"strong\">GCJFLAGS</emphasis>、"
+"<emphasis role=\"strong\">FFLAGS</emphasis>、<emphasis role=\"strong"
+"\">FCFLAGS</emphasis> 和 <emphasis role=\"strong\">LDFLAGS</emphasis> 这些构"
+"建标志（build flags）。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2713
@@ -4957,6 +4968,10 @@ msgid ""
 "\">debian/rules</emphasis> or write a simpler alternative in it. Please keep "
 "<emphasis role=\"strong\">debian/rules</emphasis> simple."
 msgstr ""
+"如果您希望在 <emphsis role=\"strong\">debian/rules</emphasis> 中使用其中的某"
+"些变量，您可以将相关的代码复制到 <emphasis role=\"strong\">debian/rules</"
+"emphasis> 文件中，或是重写一份简单的替代实现。总而言之请保持 <emphasis role="
+"\"strong\">debian/rules</emphasis> 文件尽量简单。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2714
@@ -4966,6 +4981,9 @@ msgid ""
 "emphasis> target architectures by adding the followings to <emphasis role="
 "\"strong\">debian/rules</emphasis>:"
 msgstr ""
+"例如，您按如下的方法在 <emphasis role=\"strong\">debian/rules</emphasis> 文件"
+"中添加内容，从而为 <emphasis role=\"strong\">linux-any</emphasis> 目标架构添"
+"加额外的 <emphasis role=\"strong\">CONFIGURE_FLAGS</emphasis>："
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2720
@@ -4983,6 +5001,17 @@ msgid ""
 "and should let the <emphasis role=\"strong\">dh</emphasis> command set these "
 "build flags."
 msgstr ""
+"历史上对于 <emphasis role=\"strong\">debhelper</emphasis> 兼容等级小于等于 8 "
+"的情况下，在 <emphasis>debian/rules</emphasis> 文件中包含 <emphasis role="
+"\"strong\">buildflags.mk</emphasis> 文件是很有用的，它可以合适地设置一些构建"
+"标志，如 <emphasis role=\"strong\">CPPFLAGS</emphasis>、<emphasis role="
+"\"strong\">CFLAGS</emphasis>、<emphasis role=\"strong\">LDFLAGS</emphasis> "
+"等，同时保证对特定选项，如 <emphasis role=\"strong"
+"\">DEB_CFLAGS_MAINT_APPEND</emphasis> 和 <emphasis role=\"strong"
+"\">DEB_BUILD_MAINT_OPTIONS</emphasis> 的合适处理。现在您应当使用的 <emphasis "
+"role=\"strong\">debhelper</emphasis> 兼容等级大于等于 9，故如无特殊原因，请不"
+"要继续包含 <emphasis role=\"strong\">buildflags.mk</emphasis>，请交由 "
+"<emphasis role=\"strong\">dh</emphasis> 命令来处理和设置这些构建标志。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2721
@@ -4991,6 +5020,9 @@ msgid ""
 "architecture</emphasis>(1) and <emphasis role=\"strong\">dpkg-buildflags</"
 "emphasis>(1)."
 msgstr ""
+"参见 <xref linkend=\"multiarch\"/>、<emphasis role=\"strong\">dpkg-"
+"architecture</emphasis>(1) 和 <emphasis role=\"strong\">dpkg-buildflags</"
+"emphasis>(1)。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2724
@@ -5000,12 +5032,12 @@ msgstr "可重现的构建"
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2725
 msgid "Here are some recommendations to attain the reproducible build result."
-msgstr ""
+msgstr "为了做到软件包可重现的构建，这里给出一些相关的建议。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2728
 msgid "Don’t embed the timestamp based on the system time."
-msgstr ""
+msgstr "不要嵌入基于系统时间的时间戳。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2733
