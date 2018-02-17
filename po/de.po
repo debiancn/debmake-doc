@@ -1,12 +1,12 @@
 # German translation of debmake-doc
 # This file is distributed under the same license as the debmake-doc package.
 # Copyright © of this file:
-# Helge Kreutzmann <debian@helgefjell.de>, 2017.
+# Helge Kreutzmann <debian@helgefjell.de>, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-01-09 16:00+0100\n"
-"PO-Revision-Date: 2018-01-12 11:40+0100\n"
+"PO-Revision-Date: 2018-02-17 15:38+0100\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -1333,7 +1333,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:714
 msgid "the <emphasis role=\"strong\">aptitude</emphasis> command"
-msgstr ""
+msgstr "der Befehl <emphasis role=\"strong\">aptitude</emphasis>"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:720
@@ -1979,7 +1979,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:1096
 msgid "Bug #606542"
-msgstr ""
+msgstr "Fehler #606542"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1096
@@ -2015,17 +2015,19 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/A10ccache</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">/var/cache/pbuilder/hooks/A10ccache</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1107
 msgid ""
 "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/B90lintian</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">/var/cache/pbuilder/hooks/B90lintian</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1114
 msgid "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/C10shell</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">/var/cache/pbuilder/hooks/C10shell</emphasis>"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.xml:1121
@@ -2066,7 +2068,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1139
 msgid "HTTP proxy"
-msgstr ""
+msgstr "HTTP-Proxy"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1140
@@ -4332,6 +4334,9 @@ msgid ""
 "architecture</emphasis>(1) and <emphasis role=\"strong\">dpkg-buildflags</"
 "emphasis>(1)."
 msgstr ""
+"Siehe <xref linkend=\"multiarch\"/>, <emphasis role=\"strong\">dpkg-"
+"architecture</emphasis>(1) und <emphasis role=\"strong\">dpkg-buildflags</"
+"emphasis>(1)."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2184
@@ -5033,7 +5038,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2567
 msgid "See <xref linkend=\"lib\"/>."
-msgstr ""
+msgstr "Siehe <xref linkend=\"lib\"/>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2571
@@ -5528,12 +5533,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2727
 msgid "The <emphasis role=\"strong\">diff</emphasis> command"
-msgstr ""
+msgstr "Der Befehl <emphasis role=\"strong\">diff</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2732
 msgid "See <xref linkend=\"diff-u\"/>"
-msgstr ""
+msgstr "Siehe <xref linkend=\"diff-u\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2737
@@ -5570,12 +5575,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2766
 msgid "The <emphasis role=\"strong\">dquilt</emphasis> command"
-msgstr ""
+msgstr "Der Befehl <emphasis role=\"strong\">dquilt</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2771
 msgid "See <xref linkend=\"quilt-setup\"/>"
-msgstr ""
+msgstr "Siehe <xref linkend=\"quilt-setup\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2776
@@ -5597,12 +5602,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2793
 msgid "The “<emphasis role=\"strong\">dpkg-source --commit</emphasis>” command"
-msgstr ""
+msgstr "Der Befehl »<emphasis role=\"strong\">dpkg-source --commit</emphasis>«"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2798
 msgid "See <xref linkend=\"dpkg-source-commit\"/>"
-msgstr ""
+msgstr "Siehe <xref linkend=\"dpkg-source-commit\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2803
@@ -5619,7 +5624,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2825
 msgid "See <xref linkend=\"alt-vcs\"/>"
-msgstr ""
+msgstr "Siehe <xref linkend=\"alt-vcs\"/>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2830
@@ -5645,7 +5650,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2852
 msgid "The <emphasis role=\"strong\">gbp-pq</emphasis> command"
-msgstr ""
+msgstr "Der Befehl <emphasis role=\"strong\">gbp-pq</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2857
@@ -5671,7 +5676,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2879
 msgid "The <emphasis role=\"strong\">gbp-dpm</emphasis> command"
-msgstr ""
+msgstr "Der Befehl <emphasis role=\"strong\">gbp-dpm</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2884
@@ -5973,6 +5978,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-control</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.bug-control</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3014
@@ -5989,6 +5996,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-presubj</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.bug-presubj</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3024
@@ -6005,6 +6014,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-script</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.bug-script</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3034
@@ -6022,6 +6033,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bash-"
 "completion</emphasis>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.bash-"
+"completion</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3044
@@ -6038,7 +6051,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3048
 msgid "See <emphasis role=\"strong\">dh_bash-completion</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_bash-completion</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3052
@@ -6046,6 +6059,8 @@ msgid ""
 "<emphasis role=\"strong\">clean</emphasis> <superscript><emphasis role="
 "\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">clean</emphasis> <superscript><emphasis role="
+"\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3056
@@ -6060,6 +6075,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_auto_clean</emphasis>(1) and <emphasis role="
 "\"strong\">dh_clean</emphasis>(1)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_auto_clean</emphasis>(1) und <emphasis role="
+"\"strong\">dh_clean</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3063
@@ -6067,6 +6084,8 @@ msgid ""
 "<emphasis role=\"strong\">compat</emphasis> <superscript><emphasis role="
 "\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">compat</emphasis> <superscript><emphasis role="
+"\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3067
@@ -6088,6 +6107,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.conffile</"
 "emphasis>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.conffile</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3078
@@ -6124,7 +6145,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3094
 msgid "See <emphasis role=\"strong\">dh_installdeb</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installdeb</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3098
@@ -6132,6 +6153,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.config</"
 "emphasis>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.config</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3102
@@ -6147,6 +6170,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.cron.hourly</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.cron.hourly</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3112
@@ -6162,6 +6187,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_installcron</emphasis>(1) and <emphasis "
 "role=\"strong\">cron</emphasis>(8)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_installcron</emphasis>(1) und <emphasis "
+"role=\"strong\">cron</emphasis>(8)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3119
@@ -6169,6 +6196,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.cron.daily</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.cron.daily</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3123
@@ -6184,6 +6213,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.cron.weekly</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.cron.weekly</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3134
@@ -6199,6 +6230,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.cron.monthly</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.cron.monthly</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3145
@@ -6214,6 +6247,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_installcro</emphasis>*(1) and <emphasis "
 "role=\"strong\">cron</emphasis>(8)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_installcro</emphasis>*(1) und <emphasis "
+"role=\"strong\">cron</emphasis>(8)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3152
@@ -6221,6 +6256,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.cron.d</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.cron.d</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3156
@@ -6237,6 +6274,9 @@ msgid ""
 "\"strong\">cron</emphasis>(8), and <emphasis role=\"strong\">crontab</"
 "emphasis>(5)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_installcron</emphasis>(1), <emphasis role="
+"\"strong\">cron</emphasis>(8) und <emphasis role=\"strong\">crontab</"
+"emphasis>(5)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3163
@@ -6244,6 +6284,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.default</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.default</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3167
@@ -6256,7 +6298,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3170 debmake-doc.en.xml:3292
 msgid "See <emphasis role=\"strong\">dh_installinit</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installinit</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3174
@@ -6264,6 +6306,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.dirs</emphasis> "
 "<superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.dirs</emphasis> "
+"<superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3178
@@ -6273,7 +6317,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3181
 msgid "See <emphasis role=\"strong\">dh_installdirs</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installdirs</emphasis>(1)."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3182
@@ -6289,6 +6333,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.doc-base</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.doc-base</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3190
@@ -6315,6 +6361,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.docs</emphasis> "
 "<superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.docs</emphasis> "
+"<superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3201
@@ -6326,7 +6374,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3204 debmake-doc.en.xml:3438 debmake-doc.en.xml:3569
 msgid "See <emphasis role=\"strong\">dh_installdocs</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installdocs</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3208
@@ -6334,6 +6382,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.emacsen-compat</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.emacsen-compat</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3212
@@ -6347,7 +6397,7 @@ msgstr ""
 #: debmake-doc.en.xml:3215 debmake-doc.en.xml:3226 debmake-doc.en.xml:3237
 #: debmake-doc.en.xml:3248
 msgid "See <emphasis role=\"strong\">dh_installemacsen</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installemacsen</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3219
@@ -6356,6 +6406,9 @@ msgid ""
 "install</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
 "superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.emacsen-"
+"install</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
+"superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3223
@@ -6371,6 +6424,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.emacsen-remove</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.emacsen-remove</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3234
@@ -6387,6 +6442,9 @@ msgid ""
 "startup</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
 "superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.emacsen-"
+"startup</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
+"superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3245
@@ -6402,6 +6460,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.examples</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.examples</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3256
@@ -6415,12 +6475,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3259
 msgid "See <emphasis role=\"strong\">dh_installexamples</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installexamples</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3263
 msgid "<emphasis role=\"strong\">gbp.conf</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">gbp.conf</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3267
@@ -6428,6 +6488,8 @@ msgid ""
 "If this exists, it functions as the configuration file for the <emphasis "
 "role=\"strong\">gbp</emphasis> command."
 msgstr ""
+"Falls diese existiert, funktioniert sie als Konfigurationsdatei für den "
+"Befehl <emphasis role=\"strong\">gbp</emphasis>."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3270
@@ -6436,6 +6498,9 @@ msgid ""
 "\">gbp</emphasis>(1), and <emphasis role=\"strong\">git-buildpackage</"
 "emphasis>(1)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">gbp.conf</emphasis>(5), <emphasis role="
+"\"strong\">gbp</emphasis>(1) und <emphasis role=\"strong\">git-buildpackage</"
+"emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3274
@@ -6443,16 +6508,20 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.info</emphasis> "
 "<superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.info</emphasis> "
+"<superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3278
 msgid "List info files to be installed in <emphasis>binarypackage</emphasis>."
 msgstr ""
+"Führt Info-Dateien auf, die in <emphasis>Binärpaket</emphasis> installiert "
+"werden."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3281
 msgid "See <emphasis role=\"strong\">dh_installinfo</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installinfo</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3285
@@ -6460,6 +6529,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.init</emphasis> "
 "<superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.init</emphasis> "
+"<superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3289
@@ -6468,6 +6539,9 @@ msgid ""
 "emphasis><emphasis>binarypackage</emphasis> in <emphasis>binarypackage</"
 "emphasis>."
 msgstr ""
+"Installiert in <emphasis role=\"strong\">etc/init.d/</"
+"emphasis><emphasis>Binärpaket</emphasis> in <emphasis>Binärpaket</"
+"emphasis>."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3296
@@ -6475,6 +6549,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.install</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.install</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3300
@@ -6489,6 +6565,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_install</emphasis>(1) and <emphasis role="
 "\"strong\">dh_auto_install</emphasis>(1)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_install</emphasis>(1) und <emphasis role="
+"\"strong\">dh_auto_install</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3307
@@ -6496,6 +6574,8 @@ msgid ""
 "<emphasis role=\"strong\">license-examples/</emphasis>* "
 "<superscript><emphasis role=\"strong\">-x4</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">license-examples/</emphasis>* "
+"<superscript><emphasis role=\"strong\">-x4</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3311
@@ -6516,6 +6596,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.links</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.links</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3322
@@ -6528,7 +6610,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3325
 msgid "See <emphasis role=\"strong\">dh_link</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_link</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3329
@@ -6537,6 +6619,9 @@ msgid ""
 "overrides</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
 "superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.lintian-"
+"overrides</emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></"
+"superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3333
@@ -6558,6 +6643,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_lintian</emphasis>(1), <emphasis role="
 "\"strong\">lintian</emphasis>(1) and <_:ulink-1/>."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_lintian</emphasis>(1), <emphasis role="
+"\"strong\">lintian</emphasis>(1) und <_:ulink-1/>."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3340
@@ -6565,6 +6652,8 @@ msgid ""
 "<emphasis role=\"strong\">manpage.</emphasis>* <superscript><emphasis role="
 "\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">manpage.</emphasis>* <superscript><emphasis role="
+"\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3344
@@ -6596,6 +6685,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.manpages</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.manpages</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3356
@@ -6605,7 +6696,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3359
 msgid "See <emphasis role=\"strong\">dh_installman</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installman</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3363
@@ -6613,11 +6704,13 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.menu</emphasis> "
 "(deprecated, no more installed)"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.menu</emphasis> "
+"(veraltet, nicht mehr installiert)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3368
 msgid "tech-ctte #741573"
-msgstr ""
+msgstr "tech-ctte #741573"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3367
@@ -6644,7 +6737,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3376
 msgid "<emphasis role=\"strong\">NEWS</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">NEWS</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3380
@@ -6657,12 +6750,12 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3383
 msgid "See <emphasis role=\"strong\">dh_installchangelogs</emphasis>(1)."
-msgstr ""
+msgstr "Siehe <emphasis role=\"strong\">dh_installchangelogs</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3387
 msgid "<emphasis role=\"strong\">patches/</emphasis>*"
-msgstr ""
+msgstr "<emphasis role=\"strong\">patches/</emphasis>*"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3391
@@ -6677,6 +6770,8 @@ msgid ""
 "See <emphasis role=\"strong\">dpkg-source</emphasis>(1), <xref linkend="
 "\"quilt-setup\"/> and <xref linkend=\"alt-patch\"/>."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dpkg-source</emphasis>(1), <xref linkend="
+"\"quilt-setup\"/> und <xref linkend=\"alt-patch\"/>."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3395
@@ -6691,6 +6786,8 @@ msgid ""
 "<emphasis role=\"strong\">patches/series</emphasis> <superscript><emphasis "
 "role=\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">patches/series</emphasis> <superscript><emphasis "
+"role=\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3403
@@ -6705,6 +6802,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.preinst</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.preinst</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3412
@@ -6712,6 +6811,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.postinst</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.postinst</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3415
@@ -6719,6 +6820,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.prerm</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.prerm</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3418
@@ -6726,6 +6829,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.postrm</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.postrm</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3422
@@ -6809,6 +6914,9 @@ msgid ""
 "role=\"strong\">dh_systemd_start</emphasis>(1), and <emphasis role=\"strong"
 "\">dh_installinit</emphasis>(1)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_systemd_enable</emphasis>(1), <emphasis "
+"role=\"strong\">dh_systemd_start</emphasis>(1) und <emphasis role=\"strong"
+"\">dh_installinit</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3454
@@ -6816,6 +6924,8 @@ msgid ""
 "<emphasis role=\"strong\">source/format</emphasis> <superscript><emphasis "
 "role=\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">source/format</emphasis> <superscript><emphasis "
+"role=\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3458
@@ -6842,6 +6952,8 @@ msgid ""
 "See “SOURCE PACKAGE FORMATS” in <emphasis role=\"strong\">dpkg-source</"
 "emphasis>(1)."
 msgstr ""
+"Siehe »QUELLPAKET-FORMATE« in <emphasis role=\"strong\">dpkg-source</"
+"emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3475
@@ -6865,6 +6977,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_lintian</emphasis>(1) and <emphasis role="
 "\"strong\">lintian</emphasis>(1)."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_lintian</emphasis>(1) und <emphasis role="
+"\"strong\">lintian</emphasis>(1)."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3486
@@ -6872,6 +6986,8 @@ msgid ""
 "<emphasis role=\"strong\">source/local-options</emphasis> "
 "<superscript><emphasis role=\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">source/local-options</emphasis> "
+"<superscript><emphasis role=\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3490
@@ -6883,22 +6999,22 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3493
 msgid "<emphasis role=\"strong\">unapply-patches</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">unapply-patches</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3498
 msgid "<emphasis role=\"strong\">abort-on-upstream-changes</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">abort-on-upstream-changes</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3503
 msgid "<emphasis role=\"strong\">auto-commit</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">auto-commit</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3508
 msgid "<emphasis role=\"strong\">single-debian-patch</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">single-debian-patch</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3513 debmake-doc.en.xml:3525
@@ -6907,6 +7023,7 @@ msgid ""
 "committed to the VCS of the maintainer."
 msgstr ""
 
+# FIXME: Does not exist
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3514
 msgid ""
@@ -6916,13 +7033,14 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3518
 msgid "<emphasis role=\"strong\">source/local-patch-header</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">source/local-patch-header</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3522
 msgid "Free form text that is put on top of the automatic patch generated."
 msgstr ""
 
+# FIXME: Does not exists
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3526
 msgid ""
@@ -6935,6 +7053,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.symbols</"
 "emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.symbols</"
+"emphasis> <superscript><emphasis role=\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3535
@@ -6949,6 +7069,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_makeshlibs</emphasis>(1) and <xref linkend="
 "\"symbols\"/>.."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_makeshlibs</emphasis>(1) und <xref linkend="
+"\"symbols\"/>.."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3542
@@ -6956,6 +7078,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.templates</"
 "emphasis>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.templates</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3546
@@ -6968,12 +7092,12 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3552
 msgid "<emphasis role=\"strong\">tests/control</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">tests/control</emphasis>"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3557 debmake-doc.en.xml:4548
 msgid "DEP-8"
-msgstr ""
+msgstr "DEP-8"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3556
@@ -6985,7 +7109,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3562
 msgid "<emphasis role=\"strong\">TODO</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">TODO</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3566
@@ -7002,6 +7126,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.tmpfile</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.tmpfile</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3577
@@ -7017,6 +7143,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.upstart</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>Binärpaket</emphasis><emphasis role=\"strong\">.upstart</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3588
@@ -7031,6 +7159,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_installinit</emphasis>(1) and <xref linkend="
 "\"emptypkg\"/>."
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_installinit</emphasis>(1) und <xref linkend="
+"\"emptypkg\"/>."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:3595
@@ -7038,6 +7168,8 @@ msgid ""
 "<emphasis role=\"strong\">watch</emphasis> <superscript><emphasis role="
 "\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">watch</emphasis> <superscript><emphasis role="
+"\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3599
@@ -7059,6 +7191,8 @@ msgid ""
 "See <xref linkend=\"dfsg\"/> and <emphasis role=\"strong\">uscan</"
 "emphasis>(1)."
 msgstr ""
+"Siehe <xref linkend=\"dfsg\"/> und <emphasis role=\"strong\">uscan</"
+"emphasis>(1)."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3607
@@ -8994,6 +9128,7 @@ msgstr ""
 msgid ""
 "See <emphasis role=\"strong\">dh_bugfiles</emphasis>(1) and <_:ulink-1/>"
 msgstr ""
+"Siehe <emphasis role=\"strong\">dh_bugfiles</emphasis>(1) und <_:ulink-1/>"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:4621
@@ -9005,7 +9140,7 @@ msgstr ""
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:4626
 msgid "debmake options"
-msgstr ""
+msgstr "Debmake-Optionen"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.xml:4627
