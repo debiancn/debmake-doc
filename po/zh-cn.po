@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-02-17 11:53+0800\n"
-"PO-Revision-Date: 2018-02-17 13:31+0800\n"
+"PO-Revision-Date: 2018-02-17 17:43+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -5204,33 +5204,37 @@ msgid ""
 "emphasis> file defining the split of the Debian binary packages with "
 "following stanzas:"
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令的 <emphasis role=\"strong"
+"\">-b</emphasis> 选项提供了一个符合直觉又灵活的功能，可以用来创建 <emphasis "
+"role=\"strong\">debian/control</emphasis> 的初始模板文件，其中可以定义多个 "
+"Debian 二进制软件包，每节中含有如下字段："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2817
 msgid "<emphasis role=\"strong\">Package:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Package:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #. (itstool) path: row/entry
 #: debmake-doc.en.xml:2822 debmake-doc.en.xml:2949
 msgid "<emphasis role=\"strong\">Architecture:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Architecture:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #. (itstool) path: row/entry
 #: debmake-doc.en.xml:2827 debmake-doc.en.xml:2950
 msgid "<emphasis role=\"strong\">Multi-Arch:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Multi-Arch:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2832
 msgid "<emphasis role=\"strong\">Depends:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Depends:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2837
 msgid "<emphasis role=\"strong\">Pre-Depends:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Pre-Depends:</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2842
@@ -5238,6 +5242,8 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command also set an "
 "appropriate set of substvars used in each pertinent dependency stanza."
 msgstr ""
+"<emphasis role=\"strong\">debmake</emphasis> 命令也会在每个适当的依赖字段中设"
+"置合适的变量替换占位符（substvars）。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2843
@@ -5245,6 +5251,8 @@ msgid ""
 "Let’s quote the pertinent part from the <emphasis role=\"strong\">debmake</"
 "emphasis> manpage here."
 msgstr ""
+"我们在这里直接引用 <emphasis role=\"strong\">debmake</emphasis> 手册页中的相"
+"关一部分内容。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2846 debmake-doc.en.xml:9430
@@ -5253,6 +5261,9 @@ msgid ""
 "emphasis>\", <emphasis role=\"strong\">--binaryspec</emphasis> "
 "\"<emphasis>binarypackage[:type],…</emphasis>\""
 msgstr ""
+"<emphasis role=\"strong\">-b</emphasis> \"<emphasis>二进制软件包名[:type],…</"
+"emphasis>\", <emphasis role=\"strong\">--binaryspec</emphasis> \"<emphasis>二"
+"进制软件包名[:type],…</emphasis>\""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2850 debmake-doc.en.xml:9434
