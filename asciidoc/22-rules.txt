@@ -90,7 +90,7 @@ Some variable definitions useful for customizing *debian/rules* can be found in 
 *architecture.mk*::
   Set **DEB_HOST_*** and  **DEB_BUILD_*** variables.
   +
-  Only variables used explicitly in *debian/rules* need to be defined using *dpkg-architecture*.  So there is no need to include *architecture.mk* in *debian/rules*.
+  An alternative method of retrieving those variables is to invoke *dpkg-arcitecture* directly and query the value of a single variable. With explicit invocation of *dpkg-architecture* to retrieve necessary variables, there is no need to include *architecture.mk* in *debian/rules*, which would import all architecture-related variables.
 
 *buildflags.mk*::
   Set *CFLAGS*, *CPPFLAGS*, *CXXFLAGS*, *OBJCFLAGS*, *OBJCXXFLAGS*, *GCJFLAGS*, *FFLAGS*, *FCFLAGS*, and *LDFLAGS* build flags.
