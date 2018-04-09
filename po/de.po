@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-03-11 22:05+0900\n"
-"PO-Revision-Date: 2018-02-17 15:54+0100\n"
+"PO-Revision-Date: 2018-04-09 19:13+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Helge Kreutzmann <debian@helgefjell.de>, 2017"
+msgstr "Helge Kreutzmann <debian@helgefjell.de>, 2017, 2018"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -30,6 +30,8 @@ msgid ""
 "external ref='xslt/debian-openlogo.png' "
 "md5='ee6a4590a192038bc760958298e6ce4d'"
 msgstr ""
+"external ref='xslt/debian-openlogo.png' "
+"md5='ee6a4590a192038bc760958298e6ce4d'"
 
 #. (itstool) path: bookinfo/title
 #: debmake-doc.en.xml:20
@@ -107,41 +109,37 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:62
-#, fuzzy
 msgid ""
 "“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, "
 "2005-2017 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog."
 msgstr ""
 "»Debian New Maintainers’ Guide«, Copyright © 1998-2002 Josip Rodin, "
-"2005-2014 Osamu Aoki, 2010 Craig Small und 2010 Raphaël Hertzog."
+"2005-2017 Osamu Aoki, 2010 Craig Small und 2010 Raphaël Hertzog."
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:67
 msgid "The latest version of this guide should be available:"
-msgstr ""
+msgstr "Die neuste Version dieser Anleitung sollte im Paket"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:71
 msgid "debmake-doc package"
-msgstr ""
+msgstr "debmake-doc"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:70
-#, fuzzy
 msgid "in the <_:ulink-1/> and"
-msgstr "<_:ulink-1/>."
+msgstr "im <_:ulink-1/> und auf der"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:76
-#, fuzzy
 msgid "Debian Documentation web site"
-msgstr "Debian-Dokumentation"
+msgstr "Debian-Dokumentations-Website"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:75
-#, fuzzy
 msgid "at the <_:ulink-1/>."
-msgstr "<_:ulink-1/>."
+msgstr "unter der Adresse <_:ulink-1/>.verfügbar sein."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:82
@@ -157,13 +155,12 @@ msgstr ""
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:87
-#, fuzzy
 msgid ""
 "This guide focuses on the modern packaging style and comes with many simple "
 "examples."
 msgstr ""
-"Sie konzentriert sich auf die moderne Paketierart und enthält viele "
-"Beispiele."
+"Diese Anleitung konzentriert sich auf die moderne Paketierart und enthält "
+"viele einfache Beispiele."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:91
@@ -1767,7 +1764,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1003
 msgid "mc"
-msgstr ""
+msgstr "Mc"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1004
@@ -1783,7 +1780,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1012
 msgid "git"
-msgstr ""
+msgstr "Git"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1013
@@ -1810,7 +1807,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1020
 msgid "You can check your global configuration as follows."
-msgstr ""
+msgstr "Sie können Ihre globale Konfiguration wie folgt prüfen:"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:1022
@@ -1823,7 +1820,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1025
 msgid "quilt"
-msgstr ""
+msgstr "Quilt"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1026
@@ -1869,12 +1866,12 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1047
 msgid "See <xref linkend=\"alt-patch\"/> for example usages."
-msgstr ""
+msgstr "Siehe <xref linkend=\"alt-patch\"/> für beispielhafte Verwendungen."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1050
 msgid "devscripts"
-msgstr ""
+msgstr "Devscripts"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:1051
@@ -1920,6 +1917,7 @@ msgstr ""
 #: debmake-doc.en.xml:1058
 msgid "Currently, RSA key with 4096 bits is good idea. See <_:ulink-1/>."
 msgstr ""
+"Derzeit ist ein RSA-Schlüssel mit 4096 Bits eine gute Idee. Siehe <_:ulink-1/>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:1061
@@ -3600,7 +3598,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2404
 msgid "The <emphasis role=\"strong\">debhelper</emphasis> package"
-msgstr ""
+msgstr "Das Paket <emphasis role=\"strong\">debhelper</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2405
@@ -3625,15 +3623,11 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2409
-#, fuzzy
 msgid ""
 "using the <emphasis role=\"strong\">dh</emphasis> command to invoke many "
 "utility scripts automatically from the <emphasis role=\"strong\">debhelper</"
 "emphasis> package and"
 msgstr ""
-"Falls Sie den Editor <emphasis role=\"strong\">vim</emphasis> verwenden, "
-"stellen Sie sicher, dass Sie dies mit dem Befehl »<emphasis role=\"strong\">:"
-"wq</emphasis>« speichern."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2414
@@ -4258,7 +4252,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2665
 msgid "Variables for debian/rules"
-msgstr ""
+msgstr "Variablen für debian/rules"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2666
@@ -4271,7 +4265,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2669
 msgid "<emphasis role=\"strong\">pkg-info.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">pkg-info.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2673
@@ -4284,12 +4278,18 @@ msgid ""
 "\">DEB_DISTRIBUTION</emphasis> variables. These are useful for the backport "
 "support etc.."
 msgstr ""
+"Variablen <emphasis role=\"strong\">DEB_SOURCE</emphasis>, <emphasis role="
+"\"strong\">DEB_VERSION</emphasis>, <emphasis role=\"strong"
+"\">DEB_VERSION_EPOCH_UPSTREAM</emphasis>, <emphasis role=\"strong"
+"\">DEB_VERSION_UPSTREAM_REVISION</emphasis>, <emphasis role=\"strong"
+"\">DEB_VERSION_UPSTREAM</emphasis> und <emphasis role=\"strong"
+"\">DEB_DISTRIBUTION</emphasis>. Diese sind für die Unterstützung der "
+"Rückportierung usw. nützlich."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2681
-#, fuzzy
 msgid "<emphasis role=\"strong\">vender.mk</emphasis>"
-msgstr "<emphasis role=\"strong\">NEWS</emphasis>"
+msgstr "<emphasis role=\"strong\">vender.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2685
@@ -4299,15 +4299,18 @@ msgid ""
 "\">dpkg_vendor_derives_from</emphasis> macro. These are useful for the "
 "vendor support (Debian, Ubuntu, …)."
 msgstr ""
+"Variablen <emphasis role=\"strong\">DEB_VENDOR</emphasis> und <emphasis role="
+"\"strong\">DEB_PARENT_VENDOR</emphasis> und Makro <emphasis role=\"strong"
+"\">dpkg_vendor_derives_from</emphasis>.Diese sind für die "
+"Lieferantenunterstützung (Debian, Ubuntu, …) nützlich."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2693
 msgid "<emphasis role=\"strong\">architecture.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">architecture.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2697
-#, fuzzy
 msgid ""
 "Set <emphasis role=\"strong\">DEB_HOST_</emphasis>* and <emphasis role="
 "\"strong\">DEB_BUILD_</emphasis>* variables. Only variables used explicitly "
@@ -4316,18 +4319,18 @@ msgid ""
 "need to include <emphasis role=\"strong\">architecture.mk</emphasis> in "
 "<emphasis role=\"strong\">debian/rules</emphasis>."
 msgstr ""
-"Der Befehl <emphasis role=\"strong\">deb-make</emphasis> war vor dem Befehl "
-"<emphasis role=\"strong\">dh_make</emphasis> beliebt. Das aktuelle Paket "
-"<emphasis role=\"strong\">debmake</emphasis> beginnt seine Version bei "
-"<emphasis role=\"strong\">4.0</emphasis>, um Überlappungen mit dem "
-"veralteten Paket <emphasis role=\"strong\">debmake</emphasis>, das den "
-"Befehl <emphasis role=\"strong\">deb-make</emphasis> bereitstellte, zu "
-"vermeiden."
+"Setzen Sie die Variablen <emphasis role=\"strong\">DEB_HOST_</emphasis>* und "
+"<emphasis role=\"strong\">DEB_BUILD_</emphasis>*. Nur Variablen, die explizit "
+"in <emphasis role=\"strong\">debian/rules</emphasis> verwandt werden, müssen "
+"mittels <emphasis role=\"strong\">dpkg-architecture</emphasis> definiert "
+"werden. Daher ist es nicht notwendig, <emphasis role=\"strong\">architecture."
+"mk</emphasis> in <emphasis role=\"strong\">debian/rules</emphasis> "
+"einzubinden."
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2705
 msgid "<emphasis role=\"strong\">buildflags.mk</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">buildflags.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2709
@@ -5308,13 +5311,12 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3207
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debchange</emphasis> command (alias <emphasis "
 "role=\"strong\">dch</emphasis>) is used to edit this."
 msgstr ""
 "Der Befehl <emphasis role=\"strong\">debchange</emphasis> (auch als "
-"<emphasis role=\"strong\">dch</emphasis> bekannt) wird typischerweise zur "
+"<emphasis role=\"strong\">dch</emphasis> bekannt) wird zur "
 "Bearbeitung dieser Datei verwandt."
 
 #. (itstool) path: tip/simpara
@@ -5457,7 +5459,7 @@ msgid ""
 "\">licensecheck</emphasis> package with a lot of improvements."
 msgstr ""
 "Der Befehl <emphasis role=\"strong\">licensecheck</emphasis> aus dem Paket "
-"<emphasis role=\"strong\">devscripts</emphasis> wurde zur "
+"<emphasis role=\"strong\">devscripts</emphasis> wurde zur …"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3220
@@ -13942,9 +13944,8 @@ msgstr "osamu@debian.org"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:9643
-#, fuzzy
 msgid "Copyright © 2014-2017 Osamu Aoki &lt;<_:ulink-1/>&gt;"
-msgstr "Copyright © 2014-2015 Osamu Aoki &lt;<_:ulink-1/>&gt;"
+msgstr "Copyright © 2014-2017 Osamu Aoki &lt;<_:ulink-1/>&gt;"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:9646
