@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-03-11 22:05+0900\n"
-"PO-Revision-Date: 2018-02-17 17:43+0800\n"
+"PO-Revision-Date: 2018-04-13 22:59+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -29,11 +29,13 @@ msgid ""
 "external ref='xslt/debian-openlogo.png' "
 "md5='ee6a4590a192038bc760958298e6ce4d'"
 msgstr ""
+"external ref='xslt/debian-openlogo.png' "
+"md5='ee6a4590a192038bc760958298e6ce4d'"
 
 #. (itstool) path: bookinfo/title
 #: debmake-doc.en.xml:20
 msgid "Guide for Debian Maintainers"
-msgstr "Debian 维护者指导"
+msgstr "Debian 维护者指南"
 
 #. (itstool) path: bookinfo/author
 #: debmake-doc.en.xml:21
@@ -99,7 +101,7 @@ msgstr ""
 #: debmake-doc.en.xml:49
 msgid ""
 "This guide was made using the following previous documents as its reference:"
-msgstr "本指导在撰写过程中参考了以下几篇文档："
+msgstr "本指南在撰写过程中参考了以下几篇文档："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:52
@@ -119,61 +121,55 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:62
-#, fuzzy
 msgid ""
 "“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, "
 "2005-2017 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog."
 msgstr ""
-"“Debian New Maintainers’ Guide”, 版权所有 © 1998-2002 Josip Rodin, 2005-2014 "
-"Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog."
+"“Debian New Maintainers’ Guide”, 版权所有 © 1998-2002 Josip Rodin, 2005-2017 "
+"Osamu Aoki, 2010 Craig Small 以及 2010 Raphaël Hertzog。"
 
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.xml:67
 msgid "The latest version of this guide should be available:"
-msgstr ""
+msgstr "本指南的最新版本应当可以在下列位置找到："
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:71
-#, fuzzy
 msgid "debmake-doc package"
-msgstr "debmake -cc"
+msgstr "debmake-doc 软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:70
-#, fuzzy
 msgid "in the <_:ulink-1/> and"
-msgstr "Debian kde 团队 <_:ulink-1/>"
+msgstr "在 <_:ulink-1/> 中，以及"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:76
-#, fuzzy
 msgid "Debian Documentation web site"
-msgstr "Debian 文档"
+msgstr "Debian 文档网站"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:75
-#, fuzzy
 msgid "at the <_:ulink-1/>."
-msgstr "<_:ulink-1/>。"
+msgstr "位于 <_:ulink-1/>。"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:82
-#, fuzzy
 msgid ""
 "This “Guide for Debian Maintainers” (2017-09-17) tutorial guide describes "
 "the building of the Debian package to ordinary Debian users and prospective "
 "developers using the <emphasis role=\"strong\">debmake</emphasis> command."
 msgstr ""
-"本教程文档面向普通 Debian 用户和未来的开发者，描述了使用 <emphasis role="
-"\"strong\">debmake</emphasis> 命令构建 Debian 软件包的方法。"
+"本篇《Debian 维护者指南》（2017-09-17）教程文档面向普通 Debian 用户和未来的开"
+"发者，描述了使用 <emphasis role=\"strong\">debmake</emphasis> 命令构建 "
+"Debian 软件包的方法。"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:87
-#, fuzzy
 msgid ""
 "This guide focuses on the modern packaging style and comes with many simple "
 "examples."
-msgstr "它注重描述现代的打包风格，同时提供了许多简单的示例。"
+msgstr "本指南注重描述现代的打包风格，同时提供了许多简单的示例。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:91
@@ -197,13 +193,10 @@ msgstr "含有共享库的多个二进制软件包的打包，等等。"
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.xml:112
-#, fuzzy
 msgid ""
 "This “Guide for Debian Maintainers” can be considered as the successor to "
 "the “Debian New Maintainers’ Guide”."
-msgstr ""
-"本篇“Debian 维护者指导”（1.10-1 2018-02-16）可看作“Debian 新维护者手册”的继承"
-"文档。"
+msgstr "本篇“Debian 维护者指南”可看作“Debian 新维护者手册”的继承文档。"
 
 #. (itstool) path: preface/title
 #: debmake-doc.en.xml:117
@@ -272,7 +265,7 @@ msgid ""
 "Debian community."
 msgstr ""
 "如果你想要创建一个 Debian 软件包来满足你的需求，并将你的工作与社区分享，你便"
-"是本篇指导的目标读者，即未来的 Debian 维护者。<_:footnote-1/> 欢迎来到 "
+"是本篇指南的目标读者，即未来的 Debian 维护者。<_:footnote-1/> 欢迎来到 "
 "Debian 社区。"
 
 #. (itstool) path: preface/simpara
@@ -330,7 +323,7 @@ msgid ""
 "points for them to get started. It describes as follows:"
 msgstr ""
 "这些目标也许会让很多新近参与进 Debian 工作中的潜在 Debian 维护者感到迷茫而不"
-"知所措。本篇指导尝试为这些目标提供一个着手点，方便读者开展工作。它具体描述了"
+"知所措。本篇指南尝试为这些目标提供一个着手点，方便读者开展工作。它具体描述了"
 "以下内容："
 
 #. (itstool) path: listitem/simpara
@@ -374,7 +367,7 @@ msgstr ""
 "作者在更新原有的使用 <emphasis role=\"strong\">dh-make</emphasis> 软件包的“新"
 "维护者手册”时感受到了文档的局限性。因此，作者决定创建一个替代工具并编写其对应"
 "的文档以解决某些现代的需求。其成果便是 <emphasis role=\"strong\">debmake</"
-"emphasis>（当前版本：4.2.9）软件包，以及这篇更新的“Debian 维护者指导”，可从 "
+"emphasis>（当前版本：4.2.9）软件包，以及这篇更新的“Debian 维护者指南”，可从 "
 "<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：1.10-1）软件包获"
 "取。"
 
@@ -386,7 +379,7 @@ msgid ""
 "offers many packaging examples."
 msgstr ""
 "许多杂项事务和小提示都集成进了 <emphasis role=\"strong\">debmake</emphasis> "
-"命令，以使本指导内容简单易懂。本指导同时提供了许多打包示例。"
+"命令，以使本指南内容简单易懂。本指南同时提供了许多打包示例。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.xml:205
@@ -409,7 +402,7 @@ msgid ""
 msgstr ""
 "某些重要的主题会详细进行说明。其中某些可能看起来和你没什么关系。请保持耐心。"
 "某些边角案例会被跳过。某些主题仅使用外部链接提及。这些都是有意的行文安排，目"
-"标是让这份指导保持简单而可维护。"
+"标是让这份指南保持简单而可维护。"
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.xml:209
@@ -908,7 +901,7 @@ msgid ""
 "this guide, please refer to the following to understand the social dynamics "
 "of Debian:"
 msgstr ""
-"在这篇指导之后的部分中，我们只关注打包的技术方面。因此，请参考下面的文档来理"
+"在这篇指南之后的部分中，我们只关注打包的技术方面。因此，请参考下面的文档来理"
 "解 Debian 的社会动力学："
 
 #. (itstool) path: simpara/ulink
@@ -1006,7 +999,7 @@ msgid ""
 "documentation together with this guide as needed to generate perfect Debian "
 "packages:"
 msgstr ""
-"请在阅读本指导的同时按需阅览下面这些 Debian 官方文档中的相关部分；这些文档提"
+"请在阅读本指南的同时按需阅览下面这些 Debian 官方文档中的相关部分；这些文档提"
 "供的信息有助于创建质量优良的 Debian 软件包："
 
 #. (itstool) path: listitem/simpara
@@ -1047,7 +1040,7 @@ msgid ""
 "doc</emphasis> package using the <emphasis role=\"strong\">reportbug</"
 "emphasis> command."
 msgstr ""
-"如果本指导文档的内容与官方的 Debian 文档有所冲突，那么官方的那些总是对的。请"
+"如果本指南文档的内容与官方的 Debian 文档有所冲突，那么官方的那些总是对的。请"
 "使用 <emphasis role=\"strong\">reportbug</emphasis> 工具向 <emphasis role="
 "\"strong\">debmake-doc</emphasis> 软件包报告问题。"
 
@@ -1056,7 +1049,7 @@ msgstr ""
 msgid ""
 "Here are alternative tutorial documents which you may read along with this "
 "guide:"
-msgstr "这里有你当前阅读的指导的一些替代性教程文档："
+msgstr "这里有你当前阅读的指南的一些替代性教程文档："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:540
@@ -1657,6 +1650,8 @@ msgid ""
 "These activities should give you good exposure to the other Debian people to "
 "establish your credibility."
 msgstr ""
+"这些活动应当能让您在各位 Debian 社区成员之间得到存在感，从而建立您的信誉与名"
+"气。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:964
@@ -4696,7 +4691,7 @@ msgid ""
 "<emphasis role=\"strong\">debhelper</emphasis> version 9 or newer."
 msgstr ""
 "这个简化形式在 <emphasis role=\"strong\">debhelper</emphasis> 软件包第七版或"
-"更新的版本中可用。本指导内容假设您在使用 <emphasis role=\"strong"
+"更新的版本中可用。本指南内容假设您在使用 <emphasis role=\"strong"
 "\">debhelper</emphasis> 第九版或更新的版本。"
 
 #. (itstool) path: footnote/simpara
@@ -4932,9 +4927,8 @@ msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.xml:2681
-#, fuzzy
 msgid "<emphasis role=\"strong\">vender.mk</emphasis>"
-msgstr "<emphasis role=\"strong\">vendor.mk</emphasis>"
+msgstr "<emphasis role=\"strong\">vender.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2685
@@ -5560,11 +5554,13 @@ msgid ""
 "<emphasis role=\"strong\">lib</emphasis><emphasis>foo</emphasis><emphasis "
 "role=\"strong\">-doc</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">lib</emphasis><emphasis>foo</emphasis><emphasis "
+"role=\"strong\">-doc</emphasis>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2987 debmake-doc.en.xml:3001
 msgid "<emphasis role=\"strong\">doc</emphasis><superscript>*</superscript>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">doc</emphasis><superscript>*</superscript>"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.xml:2988 debmake-doc.en.xml:3002 debmake-doc.en.xml:3009
@@ -5796,7 +5792,7 @@ msgstr "参见 <xref linkend=\"lib\"/>。"
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3113
 msgid "Substvar"
-msgstr ""
+msgstr "Substvar"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3114
@@ -5896,6 +5892,8 @@ msgid ""
 "For POSIX shell programs, there is no easy way to identify the dependency "
 "and no substvar covers their dependency."
 msgstr ""
+"对 POSIX shell 程序来说，并没有简单的办法来验证其依赖关系，substvar 的变量替"
+"换也无法自动得出它们的依赖。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:3157
@@ -5969,6 +5967,8 @@ msgid ""
 "<emphasis role=\"strong\">Depends:</emphasis> <emphasis>bar</emphasis> "
 "<emphasis role=\"strong\">(= ${source:Version}</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">Depends:</emphasis> <emphasis>bar</emphasis> "
+"<emphasis role=\"strong\">(= ${source:Version}</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3189
@@ -5977,6 +5977,9 @@ msgid ""
 "“<emphasis role=\"strong\">Architecture: any</emphasis>” <emphasis>baz</"
 "emphasis> package"
 msgstr ""
+"“<emphasis role=\"strong\">Architecture: all</emphasis>”的软件包依赖"
+"于“<emphasis role=\"strong\">Architecture: any</emphasis>”<emphasis>baz</"
+"emphasis> 软件包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:3194
@@ -5986,6 +5989,10 @@ msgid ""
 "<emphasis>baz</emphasis> <emphasis role=\"strong\">(&lt;&lt; ${source:"
 "Upstream-Version}.0~)</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">Depends:</emphasis> <emphasis>baz</emphasis> "
+"<emphasis role=\"strong\">(&gt;= ${source:Version})</emphasis>, "
+"<emphasis>baz</emphasis> <emphasis role=\"strong\">(&lt;&lt; ${source:"
+"Upstream-Version}.0~)</emphasis>"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:3204
@@ -6000,6 +6007,9 @@ msgid ""
 "Debian revision in its first line. The changes need to be documented in the "
 "specific, formal, and concise style."
 msgstr ""
+"<emphasis role=\"strong\">debian/changelog</emphasis> 文件记录了 Debian 软件"
+"包的历史并在其第一行定义了上游软件包的版本和 Debian 修订版本。所有改变的内容"
+"应当以明确、正式而简明的语言风格进行记录。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:3206
@@ -8021,15 +8031,15 @@ msgstr ""
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:4266
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debian/source/local-options</emphasis> and "
 "<emphasis role=\"strong\">debian/source/local-patch-header</emphasis> files "
 "are meant to be recorded in the VCS. These aren’t included in the Debian "
 "source package."
 msgstr ""
-"<emphasis role=\"strong\">dh binary-indep</emphasis>：为架构无关的软件包产生 "
-"<emphasis role=\"strong\">deb</emphasis> 文件"
+"<emphasis role=\"strong\">debian/source/local-options</emphasis> 和 "
+"<emphasis role=\"strong\">debian/source/local-patch-header</emphasis> 文件只"
+"用于在版本控制系统中记录信息。它们不应包含在 Debian 源码包中。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:4269
@@ -8746,7 +8756,7 @@ msgstr "该文档鼓励在共享库中使用带版本的符号。"
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4607
 msgid "Debian Library Packaging guide"
-msgstr "Debian 库打包指导"
+msgstr "Debian 库打包指南"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:4607
@@ -11686,13 +11696,12 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6092
-#, fuzzy
 msgid ""
 "“<emphasis role=\"strong\">sh -n</emphasis> <emphasis>script.sh”</emphasis> "
 "- Syntax check of a Shell script"
 msgstr ""
-"所有相关命令在 <emphasis role=\"strong\">man</emphasis> <emphasis>命令</"
-"emphasis> 下输出的内容。"
+"“<emphasis role=\"strong\">sh -n</emphasis> <emphasis>script.sh”</emphasis> "
+"- Shell 脚本的语法检查"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6097
@@ -11703,13 +11712,12 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6102
-#, fuzzy
 msgid ""
 "“<emphasis role=\"strong\">python -m py_compile</emphasis> <emphasis>script."
 "py”</emphasis> - Syntax check of a Python script"
 msgstr ""
-"<emphasis role=\"strong\">debian/rules</emphasis>：<emphasis role=\"strong"
-"\">dh</emphasis> 语法、编译器加固选项、……"
+"“<emphasis role=\"strong\">python -m py_compile</emphasis> <emphasis>script."
+"py”</emphasis> - Python 脚本的语法检查"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6107
@@ -11720,13 +11728,12 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6112
-#, fuzzy
 msgid ""
 "“<emphasis role=\"strong\">perl -I ../libpath -c</emphasis> <emphasis>script."
 "pl”</emphasis> - Syntax check of a Perl script"
 msgstr ""
-"<emphasis role=\"strong\">debian/rules</emphasis>：<emphasis role=\"strong"
-"\">dh</emphasis> 语法、编译器加固选项、……"
+"“<emphasis role=\"strong\">perl -I ../libpath -c</emphasis> <emphasis>script."
+"pl”</emphasis> - Perl 脚本的语法检查"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:6117
@@ -14597,7 +14604,7 @@ msgid ""
 "directory."
 msgstr ""
 "<emphasis role=\"strong\">debmake-doc</emphasis> 软件包提供了“Debian 维护者指"
-"导”手册，以春文本、HTML 和 PDF 三种格式存放在 <emphasis role=\"strong\">/usr/"
+"南”手册，以纯文本、HTML 和 PDF 三种格式存放在 <emphasis role=\"strong\">/usr/"
 "share/doc/debmake-doc/</emphasis> 目录下。"
 
 #. (itstool) path: simpara/ulink
