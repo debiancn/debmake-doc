@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-04-14 17:45+0300\n"
-"PO-Revision-Date: 2018-04-14 18:08+0500\n"
+"PO-Revision-Date: 2018-04-14 22:24+0500\n"
 "Last-Translator: Lev Lamberov <dogsleg@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russia@lists.debian.org>\n"
 "Language: ru\n"
@@ -17410,7 +17410,7 @@ msgstr "Copyright © 2014-2015 Осаму Аоки &lt;<_:ulink-1/>&gt;"
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:7552
 msgid "LICENSE"
-msgstr "Лицензия"
+msgstr "ЛИЦЕНЗИЯ"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:7553
