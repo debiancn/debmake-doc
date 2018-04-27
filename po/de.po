@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-03-11 22:05+0900\n"
-"PO-Revision-Date: 2018-04-09 19:13+0200\n"
+"PO-Revision-Date: 2018-04-27 21:03+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -4343,6 +4343,12 @@ msgid ""
 "\">FCFLAGS</emphasis>, and <emphasis role=\"strong\">LDFLAGS</emphasis> "
 "build flags."
 msgstr ""
+"Setzt die Bauschalter <emphasis role=\"strong\">CFLAGS</emphasis>, <emphasis "
+"role=\"strong\">CPPFLAGS</emphasis>, <emphasis role=\"strong\">CXXFLAGS</emphasis>, "
+"<emphasis role=\"strong\">OBJCFLAGS</emphasis>, <emphasis role=\"strong"
+"\">OBJCXXFLAGS</emphasis>, <emphasis role=\"strong\">GCJFLAGS</emphasis>, "
+"<emphasis role=\"strong\">FFLAGS</emphasis>, <emphasis role=\"strong"
+"\">FCFLAGS</emphasis> und <emphasis role=\"strong\">LDFLAGS</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2715
@@ -4352,6 +4358,11 @@ msgid ""
 "\">debian/rules</emphasis> or write a simpler alternative in it. Please keep "
 "<emphasis role=\"strong\">debian/rules</emphasis> simple."
 msgstr ""
+"Falls Sie einige dieser nützlichen Variablen in <emphasis role=\"strong"
+"\">debian/rules</emphasis> verwenden wollen, kopieren Sie relevante Codes "
+"nach <emphasis role=\"strong\">debian/rules</emphasis> oder schreiben Sie "
+"eine einfachere Alternative darin. Bitte halten Sie <emphasis role=\"strong"
+"\">debian/rules</emphasis> einfach."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2716
@@ -4361,6 +4372,10 @@ msgid ""
 "emphasis> target architectures by adding the followings to <emphasis role="
 "\"strong\">debian/rules</emphasis>:"
 msgstr ""
+"Beispielsweise können Sie eine Zusatzoption zu <emphasis role=\"strong"
+"\">CONFIGURE_FLAGS</emphasis> für die Zielarchitektur <emphasis role=\""
+"strong\">linux-any</emphasis> durch Hinzufügen von folgendem zur <emphasis "
+"role=\"strong\">debian/rules</emphasis> hinzufügen:"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.xml:2722
@@ -4393,17 +4408,17 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2726
 msgid "Reproducible build"
-msgstr ""
+msgstr "Reproduzierbares Bauen"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2727
 msgid "Here are some recommendations to attain the reproducible build result."
-msgstr ""
+msgstr "Es folgen einige Empfehlungen, um reproduzierbares Bauen zu erreichen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2730
 msgid "Don’t embed the timestamp based on the system time."
-msgstr ""
+msgstr "Betten Sie keine Zeitstempel, basierend auf der Systemzeit, ein."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2735
@@ -4412,6 +4427,9 @@ msgid ""
 "\"strong\">debian/rules</emphasis> to access the latest <emphasis role="
 "\"strong\">debhelper</emphasis> features."
 msgstr ""
+"Verwenden Sie »<emphasis role=\"strong\">dh $@</emphasis>« in der <emphasis role="
+"\"strong\">debian/rules</emphasis>, um auf die neusten Funktionalitäten von "
+"<emphasis role=\"strong\">debhelper</emphasis> zuzugreifen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2740
@@ -4419,6 +4437,8 @@ msgid ""
 "Export the build environment as “<emphasis role=\"strong\">LC_ALL=C.UTF-8</"
 "emphasis>” (see <xref linkend=\"utf-8-build\"/>)."
 msgstr ""
+"Exportieren Sie die Bauumgebung als »<emphasis role=\"strong\">LC_ALL=C.UTF-"
+"8</emphasis>« (siehe <xref linkend=\"utf-8-build\"/>)."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2745
@@ -4427,6 +4447,9 @@ msgid ""
 "debhelper provided environment variable <emphasis role=\"strong\">"
 "$SOURCE_DATE_EPOCH</emphasis>."
 msgstr ""
+"Setzen Sie den in den Quellen der Originalautoren verwandten Zeitstempel aus "
+"dem Wert von der durch Debhelper bereitgestellten Variablen <emphasis role="
+"\"strong\">$SOURCE_DATE_EPOCH</emphasis>."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2751
@@ -4436,7 +4459,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2750
 msgid "Read more at <_:ulink-1/>."
-msgstr ""
+msgstr "Lesen Sie mehr unter <_:ulink-1/>."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2756
