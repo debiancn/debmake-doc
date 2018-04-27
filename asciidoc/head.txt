@@ -79,7 +79,7 @@ at the <ulink url="https://www.debian.org/doc/devel-manuals#debmake-doc">Debian 
 </itemizedlist>
     </legalnotice>
     <abstract>
-<simpara>This “Guide for Debian Maintainers” (&debdate;) 
+<simpara>This “Guide for Debian Maintainers” (&debdate;)
 tutorial guide describes the building of the Debian
 package to ordinary Debian users and prospective developers using
 the <emphasis role="strong">debmake</emphasis> command.</simpara>
