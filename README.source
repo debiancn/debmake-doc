@@ -4,28 +4,57 @@ All files included in this source tree are under the MIT license with its text
 in the LICENSE file except for the files which explicitly claim differently in
 them.
 
-Package generation can be automated with debmake as:
+== Git repository
+
+All updates should be committed to "devel" branch of the Git repository at
+
+  https://salsa.debian.org/debian/debmake-doc
+
+Then the non-native Debian binary package is built using the “debmake -t -i
+debuild” command using quasi-native Debian package scheme as described in 6.2.
+
+The uploaded package should be recorded into the Git repository using "gbp
+import-dsc" with "pristine-tar" (master, upstream, pristine-tar branches).
+
+== Build
+
+The binary Debian package build of debmake-doc can be automated as:
+
  $ make package
-This runs build in chroot.  So not so easy for the debug build.
+
+This regenerates the packaging example logs and runs full document package
+build in chroot.
+
+This takes long time and isn't friendly for debug.
+
+== Debug build
 
 If DEBUG is set, the debug build of this source via XML can be done in 2 steps.
+
+If DEBUG is set, this source build requires 2 steps.
+
  $ export DEBUG=1
  $ make pkg       # building packaging log example
  $ make css html  # building page just like the one in package
+
 Results are found under tmp/
 
 For checking updated English ASCIIDOC and translation PO contents, this
 DEBUG=1 saves time.  You only build html page with existing packaging logs.
+
  $ make css html
+
 to check their goodness when rebuilding.  (Long package example build results
 are kept and reused.)
 
 If you are checking ASCIIDOC markup issue and wish to test build without going
 through XML, there is an alternative html build method:
+
  $ export DEBUG=1
  $ make pkg       # building packaging log example
  $ cd asciidoc
  $ make
+
 The result is asciidoc/debameke-doc.html
 
 == po
