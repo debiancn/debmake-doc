@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-03-11 22:05+0900\n"
-"PO-Revision-Date: 2018-04-27 21:03+0200\n"
+"PO-Revision-Date: 2018-07-14 08:05+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -4393,6 +4393,18 @@ msgid ""
 "and should let the <emphasis role=\"strong\">dh</emphasis> command set these "
 "build flags."
 msgstr ""
+"Es war nützlich, <emphasis role=\"strong\">buildflags.mk</emphasis> in die "
+"<emphasis role=\"strong\">debian/rules</emphasis> aufzunehmen, um die "
+"Bauschalter wie <emphasis role=\"strong\">CPPFLAGS</emphasis>, <emphasis "
+"role=\"strong\">CFLAGS</emphasis>, <emphasis role=\"strong\">LDFLAGS</"
+"emphasis>, usw. korrekt zu setzen und gleichzeitig <emphasis role=\"strong"
+"\">DEB_CFLAGS_MAINT_APPEND</emphasis>, <emphasis role=\"strong"
+"\">DEB_BUILD_MAINT_OPTIONS</emphasis>, usw. für den <emphasis role=\"strong"
+"\">debhelper</emphasis> »compat &lt;= 8« zu berücksichtigen. Jetzt sollten "
+"Sie <emphasis role=\"strong\">debhelper</emphasis> »compat &gt;= 9« "
+"verwenden, <emphasis role=\"strong\">buildflags.mk</emphasis> nicht ohne "
+"besonderen Grund einbinden und den Befehl <emphasis role=\"strong\">dh</"
+"emphasis> diese Bauschalter setzen lassen."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2723
@@ -4454,7 +4466,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2751
 msgid "ReproducibleBuilds"
-msgstr ""
+msgstr "Reproduzierbares Bauen"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2750
@@ -4464,12 +4476,12 @@ msgstr "Lesen Sie mehr unter <_:ulink-1/>."
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2756
 msgid "ReproducibleBuilds Howto"
-msgstr ""
+msgstr "Reproduzierbares Bauen - Wie geht es"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.xml:2761
 msgid "ReproducibleBuilds TimestampsProposal"
-msgstr ""
+msgstr "Reproduzierbares Bauen - Zeitstempelvorschlag"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2767
@@ -4479,11 +4491,16 @@ msgid ""
 "<emphasis role=\"strong\">dpkg-genbuildinfo</emphasis>(1) records the build "
 "environment. See <emphasis role=\"strong\">deb-buildinfo</emphasis>(5)"
 msgstr ""
+"Die durch <emphasis role=\"strong\">dpkg-genbuildinfo</emphasis>(1) "
+"erstellte Steuerdatei <emphasis>source-name_source-version_arch</"
+"emphasis><emphasis role=\"strong\">.buildinfo</emphasis> zeichnet die "
+"Bauumgebung auf. Siehe <emphasis role=\"strong\">deb-buildinfo</"
+"emphasis>(5)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2771
 msgid "debian/control"
-msgstr ""
+msgstr "debian/control"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2772
@@ -4492,16 +4509,19 @@ msgid ""
 "blocks of meta data separated by the blank line. Each block of meta data "
 "defines the following in this order:"
 msgstr ""
+"Die Datei <emphasis role=\"strong\">debian/control</emphasis> besteht aus "
+"Blöcken von Metadaten, die durch Leerzeilen getrennt sind. Jeder "
+"Metadatenblock definiert Folgendes in dieser Reihenfolge:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2775
 msgid "meta data for the Debian source package"
-msgstr ""
+msgstr "Metadaten für das Debian-Quellpaket"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.xml:2780
 msgid "meta data for the Debian binary packages"
-msgstr ""
+msgstr "Metadaten für das Debian-Binärpaket"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2785
@@ -4513,7 +4533,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.xml:2787
 msgid "Split of the Debian binary package"
-msgstr ""
+msgstr "Das Debian-Binärpaket aufteilen"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.xml:2788
