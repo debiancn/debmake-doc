@@ -3,7 +3,6 @@
                "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
 [
  <!-- ENTITY % urlent SYSTEM "url.ent" > %urlent; -->
- <!ENTITY % commonent SYSTEM "common.ent" > %commonent;
 ]>
 
 <book>
@@ -21,7 +20,7 @@
     <author>
       <personname> Osamu Aoki</personname>
     </author>
-    <date>&debdate;</date>
+    <date>@@@debdate@@@</date>
 
     <copyright>
       <year>2014-2017</year>
@@ -79,7 +78,7 @@ at the <ulink url="https://www.debian.org/doc/devel-manuals">Debian Documentatio
 </itemizedlist>
     </legalnotice>
     <abstract>
-<simpara>This “Guide for Debian Maintainers” (&debdate;)
+<simpara>This “Guide for Debian Maintainers” (@@@debdate@@@)
 tutorial guide describes the building of the Debian
 package to ordinary Debian users and prospective developers using
 the <emphasis role="strong">debmake</emphasis> command.</simpara>

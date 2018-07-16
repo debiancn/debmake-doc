@@ -1,8 +1,8 @@
 = Guide for Debian Maintainers
 :Author:    Osamu Aoki
 :Email:     osamu@debian.org
-:Date:      {date}
-:Revision:  {revision}
+:Date:      @@@debdate@@@
+:Revision:  @@@debversion@@@
 :encoding: UTF-8
 // The above date and revision are only used by testing HTML test page within
 // this directory.

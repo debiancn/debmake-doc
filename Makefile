@@ -32,6 +32,8 @@ build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	$(MAKE) xml	                # XML docs for all PO
 	-mkdir -p $(TMPDIR)
 	-mkdir -p $(BASEDIR)/html
+	# leave fuzzy status in the package build log
+	-cat fuzzy.log
 
 install: css html pdf epub txt # build docs from XML
 #ifndef DEBUG

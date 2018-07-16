@@ -8,15 +8,11 @@ Section: Debian
 
 Format: text
 Files: /usr/share/doc/debmake-doc/debmake-doc.en.txt.gz
-Files: /usr/share/doc/debmake-doc/debmake-doc.ru.txt.gz
 
 Format: PDF
 Files: /usr/share/doc/debmake-doc/debmake-doc.en.pdf
-Files: /usr/share/doc/debmake-doc/debmake-doc.ru.pdf
 
 Format: HTML
 Index: /usr/share/doc/debmake-doc/html/index.en.html
 Files: /usr/share/doc/debmake-doc/html/*.en.html
-Index: /usr/share/doc/debmake-doc/html/index.ru.html
-Files: /usr/share/doc/debmake-doc/html/*.ru.html
 

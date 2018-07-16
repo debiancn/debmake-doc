@@ -21,7 +21,7 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-This ``Guide for Debian Maintainers'' ({date}) was made using the following previous documents as its reference:
+This ``Guide for Debian Maintainers'' (@@@debdate@@@) was made using the following previous documents as its reference:
 
 * ``Making a Debian Package (AKA the Debmake Manual)'', copyright © 1997 Jaldhar Vyas.
 * ``The New-Maintainer’s Debian Packaging Howto'', copyright © 1997 Will Lowe.

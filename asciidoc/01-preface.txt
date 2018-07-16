@@ -24,7 +24,7 @@ These make it somewhat overwhelming for many new prospective Debian maintainers 
 * Tips for making the Debian package.
 * Examples of making Debian packages for several typical scenarios.
 
-The author felt limitations of updating the original ``New Maintainers' Guide'' with the *dh-make* package and decided to create an alternative tool and its matching document to address modern requirements.  The result is the *debmake* (version: {debmakeversion}) package and this updated ``Guide for Debian Maintainers'' in the *debmake-doc* (version: {revision}) package.
+The author felt limitations of updating the original ``New Maintainers' Guide'' with the *dh-make* package and decided to create an alternative tool and its matching document to address modern requirements.  The result is the *debmake* (version: @@@debmakeversion@@@) package and this updated ``Guide for Debian Maintainers'' in the *debmake-doc* (version: @@@debversion@@@) package.
 
 Many chores and tips have been integrated into the *debmake* command making this guide simple.  This guide also offers many packaging examples.
 

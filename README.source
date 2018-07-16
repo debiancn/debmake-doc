@@ -10,20 +10,32 @@ All updates should be committed to "devel" branch of the Git repository at
 
   https://salsa.debian.org/debian/debmake-doc
 
-Then the non-native Debian binary package is built using the “debmake -t -i
-debuild” command using quasi-native Debian package scheme as described in 6.2.
-
-The uploaded package should be recorded into the Git repository using "gbp
-import-dsc" with "pristine-tar" (master, upstream, pristine-tar branches).
+The "devel" branch is meant to build the non-native Debian binary package
+using the “debmake -t -i debuild” command with quasi-native Debian package
+scheme as described in 6.2.
 
 == Build
 
-The binary Debian package build of debmake-doc can be automated as:
+The build process involves several files for make:
 
- $ make package
+* Makefile -- "package" target does “debmake -t -i debuild”
+* Makefile.common -- Common build parameters
+* Makefile.pkg -- "pkg" target to generate the packaging example logs
+* Makefile.dbk -- build documentation from the asciidoc source and the
+  packaging example logs
 
-This regenerates the packaging example logs and runs full document package
-build in chroot.
+== Normal build
+
+The packaging of debmake-doc is:
+
+* package build by "make package" from the git "devel" branch.
+* upload package with "dput"
+* Import to git with "gbp import-dsc" with "pristine-tar" (master, upstream,
+  pristine-tar branches).
+* Merge "master" into "devel" branch for readable history.
+
+The execution of "make package" regenerates the packaging example logs and
+runs full document package build in chroot.
 
 This takes long time and isn't friendly for debug.
 

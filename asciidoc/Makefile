@@ -51,9 +51,6 @@ $(MANUAL).xml: $(ALLTXT)
 	asciidoc --doctype book\
 		-b docbook \
 		-a 'newline=\n' \
-		-a debmakeversion="$(DEBMAKEVERSION)" \
-		-a revision="$(DEBVERSION)" \
-		-a date="$(DEBDATE)" \
 		$(MANUAL).txt
 
 test.xml: test.txt
@@ -61,9 +58,6 @@ test.xml: test.txt
 	asciidoc --doctype book\
 		-b docbook \
 		-a 'newline=\n' \
-		-a debmakeversion="$(DEBMAKEVERSION)" \
-		-a revision="$(DEBVERSION)" \
-		-a date="$(DEBDATE)" \
 		$<
 
 %.html: $(ALLTXT)
@@ -72,15 +66,11 @@ test.xml: test.txt
 	asciidoc \
 		-a toc2 \
 		-a 'newline=\n' \
-		-a debmakeversion="$(DEBMAKEVERSION)" \
-		-a revision="$(DEBVERSION)" \
-		-a date="$(DEBDATE)" \
 		$*.txt
 	mv -f $(MANUAL).keep $(MANUAL).txt
 
 debmake.1: manpage.txt
 	a2x --doctype manpage --format manpage \
-		-a debmakeversion="$(DEBMAKEVERSION)" \
 		manpage.txt
 
 # This PDF is not used by debmake-doc
@@ -88,9 +78,6 @@ $(MANUAL).pdf: $(ALLTXT)
 	@$(call check-command, asciidoc, asciidoc)
 	a2x -v --doctype book --format pdf --dblatex-opts="-b xetex"\
 		-a 'newline=\n' \
-		-a debmakeversion="$(DEBMAKEVERSION)" \
-		-a revision="$(DEBVERSION)" \
-		-a date="$(DEBDATE)" \
 		$(MANUAL).txt
 clean:
 	-rm -f $(GENTXT)
