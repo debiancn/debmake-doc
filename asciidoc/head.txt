@@ -73,7 +73,7 @@ in the <ulink url="https://tracker.debian.org/pkg/debmake-doc">debmake-doc packa
 </listitem>
 <listitem>
 <simpara>
-at the <ulink url="https://www.debian.org/doc/devel-manuals#debmake-doc">Debian Documentation web site</ulink>.
+at the <ulink url="https://www.debian.org/doc/devel-manuals">Debian Documentation web site</ulink>.
 </simpara>
 </listitem>
 </itemizedlist>
