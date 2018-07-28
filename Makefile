@@ -20,7 +20,9 @@ include Makefile.dbk
 $(BASEXML):
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
 
-build: $(PKG) $(BASEXML) $(wildcard $(ASCIIDOC_DIR)/*.txt)
+build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
+	# process ASCIIDOC after $(pkg) targets even under the parallel build
+	$(MAKE) $(BASEXML)
 	echo "DEBUG='$(DEBUG)'"
 	echo "LANGPO='$(LANGPO)'"
 	echo "LANGALL='$(LANGALL)'"
