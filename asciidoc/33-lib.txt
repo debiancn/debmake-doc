@@ -1,15 +1,15 @@
 [[lib]]
 === Library package
 
-Packaging the library software requires you to perform much more work than usual.  Here are some reminders for packaging the library software:
+Packaging library software requires you to perform much more work than usual.  Here are some reminders for packaging library software:
 
-* The library binary package must be named as <<libnames>>.
-* Debian ships shared library such as */usr/lib/<triplet>/lib*'foo-0.1'*.so.*'1.0.0' (see <<multiarch>>).
-* Debian encourages to use versioned symbols in the shared library (see <<symbols>>).
+* The library binary package must be named as in <<libnames>>.
+* Debian ships shared libraries such as */usr/lib/<triplet>/lib*'foo-0.1'*.so.*'1.0.0' (see <<multiarch>>).
+* Debian encourages using versioned symbols in the shared library (see <<symbols>>).
 * Debian doesn't ship ***.la**  libtool library archive files.
-* Debian discourages to use and ship ***.a** static library files.
+* Debian discourages using and shipping ***.a** static library files.
 
-Before packaging the shared library software, see:
+Before packaging shared library software, see:
 
 * https://www.debian.org/doc/debian-policy/#document-ch-sharedlibs[Chapter 8 - Shared libraries] of the ``Debian Policy Manual''
 * https://www.debian.org/doc/debian-policy/#libraries[10.2 Libraries] of the ``Debian Policy Manual''
@@ -18,6 +18,6 @@ Before packaging the shared library software, see:
 For the historic background study, see:
 
 * https://debconf4.debconf.org/talks/dependency-hell/img1.html[Escaping the Dependency Hell] footnote:[This document was written before the introduction of the *symbols* file.]
-** This encourages to have versioned symbols in the shared library.
-* https://www.netfort.gr.jp/\~dancer/column/libpkg-guide/libpkg-guide.html[Debian Library Packaging guide] footnote:[The strong preference to use the SONAME versioned *-dev* package names over the single *-dev* package name in its https://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html#devpkg[Chapter 6. Development (-DEV) packages] does not seem to be shared by the former ftp-master (Steve Langasek). This document was written before the introduction of the *multiarch* system and the *symbols* file.]
+** This encourages having versioned symbols in the shared library.
+* https://www.netfort.gr.jp/\~dancer/column/libpkg-guide/libpkg-guide.html[Debian Library Packaging guide] footnote:[The strong preference is to use the SONAME versioned *-dev* package names over the single *-dev* package name in https://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html#devpkg[Chapter 6. Development (-DEV) packages], which does not seem to be shared by the former ftp-master (Steve Langasek). This document was written before the introduction of the *multiarch* system and the *symbols* file.]
 ** Please read the discussion thread following https://lists.debian.org/debian-devel/2004/06/msg00069.html[its announcement], too.

@@ -3,7 +3,7 @@
 
 Debian cares about supporting new ports or flavours.  The new ports or flavours
 require https://wiki.debian.org/DebianBootstrap[bootstrapping] operation for
-the cross-build of initial minimal native-building system.  In order to avoid
+the cross-build of the initial minimal native-building system.  In order to avoid
 build-dependency loops during bootstrapping, the build-dependency needs to be
 reduced using the https://wiki.debian.org/BuildProfileSpec[profile] builds
 feature.

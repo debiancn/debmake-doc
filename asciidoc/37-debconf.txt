@@ -10,7 +10,7 @@ The *debconf* package enables us to configure packages during their installation
 
 All user interactions for the package installation must be handled by this *debconf* system using the following files.
 
-* *debian/*'binarypackage'*.cofig*
+* *debian/*'binarypackage'*.config*
 ** This is the *debconf* *config* script used for asking any questions necessary to configure the package.
 * *debian/*'binarypackage'*.template*
 ** This is the *debconf* *templates* file used for asking any questions necessary to configure the package.
@@ -20,5 +20,5 @@ All user interactions for the package installation must be handled by this *debc
 ** *debian/*'binarypackage'*.postinst*
 ** *debian/*'binarypackage'*.postrm*
 
-See *dh_installdebconf*(1), *debconf*(7), *debconf-devel*(7) and https://www.debian.org/doc/debian-policy/#prompting-in-maintainer-scripts[3.9.1 Prompting in maintainer scripts] of the ``Debian Policy Manual''.
+See *dh_installdebconf*(1), *debconf*(7), *debconf-devel*(7) and https://www.debian.org/doc/debian-policy/#prompting-in-maintainer-scripts[3.9.1 Prompting in maintainer scripts] in the ``Debian Policy Manual''.
 

@@ -1,7 +1,7 @@
 [[harden]]
 === Compiler hardening
 
-The compiler hardening support spreading for Debian *jessie* (8.0, TBA) demands us to pay extra attention for the packaging.
+The compiler hardening support spreading for Debian *jessie* (8.0, TBA) demands that we pay extra attention to the packaging.
 
 You should read the following references in detail.
 

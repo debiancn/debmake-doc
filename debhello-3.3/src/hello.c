@@ -10,7 +10,7 @@ main()
         setlocale(LC_ALL,"");
         bindtextdomain(PACKAGE, LOCALEDIR);
         textdomain(PACKAGE);
-        printf(_("Hello, I am %s!\n"), PACKAGE_AUTHOR);
+        printf(_("Hello, my name is %s!\n"), PACKAGE_AUTHOR);
         sharedlib();
         return 0;
 }

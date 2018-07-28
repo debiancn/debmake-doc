@@ -1,9 +1,9 @@
 [[copyright]]
 === debian/copyright
 
-Debian takes the copyright and license matters very seriously. The ``Debian Policy Manual'' enforces to have summary of them in the *debian/copyright* file in the package.
+Debian takes the copyright and license matters very seriously. The ``Debian Policy Manual'' enforces having a summary of them in the *debian/copyright* file in the package.
 
-You should format it as the https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/[machine-readable debian/copyright file] (DEP-5).
+You should format it as a https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/[machine-readable debian/copyright file] (DEP-5).
 
 CAUTION: The *debian/copyright* file should be sorted to keep the generic file patterns at the top of the list.  See <<koption>>.
 
@@ -13,7 +13,7 @@ Unless specifically requested to be pedantic with the *-P* option, the *debmake*
 
 NOTE: If you find issues with this license checker, please file a bug report to the *debmake* package with the problematic part of text containing the copyright and license.
 
-NOTE: The *debmake* command focuses on bunching up same copyright and license claims in details to create template for *debian/copyright*.  In order to do this within reasonable time, it only picks the first section which looks like copyright and license claims.  So its license assignment may not be optimal.  Please also use other tools such as *licensecheck*.
+NOTE: The *debmake* command focuses on bunching up same copyright and license claims in detail to create template for *debian/copyright*.  In order to do this within reasonable time, it only picks the first section which looks like copyright and license claims.  So its license assignment may not be optimal.  Please also use other tools such as *licensecheck*.
 
 TIP:  You are highly encouraged to check the license status with the *licensecheck*(1) command and, as needed, with your manual code review.
 

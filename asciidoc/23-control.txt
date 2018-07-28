@@ -1,7 +1,7 @@
 [[control]]
 === debian/control
 
-The *debian/control* file consists of blocks of meta data separated by the blank line.  Each block of meta data defines the following in this order:
+The *debian/control* file consists of blocks of meta data separated by a blank line.  Each block of meta data defines the following in this order:
 
 * meta data for the Debian source package
 * meta data for the Debian binary packages
@@ -9,9 +9,9 @@ The *debian/control* file consists of blocks of meta data separated by the blank
 See https://www.debian.org/doc/debian-policy/#document-ch-controlfields[Chapter 5 - Control files and their fields] of the ``Debian Policy Manual'' for the definition of each meta data.
 
 [[split]]
-==== Split of the Debian binary package
+==== Split of a Debian binary package
 
-For well behaving build systems, the split of the Debian binary package into small ones can be realized as follows.
+For well behaving build systems, the split of a Debian binary package into small ones can be realized as follows.
 
 * Create binary package entries for all binary packages in the *debian/control* file.
 * List all file paths (relative to *debian/tmp*) in the corresponding *debian/*'binarypackage'**.install** files.
@@ -24,7 +24,7 @@ Please check examples in this guide:
 [[boption]]
 ===== debmake -b
 
-The *debmake* command with the *-b* option provides intuitive and flexible method to creates the initial template *debian/control* file defining the split of the Debian binary packages with following stanzas:
+The *debmake* command with the *-b* option provides an intuitive and flexible method to create the initial template *debian/control* file defining the split of the Debian binary packages with following stanzas:
 
 * *Package:*
 * *Architecture:*
@@ -32,7 +32,7 @@ The *debmake* command with the *-b* option provides intuitive and flexible metho
 * *Depends:*
 * *Pre-Depends:*
 
-The *debmake* command also set an appropriate set of substvars used in each pertinent dependency stanza.
+The *debmake* command also sets an appropriate set of substvars used in each pertinent dependency stanza.
 
 Let's quote the pertinent part from the *debmake* manpage here.
 
@@ -63,32 +63,32 @@ Here are some typical multiarch package split scenarios for the following upstre
 [[libnames]]
 ===== The library package name
 
-Let's consider that the upstream source tarball of the *lib*'foo' library is updated from *lib*'foo-7.0'*.tar.gz* to *lib*'foo-8.0'*.tar.gz* with the new SONAME major version which affects other packages.
+Let's consider that the upstream source tarball of the *lib*'foo' library is updated from *lib*'foo-7.0'*.tar.gz* to *lib*'foo-8.0'*.tar.gz* with a new SONAME major version which affects other packages.
 
 The binary library package must be renamed from *lib*'foo7' to *lib*'foo8' to keep the *unstable* suite system working for all dependent packages after the upload of the package based on the *lib*'foo-8.0'*.tar.gz*.
 
-WARNING: If the binary library package isn't renamed, many dependent packages in the *unstable* suite become broken just after the library upload even if the binNMU is requested.  The binNMU may not happen immediately after the upload due to several reasons.
+WARNING: If the binary library package isn't renamed, many dependent packages in the *unstable* suite become broken just after the library upload even if a binNMU upload is requested.  The binNMU may not happen immediately after the upload due to several reasons.
 
 The *-dev* package must follow one of the following naming rules:
 
 * Use the *unversioned -dev* package name: *lib*'foo'*-dev*
-** This is the typical for the leaf library packages.
+** This is the typical one for leaf library packages.
 ** Only one version of the library source package is allowed in the archive.
-*** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent the dependency breakage in the *unstable* archive during the library transition.
+*** The associated library package needs to be renamed from *lib*'foo7' to *lib*'foo8' to prevent dependency breakage in the *unstable* archive during the library transition.
 ** This approach should be used if the simple binNMU resolves the library dependency quickly for all affected packages. (https://en.wikipedia.org/wiki/Application_binary_interface[ABI] change by dropping the deprecated https://en.wikipedia.org/wiki/Application_programming_interface[API] while keeping the active API unchanged.)
 ** This approach may still be a good idea if manual code updates, etc. can be coordinated and manageable within limited packages. (https://en.wikipedia.org/wiki/Application_programming_interface[API] change)
 
 * Use the *versioned -dev* package names: *lib*'foo7'*-dev* and *lib*'foo8'*-dev*
-** This is typical for the many major library packages.
+** This is typical for many major library packages.
 ** Two versions of the library source packages are allowed simultaneously in the archive.
 *** Make all dependent packages depend on *lib*'foo'*-dev*.
 *** Make both *lib*'foo7'*-dev* and *lib*'foo8'*-dev* provide *lib*'foo'*-dev*.
 *** The source package needs to be renamed as *lib*'foo7-7.0'*.tar.gz* and *lib*'foo8-8.0'*.tar.gz* respectively from *lib*'foo-?.0'*.tar.gz*.
 *** The package specific install file path including *lib*'foo7' and *lib*'foo8' respectively for header files etc. needs to be chosen to make them co-installable.
 ** Do not use this heavy handed approach, if possible.
-** This approach should be used if the update of multiple dependent packages require manual code updates, etc. (https://en.wikipedia.org/wiki/Application_programming_interface[API] change)  Otherwise, the affected packages becomes RC buggy with FTBFS.
+** This approach should be used if the update of multiple dependent packages require manual code updates, etc. (https://en.wikipedia.org/wiki/Application_programming_interface[API] change)  Otherwise, the affected packages become RC buggy with FTBFS.
 
-TIP: If data encoding scheme changes (e.g., latin1 to utf-8), the same care as the API change needs to be taken.
+TIP: If the data encoding scheme changes (e.g., latin1 to utf-8), the same care as the API change needs to be taken.
 
 See <<lib>>.
 
@@ -97,7 +97,7 @@ See <<lib>>.
 
 The *debian/control* file also defines the package dependency in which the https://www.debian.org/doc/debian-policy/ch-source.html#s-substvars[variable substitutions mechanism] (substvar) may be used to free package maintainers from chores of tracking most of the simple package dependency cases.  See *deb-substvars*(5).
 
-The *debmake* command supports following substvars.
+The *debmake* command supports the following substvars:
 
 * *$\{misc:Depends}* for all binary packages
 * *$\{misc:Pre-Depends}* for all multiarch packages
@@ -109,7 +109,7 @@ The *debmake* command supports following substvars.
 
 For the shared library, required libraries found simply by "*objdump -p* '/path/to/program' *| grep NEEDED*" are covered by the *shlib* substvar.
 
-For the Python and other interpreters, required modules found simply looking for lines with ``*import*'', ``*use*'', ``*require*'', etc., are covered by the corresponding substvars.
+For Python and other interpreters, required modules found simply looking for lines with ``*import*'', ``*use*'', ``*require*'', etc., are covered by the corresponding substvars.
 
 For other programs which do not deploy their own substvars, the *misc* substvar covers their dependency.
 
@@ -120,14 +120,14 @@ For libraries and modules required via the dynamic loading mechanism including t
 [[binnmu]]
 ==== binNMU safe
 
-A https://wiki.debian.org/binNMU[binNMU] is a binary-only non-maintainer upload performed for library transitions etc.  In a binNMU, only the ``*Architecture: any*'' packages are rebuilt with a suffixed version number (e.g. version 2.3.4-3 will become 2.3.4-3+b1).  The ``*Architecture: all*'' packages are not built.
+A https://wiki.debian.org/binNMU[binNMU] is a binary-only non-maintainer upload performed for library transitions etc.  In a binNMU upload, only the ``*Architecture: any*'' packages are rebuilt with a suffixed version number (e.g. version 2.3.4-3 will become 2.3.4-3+b1).  The ``*Architecture: all*'' packages are not built.
 
-The dependency defined in the *debian/control* file among binary packages from a same source package should be safe for the binNMU.  This needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
+The dependency defined in the *debian/control* file among binary packages from the same source package should be safe for the binNMU.  This needs attention if there are both ``*Architecture: any*'' and ``*Architecture: all*'' packages involved in it.
 
-* ``*Architecture: any*'' package depends on ``*Architecture: any*'' 'foo' package
+* ``*Architecture: any*'' package: depends on ``*Architecture: any*'' 'foo' package
 ** *Depends:* 'foo' *(= $\{binary:Version})*
-* ``*Architecture: any*'' package depends on ``*Architecture: all*'' 'bar' package
+* ``*Architecture: any*'' package: depends on ``*Architecture: all*'' 'bar' package
 ** *Depends:* 'bar' *(= $\{source:Version}*
-* ``*Architecture: all*'' package depends on ``*Architecture: any*'' 'baz' package
+* ``*Architecture: all*'' package: depends on ``*Architecture: any*'' 'baz' package
 ** *Depends:* 'baz' *(>= $\{source:Version})*, 'baz' *(<< $\{source:Upstream-Version}.0~)*
 

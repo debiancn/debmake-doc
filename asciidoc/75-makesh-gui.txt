@@ -3,7 +3,7 @@
 
 Here is an example of creating a simple Debian package from a POSIX shell GUI program using the *Makefile* as its build system.
 
-This upstream is based in <<makefile-sh>> with enhanced GUI support.
+This upstream is based on <<makefile-sh>> with enhanced GUI support.
 
 Let's assume its upstream tarball to be *debhello-1.2.tar.gz*.
 
@@ -28,16 +28,16 @@ Here, the desktop file is updated to be *Terminal=false* as a GUI program.
 include::../debhello-1.2-pkg1/step102.slog[]
 ----
 
-All other files are the same as <<makefile-sh>>.
+All other files are the same as in <<makefile-sh>>.
 
-Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify the generated binary package is a shell script.
+Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify that the generated binary package is a shell script.
 
 ----
 sys::[head -n12  ../debhello-1.2-pkg1/step200.slog]
 ...
 ----
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 // .The source tree after the basic *debmake* execution. (v=1.2)
 // ----
@@ -56,7 +56,7 @@ Let's make this Debian package better as the maintainer.
 include::../debhello-1.2-pkg1/step302.slog[]
 ----
 
-Please note manually added *zenity*.
+Please note the manually added *zenity* dependency.
 
 The *debian/rules* file is exactly the same as the one in <<makefile-sh>>.
 
@@ -67,7 +67,7 @@ There are several other template files under the *debian/* directory.  These als
 include::../debhello-1.2-pkg1/step400.slog[]
 ----
 
-The rest of the packaging activities are practically the same as the one in <<makefile-sh>>.
+The rest of the packaging activities are practically the same as in <<makefile-sh>>.
 
 Here is the generated dependency list of binary packages.
 

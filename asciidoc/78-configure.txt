@@ -1,9 +1,9 @@
 [[configure-single]]
-=== Makefile.in + configure (single-binary)
+=== Makefile.in + configure (single-binary package)
 
-Here is an example of creating a simple Debian package from a simple C source using the *Makefile.in* and *configure* as its build system.
+Here is an example of creating a simple Debian package from a simple C source program using *Makefile.in* and *configure* as its build system.
 
-This is an enhanced upstream source example for <<makefile-single>>.  This also links to an external library *libm* and this source is configurable using arguments to the *configure* script which generates the *Makefile* and *src/config.h* files.
+This is an enhanced upstream source example for <<makefile-single>>.  This also links to an external library, *libm*, and this source is configurable using arguments to the *configure* script, which generates the *Makefile* and *src/config.h* files.
 
 Let's assume this upstream tarball to be *debhello-1.5.tar.gz*.
 
@@ -42,7 +42,7 @@ include::../debhello-1.5-pkg1/step102.slog[]
 include::../debhello-1.5-pkg1/step103.slog[]
 ----
 
-Please note that the *configure* command replaces strings with *@...@* in the *Makefile.in* to produce *Makefile* and creates *src/config.h*.
+Please note that the *configure* command replaces strings with *@...@* in *Makefile.in* to produce *Makefile* and creates *src/config.h*.
 
 Let's package this with the *debmake* command.
 
@@ -53,7 +53,7 @@ sys::[head -n12  ../debhello-1.5-pkg1/step200.slog]
 
 The result is similar to <<step-debmake>> but not exactly the same.
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 // .The source tree after the basic *debmake* execution. (v=1.5)
 // ----

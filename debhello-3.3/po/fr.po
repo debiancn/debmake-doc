@@ -17,8 +17,8 @@ msgstr ""
 
 #: src/hello.c:34
 #, c-format
-msgid "Hello, I am %s!\n"
-msgstr "Bonjour, je suis %s!\n"
+msgid "Hello, my name is %s!\n"
+msgstr "Bonjour, je m'appelle %s!\n"
 
 #: lib/sharedlib.c:29
 #, c-format

@@ -22,7 +22,7 @@ This is installed in the */usr/share/doc/*'binarypackage' directory as *changelo
 
 The upstream changelog is installed in the */usr/share/doc/*'binarypackage' directory as *changelog.gz*.
 
-The upstream changelog is automatically found by the *dh_installchangelogs* using the case insensitive match of its file name to *changelog*, *changes*, *changelog.txt*, *changes.txt*, *history*, *history.txt*, or *changelog.md* and searched in the *./* *doc/*, or *docs/* directories.
+The upstream changelog is automatically found by the *dh_installchangelogs* using the case insensitive match of its file name to *changelog*, *changes*, *changelog.txt*, *changes.txt*, *history*, *history.txt*, or *changelog.md* and searched in the *./* *doc/* or *docs/* directories.
 
-After finishing your packaging and verifying its quality, please execute the ``*dch -r*'' command and save the finalized *debian/changelog* file with the distribution normally set to *unstable*. footnote:[If you are using the *vim* editor, make sure to save this with the ``*:wq*'' command.]  If you are packaging for the backports, security updates, LTS, etc., please use the appropriate distribution names, instead.
+After finishing your packaging and verifying its quality, please execute the ``*dch -r*'' command and save the finalized *debian/changelog* file with the distribution normally set to *unstable*. footnote:[If you are using the *vim* editor, make sure to save this with the ``*:wq*'' command.]  If you are packaging for backports, security updates, LTS, etc., please use the appropriate distribution names instead.
 
