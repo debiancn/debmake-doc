@@ -51,6 +51,8 @@ example logs.
 First, you set up source with:
 
  $ export DEBUG=1 # more verbose reporting
+ $ sudo apt-get update
+ $ sudo apt-get install git gitk debmake devscripts
  $ sudo apt-get build-dep debmake-doc
  $ git clone git@salsa.debian.org:debian/debmake-doc.git
  $ cd debmake-doc
