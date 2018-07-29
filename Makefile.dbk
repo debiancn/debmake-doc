@@ -64,6 +64,10 @@ DBLATEX	:= dblatex
 #export DRAFTMODE := yes
 export DRAFTMODE := maybe
 #######################################################################
+# Normal doc content as English base xml
+$(BASEXML): $(wildcard $(ASCIIDOC_DIR)/*.txt)
+	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
+
 # set last chapter as appendix.
 $(MANUAL).en.x01: $(BASEXML)
 	@$(call check-command, xsltproc, xsltproc)
@@ -148,6 +152,10 @@ doc-clean:
 clean:: doc-clean
 
 #######################################################################
+.PHONY: base-xml
+base-xml: $(BASEXML)
+
+#######################################################################
 .PHONY: all-xml
 all-xml: $(SRC_XML) $(ENT_ALL)
 
@@ -158,7 +166,7 @@ doc-all: css html txt epub
 #######################################################################
 # $ make test      # build html for testing (for Translator)
 #######################################################################
-.PHONY: test
+.PHONY: doc-test
 doc-test: html css
 
 #######################################################################

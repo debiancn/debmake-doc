@@ -50,7 +50,7 @@ example logs.
 
 First, you set up source with:
 
- $ export DEBUG=1
+ $ export DEBUG=1 # more verbose reporting
  $ sudo apt-get build-dep debmake-doc
  $ git clone git@salsa.debian.org:debian/debmake-doc.git
  $ cd debmake-doc
@@ -59,11 +59,16 @@ First, you set up source with:
 
 Then refresh files under po/ directory with:
 
- $ make all-xml   # building all xml source while updating PO
+ $ make base-xml  # building base xml from asciidoc
+ $ make all-xml   # building all xml source while updating PO from base-xml
 
-Translate this by hacking PO files under po/ directory using tools such as
-poedit.  The result of your translation can be previewed with the browser by
-generating html files.
+or simply as:
+
+ $ make build     # building all xml source while updating PO from asciidoc
+
+Now you are ready to translate this source by hacking PO files under po/
+directory using tools such as poedit.  The result of your translation can be
+previewed with the browser by generating html files.
 
  $ make LANGPO=<lang> css html  # preview html
 
@@ -98,7 +103,6 @@ Results are found under tmp/ .
 If you are checking ASCIIDOC markup issue and wish to test build without going
 through XML, there is an alternative html build method:
 
- $ export DEBUG=1
  $ make pkg       # building packaging log example
  $ cd asciidoc
  $ make
@@ -113,21 +117,24 @@ In order to keep the translation in sync with the English, po/pot files are
 generated in the way not to contain <screen> contents and url attribute of
 <ulink>.
 
-This is done directly by the itstool from gettext (without using po4a).
+This is done directly by the itstool from gettext (without using po4a) as
+described in the above "Debug build".
 
 If you updated a PO file while others committing the same file before you
-commit it, merging isn't trivial.  Don't try to merge just by git.
+commit it, merging of the PO file isn't trivial.  Don't try to merge just by
+git.  Here is the way to do it.
 
-* Copy your po/<lang>.po to outside of the source tree as /path/to/<lang>.po.my .
+* Copy your latest po/<lang>.po to outside of the source tree as
+  /path/to/<lang>.po.my .
 * Use gitk to checkout local "devel" branch.
 * Use gitk to reset your local "devel" to "remotes/origin/devel" (hard reset).
 * Use "git pull origin devel"
 * Move po/<lang>.po to po/<lang>.po.their .
 * Move back /path/to/<lang>.po.my to po/<lang>.po.my .
 * msgcat --use-first po/<lang>.po.my po/<lang>.po.their >po/<lang>.po
-* Update po with the latest source "make all-xml"
+* Update po with the latest source "make build"
 
-Now you have merged PO po/<lang>.po .
+Now you have merged PO to po/<lang>.po .
 
 You may un-fuzzy and commit po/<lang>.po .
 

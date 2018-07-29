@@ -15,14 +15,9 @@ include Makefile.common
 include Makefile.pkg
 include Makefile.dbk
 
-
-# Normal doc content as English base xml
-$(BASEXML):
-	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
-
 build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	# process ASCIIDOC after $(pkg) targets even under the parallel build
-	$(MAKE) $(BASEXML)
+	$(MAKE) base-xml
 	echo "DEBUG='$(DEBUG)'"
 	echo "LANGPO='$(LANGPO)'"
 	echo "LANGALL='$(LANGALL)'"
@@ -34,8 +29,6 @@ build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	-mkdir -p $(BASEDIR)/html
 	# leave fuzzy status in the package build log
 	-cat fuzzy.log
-
-preview: css html # build docs from XML
 
 install: css html pdf epub txt # build docs from XML
 #ifndef DEBUG
@@ -52,4 +45,4 @@ distclean:: clean
 package:
 	debmake -t -y -zx -b':doc' -i pdebuild
 
-.PHONY: all build preview install clean distclean package
+.PHONY: all build install clean distclean package
