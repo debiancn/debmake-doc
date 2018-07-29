@@ -16,7 +16,7 @@ include Makefile.pkg
 include Makefile.dbk
 
 
-# Normal doc content as xml and prepare install directory
+# Normal doc content as English base xml
 $(BASEXML):
 	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
 
@@ -29,11 +29,13 @@ build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	echo "NOPDF='$(NOPDF)'"
 	echo "BASEDIR='$(BASEDIR)'"
 	echo "TMPDIR='$(TMPDIR)'"
-	$(MAKE) xml	                # XML docs for all PO
+	$(MAKE) all-xml	                # XML docs for all PO
 	-mkdir -p $(TMPDIR)
 	-mkdir -p $(BASEDIR)/html
 	# leave fuzzy status in the package build log
 	-cat fuzzy.log
+
+preview: css html # build docs from XML
 
 install: css html pdf epub txt # build docs from XML
 #ifndef DEBUG
@@ -50,4 +52,4 @@ distclean:: clean
 package:
 	debmake -t -y -zx -b':doc' -i pdebuild
 
-.PHONY: all build clean
+.PHONY: all build preview install clean distclean package

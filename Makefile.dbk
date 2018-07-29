@@ -148,8 +148,8 @@ doc-clean:
 clean:: doc-clean
 
 #######################################################################
-.PHONY: xml
-xml: $(SRC_XML) $(ENT_ALL)
+.PHONY: all-xml
+all-xml: $(SRC_XML) $(ENT_ALL)
 
 #######################################################################
 .PHONY: doc-all
