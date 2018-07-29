@@ -99,7 +99,11 @@ Update English original content by hacking ASCIIDOC text files under asciidoc/
 directory.  The result can be previewed with the browser by generating html
 files. 
 
+ $ make base-xml  # building base xml from asciidoc
+ $ make LANGPO= all-xml   # building all xml source while updating PO from base-xml
  $ make LANGPO= css html  # preview html
+
+Please note that LANGPO is set to empty string in the above.
 
 Results are found under tmp/html/ .
 
