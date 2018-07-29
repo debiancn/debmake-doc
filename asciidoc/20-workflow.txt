@@ -1,10 +1,10 @@
-The broad overview is presented here for the basic rules of the Debian packaging focusing on the non-native Debian package in the ``*3.0 (quilt)*'' format.
+A broad overview is presented here for the basic rules of Debian packaging focusing on the non-native Debian package in the ``*3.0 (quilt)*'' format.
 
 NOTE: Some details are intentionally skipped for clarity.  Please read the manpages of the *dpkg-source*(1), *dpkg-buildpackage*(1), *dpkg*(1), *dpkg-deb*(1), *deb*(5), etc.
 
 The Debian source package is a set of input files used to build the Debian binary package and is not a single file.
 
-The Debian binary package is a special archive file which holds a set of installable binary data with their associated information.
+The Debian binary package is a special archive file which holds a set of installable binary data with its associated information.
 
 A single Debian source package may generate multiple Debian binary packages defined in the *debian/control* file.
 
@@ -15,7 +15,7 @@ NOTE: There are many wrapper scripts.  Use them to streamline your workflow but 
 [[workflow]]
 === Packaging workflow
 
-The Debian packaging workflow to create the Debian binary package involves generating several specifically named files (see <<name-version>>) as defined in the ``Debian Policy Manual''.
+The Debian packaging workflow to create a Debian binary package involves generating several specifically named files (see <<name-version>>) as defined in the ``Debian Policy Manual''.
 
 The oversimplified method for the Debian packaging workflow can be summarized in 5 steps as follows.
 
@@ -25,11 +25,11 @@ The oversimplified method for the Debian packaging workflow can be summarized in
 * the character separating 'package' and 'version' is changed from *-* (hyphen) to *_* (underscore)
 * *.orig* is added in the file extension.
 4. The Debian package specification files are added to the upstream source under the 'package-version'**/debian/** directory.
-* Required specification files under the *debian/**:
+* Required specification files under the *debian/* directory:
 *debian/rules*::
 The executable script for building the Debian package (see <<rules>>)
 *debian/control*::
-The package configuration file containing the source package name, the source build dependency, the binary package name, the binary dependency, etc. (see <<control>>)
+The package configuration file containing the source package name, the source build dependencies, the binary package name, the binary dependencies, etc. (see <<control>>)
 *debian/changelog*::
 The Debian package history file defining the upstream package version and the Debian revision in its first line (see <<changelog>>)
 *debian/copyright*::
@@ -53,11 +53,11 @@ The copyright and license summary (see <<copyright>>)
 ** ... (There may be multiple Debian binary package files.)
 ** 'package_version-revision_arch'.*changes*
 6. Check the quality of the Debian package with the *lintian* command. (recommended)
-* Follow the rejection guideline from https://ftp-master.debian.org/[ftp-master].
+* Follow the rejection guidelines from https://ftp-master.debian.org/[ftp-master].
 ** https://ftp-master.debian.org/REJECT-FAQ.html[REJECT-FAQ]
 ** https://ftp-master.debian.org/NEW-checklist.html[NEW checklist]
 ** https://ftp-master.debian.org/#lintianrejects[Lintian Autorejects] (https://ftp-master.debian.org/static/lintian.tags[lintian tag list])
-7. Sign the 'package_version-revision'.*dsc* and 'package_version-revision_arch'.*changes* with the *debsign* command using your private GPG key.
+7. Sign the 'package_version-revision'.*dsc* and 'package_version-revision_arch'.*changes* files with the *debsign* command using your private GPG key.
 8. Upload the set of the Debian source and binary package files with the *dput* command to the Debian archive.
 
 Here, please replace each part of the filename as:
@@ -70,17 +70,18 @@ Here, please replace each part of the filename as:
 
 TIP: Many patch management and VCS usage strategies for the Debian packaging are practiced.  You don't need to use all of them.
 
-TIP: There is very extensive documentation in https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html[Chapter 6. Best Packaging Practices] of the ``Debian Developer's Reference''.  Please read it.
-
-TIP: Although a Debian package can be made by writing a *debian/rules* script without using the *debhelper* package, it is unpractical to do so due to the complication of modern packaging concerns such as debug symbol handling, multiarch library, reproducible build, etc.  The modern Debian packaging workflow can be organized into a simple modular workflow by using the *dh* command to invoke many utility scripts in the *debhelper* package and configuring their behavior with declarative configuration files in the *debian/* directory.  Many ``Policy'' required features such as proper file permissions, insertion of installation hook scripts, etc. are automatically 
+TIP: There is very extensive documentation in https://www.debian.org/doc/manuals/developers-reference/best-pkging-practices.html[Chapter 6. Best Packaging Practices] in the ``Debian Developer's Reference''.  Please read it.
 
 [[debhelper]]
 ==== The *debhelper* package
 
-Although a Debian package can be made by writing a *debian/rules* script without using the *debhelper* package, it is unpractical to do so.  There are too many modern ``Policy'' required features to be addressed, such as application of the proper file permissions, use of the proper architecture dependent library installation path, insertion of the installation hook scripts, generation of the debug symbol package, generation of package dependency information, generation of the package information files, application of the proper timestamp for reproducible build, etc.
+Although a Debian package can be made by writing a *debian/rules* script without using the *debhelper* package, it is impractical to do so.  There are too many modern ``Policy'' required features to be addressed, such as application of the proper file permissions, use of the proper architecture dependent library installation path, insertion of the installation hook scripts, generation of the debug symbol package, generation of package dependency information, generation of the package information files, application of the proper timestamp for reproducible build, etc.
+
+*Debhelper* package provides a set of useful scripts in order to simplify Debian's packaging workflow and reduce the burden of package maintainers. When properly used, they will help packagers handle and implement ``Policy'' required features automatically.
 
 The modern Debian packaging workflow can be organized into a simple modular workflow by:
 
-* using the *dh* command to invoke many utility scripts automatically from the *debhelper* package and
+* using the *dh* command to invoke many utility scripts automatically from the *debhelper* package, and
 * configuring their behavior with declarative configuration files in the *debian/* directory.
 
+You should almost always use *debhelper* as your package's build dependency. This document also assumes that you are using a fairly contemporary version of *debhelper* to handle packaging works in the following contents.

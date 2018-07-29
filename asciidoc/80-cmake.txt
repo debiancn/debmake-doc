@@ -1,9 +1,9 @@
 [[cmake-single]]
-=== CMake (single-binary)
+=== CMake (single-binary package)
 
-Here is an example of creating a simple Debian package from a simple C source using the CMake (*CMakeLists.txt* and some files such as *config.h.in*) as its build system. See <<cmake>>.
+Here is an example of creating a simple Debian package from a simple C source program using CMake (*CMakeLists.txt* and some files such as *config.h.in*) as its build system. See <<cmake>>.
 
-The *cmake* command generates the *Makefile* file based on the *CMakeLists.txt* file and its *-D* option.  It also configure the file as specified in its *configure_file(...)* by replacing strings with *@...@* and changing *#cmakedefine ...* line.
+The *cmake* command generates the *Makefile* file based on the *CMakeLists.txt* file and its *-D* option.  It also configures the file as specified in its *configure_file(...)* by replacing strings with *@...@* and changing the *#cmakedefine ...* line.
 
 Let's assume this upstream tarball to be *debhello-1.7.tar.gz*.
 
@@ -52,7 +52,7 @@ sys::[head -n12  ../debhello-1.7-pkg1/step200.slog]
 
 The result is similar to <<configure-single>> but not exactly the same.
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 // .The source tree after the basic *debmake* execution. (v=1.7)
 // ----

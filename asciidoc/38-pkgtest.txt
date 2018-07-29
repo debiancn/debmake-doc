@@ -1,14 +1,14 @@
 [[ci]]
 === Continuous integration
 
-http://dep.debian.net/deps/dep8/[DEP-8] defines the *debian/tests/control* file as the RFC822-style test metadata file for the https://en.wikipedia.org/wiki/Continuous_integration[continuous integration] (CI) of the Debian package.
+http://dep.debian.net/deps/dep8/[DEP-8] defines the *debian/tests/control* file as the RFC822-style test metadata file for https://en.wikipedia.org/wiki/Continuous_integration[continuous integration] (CI) of the Debian package.
 
-It is used after building the binary packages from the source package containing this *debian/tests/control* file.  When the *adt-run* command provided by the *autopkgtest* package is run, the generated binary packages are installed and tested in the virtual environment according to this file.
+It is used after building the binary packages from the source package containing this *debian/tests/control* file.  When the *autopkgtest* command is run, the generated binary packages are installed and tested in the virtual environment according to this file.
 
 See documents in the */usr/share/doc/autopkgtest/* directory and http://packaging.ubuntu.com/html/auto-pkg-test.html[3. autopkgtest: Automatic testing for packages] of the ``Ubuntu Packaging Guide''.
 
 There are several other CI tools on Debian for you to explore.
 
-* The *debci* package: CI platform on the top of the *autopkgtest* package
+* The *debci* package: CI platform on top of the *autopkgtest* package
 * The *jenkins* package: generic CI platform
 

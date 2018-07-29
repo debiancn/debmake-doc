@@ -1,7 +1,7 @@
 [[dt-option]]
 === Upstream snapshot (-d, -t)
 
-The upstream snapshot from the upstream source tree in the VCS can be made with the *-d* option if the upstream supports the ``*make dist*'' equivalence.
+The upstream snapshot from the upstream source tree in the VCS can be made with the *-d* option if the upstream package supports the ``*make dist*'' equivalence.
 
 ----
  $ cd /path/to/upstream-vcs
@@ -19,7 +19,7 @@ Unless you provide the upstream version with the *-u* option or with the *debian
 
 If the upstream VCS is hosted in the 'package/' directory instead of the 'upstream-vcs/' directory, the ``*-p* 'package''' can be skipped.
 
-If the upstream source tree in the VCS contains the **debian/*** files, the *debmake* command with either the *-d* option or the *-t* option combined with the *-i* option automates making of the non-native Debian packages from the VCS snapshot while using these **debian/*** files.
+If the upstream source tree in the VCS contains the **debian/*** files, the *debmake* command with either the *-d* option or the *-t* option combined with the *-i* option automates the making of a non-native Debian package from the VCS snapshot while using these **debian/*** files.
 
 ----
  $ cp -r /path/to/package-0~1403012359/debian/. /path/to/upstream-vcs/debian
@@ -31,5 +31,5 @@ If the upstream source tree in the VCS contains the **debian/*** files, the *deb
 
 This *non-native* Debian binary package building scheme using the ``*debmake -t -i debuild*'' command may be considered as the *quasi-native* Debian package scheme since the packaging situation resembles the *native* Debian binary package building case using the *debuild* command without the upstream tarball.
 
-Use of the *non-native* Debian package helps to ease communication with the downstream distros such as Ubuntu for bug fixes etc.
+Use of a *non-native* Debian package helps to ease communication with the downstream distros such as Ubuntu for bug fixes etc.
 

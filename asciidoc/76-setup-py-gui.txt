@@ -3,7 +3,7 @@
 
 Here is an example of creating a simple Debian package from a Python3 GUI program using the *setup.py* as its build system.
 
-This upstream is based in <<setup-py>> with enhanced GUI, desktop icon, and manpage supports.
+This upstream is based on <<setup-py>> with enhanced GUI, desktop icon, and manpage support.
 
 Let's assume this upstream tarball to be *debhello-1.3.tar.gz*.
 
@@ -36,14 +36,14 @@ include::../debhello-1.3-pkg1/step103.slog[]
 include::../debhello-1.3-pkg1/step104.slog[]
 ----
 
-Let's package this with the *debmake* command.  Here, the *-b\':py3'* option is used to specify the generated binary package contain Python3 script and module files.
+Let's package this with the *debmake* command.  Here, the *-b\':py3'* option is used to specify that the generated binary package contains Python3 script and module files.
 
 ----
 sys::[head -n12  ../debhello-1.3-pkg1/step200.slog]
 ...
 ----
 
-The result is practically the same as <<setup-py>>.
+The result is practically the same as in <<setup-py>>.
 
 Let's make this Debian package better as the maintainer.
 
@@ -57,11 +57,11 @@ include::../debhello-1.3-pkg1/step301.slog[]
 include::../debhello-1.3-pkg1/step302.slog[]
 ----
 
-Please note manually added *python3-gi* and *gir1.2-gtk-3.0*.
+Please note the manually added *python3-gi* and *gir1.2-gtk-3.0* dependencies.
 
-Since this upstream source has manpage and other files with matching entries in the *setup.py* file, there are no needs to create them and add *debian/install* and *debian/manpages* files which was required in <<setup-py>>.
+Since this upstream source has a manpage and other files with matching entries in the *setup.py* file, there is no need to create them and add the *debian/install* and *debian/manpages* files that were required in <<setup-py>>.
 
-The rest of the packaging activities are practically the same as the one in <<setup-py>>.
+The rest of the packaging activities are practically the same as in <<setup-py>>.
 
 Here is the generated dependency list of binary packages.
 

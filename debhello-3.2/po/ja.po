@@ -33,5 +33,5 @@ msgstr ""
 
 #: ../src/hello.c:33
 #, c-format
-msgid "Hello, I am %s!\n"
-msgstr "こんにちは、私は%sです！\n"
+msgid "Hello, my name is %s!\n"
+msgstr "こんにちは、私の名前は%sです！\n"

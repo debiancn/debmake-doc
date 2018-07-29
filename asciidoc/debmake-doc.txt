@@ -1,9 +1,15 @@
 = Guide for Debian Maintainers
 :Author:    Osamu Aoki
 :Email:     osamu@debian.org
-:Date:      {date}
-:Revision:  {revision}
+:Date:      @@@debdate@@@
+:Revision:  @@@debversion@@@
 :encoding: UTF-8
+// The above date and revision are only used by testing HTML test page within
+// this directory.
+//
+// head.txt generated from 00-terms.txt[] replaces corresponding part.  Thus
+// date comes from there.
+//####include::00-terms.txt[]
 
 // asciidoc output docbook 4.5 entity but the first conversion creates
 // the real UTF-8 output in the XML base file.
@@ -26,9 +32,6 @@
 // Problem with LEFT and RIGHT SINGLE QUOTATION MARKs
 //   * xetex treat it as full width CJK char.
 //   * All Japanese character treats these as double width chars.
-
-// head.txt takes care this
-//####include::00-terms.txt[]
 
 [[preface]]
 == Preface

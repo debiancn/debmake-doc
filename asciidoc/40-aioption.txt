@@ -14,7 +14,7 @@ The example in the above <<simple>> can be done simply as follows.
  $ debmake -a package-1.0.tar.gz -i debuild
 ----
 
-TIP: URL such as ``*https://www.example.org/DL/package-1.0.tar.gz*'' may be used for the *-a* option.
+TIP: A URL such as ``*https://www.example.org/DL/package-1.0.tar.gz*'' may be used for the *-a* option.
 
-TIP: URL such as ``*https://arm.koji.fedoraproject.org/packages/ibus/1.5.7/3.fc21/src/ibus-1.5.7-3.fc21.src.rpm*'' may be used for the *-a* option, too.
+TIP: A URL such as ``*https://arm.koji.fedoraproject.org/packages/ibus/1.5.7/3.fc21/src/ibus-1.5.7-3.fc21.src.rpm*'' may be used for the *-a* option, too.
 

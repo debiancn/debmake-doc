@@ -1,7 +1,7 @@
 [[newrevision]]
 === New Debian revision
 
-Let's assume that a bug report *#*'bug_number' was filed against your package, and it describes a problem that you can solve by editing *buggy* file in the upstream source.  Here's what you need to do to create a new Debian revision of the package with the *bugname.patch* file recording the fix.
+Let's assume that a bug report *#*'bug_number' was filed against your package, and it describes a problem that you can solve by editing the *buggy* file in the upstream source.  Here's what you need to do to create a new Debian revision of the package with the *bugname.patch* file recording the fix.
 
 .New Debian revision with the *dquilt* command
 ----
@@ -16,7 +16,7 @@ Let's assume that a bug report *#*'bug_number' was filed against your package, a
  $ dch -i
 ----
 
-Alternatively if the package is managed in the git repository using the *git-buildpackage* command with its default configuration.
+Alternatively if the package is managed in the git repository using the *git-buildpackage* command with its default configuration:
 
 .New Debian revision with the *gbp-pq* command
 ----

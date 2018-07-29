@@ -33,7 +33,7 @@ There are several methods to prepare a series of *-p1* patches.
 * The *gbp-pq* command
 ** basic *git* work flow with the *git-buildpackage* package
 ** Missing the *.pc/* directory
-** Modified upstream source tree in the through-away branch (*patch-queue/master*)
+** Modified upstream source tree in the throw-away branch (*patch-queue/master*)
 ** Unmodified upstream source tree in the Debian branch (*master*)
 * The *gbp-dpm* command
 ** more elaborate *git* work flow with the *git-dpm* package
@@ -41,16 +41,16 @@ There are several methods to prepare a series of *-p1* patches.
 ** Modified upstream source tree in the patched branch (*patched/*'whatever')
 ** Unmodified upstream source tree in the Debian branch (*master/*'whatever')
 
-Wherever these patches come from, it is good idea to tag them with http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
+Wherever these patches come from, it is a good idea to tag them with a http://dep.debian.net/deps/dep3/[DEP-3] compatible header.
 
-TIP: The *dgit* package offeres an alternative git integration tool with the Debian package archive.
+TIP: The *dgit* package offers an alternative git integration tool with the Debian package archive.
 
 [[dpkg-source-x]]
 ==== dpkg-source -x
 
 The ``*dpkg-source -x*'' command unpacks the Debian source package.
 
-It normally applies the patches in the *debian/patches/* directory to the source tree and records the patch state in the *.pc/* directory. 
+It normally applies the patches in the *debian/patches/* directory to the source tree and records the patch state in the *.pc/* directory.
 
 If you wish to keep the source tree unmodified (for example, for use in <<vcs>>), please use the *--skip-patches* option.
 
@@ -59,14 +59,14 @@ If you wish to keep the source tree unmodified (for example, for use in <<vcs>>)
 
 The *quilt* command (or its wrapped *dquilt* command) was needed to manage the *-p1* patches in the *debian/patches/* directory before the *--commit* feature was added to the *dpkg-source* command in 1.16.1.
 
-The patches should apply cleanly when using the *dpkg-source* command.  Thus you can't just copy the patches to the new packaging of the new upstream release if there are patch offset etc.
+The patches should apply cleanly when using the *dpkg-source* command.  Thus you can't just copy the patches to the new packaging of the new upstream release if there are patch offsets, etc.
 
-The *dquilt* command (see <<quilt-setup>>) is more foregiving.  You can normalize the patches by the *dquilt* command.
+The *dquilt* command (see <<quilt-setup>>) is more forgiving.  You can normalize the patches by the *dquilt* command.
 
 ----
  $ while dquilt push; do dquilt refresh ; done
  $ dquilt pop -a
 ----
 
-There is one advantage of using the *dpkg-source* command over the *dquilt* command.  While the *dquilt* command can not handle modified binary files automatically, the *dpkg-source* command detects modified binary files and lists them in the *debian/source/include-binaries* file to include them in the Debian tarball.
+There is one advantage of using the *dpkg-source* command over the *dquilt* command.  While the *dquilt* command cannot handle modified binary files automatically, the *dpkg-source* command detects modified binary files and lists them in the *debian/source/include-binaries* file to include them in the Debian tarball.
 

@@ -7,8 +7,8 @@ Actual details of the examples presented and their variants can be obtained by t
 ----
  $ apt-get source debmake-doc
  $ sudo apt-get install devscripts build-essentials
- $ sudo apt-get build-dep debmake-doc
  $ cd debmake-doc*
+ $ sudo apt-get build-dep ./
  $ make
 ----
 
@@ -17,7 +17,7 @@ Each directory with the *-pkg[0-9]* suffix contains the Debian packaging example
 * emulated console command line activity log: the *.log* file
 * emulated console command line activity log (short): the *.slog* file
 * snapshot source tree image after the *debmake* command: the *debmake* directory
-* snapshot source tree image after the proper packaging: the *packge* directory
+* snapshot source tree image after proper packaging: the *packge* directory
 * snapshot source tree image after the *debuild* command: the *test* directory
 
 

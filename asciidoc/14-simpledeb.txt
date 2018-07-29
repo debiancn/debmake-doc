@@ -13,17 +13,17 @@ This type of source is meant to be installed as a non-system file as:
  $ make install
 ----
 
-Debian packaging requires to change this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
+Debian packaging requires changing this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
 
-NOTE: Examples of creating Debian package from other complicated build systems are described in <<more>>.
+NOTE: Examples of creating a Debian package from other complicated build systems are described in <<more>>.
 
 [[big-picture]]
 === Big picture
 
 The big picture for building a single non-native Debian package from the upstream tarball *debhello-0.0.tar.gz* can be summarized as:
 
-* The maintainer obtains the upstream tarball *debhello-0.0.tar.gz* and untar its contents to *debhello-0.0* directory.
-* The *debmake* command debianize the upstream source tree by adding template files only in the *debian* directory.
+* The maintainer obtains the upstream tarball *debhello-0.0.tar.gz* and untars its contents to the *debhello-0.0* directory.
+* The *debmake* command debianizes the upstream source tree by adding template files only in the *debian* directory.
 ** The *debhello_0.0.orig.tar.gz* symlink is created pointing to the *debhello-0.0.tar.gz* file.
 ** The maintainer customizes template files.
 * The *debuild* command builds the binary package from the debianized source tree.
@@ -39,9 +39,9 @@ The big picture for building a single non-native Debian package from the upstrea
    ...
 ----
 
-TIP: The *debuild* command in this and following examples may be substituted by the equivalent commands such as the *pdebuild* command.
+TIP: The *debuild* command in this and following examples may be substituted by equivalent commands such as the *pdebuild* command.
 
-TIP: If the upstream tarball in the *.tar.xz* format is available, use it instead of the one in the *.tar.gz* and *.tar.bz2* formats. The *xz* compression offers the better compression than the *gzip* and *bzip2* compressions.
+TIP: If the upstream tarball in the *.tar.xz* format is available, use it instead of the one in the *.tar.gz* and *.tar.bz2* formats. The *xz* compression format offers the better compression than the *gzip* and *bzip2* compressions.
 
 [[what-debmake]]
 === What is debmake?
@@ -52,7 +52,7 @@ The *debmake* command is the helper script for the Debian packaging.
 * It generates the upstream tarball and its required symlink if they are missing.
 * It doesn't overwrite the existing configuration files in the *debian/* directory.
 * It supports the *multiarch* package.
-* It creates good template files such as the *debian/copyright* file complaint to *DEP-5*.
+* It creates good template files such as the *debian/copyright* file compliant with *DEP-5*.
 
 These features make Debian packaging with *debmake* simple and modern.
 
@@ -64,12 +64,12 @@ NOTE: The *debmake* command isn't the only way to make a Debian package.  Many p
 Here is a summary of commands similar to the *debuild* command.
 
 * The *debian/rules* file defines how the Debian binary package is built.
-* The *dpkg-buildpackage* is the official command to build the Debian binary package.  For normal binary build, it executes roughly:
+* The *dpkg-buildpackage* command is the official command to build the Debian binary package.  For normal binary build, it executes roughly:
 ** ``*dpkg-source --before-build*'' (apply Debian patches, unless it is already applied)
 ** ``*fakeroot debian/rules clean*''
 ** ``*dpkg-source --build*'' (build the Debian source package)
-** ``*fakeroot debian/rules build*'' 
-** ``*fakeroot debian/rules binary*'' 
+** ``*fakeroot debian/rules build*''
+** ``*fakeroot debian/rules binary*''
 ** ``*dpkg-genbuildinfo*'' (generate a ***.buildinfo** file)
 ** ``*dpkg-genchanges*'' (generate a ***.changes** file)
 ** ``*fakeroot debian/rules clean*''
@@ -102,15 +102,15 @@ include::../debhello-0.0-pkg1/step101.slog[]
 Here, the *Makefile* supports https://www.gnu.org/prep/standards/[GNU Coding Standards] and https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard[FHS]. Notably:
 
 * build binaries honoring *$(CPPFLAGS)*, *$(CFLAGS)*, *$(LDFLAGS)*, etc.
-* install files with the *$(DESTDIR)* to the target system image
-* install files with the *$(prefix)* which can be overridden to be */usr*
+* install files with *$(DESTDIR)* defined to the target system image
+* install files with *$(prefix)* defined, which can be overridden to be */usr*
 
 .*Makefile*
 ----
 include::../debhello-0.0-pkg1/step102.slog[]
 ----
 
-NOTE: The *echo* of the *$(CFLAGS)* is used to verify the proper setting of the build flag in the following example.
+NOTE: The *echo* of the *$(CFLAGS)* variable is used to verify the proper setting of the build flag in the following example.
 
 [[step-debmake]]
 === Step 2: Generate template files with debmake
@@ -123,7 +123,7 @@ The output from the *debmake* command is very verbose and explains what it does 
 include::../debhello-0.0-pkg1/step200.slog[]
 ----
 
-The *debmake* command generates all these template files based on the command line option.  Since no options are specified, the *debmake* command choses reasonable default values for you:
+The *debmake* command generates all these template files based on command line options.  Since no options are specified, the *debmake* command chooses reasonable default values for you:
 
 * The source package name: *debhello*
 * The upstream version: *0.0*
@@ -155,11 +155,11 @@ The *debian/control* file provides the main meta data for the Debian package.  H
 include::../debhello-0.0-pkg1/step203.slog[]
 ----
 
-WARNING: If you leave ``*Section: unknown*'' in the template *debian/control* file unchanged, the *lintian* error may cause the build failure.
+WARNING: If you leave ``*Section: unknown*'' in the template *debian/control* file unchanged, the *lintian* error may cause the build to fail.
 
 Since this is the ELF binary executable package, the *debmake* command sets ``*Architecture: any*'' and ``*Multi-Arch: foreign*''.  Also, it sets required *substvar* parameters as ``*Depends: $\{shlibs:Depends}, $\{misc:Depends}*''.  These are explained in <<basics>>.
 
-NOTE: Please note this *debian/control* file uses the RFC-822 style as documented in https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-sourcecontrolfiles[5.2 Source package control files -- debian/control] of the ``Debian Policy Manual''. The use of the empty line and the leading space are significant.
+NOTE: Please note this *debian/control* file uses the RFC-822 style as documented in https://www.debian.org/doc/debian-policy/#source-package-control-files-debian-control[5.2 Source package control files -- debian/control] of the ``Debian Policy Manual''. The use of the empty line and the leading space are significant.
 
 The *debian/copyright* file provides the copyright summary data of the Debian package.  Here is its template file generated by the *debmake* command.
 
@@ -180,17 +180,17 @@ In order to install files as a part of the system files, the *$(prefix)* value o
 include::../debhello-0.0-pkg1/step301.slog[]
 ----
 
-Exporting the *DH_VERBOSE* in the *debian/rules* file as above forces the *debhelper* tool to make a fine grained build report.
+Exporting the *DH_VERBOSE* environment variable in the *debian/rules* file as above forces the *debhelper* tool to make a fine grained build report.
 
-Exporting the *DEB_BUILD_MAINT_OPTION* as above sets the hardening options as described in the ``FEATURE AREAS/ENVIRONMENT'' in *dpkg-buildflags*(1).  footnote:[This is a cliché to force read-only relocation link for the hardening and to prevent the lintian warning ``*W: debhello: hardening-no-relro usr/bin/hello*''.  This is not really needed for this example but should be harmless. The lintian seems to produce false positive warning for this case which has no linked library.]
+Exporting *DEB_BUILD_MAINT_OPTION* as above sets the hardening options as described in the ``FEATURE AREAS/ENVIRONMENT'' in *dpkg-buildflags*(1).  footnote:[This is a cliché to force a read-only relocation link for the hardening and to prevent the lintian warning ``*W: debhello: hardening-no-relro usr/bin/hello*''.  This is not really needed for this example but should be harmless. The lintian tool seems to produce a false positive warning for this case which has no linked library.]
 
-Exporting the *DEB_CFLAGS_MAINT_APPEND* as above forces C compiler to emit all the warnings.
+Exporting *DEB_CFLAGS_MAINT_APPEND* as above forces the C compiler to emit all the warnings.
 
-Exporting the *DEB_LDFLAGS_MAINT_APPEND* as above forces linker to link only when the library is actually needed.  footnote:[This is a cliché to prevent overlinking for the complex library dependency case such as Gnome programs.  This is not really needed for this simple example but should be harmless.]
+Exporting *DEB_LDFLAGS_MAINT_APPEND* as above forces the linker to link only when the library is actually needed.  footnote:[This is a cliché to prevent overlinking for the complex library dependency case such as Gnome programs.  This is not really needed for this simple example but should be harmless.]
 
-The *dh_auto_install* command for the Makefile based build system does essentially ``*$(MAKE) install DESTDIR=debian/debhello*''.  The creation of this *override_dh_auto_install* target changes its behavior to ``*$(MAKE) install DESTDIR=debian/debhello prefix=/usr*''.
+The *dh_auto_install* command for the Makefile based build system essentially runs ``*$(MAKE) install DESTDIR=debian/debhello*''.  The creation of this *override_dh_auto_install* target changes its behavior to ``*$(MAKE) install DESTDIR=debian/debhello prefix=/usr*''.
 
-Here are the maintainer version of the *debian/control* and *debian/copyright* files.
+Here are the maintainer versions of the *debian/control* and *debian/copyright* files.
 
 .*debian/control* (maintainer version):
 ----
@@ -209,7 +209,7 @@ There are several other template files under the *debian/* directory.  These als
 include::../debhello-0.0-pkg1/step400.slog[]
 ----
 
-TIP: Configuration files used by the *dh_** commands from the *debhelper* package usually treat *#* as the start of the comment line.
+TIP: Configuration files used by the *dh_** commands from the *debhelper* package usually treat *#* as the start of a comment line.
 
 [[step-debuild]]
 === Step 4: Building package with debuild
@@ -232,9 +232,9 @@ sys::[grep -A 3 -e 'binary-without-manpage' ../debhello-0.0-pkg1/step500.slog]
 sys::[tail -n1  ../debhello-0.0-pkg1/step500.slog]
 ----
 
-You can verify *CFLAGS* is updated properly with *-Wall* and *-pedantic* by the *DEB_CFLAGS_MAINT_APPEND* variable.
+You can verify that *CFLAGS* is updated properly with *-Wall* and *-pedantic* by the *DEB_CFLAGS_MAINT_APPEND* variable.
 
-The manpage should be added to the package as reported by the *lintian* package as shown in the later examples (see <<more>>).  Let's move on for now.
+The manpage should be added to the package as reported by the *lintian* package, as shown in later examples (see <<more>>).  Let's move on for now.
 
 Let's inspect the result.
 
@@ -272,7 +272,7 @@ The generated dependency of *debhello_0.0-1_amd64.deb* is as follows.
 include::../debhello-0.0-pkg1/step702.slog[]
 ----
 
-CAUTION: Much more details need to be addressed before uploading the package to the Debian archive.
+CAUTION: Many more details need to be addressed before uploading the package to the Debian archive.
 
 NOTE: If manual adjustments of auto-generated configuration files by the *debmake* command are skipped, the generated binary package may lack meaningful package description and some of the policy requirements may be missed.  This sloppy package functions well under the *dpkg* command, and may be good enough for your local deployment.
 
@@ -286,7 +286,7 @@ An alternative approach as the maintainer is to change the upstream source by mo
 The packaging is practically the same as the above step-by-step example except for two points in <<step-maintainer>>:
 
 * Store the maintainer modifications to the upstream source as the corresponding patch files in the *debian/patches/* directory and list their filenames in the *debian/patches/series* file as indicated in <<patches>>.
-There are several ways to generate patch files.  A few examples are given as below.
+There are several ways to generate patch files.  A few examples are given in these sections:
 ** <<diff-u>>
 ** <<dquilt>>
 ** <<dpkg-source-commit>>
@@ -297,7 +297,7 @@ There are several ways to generate patch files.  A few examples are given as bel
 include::../debhello-0.0-pkg2/step301.slog[]
 ----
 
-This alternative approach to the Debian packaging using a series of patch files may be less robust for the future upstream changes but more flexible to cope with the difficult upstream source.  (See <<deb3>>.)
+This alternative approach to Debian packaging using a series of patch files may be less robust for future upstream changes but more flexible coping with the difficult upstream source.  (See <<deb3>>.)
 
 NOTE: For this particular packaging case, the above <<step-maintainer>> using the *debian/rules* file is the better approach.  But let's keep on with this approach as a leaning process.
 
@@ -329,9 +329,9 @@ Here is an example to create *000-prefix-usr.patch* by the *dquilt* command whic
 include::../debhello-0.0-pkg3/step304.slog[]
 ----
 
-Here, *Makefile* in the upstream source tree doesn't need to be restored to the original state. The *dpkg-source* command invoked by the Debian packaging procedure in <<step-debuild>>, understands the patch application state recorded by the *dquilt* program in the *.pc/* directory.  As long as all the changes are committed by the *dquilt* command, the Debian source package can be build from the modified source tree.
+Here, *Makefile* in the upstream source tree doesn't need to be restored to the original state. The *dpkg-source* command invoked by the Debian packaging procedure in <<step-debuild>>, understands the patch application state recorded by the *dquilt* program in the *.pc/* directory.  As long as all the changes are committed by the *dquilt* command, the Debian source package can be built from the modified source tree.
 
-NOTE: If the *.pc/* directory is missing, the *dpkg-source* command assumes that no patch was applied.  That's why the more primitive patch generation methods like <<diff-u>> without generating the *.pc/* directory require the upstream source tree to be restored.
+NOTE: If the *.pc/* directory is missing, the *dpkg-source* command assumes that no patch was applied.  That's why the more primitive patch generation methods like in <<diff-u>> without generating the *.pc/* directory require the upstream source tree to be restored.
 
 [[dpkg-source-commit]]
 ==== Patch by dpkg-source --commit

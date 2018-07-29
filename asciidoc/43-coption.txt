@@ -1,7 +1,7 @@
 [[coption]]
 === debmake -cc
 
-The *debmake* command with the *-cc* option can make a summary of the copyright and license for the entire source tree to the standard output.
+The *debmake* command with the *-cc* option can make a summary of the copyright and license for the entire source tree to standard output.
 
 ----
  $ tar -xvzf package-1.0.tar.gz

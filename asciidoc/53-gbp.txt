@@ -5,19 +5,19 @@ The *git-buildpackage* package offers many commands to automate packaging activi
 
 * *gbp import-dsc*: import the previous Debian source package to the git repository.
 * *gbp import-orig*: import the new upstream tar to the git repository.
-** The *--pristine-tar* option for the *git import-orig* command enables to store the upstream tarball in the same git repository.
-** The *--uscan* option as the last argument of the *gbp import-orig* command enables to download and commit the new upstream tarball into the git repository.
+** The *--pristine-tar* option for the *git import-orig* command enables storing the upstream tarball in the same git repository.
+** The *--uscan* option as the last argument of the *gbp import-orig* command enables downloading and committing the new upstream tarball into the git repository.
 * *gbp dch*: generate the Debian changelog from the git commit messages.
 * *gbp buildpackage*: build the Debian binary package from the git repository.
 * *gbp pull*: update the *debian*, *upstream* and *pristine-tar* branches safely from the remote repository.
 * *git-pbuilder*: build the Debian binary package from the git repository using the *pbuilder* package.
 ** The *cowbuilder* package is used as its backend.
 * The *gbp pq*, *git-dpm* or *quilt* (or alias *dquilt*) commands are used to manage quilt patches.
-** The use of the *dquilt* command is the simplest to learn and requires you to commit the resulting files manually with the *git* command to the *master* branch.
-** The use of the ``*gbp pq*'' command provides the equivalent functionality of the patch set management without using *dquilt* and eases including upstream git repository changes by the cherry-picking.
-** The use of the ``*git dpm*'' command provides the more enhanced functionality than that of the `*gbp pq*'' command.
+** The *dquilt* command is the simplest to learn and requires you to commit the resulting files manually with the *git* command to the *master* branch.
+** The ``*gbp pq*'' command provides the equivalent functionality of patch set management without using *dquilt* and eases including upstream git repository changes by cherry-picking.
+** The ``*git dpm*'' command provides more enhanced functionality than that of the `*gbp pq*'' command.
 
-The package history management with the *git-buildpackage* package is becoming the standard practice for most Debian maintainers.
+Package history management with the *git-buildpackage* package is becoming the standard practice for most Debian maintainers.
 
 See:
 

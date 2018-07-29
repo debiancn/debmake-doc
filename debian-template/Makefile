@@ -30,6 +30,7 @@ all:
 	ERR=$$? ; \
 	cat $(ROOTDIR)/$$i.log | col -b -x | \
 	grep -v -e '^Script started on' | \
+	grep -v -e '^Script done on' | \
 	sed -r '$(NOANSI)' | \
 	sed -e 's#$(TESTDIR)#/path/to#g' | \
 	sed -e '$(FILTER)' > $(ROOTDIR)/$$i.slog ; \

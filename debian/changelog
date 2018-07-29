@@ -1,11 +1,35 @@
+debmake-doc (1.10-1) unstable; urgency=medium
+
+  [ Osamu Aoki ]
+  * Update debian/changelog documentation.  Closes: #851456
+  * Use --allow-downgrades for apt-get as in the BTS: #868279
+  * Restore debian-openlogo.png as in the BTS: #871493
+  * Add Russian build support.
+  * Bump standards version to 4.1.5 and compat to 11.
+  * Update VCS to new salsa service in compliance to the Debian
+    Policy 5.6.26 (version 4.1.5).
+  * Update URLs to the new salsa.debian.org.
+  * Address build issues by making Makefile safe for parallel build.
+    Closes: #891128
+  * Merge English proofing done by Paul Hardy.  Closes: #903805, #904217
+  * Update build system to be friendly to the translation.
+
+  [ Boyuan Yang ]
+  * Use Priority: optional instead of Priority: extra globally.
+  * Use Standards-Version: 4.1.3 globally.
+  * Do some proofreading and fix contents in debhelper section.
+  * More update for Simplified Chinese translation.
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 29 Jul 2018 14:22:22 +0900
+
 debmake-doc (1.9-1) unstable; urgency=medium
 
-  * Drop cover image. 
+  * Drop cover image.
   * Update advice to novice.
   * Update and add workflow with debhelper.
   * Add reminder for non-debmake workflow.
   * Mention ssh as TIP.
-  * Enable CJ PDF build.  (Needs more translation.) 
+  * Enable CJ PDF build.  (Needs more translation.)
 
  -- Osamu Aoki <osamu@debian.org>  Sun, 17 Sep 2017 08:04:25 +0900
 
@@ -32,7 +56,7 @@ debmake-doc (1.8-1) unstable; urgency=medium
 
 debmake-doc (1.7-2) unstable; urgency=medium
 
-  * Fix Vcs-Git data. 
+  * Fix Vcs-Git data.
 
  -- Osamu Aoki <osamu@debian.org>  Sun, 11 Dec 2016 10:32:29 +0900
 

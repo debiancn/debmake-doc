@@ -10,13 +10,13 @@ The Debian packaging of the 'package-1.0'*.tar.gz*, containing a simple C source
 
 If manual adjustments of generated configuration files are skipped, the generated binary package lacks meaningful package description but still functions well under the *dpkg* command to be used for your local deployment.
 
-CAUTION: The *debmake* command only provides good template files. These template files must be manually adjusted to their perfection to comply with the strict quality requirements of the Debian archive, if the generated package is intended for the general consumption.
+CAUTION: The *debmake* command only provides good template files. These template files must be manually adjusted to their perfection to comply with the strict quality requirements of the Debian archive, if the generated package is intended for general consumption.
 
-If you are new to the Debian packaging, do not worry about the details and just get the big picture instead.
+If you are new to Debian packaging, do not worry about the details and just get the big picture instead.
 
-If you have been exposed to the Debian packaging, this looks very much like the *dh_make* command.  This is because the *debmake* command is intended to replace functions offered historically by the *dh_make* command. footnote:[The *deb-make* command was popular before the *dh_make* command.  The current *debmake* package starts its version from *4.0* to avoid version overlaps with obsolete *debmake* package which provided the *deb-make* command.]
+If you have been exposed to Debian packaging, this looks very much like the *dh_make* command.  This is because the *debmake* command is intended to replace functions offered historically by the *dh_make* command. footnote:[The *deb-make* command was popular before the *dh_make* command.  The current *debmake* package starts its version from *4.0* to avoid version overlaps with the obsolete *debmake* package, which provided the *deb-make* command.]
 
-The *debmake* command is designed with following features:
+The *debmake* command is designed with the following features:
 
 * modern packaging style
 ** *debian/copyright*: *DEP-5* compliant
@@ -26,18 +26,18 @@ The *debmake* command is designed with following features:
 ** many options (<<boption>>, <<options>>, <<manpage>>)
 * sane default actions
 ** execute non-stop with clean results
-** generate the multiarch package, unless *-m* option is explicitly specified.
-** generate the non-native Debian package with the ``*3.0 (quilt)*'' format, unless *-n* option is explicitly specified.
+** generate the multiarch package, unless the *-m* option is explicitly specified.
+** generate the non-native Debian package with the ``*3.0 (quilt)*'' format, unless the *-n* option is explicitly specified.
 * extra utility
 ** verification of the *debian/copyright* file against the current source (<<koption>>)
 
 The *debmake* command delegates most of the heavy lifting to its back-end packages: *debhelper*, *dpkg-dev*, *devscripts*, *pbuilder*, etc.
 
-TIP: Make sure to protect the arguments of the *-b*, *-f*, *-l*, and *-w* options from the shell interference by quoting them properly.
+TIP: Make sure to protect the arguments of the *-b*, *-f*, *-l*, and *-w* options from shell interference by quoting them properly.
 
 TIP: The non-native Debian package is the normal Debian package.
 
-TIP: The detailed log of all the package build examples in this document can be obtained by following the instruction in <<details>>.
+TIP: The detailed log of all the package build examples in this document can be obtained by following the instructions in <<details>>.
 
 NOTE: The generation of the *debian/copyright* file, and the outputs from the *-c* (<<coption>>) and *-k* (<<koption>>) options involve heuristic operations on the copyright and license information.  They may produce some erroneous results.
 

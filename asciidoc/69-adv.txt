@@ -9,14 +9,14 @@ Hints for the following can be found in the *debhelper*(7) manpage:
 ** invoking multiple ``*dh_auto_configure -S ...*'' commands in the *override_dh_auto_configure* target
 ** invoking multiple ``*dh_auto_build -S ...*'' commands in the *override_dh_auto_build* target
 ** invoking multiple ``*dh_auto_install -S ...*'' commands in the *override_dh_auto_install* target
-* building *udeb* packages with ``*Package-Type: udeb*'' in *debian/control* (see https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-Package-Type[Package-Type])
-* excluding some packages for the bootstrapping (see also https://wiki.debian.org/BuildProfileSpec[BuildProfileSpec])
+* building *udeb* packages with ``*Package-Type: udeb*'' in *debian/control* (see https://www.debian.org/doc/debian-policy/#s-f-package-type[Package-Type])
+* excluding some packages for the bootstrapping process (see also https://wiki.debian.org/BuildProfileSpec[BuildProfileSpec])
 ** adding the *Build-Profiles* fields in binary package stanzas in *debian/control*
 ** building packages with the *DEB_BUILD_PROFILES* environment variable set to the pertinent profile name
 
 Hints for the following can be found in the *dpkg-source*(1) manpage:
 
-* naming convention for the multiple upstream source tarballs
+* naming convention for multiple upstream source tarballs
 ** 'packagename_version'**.orig.tar.gz**
 ** 'packagename_version'**.orig-**'componentname'**.tar.gz**
 * recording the Debian changes to the upstream source package
@@ -27,13 +27,13 @@ Hints for the following can be found in the *dpkg-source*(1) manpage:
 
 Although the upstream tarball has all the information to build the Debian package, it is not always easy to figure out which combination of options to use.
 
-Also, the upstream may be more focused on the feature enhancements and may be less eager for backward compatibilities etc. which are important aspect of the Debian packaging practice.
+Also, the upstream package may be more focused on feature enhancements and may be less eager about backward compatibilities etc., which are an important aspect of Debian packaging practice.
 
-The leveraging of information from other distributions is an option to address above issues.
+The leveraging of information from other distributions is an option to address the above issues.
 
-If the other distribution in interest is a Debian derivative one, it is trivial to reuse it.
+If the other distribution of interest is a Debian derivative one, it is trivial to reuse it.
 
-If the other distribution in interest is a https://en.wikipedia.org/wiki/RPM_Package_Manager[RPM] based distribution, see https://wiki.debian.org/Repackage_srcrpm[Repackage src.rpm].
+If the other distribution of interest is an https://en.wikipedia.org/wiki/RPM_Package_Manager[RPM] based distribution, see https://wiki.debian.org/Repackage_srcrpm[Repackage src.rpm].
 
 Downloading and opening of the *src.rpm* file can be done with the *rget* command.  (Place the *rget* script in your PATH.)
 
@@ -80,15 +80,15 @@ This is too deep a topic to describe here.  So, let me just list few pointers an
 * ``*python -mtrace --trace* 'script.py''' - Trace a Python script
 * ``*perl -I ../libpath -c* 'script.pl''' - Syntax check of a Perl script
 * ``*perl -d:Trace* 'script.pl''' - Trace a Perl script
-** Install the *libterm-readline-gnu-perl* package or its equivalent to add the input line editing capability with history support.
+** Install the *libterm-readline-gnu-perl* package or its equivalent to add input line editing capability with history support.
 * *lsof* - List open files by processes
 ** ``*man lsof*''
 
-TIP: The *script* command helps recording console outputs. 
+TIP: The *script* command records console outputs.
 
-TIP: The *screen* and *tmux* commands used with the *ssh* command offer the secure and robust remote connection terminal.
+TIP: The *screen* and *tmux* commands used with the *ssh* command offer secure and robust remote connection terminals.
 
-TIP: Python and Shell like REPL (=READ + EVAL + PRINT + LOOP) environment for Perl is offered by the *reply* command from the *libreply-perl* (new) and the *re.pl* command from the *libdevel-repl-perl* (old).
+TIP: A Python- and Shell-like REPL (=READ + EVAL + PRINT + LOOP) environment for Perl is offered by the *reply* command from the *libreply-perl* (new) package and the *re.pl* command from the *libdevel-repl-perl* (old) package.
 
-TIP: The *rlwrap* and *rlfe* commands add the input line editing capability with history support to any interactive commands.  E.g. ``*rlwrap dash -i*''' .
+TIP: The *rlwrap* and *rlfe* commands add input line editing capability with history support to any interactive commands.  E.g. ``*rlwrap dash -i*''' .
 

@@ -1,7 +1,7 @@
 [[signing-key]]
 === debian/upstream/signing-key.asc
 
-Some packages are signed by the GPG key.
+Some packages are signed by a GPG key.
 
 For example, https://www.gnu.org/software/hello/[GNU hello] can be downloaded via HTTP from https://ftp.gnu.org/gnu/hello/ .  There are sets of files:
 
@@ -20,7 +20,7 @@ gpg: Signature made Thu 10 Oct 2013 08:49:23 AM JST using DSA key ID 80EE4A00
 gpg: Can't check signature: public key not found
 ----
 
-If you know the public GPG key of the upstream from the mailing list, use it as the *debian/upstream/signing-key.asc* file.  Otherwise, use the hkp keyserver and check it via your https://en.wikipedia.org/wiki/Web_of_trust[web of trust].
+If you know the public GPG key of the upstream maintainer from the mailing list, use it as the *debian/upstream/signing-key.asc* file.  Otherwise, use the hkp keyserver and check it via your https://en.wikipedia.org/wiki/Web_of_trust[web of trust].
 
 ----
 $ gpg --keyserver hkp://keys.gnupg.net --recv-key 80EE4A00
@@ -38,7 +38,7 @@ Primary key fingerprint: 9297 8852 A62F A5E2 85B2  A174 6808 9F73 80EE 4A00
 
 TIP:  If your network environment blocks access to the HPK port *11371*, use ``*hkp://keyserver.ubuntu.com:80*'' instead.
 
-After confirming the key ID *80EE4A00* is trust worthy one, download its public key into the *debian/upstream/signing-key.asc* file.
+After confirming the key ID *80EE4A00* is a trustworthy one, download its public key into the *debian/upstream/signing-key.asc* file.
 
 ----
 $ gpg --armor --export 80EE4A00 >debian/upstream/signing-key.asc
