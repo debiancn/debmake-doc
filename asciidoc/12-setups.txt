@@ -1,10 +1,10 @@
 The *build-essential* package must be installed in the build environment.
 
-The *devscripts* package should be installed on the maintainer environment.
+The *devscripts* package should be installed in the maintainer environment.
 
-Although this is not necessary the absolute requirement, it is a good idea to install and setup all of the popular set of packages mentioned in this chapter on the maintainer environment.  This enables us to share the common baseline working environment.
+Although this is not necessarily an absolute requirement, it is a good idea to install and set up all of the popular set of packages mentioned in this chapter in the maintainer environment.  This enables us to share the common baseline working environment.
 
-Please install the tools mentioned in the https://www.debian.org/doc/manuals/developers-reference/tools.html[Overview of Debian Maintainer Tools] of the ``Debian Developer's Reference'', as needed, too.
+Please install the tools mentioned in the https://www.debian.org/doc/manuals/developers-reference/tools.html[Overview of Debian Maintainer Tools] in the ``Debian Developer's Reference'', as needed, too.
 
 CAUTION: Tool setups presented here are only meant as an example and may not be up-to-date with the latest packages on the system.  Debian development is a moving target.  Please make sure to read the pertinent documentation and update the configuration as needed.
 
@@ -25,7 +25,7 @@ export DEBEMAIL DEBFULLNAME
 [[mc-setup]]
 === mc
 
-The *mc* command offers very easy ways to manage files.  It can open the binary *deb* file to check its content by pressing the Enter key over the binary *deb* file.  It uses the *dpkg-deb* command as its back-end.  Let's setup it to support easy *chdir* as follows.
+The *mc* command offers very easy ways to manage files.  It can open the binary *deb* file to check its content by pressing the Enter key over the binary *deb* file.  It uses the *dpkg-deb* command as its back-end.  Let's set it up to support easy *chdir* as follows.
 
 .Add to the *~/.bashrc* file
 ----
@@ -101,9 +101,9 @@ See <<alt-patch>> for example usages.
 
 The *debsign* command, included in the *devscripts* package, is used to sign the Debian package with your private GPG key.
 
-The *debuild* command, included in the *devscripts* package, builds the binary package and check them with the *lintian* command.  It is useful to have verbose outputs from the *lintian* command.
+The *debuild* command, included in the *devscripts* package, builds the binary package and checks it with the *lintian* command.  It is useful to have verbose outputs from the *lintian* command.
 
-You can setup these by the *~/.devscripts* as follows.
+You can set these up in *~/.devscripts* as follows.
 
 ----
 DEBUILD_DPKG_BUILDPACKAGE_OPTS="-i -I -us -uc"
@@ -113,12 +113,12 @@ DEBSIGN_KEYID="Your_GPG_keyID"
 
 The *-i* and *-I* options in *DEBUILD_DPKG_BUILDPACKAGE_OPTS* for the *dpkg-source* command help rebuilding of Debian packages without extraneous contents (see <<build-noextra>>).
 
-Currently, RSA key with 4096 bits is good idea.  See https://keyring.debian.org/creating-key.html[Creating a new GPG key].
+Currently, an RSA key with 4096 bits is a good idea.  See https://keyring.debian.org/creating-key.html[Creating a new GPG key].
 
 [[pbuilder-setup]]
 === pbuilder
 
-The *pbuilder* package provides the clean room (*chroot*) build environment. footnote:[The *sbuild* package provides an alternative chroot platform.]
+The *pbuilder* package provides a clean room (*chroot*) build environment. footnote:[The *sbuild* package provides an alternative chroot platform.]
 
 Let's customize it with several helper packages.
 
@@ -160,7 +160,7 @@ NOTE: A symlink from */root/.pbuilderrc* to */home/<user>/.pbuilderrc* may help 
 
 NOTE: Due to https://bugs.debian.org/606542[Bug #606542], you may need to manually install packages listed in *EXTRAPACKAGES* into the chroot.  See <<chroot>>.
 
-NOTE: Install *libeatmydata1* (>=82-2) both inside and outside of the chroot or disable to use *libeatmydata1*.  This may cause the race condition with some build systems.
+NOTE: Install *libeatmydata1* (>=82-2) both inside and outside of the chroot or disable to use *libeatmydata1*.  This may cause a race condition with some build systems.
 
 NOTE: The parallel *make* may fail for some existing packages and may make the build log difficult to read.
 
@@ -180,7 +180,7 @@ ccache -s
 ----
 #!/bin/sh
 set -e
-apt-get -y --force-yes install lintian
+apt-get -y --allow-downgrades install lintian
 echo "+++ lintian output +++"
 su -c "lintian -i -I --show-overrides /tmp/buildd/*.changes; :" -l pbuilder
 echo "+++ end of lintian output +++"
@@ -190,7 +190,7 @@ echo "+++ end of lintian output +++"
 ----
 #!/bin/sh
 set -e
-apt-get -y --force-yes install vim bash mc
+apt-get -y --allow-downgrades install vim bash mc
 # invoke shell if build fails
 cd /tmp/buildd/*/debian/..
 /bin/bash < /dev/tty > /dev/tty 2> /dev/tty

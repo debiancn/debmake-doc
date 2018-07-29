@@ -1,13 +1,13 @@
 [[pythonmod]]
 ==== Python module
 
-You can generate a functioning single binary Debian package with a reasonable package description directly from the Python module package offered as a tarball 'pythonmodule-1.0'*.tar.gz*.  The *-b* option specifying the package type *python* and the *-s* option to copy the package description from the upstream package need to be specified.
+You can generate a functioning single binary Debian package with a reasonable package description directly from the Python module package offered as a tarball, 'pythonmodule-1.0'*.tar.gz*.  The *-b* option specifying the package type *python* and the *-s* option to copy the package description from the upstream package need to be specified.
 
 ----
  $ debmake -s -b':python' -a pythonmodule-1.0.tar.gz -i debuild
 ----
 
-For other interpreted languages with the *-b* option support, specify the pertinent 'type' for the *-b* option.
+For other interpreted languages that support the *-b* option, specify the pertinent 'type' for the *-b* option.
 
-For interpreted languages without the *-b* option support, specify the *script* type instead and add the interpreter package as the dependency of the resulting binary package by adjusting the *debian/control* file.
+For interpreted languages without the *-b* option support, specify the *script* type instead and add the interpreter package as a dependency of the resulting binary package by adjusting the *debian/control* file.
 

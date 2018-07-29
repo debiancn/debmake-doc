@@ -1,11 +1,11 @@
 [[autotools-single]]
-=== Autotools (single-binary)
+=== Autotools (single-binary package)
 
-Here is an example of creating a simple Debian package from a simple C source using the Autotools = Autoconf and Automake (*Makefile.am* and *configure.ac*) as its build system. See <<autotools>>.
+Here is an example of creating a simple Debian package from a simple C source program using Autotools = Autoconf and Automake (*Makefile.am* and *configure.ac*) as its build system. See <<autotools>>.
 
-This source usually comes with the upstream auto-generated *Makefile.in* and *configure* files, too.  This source can be packaged using these files as <<configure-single>> with the help of the *autotools-dev* package.
+This source usually comes with the upstream auto-generated *Makefile.in* and *configure* files, too.  This source can be packaged using these files as in <<configure-single>> with the help of the *autotools-dev* package.
 
-The better alternative is to regenerate these files using the latest Autoconf and Automake packages if the upstream provided *Makefile.am* and *configure.ac* are compatible with the latest version.  This is advantageous for the porting to the new CPU architectures etc.  This can be automated by using the ``*--with autoreconf*'' option for the *dh* command.
+The better alternative is to regenerate these files using the latest Autoconf and Automake packages if the upstream provided *Makefile.am* and *configure.ac* are compatible with the latest version.  This is advantageous for porting to new CPU architectures, etc.  This can be automated by using the ``*--with autoreconf*'' option for the *dh* command.
 
 Let's assume this upstream tarball to be *debhello-1.6.tar.gz*.
 
@@ -53,7 +53,7 @@ sys::[head -n12  ../debhello-1.6-pkg1/step200.slog]
 
 The result is similar to <<configure-single>> but not exactly the same.
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 // .The source tree after the basic *debmake* execution. (v=1.6)
 // ----

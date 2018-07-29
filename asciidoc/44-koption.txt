@@ -10,7 +10,7 @@ When updating a package for the new upstream release, the *debmake* command can 
  $ debmake -k | less
 ----
 
-The ``*debmake -k*'' command parses the *debian/copyright* file from the top to the bottom and compare the license of all the non-binary files in the current package with the license described in the last matching file pattern entry of the *debian/copyright* file.
+The ``*debmake -k*'' command parses the *debian/copyright* file from the top to the bottom and compares the license of all the non-binary files in the current package with the license described in the last matching file pattern entry of the *debian/copyright* file.
 
 When editing the auto-generated *debian/copyright* file, please make sure to keep the generic file patterns at the top of the list.
 

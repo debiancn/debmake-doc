@@ -1,7 +1,7 @@
 [[makefile-single]]
-=== Makefile (single-binary)
+=== Makefile (single-binary package)
 
-Here is an example of creating a simple Debian package from a simple C source using the *Makefile* as its build system.
+Here is an example of creating a simple Debian package from a simple C source program using the *Makefile* as its build system.
 
 This is an enhanced upstream source example for <<simple>>.  This comes with the manpage, the desktop file, and the desktop icon.  This also links to an external library *libm* to be a more practical example.
 
@@ -16,7 +16,7 @@ This type of source is meant to be installed as a non-system file as:
  $ make install
 ----
 
-Debian packaging requires to change this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
+Debian packaging requires changing this ``*make install*'' process to install files into the target system image location instead of the normal location under */usr/local*.
 
 Let's get the source and make the Debian package.
 
@@ -51,9 +51,9 @@ sys::[head -n12  ../debhello-1.4-pkg1/step200.slog]
 ...
 ----
 
-The result is practically the same as <<step-debmake>>.
+The result is practically the same as in <<step-debmake>>.
 
-Let's make this Debian package better as the maintainer which is practically the same as <<step-maintainer>>.
+Let's make this Debian package, which is practically the same as in <<step-maintainer>>, better as the maintainer.
 
 
 // .*debian/rules* (maintainer version, v=1.4):
@@ -61,9 +61,9 @@ Let's make this Debian package better as the maintainer which is practically the
 // include::../debhello-1.4-pkg1/step301.slog[]
 // ----
 
-If the *DEB_BUILD_MAINT_OPTIONS* is not exported in the *debian/rules*, the lintian warns "W: debhello: hardening-no-relro usr/bin/hello" for the linking of the *libm*.
+If the *DEB_BUILD_MAINT_OPTIONS* environment variable is not exported in *debian/rules*, lintian warns "W: debhello: hardening-no-relro usr/bin/hello" for the linking of *libm*.
 
-The *debian/control* file making it exactly the same as one in <<step-maintainer>>, since the *libm* library is always available as a part of the *libc6* (Priority: required).
+The *debian/control* file makes it exactly the same as the one in <<step-maintainer>>, since the *libm* library is always available as a part of *libc6* (Priority: required).
 
 There are several other template files under the *debian/* directory.  These also need to be updated.
 

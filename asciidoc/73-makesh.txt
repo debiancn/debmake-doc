@@ -13,7 +13,7 @@ This type of source is meant to be installed as a non-system file as:
  $ make install
 ----
 
-Debian packaging requires to change this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
+Debian packaging requires changing this ``*make install*'' process to install files to the target system image location instead of the normal location under */usr/local*.
 
 Let's get the source and make the Debian package.
 
@@ -22,21 +22,21 @@ Let's get the source and make the Debian package.
 include::../debhello-1.0-pkg1/step000.slog[]
 ----
 
-Here, the *Makefile* uses *$(DESTDIR)* and *$(prefix)* properly.  All other files are the same as <<nomakefile>> and most of the packaging activities are the same.
+Here, the *Makefile* uses *$(DESTDIR)* and *$(prefix)* properly.  All other files are the same as in <<nomakefile>> and most of the packaging activities are the same.
 
 .*Makefile* (v=1.0)
 ----
 include::../debhello-1.0-pkg1/step101.slog[]
 ----
 
-Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify the generated binary package is a shell script.
+Let's package this with the *debmake* command.  Here, the *-b\':sh'* option is used to specify that the generated binary package is a shell script.
 
 ----
 sys::[head -n12  ../debhello-1.0-pkg1/step200.slog]
 ...
 ----
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 // .The source tree after the basic *debmake* execution. (v=1.0)
 // ----
@@ -55,7 +55,7 @@ Let's make this Debian package better as the maintainer.
 include::../debhello-1.0-pkg1/step301.slog[]
 ----
 
-Since this upstream source has the proper upstream *Makefile*, there are no needs to create *debian/install* and *debian/manpages* files.
+Since this upstream source has the proper upstream *Makefile*, there is no need to create *debian/install* and *debian/manpages* files.
 
 The *debian/control* file is exactly the same as the one in <<nomakefile>>.
 
@@ -66,5 +66,5 @@ There are several other template files under the *debian/* directory.  These als
 include::../debhello-1.0-pkg1/step400.slog[]
 ----
 
-The rest of the packaging activities are practically the same as the one in <<nomakefile>>.
+The rest of the packaging activities are practically the same as the ones in <<nomakefile>>.
 

@@ -1,8 +1,6 @@
 = Test for AsciiDoc
 :Author:    Osamu Aoki
 :Email:     osamu@debian.org
-:Date:      {date}
-:Revision:  {revision}
 :encoding: UTF-8
 
 

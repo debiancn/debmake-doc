@@ -5,7 +5,7 @@ The default locale of the build environment is *C*.
 
 Some programs such as the *read* function of Python3 change their behavior depending on the locale.
 
-Adding the following code to the *debian/rules* file ensures to build the program under the *C.UTF-8* locale.
+Adding the following code to the *debian/rules* file ensures building the program under the *C.UTF-8* locale.
 
 ----
 LC_ALL := C.UTF-8

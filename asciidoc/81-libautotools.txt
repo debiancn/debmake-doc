@@ -1,9 +1,9 @@
 [[autotools-multi]]
-=== Autotools (multi-binary)
+=== Autotools (multi-binary package)
 
-Here is an example of creating a set of Debian binary packages including the executable package, the shared library package, the development file package, and the debug symbol package from a simple C source using the Autotools = Autoconf and Automake (*Makefile.am* and *configure.ac*) as its build system.  See <<autotools>>.
+Here is an example of creating a set of Debian binary packages including the executable package, the shared library package, the development file package, and the debug symbol package from a simple C source program using Autotools = Autoconf and Automake (which use *Makefile.am* and *configure.ac* as their input files) as its build system.  See <<autotools>>.
 
-Let's package this in the same way as <<autotools-single>>.
+Let's package this in the same way as in <<autotools-single>>.
 
 Let's assume this upstream tarball to be *debhello-2.0.tar.gz*.
 
@@ -64,7 +64,7 @@ sys::[head -n16  ../debhello-2.0-pkg1/step200.slog]
 
 The result is similar to <<configure-single>> but with more template files.
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 .*debian/rules* (template file, v=2.0):
 ----
@@ -88,7 +88,7 @@ include::../debhello-2.0-pkg1/step302.slog[]
 include::../debhello-2.0-pkg1/step303.slog[]
 ----
 
-Since this upstream source creates the proper auto-generated *Makefile*, there are no needs to create *debian/install* and *debian/manpages* files.
+Since this upstream source creates the proper auto-generated *Makefile*, there is no need to create *debian/install* and *debian/manpages* files.
 
 There are several other template files under the *debian/* directory.  These also need to be updated.
 

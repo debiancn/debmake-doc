@@ -1,7 +1,7 @@
 [[cmake-multi]]
-=== CMake (multi-binary)
+=== CMake (multi-binary package)
 
-Here is an example of creating a set of Debian binary packages including the executable package, the shared library package, the development file package, and the debug symbol package from a simple C source using the CMake (*CMakeLists.txt* and some files such as *config.h.in*) as its build system. See <<cmake>>.
+Here is an example of creating a set of Debian binary packages including the executable package, the shared library package, the development file package, and the debug symbol package from a simple C source program using CMake (*CMakeLists.txt* and some files such as *config.h.in*) as its build system. See <<cmake>>.
 
 Let's assume this upstream tarball to be *debhello-2.1.tar.gz*.
 
@@ -55,7 +55,7 @@ sys::[head -n12  ../debhello-2.1-pkg1/step200.slog]
 
 The result is similar to <<configure-single>> but not exactly the same.
 
-Let's inspect notable template files generated.
+Let's inspect the notable template files generated.
 
 .*debian/rules* (template file, v=2.1):
 ----
@@ -86,7 +86,7 @@ This upstream CMakeList.txt needs to be patched to cope with the multiarch path.
 include::../debhello-2.1-pkg1/step304.slog[]
 ----
 
-Since this upstream source creates the proper auto-generated *Makefile*, there are no needs to create *debian/install* and *debian/manpages* files.
+Since this upstream source creates the proper auto-generated *Makefile*, there is no need to create *debian/install* and *debian/manpages* files.
 
 There are several other template files under the *debian/* directory.  These also need to be updated.
 

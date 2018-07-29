@@ -1,7 +1,7 @@
 [[joption]]
 === debmake -j
 
-The generation of the functioning multi binary package always requires extra manual works than that of the functioning single binary package.  The test build of the source package is essential part of it.
+The generation of a functioning multi-binary package always requires more manual work than that of a functioning single binary package.  The test build of the source package is the essential part of it.
 
 For example, let's package the same 'package-1.0'*.tar.gz* (see <<simple>>) into a multi binary package.
 
@@ -10,9 +10,9 @@ For example, let's package the same 'package-1.0'*.tar.gz* (see <<simple>>) into
 ----
  $ debmake -j -a package-1.0.tar.gz
 ----
-* Check the last lines of the 'package'**.build-dep.log** file to judge build dependencies for *Build-Depends*. (You do not need to list packages used by *debhelper*, *perl*, or *fakeroot* explicitly in *Build-Depends*.  This technique is useful for the generation of the single binary package, too.)
+* Check the last lines of the 'package'**.build-dep.log** file to judge build dependencies for *Build-Depends*. (You do not need to list packages used by *debhelper*, *perl*, or *fakeroot* explicitly in *Build-Depends*.  This technique is useful for the generation of a single binary package, too.)
 * Check the contents of the 'package'**.install.log** file to identify the install paths for files to decide how you split them into multiple packages.
-* Start packaging with the *debmake* command. 
+* Start packaging with the *debmake* command.
 +
 ----
  $ rm -rf package-1.0
@@ -22,12 +22,12 @@ For example, let's package the same 'package-1.0'*.tar.gz* (see <<simple>>) into
 ----
 * Update *debian/control* and *debian/*'binarypackage'**.install** files using the above information.
 * Update other *debian/** files as needed.
-* Build the Debian package with the *debuild* or its equivalent command.
+* Build the Debian package with the *debuild* command or its equivalent.
 +
 ----
  $ debuild
 ----
-* All binary package entries specified in the **debian/**'binarypackage'**.install** file are generated as the 'binarypackage_version-revision_arch'**.deb**.
+* All binary package entries specified in the **debian/**'binarypackage'**.install** file are generated as 'binarypackage_version-revision_arch'**.deb**.
 
 NOTE: The *-j* option for the *debmake* command invokes *dpkg-depcheck*(1) to run *debian/rules* under *strace*(1) to obtain library dependencies.  Unfortunately, this is very slow.  If you know the library package dependencies from other sources such as the SPEC file in the source, you may just run the "*debmake* ..." command without the *-j* option and run the ``*debian/rules install*'' command to check the install paths of the generated files.
 

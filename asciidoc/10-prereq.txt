@@ -44,7 +44,7 @@ Please understand Debian's social dynamics to prepare yourself for interactions 
 ** Attention from other volunteers is a very scarce resource.
 * Debian is constantly improving.
 ** You are expected to make high quality packages.
-** You should adapt yourself to the change.
+** You should adapt yourself to change.
 
 Since we focus only on the technical aspects of the packaging in the rest of this guide, please refer to the following to understand the social dynamics of Debian:
 
@@ -76,9 +76,9 @@ Please make yourself ready to read the pertinent part of the official Debian doc
 * ``Debian Developer's Reference''
 ** ``best practice'' document (https://www.debian.org/doc/devel-manuals#devref)
 
-If this guide contradicts with the official Debian documentation, they are correct. Please file a bug report on the *debmake-doc* package using the *reportbug* command.
+If this guide contradicts the official Debian documentation, the official Debian documentation is correct. Please file a bug report on the *debmake-doc* package using the *reportbug* command.
 
-Here are alternative tutorial documents which you may read along with this guide:
+Here are alternative tutorial documents, which you may read along with this guide:
 
 * ``Debian New Maintainers' Guide'' (older)
 ** https://www.debian.org/doc/devel-manuals#maint-guide
@@ -89,12 +89,12 @@ Here are alternative tutorial documents which you may read along with this guide
 * ``Ubuntu Packaging Guide'' (Ubuntu is Debian based.)
 ** http://packaging.ubuntu.com/html/
 
-TIP: When reading these tutorials, you should consider to use the *debmake* command in place of the *dh_make* command for better template files.
+TIP: When reading these tutorials, you should consider using the *debmake* command in place of the *dh_make* command for better template files.
 
 [[help]]
 === Help resources
 
-Before you decide to ask your question in some public place, please do your parts of efforts, i.e., read the fine documentation:
+Before you decide to ask your question in some public place, please do your part of the effort, i.e., read the fine documentation:
 
 * package information available through the *aptitude*, *apt-cache*, and *dpkg* commands.
 * files in */usr/share/doc/*'package' for all pertinent packages.
@@ -103,7 +103,7 @@ Before you decide to ask your question in some public place, please do your part
 * contents of https://lists.debian.org/debian-mentors/[debian-mentors@lists.debian.org mailing list archive].
 * contents of https://lists.debian.org/debian-devel/[debian-devel@lists.debian.org mailing list archive].
 
-Your desired information can be found effectively by using the well-formed search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
+Your desired information can be found effectively by using a well-formed search string such as ``keyword *site:lists.debian.org*'' to limit the search domain of the web search engine.
 
 Making a small test package is a good way to learn details of the packaging. Inspecting existing well maintained packages is the best way to learn how other people make packages.
 
@@ -119,7 +119,7 @@ If you still have questions about the packaging, you can ask them interactively:
 
 The more experienced Debian developers will gladly help you, if you ask properly after making your required efforts.
 
-CAUTION: Debian development is a moving target.  Some information found on the web may be outdated, incorrect, and not-applicable.  Please use them carefully.
+CAUTION: Debian development is a moving target.  Some information found on the web may be outdated, incorrect, and non-applicable.  Please use it carefully.
 
 [[situation]]
 === Archive situation
@@ -128,16 +128,16 @@ Please realize the situation of the Debian archive.
 
 * Debian already has packages for most kinds of programs.
 * The number of packages already in the Debian archive is several tens of times greater than that of active maintainers.
-* Unfortunately, some packages lack appropriate level of attention by the maintainer.
+* Unfortunately, some packages lack an appropriate level of attention by the maintainer.
 
-Thus, contributions to packages already in the archive are far more appreciated (and more likely to receive sponsorship for the uploading) by other maintainers.
+Thus, contributions to packages already in the archive are far more appreciated (and more likely to receive sponsorship for uploading) by other maintainers.
 
 TIP: The *wnpp-alert* command from the *devscripts* package can check for installed packages up for adoption or orphaned.
 
 [[approaches]]
 === Contribution approaches
 
-Here is a pseudo-Python code for your contribution approaches to Debian with a *program*:
+Here is pseudo-Python code for your contribution approaches to Debian with a *program*:
 
 ----
 if exist_in_debian(program):
@@ -193,7 +193,7 @@ Here:
 ** The program should be useful.
 ** The program should not introduce security and maintenance concerns to the Debian system.
 ** The program should be well documented and its code needs to be understandable (i.e. not obfuscated).
-** The program's authors agree with the packaging and are amicable to Debian. footnote:[This is not the absolute requirement.  The hostile upstream may become major resource drains for us all.  The friendly upstream can be consulted to solve any problems with the program.]
+** The program's authors agree with the packaging and are amicable to Debian. footnote:[This is not the absolute requirement.  The hostile upstream may become a major resource drain for us all.  The friendly upstream can be consulted to solve any problems with the program.]
 * For is_it_DFSG(), and is_its_dependency_DFSG(); check:
 ** https://www.debian.org/social_contract#guidelines[Debian Free Software Guidelines] (DFSG).
 * For is_it_distributable(), check:
@@ -210,10 +210,10 @@ You either need to file an *ITP* or adopt a package to start working on it.  See
 The novice contributor and maintainer may wonder what to learn to start your contribution to Debian.  Here are my suggestions depending on your focus:
 
 * Packaging
-** Basics of *POSIX shell* and *make*.
+** Basics of the *POSIX shell* and *make*.
 ** Some rudimentary knowledge of *Perl* and *Python*.
 * Translation
-** Basics of how PO based translation system.
+** Basics of how the PO based translation system works.
 * Documentation
 ** Basics of text markups (XML, ReST, Wiki, ...).
 
