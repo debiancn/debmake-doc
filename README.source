@@ -56,7 +56,7 @@ First, you set up source with:
  $ sudo apt-get build-dep debmake-doc
  $ git clone git@salsa.debian.org:debian/debmake-doc.git
  $ cd debmake-doc
- $ gitk # check the source (you are on master now.)
+ $ gitk --all # check the source (you are on master now.)
  $ git checkout --track origin/upstream
  $ git checkout --track origin/pristine-tar
  $ git checkout --track origin/devel
