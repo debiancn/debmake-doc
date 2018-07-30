@@ -5662,7 +5662,7 @@ msgstr ""
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:3477
 msgid ""
-"If your network environment blocks access to the HPK port <emphasis role="
+"If your network environment blocks access to the HKP port <emphasis role="
 "\"strong\">11371</emphasis>, use “<emphasis role=\"strong\">hkp://keyserver."
 "ubuntu.com:80</emphasis>” instead."
 msgstr ""
