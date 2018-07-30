@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-07-29 14:00+0900\n"
-"PO-Revision-Date: 2018-07-14 08:05+0200\n"
+"PO-Revision-Date: 2018-07-29 09:45+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -113,7 +113,7 @@ msgid ""
 "“Debian New Maintainers’ Guide”, copyright © 1998-2002 Josip Rodin, "
 "2005-2017 Osamu Aoki, 2010 Craig Small, and 2010 Raphaël Hertzog."
 msgstr ""
-"»Debian New Maintainers’ Guide«, Copyright © 1998-2002 Josip Rodin, "
+"»Debian-Leitfaden für Neue Paketbetreuer«, Copyright © 1998-2002 Josip Rodin, "
 "2005-2017 Osamu Aoki, 2010 Craig Small und 2010 Raphaël Hertzog."
 
 #. (itstool) path: legalnotice/simpara
@@ -184,13 +184,12 @@ msgstr "mehrere Binärpakete mit Laufzeitbibliotheken usw."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.x02:111
-#, fuzzy
 msgid ""
 "This “Guide for Debian Maintainers” can be considered as the successor to "
 "the “Debian New Maintainers’ Guide”."
 msgstr ""
-"Diese »Anleitung für Debian-Betreuer« kann als Nachfolger der FIXME "
-"angesehen werden."
+"Diese »Anleitung für Debian-Betreuer« kann als Nachfolger des »Debian-"
+"Leitfaden für Neue Paketbetreuer« angesehen werden."
 
 #. (itstool) path: preface/title
 #: debmake-doc.en.x02:116
@@ -1098,7 +1097,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:536
-#, fuzzy
 msgid ""
 "Here are alternative tutorial documents, which you may read along with this "
 "guide:"
@@ -1109,7 +1107,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:539
 msgid "“Debian New Maintainers' Guide” (older)"
-msgstr ""
+msgstr "»Debian-Leitfaden für Neue Paketbetreuer« (älter)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:545
@@ -14782,11 +14780,15 @@ msgid ""
 "“Guide for Debian Maintainers” in plain text, HTML and PDF formats under the "
 "<emphasis role=\"strong\">/usr/share/doc/debmake-doc/</emphasis> directory."
 msgstr ""
+"Das Paket <emphasis role=\"strong\">debmake-doc</emphasis> stellt die "
+"»Anleitung für Debian-Betreuer« in einfachem Text, HTML und PDF-Format im "
+"Verzeichnis <emphasis role=\"strong\">/usr/share/doc/debmake-doc/</emphasis> "
+"zur Verfügung."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:9661
 msgid "Debian New Maintainers’ Guide"
-msgstr ""
+msgstr "Debian-Leitfaden für Neue Paketbetreuer"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9661
@@ -14823,10 +14825,6 @@ msgstr ""
 "\">cowbuilder</emphasis>(8), <emphasis role=\"strong\">gbp-buildpackage</"
 "emphasis>(1), <emphasis role=\"strong\">gbp-pq</emphasis>(1) und <emphasis "
 "role=\"strong\">git-pbuilder</emphasis>(1)."
-
-#, fuzzy
-#~ msgid "2018-07-29"
-#~ msgstr "2018-02-16"
 
 #~ msgid "2017-09-17"
 #~ msgstr "17. September 2017"
