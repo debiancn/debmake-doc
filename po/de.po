@@ -4795,7 +4795,7 @@ msgid ""
 "<emphasis>binarypackage:type</emphasis> pairs, e.g., in the full form "
 "“<emphasis role=\"strong\">foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,"
 "libfoo-dev:dev</emphasis>” or in the short form, “<emphasis role=\"strong\">-"
-"doc,libfoo1,libfoo1-dbg, libfoo-dev</emphasis>”."
+"doc,libfoo1,libfoo1-dbg,libfoo-dev</emphasis>”."
 msgstr ""
 
 #. (itstool) path: listitem/simpara

@@ -5695,13 +5695,13 @@ msgid ""
 "<emphasis>binarypackage:type</emphasis> pairs, e.g., in the full form "
 "“<emphasis role=\"strong\">foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,"
 "libfoo-dev:dev</emphasis>” or in the short form, “<emphasis role=\"strong\">-"
-"doc,libfoo1,libfoo1-dbg, libfoo-dev</emphasis>”."
+"doc,libfoo1,libfoo1-dbg,libfoo-dev</emphasis>”."
 msgstr ""
 "установить спецификацию двоичного пакета в значение разделённого запятой "
 "списка, содержащего пары вида <emphasis>двоичныйпакет:тип</emphasis>, "
 "например, в полном виде — «<emphasis role=\"strong\">foo:bin,foo-doc:doc,"
 "libfoo1:lib,libfoo1-dbg:dbg,libfoo-dev:dev</emphasis>» или в коротком виде — "
-"«<emphasis role=\"strong\">,-doc,libfoo1,libfoo1-dbg, libfoo-dev</emphasis>»."
+"«<emphasis role=\"strong\">,-doc,libfoo1,libfoo1-dbg,libfoo-dev</emphasis>»."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2830 debmake-doc.en.x02:9184
