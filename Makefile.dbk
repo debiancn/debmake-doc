@@ -56,7 +56,7 @@ ITSTOOL := itstool -i $(XSLT_DIR)/docbook.its
 MKDIRP := mkdir -p
 MSGCAT := msgcat
 MSGFMT := msgfmt
-MSGMERGE := msgmerge
+MSGMERGE := msgmerge --update --previous
 MSGATTRIB := msgattrib
 DBLATEX	:= dblatex
 # Change $(DRAFTMODE) from "yes" to "maybe" when this document
