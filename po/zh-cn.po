@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-07-29 14:00+0900\n"
-"PO-Revision-Date: 2018-04-27 13:09+0800\n"
+"PO-Revision-Date: 2018-07-30 09:16+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.9\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -160,8 +160,8 @@ msgid ""
 "the building of the Debian package to ordinary Debian users and prospective "
 "developers using the <emphasis role=\"strong\">debmake</emphasis> command."
 msgstr ""
-"本篇《Debian 维护者指南》（@@@debdate@@@）教程文档面向普通 Debian 用户和未来的开"
-"发者，描述了使用 <emphasis role=\"strong\">debmake</emphasis> 命令构建 "
+"本篇《Debian 维护者指南》（@@@debdate@@@）教程文档面向普通 Debian 用户和未来"
+"的开发者，描述了使用 <emphasis role=\"strong\">debmake</emphasis> 命令构建 "
 "Debian 软件包的方法。"
 
 #. (itstool) path: abstract/simpara
@@ -270,7 +270,6 @@ msgstr ""
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:136
-#, fuzzy
 msgid ""
 "Debian has many social and technical rules and conventions to follow since "
 "it is a large volunteer organization with history. Debian also has developed "
@@ -318,7 +317,6 @@ msgstr "……"
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:174
-#, fuzzy
 msgid ""
 "These make it somewhat overwhelming for many new prospective Debian "
 "maintainers to get involved with Debian. This guide tries to provide entry "
@@ -369,9 +367,9 @@ msgstr ""
 "作者在更新原有的使用 <emphasis role=\"strong\">dh-make</emphasis> 软件包的“新"
 "维护者手册”时感受到了文档的局限性。因此，作者决定创建一个替代工具并编写其对应"
 "的文档以解决某些现代的需求。其成果便是 <emphasis role=\"strong\">debmake</"
-"emphasis>（当前版本：@@@debmakeversion@@@)）软件包，以及这篇更新的“Debian 维护者指南”，可从 "
-"<emphasis role=\"strong\">debmake-doc</emphasis>（当前版本：@@@debversion@@@）软件包获"
-"取。"
+"emphasis>（当前版本：@@@debmakeversion@@@)）软件包，以及这篇更新的“Debian 维"
+"护者指南”，可从 <emphasis role=\"strong\">debmake-doc</emphasis>（当前版本："
+"@@@debversion@@@）软件包获取。"
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:203
@@ -448,7 +446,6 @@ msgstr ""
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.x02:216
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command only provides good "
 "template files. These template files must be manually adjusted to their "
@@ -461,7 +458,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:217
-#, fuzzy
 msgid ""
 "If you are new to Debian packaging, do not worry about the details and just "
 "get the big picture instead."
@@ -471,7 +467,6 @@ msgstr ""
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:218
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">deb-make</emphasis> command was popular before "
 "the <emphasis role=\"strong\">dh_make</emphasis> command. The current "
@@ -489,7 +484,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:218
-#, fuzzy
 msgid ""
 "If you have been exposed to Debian packaging, this looks very much like the "
 "<emphasis role=\"strong\">dh_make</emphasis> command. This is because the "
@@ -504,7 +498,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:219
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is designed with "
 "the following features:"
@@ -571,7 +564,6 @@ msgstr "执行过程不中断，输出干净的结果"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:266
-#, fuzzy
 msgid ""
 "generate the multiarch package, unless the <emphasis role=\"strong\">-m</"
 "emphasis> option is explicitly specified."
@@ -581,7 +573,6 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:271
-#, fuzzy
 msgid ""
 "generate the non-native Debian package with the “<emphasis role=\"strong"
 "\">3.0 (quilt)</emphasis>” format, unless the <emphasis role=\"strong\">-n</"
@@ -621,7 +612,6 @@ msgstr ""
 #. (itstool) path: tip/simpara
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:291 debmake-doc.en.x02:9026
-#, fuzzy
 msgid ""
 "Make sure to protect the arguments of the <emphasis role=\"strong\">-b</"
 "emphasis>, <emphasis role=\"strong\">-f</emphasis>, <emphasis role=\"strong"
@@ -640,7 +630,6 @@ msgstr "非本土软件包是标准的 Debian 软件包。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:293
-#, fuzzy
 msgid ""
 "The detailed log of all the package build examples in this document can be "
 "obtained by following the instructions in <xref linkend=\"details\"/>."
@@ -902,9 +891,8 @@ msgstr "Debian 期望你制作出高质量的软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:439
-#, fuzzy
 msgid "You should adapt yourself to change."
-msgstr "你应该随时调整自己来适应世界的变化。"
+msgstr "你应该随时调整自己来适应变化。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:446
@@ -1046,7 +1034,6 @@ msgstr "“最佳实践”文档（<_:ulink-1/>）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:535
-#, fuzzy
 msgid ""
 "If this guide contradicts the official Debian documentation, the official "
 "Debian documentation is correct. Please file a bug report on the <emphasis "
@@ -1059,11 +1046,10 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:536
-#, fuzzy
 msgid ""
 "Here are alternative tutorial documents, which you may read along with this "
 "guide:"
-msgstr "这里有你当前阅读的指南的一些替代性教程文档："
+msgstr "这里有一些替代性的教程文档，你可以与本指南一起阅读进行参考："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:539
@@ -1107,7 +1093,6 @@ msgstr "http://packaging.ubuntu.com/html/"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:585
-#, fuzzy
 msgid ""
 "When reading these tutorials, you should consider using the <emphasis role="
 "\"strong\">debmake</emphasis> command in place of the <emphasis role=\"strong"
@@ -1124,13 +1109,12 @@ msgstr "帮助资源"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:589
-#, fuzzy
 msgid ""
 "Before you decide to ask your question in some public place, please do your "
 "part of the effort, i.e., read the fine documentation:"
 msgstr ""
-"在你决定在某些公共场合问出你的问题之前，请先做好自己应做的事，例如，查看这些"
-"文档与信息："
+"在你决定在某些公共场合问出你的问题之前，请先做好自己能做到的事情，例如，阅读"
+"能找到的文档："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:592
@@ -1187,7 +1171,6 @@ msgstr "debian-devel@lists.debian.org 邮件列表存档"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:622
-#, fuzzy
 msgid ""
 "Your desired information can be found effectively by using a well-formed "
 "search string such as “keyword <emphasis role=\"strong\">site:lists.debian."
@@ -1281,13 +1264,12 @@ msgstr ""
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.x02:665
-#, fuzzy
 msgid ""
 "Debian development is a moving target. Some information found on the web may "
 "be outdated, incorrect, and non-applicable. Please use it carefully."
 msgstr ""
-"Debian 的开发具有一个不断移动的目标。你在网上找到的某些信息可能是过时的、不正"
-"确的或者不适用的，使用时请留意。"
+"Debian 的开发是一个不断变动的目标。你在网上找到的某些信息可能是过时的、不正确"
+"的或者不适用的，使用时请留意。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:668
@@ -1313,7 +1295,6 @@ msgstr "Debian 仓库内软件包的数量是活跃维护者的数十倍。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:682
-#, fuzzy
 msgid ""
 "Unfortunately, some packages lack an appropriate level of attention by the "
 "maintainer."
@@ -1321,14 +1302,13 @@ msgstr "遗憾的是，某些软件包缺乏维护者的足够关注。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:687
-#, fuzzy
 msgid ""
 "Thus, contributions to packages already in the archive are far more "
 "appreciated (and more likely to receive sponsorship for uploading) by other "
 "maintainers."
 msgstr ""
-"因此，对已经存在于仓库内的软件包做出贡献是十分欢迎的，也更有可能得到其他维护"
-"者的感谢、支持和协助上传。"
+"因此，对已经存在于仓库内的软件包做出贡献是十分欢迎的（这也更有可能得到其他维"
+"护者的支持和协助上传）。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:688
@@ -1348,7 +1328,6 @@ msgstr "贡献流程"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:692
-#, fuzzy
 msgid ""
 "Here is pseudo-Python code for your contribution approaches to Debian with a "
 "<emphasis role=\"strong\">program</emphasis>:"
@@ -1443,14 +1422,13 @@ msgstr "这个程序应当有良好的文档，其源代码需要可被理解（
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:806
-#, fuzzy
 msgid ""
 "This is not the absolute requirement. The hostile upstream may become a "
 "major resource drain for us all. The friendly upstream can be consulted to "
 "solve any problems with the program."
 msgstr ""
-"这一条不是绝对的要求，但请注意遇上不友好的上游可能需要大家为此投入大量精力。"
-"一个友好的上游则能协助解决程序的各类问题。"
+"这一条不是绝对的要求，但请注意：遇上不友好的上游可能需要大家为此投入大量精"
+"力，而一个友好的上游则能协助解决程序的各类问题。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:805
@@ -1533,13 +1511,12 @@ msgstr "打包"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:860
-#, fuzzy
 msgid ""
 "Basics of the <emphasis role=\"strong\">POSIX shell</emphasis> and <emphasis "
 "role=\"strong\">make</emphasis>."
 msgstr ""
 "<emphasis role=\"strong\">POSIX shell</emphasis> 和 <emphasis role=\"strong"
-"\">make</emphasis> 的基础。"
+"\">make</emphasis> 的基本知识。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:865
@@ -1557,9 +1534,8 @@ msgstr "翻译"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:877
-#, fuzzy
 msgid "Basics of how the PO based translation system works."
-msgstr "基于 PO 的翻译系统的工作原理与基础。"
+msgstr "基于 PO 的翻译系统的工作原理和基本知识。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:884
@@ -1730,7 +1706,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:987
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">devscripts</emphasis> package should be "
 "installed in the maintainer environment."
@@ -1740,7 +1715,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:988
-#, fuzzy
 msgid ""
 "Although this is not necessarily an absolute requirement, it is a good idea "
 "to install and set up all of the popular set of packages mentioned in this "
@@ -1748,8 +1722,8 @@ msgid ""
 "baseline working environment."
 msgstr ""
 "尽管这个不是绝对的要求，但是在维护者的工作环境内装上并配置好本章节提到的各个"
-"软件包会有助于维护者高效投入工作。这些软件可以构成我们共同确立的一个基准工作"
-"环境。"
+"常用的软件包会有助于维护者高效投入工作。这些软件可以构成我们共同确立的一个基"
+"准工作环境。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:989
@@ -1758,13 +1732,12 @@ msgstr "Debian 维护者工具概览"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:989
-#, fuzzy
 msgid ""
 "Please install the tools mentioned in the <_:ulink-1/> in the “Debian "
 "Developer’s Reference”, as needed, too."
 msgstr ""
-"如有需要，请按需安装在“Debian 开发者参考”文中 <_:ulink-1/> 一节提到的各个工"
-"具。"
+"如有需要，请同样按需安装在“Debian 开发者参考”文中 <_:ulink-1/> 一节提到的各个"
+"工具。"
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.x02:990
@@ -4434,7 +4407,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2462
-#, fuzzy
 msgid ""
 "A native Debian package is the rare Debian binary package format. It may be "
 "used only when the package is useful and valuable only for Debian. Thus, its "
@@ -6693,9 +6665,8 @@ msgstr "debian/upstream/signing-key.asc"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3443
-#, fuzzy
 msgid "Some packages are signed by a GPG key."
-msgstr "某些软件包源码由 GPG 密钥进行了签名。"
+msgstr "某些软件包由 GPG 密钥进行了签名。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:3444
@@ -6713,6 +6684,7 @@ msgid ""
 "For example, <_:ulink-1/> can be downloaded via HTTP from <_:ulink-2/> . "
 "There are sets of files:"
 msgstr ""
+"例如，<_:ulink-1/> 可使用 HTTP 协议从 <_:ulink-2/> 下载。它含有以下文件："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3447
@@ -6720,6 +6692,8 @@ msgid ""
 "<emphasis role=\"strong\">hello-</emphasis><emphasis>version</"
 "emphasis><emphasis role=\"strong\">.tar.gz</emphasis> (upstream source)"
 msgstr ""
+"<emphasis role=\"strong\">hello-</emphasis><emphasis>version</"
+"emphasis><emphasis role=\"strong\">.tar.gz</emphasis>（上游源代码）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3452
@@ -6728,16 +6702,19 @@ msgid ""
 "emphasis><emphasis role=\"strong\">.tar.gz.sig</emphasis> (detached "
 "signature)"
 msgstr ""
+"<emphasis role=\"strong\">hello-</emphasis><emphasis>version</"
+"emphasis><emphasis role=\"strong\">.tar.gz.sig</emphasis>（分离的签名）"
+"nature)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3457
 msgid "Let’s pick the latest version set."
-msgstr ""
+msgstr "我们现在来选择最新的版本套装。"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:3465
 msgid "web of trust"
-msgstr ""
+msgstr "信任网"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3465
@@ -6747,6 +6724,9 @@ msgid ""
 "asc</emphasis> file. Otherwise, use the hkp keyserver and check it via your "
 "<_:ulink-1/>."
 msgstr ""
+"如果你从邮件列表获知上游维护者所使用的 GPG 公钥信息，请将它作为 <emphasis "
+"role=\"strong\">debian/upstream/signing-key.asc</emphasis> 文件进行存储。否"
+"则，请使用 hkp 公钥服务器并经由您的<_:ulink-1/>进行验证。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:3477
@@ -6789,7 +6769,7 @@ msgstr "debian/watch 和 DFSG"
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:3487 debmake-doc.en.x02:3488
 msgid "DFSG"
-msgstr ""
+msgstr "Debian 自由软件指导方针（DFSG）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3487
