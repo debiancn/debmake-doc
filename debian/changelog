@@ -1,3 +1,9 @@
+debmake-doc (1.11-1) UNRELEASED; urgency=medium
+
+  * Improve README.source and manpage content. 
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 29 Jul 2018 18:03:29 +0900
+
 debmake-doc (1.10-1) unstable; urgency=medium
 
   [ Osamu Aoki ]

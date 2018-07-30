@@ -15,21 +15,16 @@ include Makefile.common
 include Makefile.pkg
 include Makefile.dbk
 
-
-# Normal doc content as xml and prepare install directory
-$(BASEXML):
-	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
-
 build: $(PKG) $(wildcard $(ASCIIDOC_DIR)/*.txt)
 	# process ASCIIDOC after $(pkg) targets even under the parallel build
-	$(MAKE) $(BASEXML)
+	$(MAKE) base-xml
 	echo "DEBUG='$(DEBUG)'"
 	echo "LANGPO='$(LANGPO)'"
 	echo "LANGALL='$(LANGALL)'"
 	echo "NOPDF='$(NOPDF)'"
 	echo "BASEDIR='$(BASEDIR)'"
 	echo "TMPDIR='$(TMPDIR)'"
-	$(MAKE) xml	                # XML docs for all PO
+	$(MAKE) all-xml	                # XML docs for all PO
 	-mkdir -p $(TMPDIR)
 	-mkdir -p $(BASEDIR)/html
 	# leave fuzzy status in the package build log
@@ -50,4 +45,4 @@ distclean:: clean
 package:
 	debmake -t -y -zx -b':doc' -i pdebuild
 
-.PHONY: all build clean
+.PHONY: all build install clean distclean package
