@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-07-29 14:00+0900\n"
-"PO-Revision-Date: 2018-07-30 15:15+0800\n"
+"PO-Revision-Date: 2018-07-30 15:54+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -45,7 +45,7 @@ msgstr "<personname> 青木 修 </personname>"
 #. (itstool) path: bookinfo/date
 #: debmake-doc.en.x02:23
 msgid "@@@debdate@@@"
-msgstr ""
+msgstr "@@@debdate@@@"
 
 #. (itstool) path: bookinfo/copyright
 #: debmake-doc.en.x02:25
@@ -2965,20 +2965,18 @@ msgstr "<emphasis role=\"strong\">debian/rules</emphasis>（维护者版本）�
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1658
-#, fuzzy
 msgid ""
 "Exporting the <emphasis role=\"strong\">DH_VERBOSE</emphasis> environment "
 "variable in the <emphasis role=\"strong\">debian/rules</emphasis> file as "
 "above forces the <emphasis role=\"strong\">debhelper</emphasis> tool to make "
 "a fine grained build report."
 msgstr ""
-"如上在 <emphasis role=\"strong\">debian/rules</emphasis> 文件中导出（export）"
-"<emphasis role=\"strong\">DH_VERBOSE</emphasis> 变量可以强制 <emphasis role="
-"\"strong\">debhelper</emphasis> 工具输出细粒度的构建报告。"
+"如上在 <emphasis role=\"strong\">debian/rules</emphasis> 文件中导出"
+"=<emphasis role=\"strong\">DH_VERBOSE</emphasis> 环境变量可以强制 <emphasis "
+"role=\"strong\">debhelper</emphasis> 工具输出细粒度的构建报告。"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:1659
-#, fuzzy
 msgid ""
 "This is a cliché to force a read-only relocation link for the hardening and "
 "to prevent the lintian warning “<emphasis role=\"strong\">W: debhello: "
@@ -2993,7 +2991,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1659
-#, fuzzy
 msgid ""
 "Exporting <emphasis role=\"strong\">DEB_BUILD_MAINT_OPTION</emphasis> as "
 "above sets the hardening options as described in the “FEATURE AREAS/"
@@ -3006,7 +3003,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1660
-#, fuzzy
 msgid ""
 "Exporting <emphasis role=\"strong\">DEB_CFLAGS_MAINT_APPEND</emphasis> as "
 "above forces the C compiler to emit all the warnings."
@@ -3026,7 +3022,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1661
-#, fuzzy
 msgid ""
 "Exporting <emphasis role=\"strong\">DEB_LDFLAGS_MAINT_APPEND</emphasis> as "
 "above forces the linker to link only when the library is actually needed. <_:"
@@ -3037,7 +3032,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1662
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">dh_auto_install</emphasis> command for the "
 "Makefile based build system essentially runs “<emphasis role=\"strong\">"
@@ -3054,7 +3048,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1663
-#, fuzzy
 msgid ""
 "Here are the maintainer versions of the <emphasis role=\"strong\">debian/"
 "control</emphasis> and <emphasis role=\"strong\">debian/copyright</emphasis> "
@@ -3096,7 +3089,6 @@ msgstr ""
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:1735
-#, fuzzy
 msgid ""
 "Configuration files used by the <emphasis role=\"strong\">dh_</emphasis>* "
 "commands from the <emphasis role=\"strong\">debhelper</emphasis> package "
@@ -3126,21 +3118,19 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1769
-#, fuzzy
 msgid ""
 "You can verify that <emphasis role=\"strong\">CFLAGS</emphasis> is updated "
 "properly with <emphasis role=\"strong\">-Wall</emphasis> and <emphasis role="
 "\"strong\">-pedantic</emphasis> by the <emphasis role=\"strong"
 "\">DEB_CFLAGS_MAINT_APPEND</emphasis> variable."
 msgstr ""
-"这里验证了 <emphasis role=\"strong\">CFLAGS</emphasis> 已经添加了 <emphasis "
-"role=\"strong\">-Wall</emphasis> 和 <emphasis role=\"strong\">-pendatic</"
-"emphasis> 参数，用到的便是 <emphasis role=\"strong"
-"\">DEB_CFLAGS_MAINT_APPEND</emphasis> 变量。"
+"这里验证了 <emphasis role=\"strong\">CFLAGS</emphasis> 已经得到了更新，添加"
+"了 <emphasis role=\"strong\">-Wall</emphasis> 和 <emphasis role=\"strong\">-"
+"pendatic</emphasis> 参数；这是我们先前在 <emphasis role=\"strong"
+"\">DEB_CFLAGS_MAINT_APPEND</emphasis> 变量中所指定的。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1770
-#, fuzzy
 msgid ""
 "The manpage should be added to the package as reported by the <emphasis role="
 "\"strong\">lintian</emphasis> package, as shown in later examples (see <xref "
@@ -4033,7 +4023,6 @@ msgstr "第 6 章 最佳打包实践"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:2375
-#, fuzzy
 msgid ""
 "There is very extensive documentation in <_:ulink-1/> in the “Debian "
 "Developer’s Reference”. Please read it."
@@ -4150,7 +4139,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2400 debmake-doc.en.x02:9543
-#, fuzzy
 msgid ""
 "The license extraction and assignment process involves a lot of heuristics; "
 "it may fail in some cases. It is highly recommended to use other tools such "
@@ -4158,7 +4146,7 @@ msgid ""
 "\"strong\">devscripts</emphasis> package in conjunction with <emphasis role="
 "\"strong\">debmake</emphasis>."
 msgstr ""
-"许可证信息的提取和指派过程应用了大量启发式操作，因此在某些情况下可能不会正常"
+"许可证信息的提取和赋值过程应用了大量启发式操作，因此在某些情况下可能不会正常"
 "工作。强烈建议您搭配使用其它工具，例如来自 <emphasis role=\"strong"
 "\">devscripts</emphasis> 软件包的 <emphasis role=\"strong\">licensecheck</"
 "emphasis> 工具，以配合 <emphasis role=\"strong\">debmake</emphasis> 的使用。"
@@ -4215,7 +4203,6 @@ msgstr "第 5 章 - Control 文件及其字段"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2424 debmake-doc.en.x02:9567
-#, fuzzy
 msgid "See the exact definition in <_:ulink-1/> in the “Debian Policy Manual”."
 msgstr "请在“Debian 政策手册”的 <_:ulink-1/> 一节中查看其精确定义。"
 
@@ -4586,7 +4573,6 @@ msgstr "dh"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2522
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">dh</emphasis> command from the <emphasis role="
 "\"strong\">debhelper</emphasis> package with help from its associated "
@@ -4720,7 +4706,6 @@ msgstr "简单的 debian/rules"
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:2579
-#, fuzzy
 msgid ""
 "This simplicity is available since version 7 of the <emphasis role=\"strong"
 "\">debhelper</emphasis> package. This guide assumes the use of <emphasis "
@@ -4830,13 +4815,12 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2595
-#, fuzzy
 msgid ""
 "The build process may be customized via the upstream provided interface such "
 "as arguments to the standard source build system commands, such as:"
 msgstr ""
-"构建的过程可以使用某些上游提供的接口传递信息，例如提供传递给某些标准的源代码"
-"构建系统的参数。这些构建系统包括但不限于："
+"构建的过程可以使用某些上游提供的接口进行定制化，如使用传递给标准的源代码构建"
+"系统的参数。这些构建系统包括但不限于："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2598
@@ -4971,9 +4955,8 @@ msgstr ""
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:2656
-#, fuzzy
 msgid "<emphasis role=\"strong\">vendor.mk</emphasis>"
-msgstr "<emphasis role=\"strong\">vender.mk</emphasis>"
+msgstr "<emphasis role=\"strong\">vendor.mk</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2660
@@ -5042,14 +5025,13 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2690
-#, fuzzy
 msgid ""
 "If you wish to use some of these useful variables in <emphasis role=\"strong"
 "\">debian/rules</emphasis>, copy relevant code to <emphasis role=\"strong"
 "\">debian/rules</emphasis> or write a simpler alternative in it. Please keep "
 "<emphasis role=\"strong\">debian/rules</emphasis> simple."
 msgstr ""
-"如果您希望在 <emphasis role=\"strong\">debian/rules</emphasis> 中使用其中的某"
+"如果你希望在 <emphasis role=\"strong\">debian/rules</emphasis> 中使用其中的某"
 "些变量，您可以将相关的代码复制到 <emphasis role=\"strong\">debian/rules</"
 "emphasis> 文件中，或是重写一份简单的替代实现。总而言之请保持 <emphasis role="
 "\"strong\">debian/rules</emphasis> 文件尽量简单。"
@@ -5113,7 +5095,6 @@ msgstr "可重现的构建"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2702
-#, fuzzy
 msgid "Here are some recommendations to attain a reproducible build result."
 msgstr "为了做到软件包可重现的构建，这里给出一些相关的建议。"
 
@@ -5144,13 +5125,12 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2720
-#, fuzzy
 msgid ""
 "Set the timestamp used in the upstream source from the value of the "
 "debhelper-provided environment variable <emphasis role=\"strong\">"
 "$SOURCE_DATE_EPOCH</emphasis>."
 msgstr ""
-"对上游源代码中使用的时间戳，使用来自 debhelper 提供的环境变量 <emphasis role="
+"对上游源代码中使用的时间戳，使用 debhelper 提供的环境变量 <emphasis role="
 "\"strong\">$SOURCE_DATE_EPOCH</emphasis> 的值。"
 
 #. (itstool) path: simpara/ulink
@@ -5226,7 +5206,6 @@ msgstr "Debian 二进制软件包的拆分"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2763
-#, fuzzy
 msgid ""
 "For well behaving build systems, the split of a Debian binary package into "
 "small ones can be realized as follows."
@@ -5375,6 +5354,9 @@ msgid ""
 "package (any, foreign) (default, alias: <emphasis role=\"strong\">\"\"</"
 "emphasis>, i.e., <emphasis>null-string</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">bin</emphasis>：C/C++ 预编译 ELF 二进制代码软件包"
+"（any，foreign）（默认，别名：<emphasis role=\"strong\">\"\"</emphasis>，即，"
+"<emphasis>空字符串</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2838 debmake-doc.en.x02:9192
@@ -5382,17 +5364,19 @@ msgid ""
 "<emphasis role=\"strong\">data</emphasis>: Data (fonts, graphics, …) package "
 "(all, foreign) (alias: <emphasis role=\"strong\">da</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">data</emphasis>：数据（字体、图像、……）软件包"
+"（all，foreign）（别名：<emphasis role=\"strong\">da</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2843 debmake-doc.en.x02:9197
-#, fuzzy
 msgid ""
 "<emphasis role=\"strong\">dbg</emphasis>: Debug symbol package (any, same) "
 "(alias: <emphasis role=\"strong\">db</emphasis>) (deprecated for stretch and "
 "after since the -dbgsym package is automatically generated)"
 msgstr ""
-"<emphasis role=\"strong\">-x</emphasis> 选项：<emphasis role=\"strong\">-x1</"
-"emphasis>（是单个二进制软件包的默认值）"
+"<emphasis role=\"strong\">dbg</emphasis>：调试符号软件包（any，same）（别名："
+"<emphasis role=\"strong\">db</emphasis>）（对 stretch 和更新版本的 Debian 已"
+"不再推荐使用，因构建过程可以自动生成 -dbgsym 软件包）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2848 debmake-doc.en.x02:9202
@@ -5400,6 +5384,8 @@ msgid ""
 "<emphasis role=\"strong\">dev</emphasis>: Library development package (any, "
 "same) (alias: <emphasis role=\"strong\">de</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">dev</emphasis>：库开发软件包（any，same）（别名："
+"<emphasis role=\"strong\">de</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2853 debmake-doc.en.x02:9207
@@ -5407,6 +5393,8 @@ msgid ""
 "<emphasis role=\"strong\">doc</emphasis>: Documentation package (all, "
 "foreign) (alias: <emphasis role=\"strong\">do</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">doc</emphasis>：文档软件包（all，foreign）（别名："
+"<emphasis role=\"strong\">do</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2858 debmake-doc.en.x02:9212
@@ -5414,6 +5402,8 @@ msgid ""
 "<emphasis role=\"strong\">lib</emphasis>: Library package (any, same) "
 "(alias: <emphasis role=\"strong\">l</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">lib</emphasis>：库软件包（any，same）（别名："
+"<emphasis role=\"strong\">l</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2863 debmake-doc.en.x02:9217
@@ -5421,6 +5411,8 @@ msgid ""
 "<emphasis role=\"strong\">perl</emphasis>: Perl script package (all, "
 "foreign) (alias: <emphasis role=\"strong\">pl</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">perl</emphasis>：Perl 脚本软件包（all，foreign）"
+"（别名：<emphasis role=\"strong\">pl</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2868 debmake-doc.en.x02:9222
@@ -5428,6 +5420,8 @@ msgid ""
 "<emphasis role=\"strong\">python</emphasis>: Python script package (all, "
 "foreign) (alias: <emphasis role=\"strong\">py</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">python</emphasis>：Python 脚本软件包（all，"
+"foreign）（别名：<emphasis role=\"strong\">py</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2873 debmake-doc.en.x02:9227
@@ -5435,6 +5429,8 @@ msgid ""
 "<emphasis role=\"strong\">python3</emphasis>: Python3 script package (all, "
 "foreign) (alias: <emphasis role=\"strong\">py3</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">python3</emphasis>：Python3 脚本软件包（all，"
+"foreign）（别名：<emphasis role=\"strong\">py3</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2878 debmake-doc.en.x02:9232
@@ -5442,6 +5438,8 @@ msgid ""
 "<emphasis role=\"strong\">ruby</emphasis>: Ruby script package (all, "
 "foreign) (alias: <emphasis role=\"strong\">rb</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">ruby</emphasis>：Ruby 脚本软件包（all，foreign）"
+"（别名：<emphasis role=\"strong\">rb</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2883 debmake-doc.en.x02:9237
@@ -5449,6 +5447,8 @@ msgid ""
 "<emphasis role=\"strong\">script</emphasis>: Shell script package (all, "
 "foreign) (alias: <emphasis role=\"strong\">sh</emphasis>)"
 msgstr ""
+"<emphasis role=\"strong\">script</emphasis>：Shell 脚本软件包（all，foreign）"
+"（别名：<emphasis role=\"strong\">sh</emphasis>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2888 debmake-doc.en.x02:9242
@@ -5458,6 +5458,10 @@ msgid ""
 "\">Multi-Arch</emphasis> stanza values set in the <emphasis role=\"strong"
 "\">debian/control</emphasis> file."
 msgstr ""
+"括号内成对的值，例如（any，foreign），是软件包的<emphasis role=\"strong\">架"
+"构</emphasis>和<emphasis role=\"strong\">多架构（Multi-Arch）</emphasis>特性"
+"的值，它们将设置在 <emphasis role=\"strong\">debian/control</emphasis> 文件"
+"中。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2889 debmake-doc.en.x02:9243
@@ -5471,6 +5475,14 @@ msgid ""
 "<emphasis role=\"strong\">font-bar</emphasis> sets <emphasis>type</emphasis> "
 "to <emphasis role=\"strong\">data</emphasis>, …"
 msgstr ""
+"大多数情况下，<emphasis role=\"strong\">debmake</emphasis> 命令可以有效地从"
+"<emphasis>二进制软件包</emphasis>的名称猜测出正确的<emphasis>类型</"
+"emphasis>。如果<emphasis>类型</emphasis>的值并不明显，程序将回退到将"
+"<emphasis>类型</emphasis>设置为<emphasis role=\"strong\">bin</emphasis>。例"
+"如，<emphasis role=\"strong\">libfoo</emphasis> 设置<emphasis>类型</emphasis>"
+"为 <emphasis role=\"strong\">lib</emphasis>，而 <emphasis role=\"strong"
+"\">font-bar</emphasis> 会令程序设置<emphasis>类型</emphasis>为 <emphasis "
+"role=\"strong\">data</emphasis>，……"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2890 debmake-doc.en.x02:9244
@@ -5479,6 +5491,8 @@ msgid ""
 "emphasis>, the <emphasis role=\"strong\">debmake</emphasis> command warns "
 "you."
 msgstr ""
+"如果源码树的内容和<emphasis>类型</emphasis>的设置不一致，<emphasis role="
+"\"strong\">debmake</emphasis> 命令会发出警告。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:2896
@@ -5517,12 +5531,12 @@ msgstr ""
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2924
 msgid "<emphasis>binarypackage</emphasis>"
-msgstr ""
+msgstr "<emphasis>二进制软件包</emphasis>"
 
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2925
 msgid "<emphasis>type</emphasis>"
-msgstr ""
+msgstr "<emphasis>类型</emphasis>"
 
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2928
@@ -9021,7 +9035,6 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4611
-#, fuzzy
 msgid "This encourages having versioned symbols in the shared library."
 msgstr "该文档鼓励在共享库中使用带版本的符号。"
 
@@ -9167,22 +9180,22 @@ msgstr "8.6.3 符号（symbols）系统"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4714
 msgid "<emphasis role=\"strong\">dh_makeshlibs</emphasis>(1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dh_makeshlibs</emphasis>(1)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4719
 msgid "<emphasis role=\"strong\">dpkg-gensymbols</emphasis>(1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dpkg-gensymbols</emphasis>(1)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4724
 msgid "<emphasis role=\"strong\">dpkg-shlibdeps</emphasis>(1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dpkg-shlibdeps</emphasis>(1)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4729
 msgid "<emphasis role=\"strong\">deb-symbols</emphasis>(5)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">deb-symbols</emphasis>(5)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:4734
@@ -9298,7 +9311,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4777
 msgid "Ubuntu wiki (upstream)"
-msgstr ""
+msgstr "Ubuntu 维基（上游）"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4783
@@ -9375,7 +9388,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4849 debmake-doc.en.x02:4850
 msgid "Filesystem Hierarchy Standard"
-msgstr ""
+msgstr "文件系统层级标准"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4849
@@ -13215,7 +13228,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:7065
 msgid "setup.py (Python3, GUI)"
-msgstr ""
+msgstr "setup.py（Python3，图形界面）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7066
@@ -13335,9 +13348,8 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:7239
-#, fuzzy
 msgid "Makefile (single-binary package)"
-msgstr "重新构建二进制软件包。"
+msgstr "Makefile（单个二进制软件包）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7240
@@ -13674,9 +13686,8 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:7717
-#, fuzzy
 msgid "CMake (single-binary package)"
-msgstr "重新构建二进制软件包。"
+msgstr "CMake（单个二进制软件包）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7718
@@ -13771,9 +13782,8 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:7902
-#, fuzzy
 msgid "Autotools (multi-binary package)"
-msgstr "Autotools（单个二进制文件）"
+msgstr "Autotools（多个二进制软件包）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7903
@@ -13943,9 +13953,8 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:8269
-#, fuzzy
 msgid "CMake (multi-binary package)"
-msgstr "重新构建二进制软件包。"
+msgstr "CMake（多个二进制软件包）"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:8270
@@ -14246,9 +14255,8 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:8920
-#, fuzzy
 msgid "the POSIX shell script with Makefile (v=3.0),"
-msgstr "POSIX shell 脚本打包"
+msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:8925
@@ -14434,7 +14442,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:9028
 msgid "optional arguments:"
-msgstr ""
+msgstr "可选参数："
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:9031
@@ -14446,7 +14454,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9035
 msgid "show this help message and exit."
-msgstr ""
+msgstr "显示本帮助信息并退出。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:9041
@@ -14650,7 +14658,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9141
 msgid "set the Debian package name."
-msgstr ""
+msgstr "设置 Debian 软件包名称。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:9147
@@ -14663,7 +14671,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9151
 msgid "set the upstream package version."
-msgstr ""
+msgstr "设置上游软件包版本。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:9157
@@ -14675,7 +14683,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9161
 msgid "set the Debian package revision."
-msgstr ""
+msgstr "设置 Debian 软件包修订号。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:9167
@@ -14713,7 +14721,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9252
 msgid "set e-mail address."
-msgstr ""
+msgstr "设置电子邮件地址。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9255
@@ -15412,6 +15420,17 @@ msgid ""
 "\">gbp-pq</emphasis>(1), and <emphasis role=\"strong\">git-pbuilder</"
 "emphasis>(1) manpages."
 msgstr ""
+"另见 <emphasis role=\"strong\">dpkg-source</emphasis>(1), <emphasis role="
+"\"strong\">deb-control</emphasis>(5), <emphasis role=\"strong\">debhelper</"
+"emphasis>(7), <emphasis role=\"strong\">dh</emphasis>(1), <emphasis role="
+"\"strong\">dpkg-buildpackage</emphasis>(1), <emphasis role=\"strong"
+"\">debuild</emphasis>(1), <emphasis role=\"strong\">quilt</emphasis>(1), "
+"<emphasis role=\"strong\">dpkg-depcheck</emphasis>(1), <emphasis role="
+"\"strong\">pdebuild</emphasis>(1), <emphasis role=\"strong\">pbuilder</"
+"emphasis>(8), <emphasis role=\"strong\">cowbuilder</emphasis>(8), <emphasis "
+"role=\"strong\">gbp-buildpackage</emphasis>(1), <emphasis role=\"strong"
+"\">gbp-pq</emphasis>(1) 和 <emphasis role=\"strong\">git-pbuilder</"
+"emphasis>(1) 的手册页。"
 
 #, fuzzy
 #~ msgid "2018-07-29"
