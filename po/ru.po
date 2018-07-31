@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
-"POT-Creation-Date: 2018-07-31 19:46+0300\n"
+"POT-Creation-Date: 2018-07-30 23:24+0300\n"
 "PO-Revision-Date: 2018-04-14 22:24+0500\n"
 "Last-Translator: Lev Lamberov <dogsleg@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russia@lists.debian.org>\n"
@@ -116,31 +116,27 @@ msgstr ""
 #. (itstool) path: legalnotice/simpara
 #: debmake-doc.en.x02:66
 msgid "The latest version of this guide should be available:"
-msgstr ""
+msgstr "Последняя версия данного руководства доступна:"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:70
-#, fuzzy
 msgid "debmake-doc package"
-msgstr "debmake -cc"
+msgstr "пакете debmake-doc"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:69
-#, fuzzy
 msgid "in the <_:ulink-1/> and"
-msgstr "Команда Debian KDE <_:ulink-1/>"
+msgstr "в <_:ulink-1/> и"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:75
-#, fuzzy
 msgid "Debian Documentation web site"
-msgstr "документации Debian"
+msgstr "веб-сайте Документации Debian"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:74
-#, fuzzy
 msgid "at the <_:ulink-1/>."
-msgstr "<_:ulink-1/>."
+msgstr "на <_:ulink-1/>."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.x02:81
@@ -155,13 +151,12 @@ msgstr ""
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.x02:86
-#, fuzzy
 msgid ""
 "This guide focuses on the modern packaging style and comes with many simple "
 "examples."
 msgstr ""
-"Оно сконцентрировано на современном стиле создания пакетов и содержит "
-"множество простых примеров:"
+"Руководство сконцентрировано на современном стиле создания пакетов и "
+"содержит множество простых примеров:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:90
@@ -181,7 +176,7 @@ msgstr "C и Makefile/Autotools/CMake"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:105
 msgid "multiple binary packages with shared library etc."
-msgstr "Несколько двоичных пакетов с разделяемой библиотекой и т. д."
+msgstr "Несколько двоичных пакетов с разделяемой библиотекой и т.д."
 
 #. (itstool) path: abstract/simpara
 #: debmake-doc.en.x02:111
@@ -189,7 +184,7 @@ msgid ""
 "This “Guide for Debian Maintainers” can be considered as the successor to "
 "the “Debian New Maintainers’ Guide”."
 msgstr ""
-"Настоящее «Руководство для сопровождающих Debian» может рассматриваться как "
+"Данное «Руководство для сопровождающих Debian» может рассматриваться как "
 "замена «Руководства начинающего разработчика Debian»."
 
 #. (itstool) path: preface/title
@@ -268,12 +263,11 @@ msgid ""
 msgstr ""
 "Если вы хотите создать пакет Debian для удовлетворения указанных желаний, а "
 "также чтобы поделиться вашей работой с сообществом, то вы входите в целевую "
-"аудиторию настоящего руководства как будущий сопровождающий Debian. <_:"
+"аудиторию данного руководства как будущий сопровождающий Debian. <_:"
 "footnote-1/> Добро пожаловать в сообщество Debian."
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:136
-#, fuzzy
 msgid ""
 "Debian has many social and technical rules and conventions to follow since "
 "it is a large volunteer organization with history. Debian also has developed "
@@ -290,32 +284,32 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:139
 msgid "clean build under clearly specified package dependencies and patches"
-msgstr "чистая сборка с использованием явно указанных зависимостей и заплат"
+msgstr "Чистая сборка с использованием явно указанных зависимостей и заплат"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:144
 msgid "packages build across many architectures"
-msgstr "сборка пакетов на множестве архитектур"
+msgstr "Сборка пакетов для множества архитектур"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:149
 msgid "optimal splits into multiple binary packages"
-msgstr "оптимальное разделение на несколько двоичных пакетов"
+msgstr "Оптимальное разделение на несколько двоичных пакетов"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:154
 msgid "smooth library transitions"
-msgstr "беспроблемная смена библиотек"
+msgstr "Беспроблемная смена библиотек"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:159
 msgid "security enhancement using specific compiler flags"
-msgstr "улучшение безопасности с помощью определённых флагов компилятора"
+msgstr "Улучшение безопасности с помощью определённых флагов компилятора"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:164
 msgid "multiarch support"
-msgstr "поддержка одновременной установки пакетов для нескольких архитектур"
+msgstr "Поддержка одновременной установки пакетов для нескольких архитектур"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:169
@@ -324,7 +318,6 @@ msgstr "…"
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:174
-#, fuzzy
 msgid ""
 "These make it somewhat overwhelming for many new prospective Debian "
 "maintainers to get involved with Debian. This guide tries to provide entry "
@@ -341,13 +334,13 @@ msgid ""
 "What you should know before getting involved with Debian as a prospective "
 "maintainer."
 msgstr ""
-"Что следует знать до того как ввязаться в Debian в качестве будущего "
+"Что следует знать до того, как быть вовлечённым в Debian в качестве будущего "
 "сопровождающего."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:182
 msgid "What it looks like to make a simple Debian package."
-msgstr "На что это похоже — создать простой пакет Debian."
+msgstr "Как создать простой пакет Debian."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:187
@@ -366,7 +359,6 @@ msgstr "Примеры создания пакетов Debian для некот�
 
 #. (itstool) path: preface/simpara
 #: debmake-doc.en.x02:202
-#, fuzzy
 msgid ""
 "The author felt limitations of updating the original “New Maintainers' "
 "Guide” with the <emphasis role=\"strong\">dh-make</emphasis> package and "
@@ -379,11 +371,11 @@ msgstr ""
 "Автор осознаёт возможные ограничения при обновлении изначального "
 "«Руководства начинающего разработчика Debian» и добавлении сведений по "
 "использованию пакета <emphasis role=\"strong\">dh-make</emphasis> и принял "
-"решение создать альтернативные инструмент и соответствующую ему документацию "
-"для того, чтобы они подходили под современные требования. Результатом "
-"является пакет <emphasis role=\"strong\">debmake</emphasis> (версия: "
+"решение создать альтернативный инструмент и соответствующую ему документацию "
+"для того, чтобы они соответствовали современным требованиям. Результатом "
+"является пакет <emphasis role=\"strong\">debmake</emphasis> (версия "
 "@@@debmakeversion@@@) и данное обновлённое «Руководство для сопровождающих "
-"Debian» в пакете <emphasis role=\"strong\">debmake-doc</emphasis> (версия: "
+"Debian» в пакете <emphasis role=\"strong\">debmake-doc</emphasis> (версия "
 "@@@debversion@@@)."
 
 #. (itstool) path: preface/simpara
@@ -395,8 +387,8 @@ msgid ""
 msgstr ""
 "В команду <emphasis role=\"strong\">debmake</emphasis> было интегрировано "
 "большое количество полезных советов и рутинных действий, что значительно "
-"упрощает данное руководство. Кроме того, настоящее руководство содержит "
-"множество примеров создания пакетов."
+"упрощает данное руководство. Кроме того, руководство содержит множество "
+"примеров создания пакетов."
 
 #. (itstool) path: caution/simpara
 #: debmake-doc.en.x02:204
@@ -419,10 +411,10 @@ msgid ""
 "choices to keep this guide simple and maintainable."
 msgstr ""
 "Некоторые важные темы объясняются подробно. Некоторые из них могут "
-"показаться вам неважными, но, пожалуйста, будьте терпеливыми. Некоторые "
+"показаться вам незначительными, но, пожалуйста, проявите терпение. Некоторые "
 "специальные случаи пропускаются. Для некоторых тем приводятся только ссылки "
-"на внешние источники. Всё это сделано намерено для того, чтобы данное "
-"руководство оставалось простым и удобным в сопровождении."
+"на внешние источники. Всё это сделано намеренно, чтобы данное руководство "
+"оставалось простым и удобным в сопровождении."
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.x02:208
