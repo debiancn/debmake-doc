@@ -124,7 +124,7 @@ po: $(SRC_PO)
 # Always update
 $(PO_DIR)/%.po: $(PO_DIR)/templates.pot
 	@$(call check-command, msgmerge, gettext)
-	$(MSGMERGE) -U $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
+	$(MSGMERGE) $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
 	MESS1="no-obsolete  $*  `$(MSGATTRIB) --no-obsolete  $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
 	MESS2="untranslated $*  `$(MSGATTRIB) --untranslated $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
 	MESS3="fuzzy        $*  `$(MSGATTRIB) --fuzzy        $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
