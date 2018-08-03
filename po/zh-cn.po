@@ -907,7 +907,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:450
 msgid "Debian: 17 years of Free Software, “do-ocracy”, and democracy"
-msgstr "Debian: 17 年的自由软件、“实干主义“、和民主"
+msgstr "Debian: 17 年的自由软件、“实干主义”、和民主"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:449
