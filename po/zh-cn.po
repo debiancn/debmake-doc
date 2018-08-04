@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-07-29 14:00+0900\n"
-"PO-Revision-Date: 2018-08-03 11:57+0800\n"
+"PO-Revision-Date: 2018-08-04 22:02+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -6929,6 +6929,9 @@ msgid ""
 "removed when the <emphasis role=\"strong\">uscan</emphasis> command is used "
 "to update the Debian package."
 msgstr ""
+"在使用 <emphasis role=\"strong\">uscan</emphasis> 命令来更新 Debian 打包所用"
+"代码时，上游源码包（tarball）中不符合<_:ulink-1/>的部分可以利用该工具简单地进"
+"行移除。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3491
@@ -6937,6 +6940,8 @@ msgid ""
 "Excluded</emphasis> stanza of the <emphasis role=\"strong\">debian/"
 "copyright</emphasis> file."
 msgstr ""
+"在 <emphasis role=\"strong\">debian/copyright</emphasis> 文件中的 <emphasis "
+"role=\"strong\">Files-Excluded</emphasis> 一节中列出需要移除的文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3496
@@ -6944,6 +6949,8 @@ msgid ""
 "List the URL to download the upstream tarball in the <emphasis role=\"strong"
 "\">debian/watch</emphasis> file."
 msgstr ""
+"在 <emphasis role=\"strong\">debian/watch</emphasis> 文件中列出下载上游源码包"
+"（tarball）所使用的 URL。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3501
@@ -6951,6 +6958,8 @@ msgid ""
 "Run the <emphasis role=\"strong\">uscan</emphasis> command to download the "
 "new upstream tarball."
 msgstr ""
+"运行 <emphasis role=\"strong\">uscan</emphasis> 命令以下载新的上游源码包"
+"（tarball）。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3506
@@ -6958,6 +6967,8 @@ msgid ""
 "Alternatively, use the “<emphasis role=\"strong\">gbp import-orig --uscan --"
 "pristine-tar</emphasis>” command."
 msgstr ""
+"作为替代方案，您也可以使用“<emphasis role=\"strong\">gbp import-orig --uscan "
+"--pristine-tar</emphasis>”命令。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3513
@@ -6965,6 +6976,8 @@ msgid ""
 "The resulting tarball has the version number with an additional suffix "
 "<emphasis role=\"strong\">+dfsg</emphasis>."
 msgstr ""
+"最后得到 tarball 的版本编号会附加一个额外的后缀 <emphasis role=\"strong\">"
+"+dfsg</emphasis>。"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:3520
@@ -6981,10 +6994,15 @@ msgid ""
 "\"strong\">dpkg-source</emphasis>, <emphasis role=\"strong\">lintian</"
 "emphasis> and <emphasis role=\"strong\">gbp</emphasis> commands."
 msgstr ""
+"另外也可以添加一些可选的配置文件并放入 <emphasis role=\"strong\">debian/</"
+"emphasis> 目录。它们大多用于控制由 <emphasis role=\"strong\">debhelper</"
+"emphasis> 软件包提供的 <emphasis role=\"strong\">dh_</emphasis>* 命令的行为，"
+"但也有一些文件会影响 <emphasis role=\"strong\">dpkg-source</emphasis>、"
+"<emphasis role=\"strong\">lintian</emphasis> 和 <emphasis role=\"strong"
+"\">gbp</emphasis> 这些命令。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3522
-#, fuzzy
 msgid ""
 "The \"-x[1234]\" superscript notation that appears in the following list "
 "indicates the minimum value for the <emphasis role=\"strong\">debmake</"
@@ -6992,20 +7010,18 @@ msgid ""
 "the associated template file. See <emphasis role=\"strong\">debmake</"
 "emphasis>(1) for details."
 msgstr ""
-"如果您按照 <xref linkend=\"devscripts-setup\"/> 的说明设置了 <emphasis role="
-"\"strong\">-us</emphasis> 和 <emphasis role=\"strong\">-us</emphasis> 选项的"
-"话，本步骤将会被跳过。您需要手动运行 <emphasis role=\"strong\">debsign</"
-"emphasis> 命令。"
+"下面列表中出现的“-x[1234]”上标指示了 <emphasis role=\"strong\">debmake</"
+"emphasis> <emphasis role=\"strong\">-x</emphasis> 选项生成对应模板文件所需要"
+"的最小值。请参考 <emphasis role=\"strong\">debmake</emphasis>(1) 以了解详情。"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:3523
-#, fuzzy
 msgid ""
 "Check <emphasis role=\"strong\">debhelper</emphasis>(7) for the latest "
 "available set of the <emphasis role=\"strong\">dh_</emphasis>* commands."
 msgstr ""
-"这里的 <emphasis role=\"strong\">gbp</emphasis> 命令是 <emphasis role="
-"\"strong\">git-buildpackage</emphasis> 命令的一个别名。"
+"请检查 <emphasis role=\"strong\">debhelper</emphasis>(7) 的内容以了解当前可用"
+"的 <emphasis role=\"strong\">dh_</emphasis>* 命令列表。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3524
@@ -7016,11 +7032,15 @@ msgid ""
 "its build system can be packaged just by using these files. See <xref "
 "linkend=\"nomakefile\"/> as an example."
 msgstr ""
+"这些 <emphasis role=\"strong\">debian/</emphasis><emphasis>binarypackage</"
+"emphasis><emphasis role=\"strong\">.</emphasis>* 的文件提供了设置文件安装路径"
+"的强大功能。即使上游源代码没有构建系统，这个软件依然可以利用这里提到的这些文"
+"件来进行打包。请参考 <xref linkend=\"nomakefile\"/> 的示例。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:3525
 msgid "Here is the alphabetical list of notable optional configuration files."
-msgstr ""
+msgstr "下面按照字母表顺序列出一些值得注意的可选配置文件。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3528
@@ -7028,6 +7048,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-control</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-control</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3532
@@ -7037,6 +7059,9 @@ msgid ""
 "control</emphasis> in <emphasis>binarypackage</emphasis>. See <xref linkend="
 "\"bug\"/>."
 msgstr ""
+"将安装至 <emphasis>binarypackage</emphasis> 软件包的 <emphasis role=\"strong"
+"\">usr/share/bug/</emphasis><emphasis>binarypackage</emphasis><emphasis role="
+"\"strong\">/control</emphasis> 位置。另请参考<xref linkend=\"bug\"/>。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3538
@@ -7044,6 +7069,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-presubj</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-presubj</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3542
@@ -7053,6 +7080,9 @@ msgid ""
 "presubj</emphasis> in <emphasis>binarypackage</emphasis>. See <xref linkend="
 "\"bug\"/>."
 msgstr ""
+"将安装至 <emphasis>binarypackage</emphasis> 软件包的 <emphasis role=\"strong"
+"\">usr/share/bug/</emphasis><emphasis>binarypackage</emphasis><emphasis role="
+"\"strong\">/presubj</emphasis> 位置。另请参考<xref linkend=\"bug\"/>。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3548
@@ -7060,6 +7090,8 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-script</"
 "emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 msgstr ""
+"<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bug-script</"
+"emphasis> <superscript><emphasis role=\"strong\">-x3</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3552
@@ -7070,6 +7102,11 @@ msgid ""
 "\"strong\">/script</emphasis> in <emphasis>binarypackage</emphasis>. See "
 "<xref linkend=\"bug\"/>."
 msgstr ""
+"将安装至 <emphasis>binarypackage</emphasis> 软件包的 <emphasis role=\"strong"
+"\">usr/share/bug/</emphasis><emphasis>binarypackage</emphasis> or <emphasis "
+"role=\"strong\">usr/share/bug/</emphasis><emphasis>binarypackage</"
+"emphasis><emphasis role=\"strong\">/script</emphasis> 位置。另请参考<xref "
+"linkend=\"bug\"/>。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3558
@@ -7077,11 +7114,13 @@ msgid ""
 "<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bash-"
 "completion</emphasis>"
 msgstr ""
+"<emphasis>binarypackage</emphasis><emphasis role=\"strong\">.bash-"
+"completion</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3562
 msgid "List <literal>bash</literal> completion scripts to be installed."
-msgstr ""
+msgstr "列出需要安装的 <literal>bash</literal> 补全脚本。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3565
@@ -7089,11 +7128,12 @@ msgid ""
 "The <literal>bash-completion</literal> package is required for both build "
 "and user environments."
 msgstr ""
+"需要在构建环境和用户环境内均安装 <literal>bash-completion</literal> 软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3566
 msgid "See <emphasis role=\"strong\">dh_bash-completion</emphasis>(1)."
-msgstr ""
+msgstr "另请参考<emphasis role=\"strong\">dh_bash-completion</emphasis>(1)。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3570
@@ -7101,17 +7141,17 @@ msgid ""
 "<emphasis role=\"strong\">clean</emphasis> <superscript><emphasis role="
 "\"strong\">-x2</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">clean</emphasis> <superscript><emphasis role="
+"\"strong\">-x2</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3574
-#, fuzzy
 msgid ""
 "List files that should be removed but are not cleaned by the <emphasis role="
 "\"strong\">dh_auto_clean</emphasis> command."
 msgstr ""
-"如果上文提到的构建系统命令已知得到了 <emphasis role=\"strong"
-"\">dh_auto_build</emphasis> 命令的支持的话，请避免直接调用这些命令（而让 "
-"<emphasis role=\"strong\">dh_auto_build</emphasis> 自动处理）。"
+"列出（构建前）未被 <emphasis role=\"strong\">dh_auto_clean</emphasis> 命令清"
+"理，且需要手工清理的文件。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3577
@@ -7119,6 +7159,8 @@ msgid ""
 "See <emphasis role=\"strong\">dh_auto_clean</emphasis>(1) and <emphasis role="
 "\"strong\">dh_clean</emphasis>(1)."
 msgstr ""
+"另请参考 <emphasis role=\"strong\">dh_auto_clean</emphasis>(1) 和 <emphasis "
+"role=\"strong\">dh_clean</emphasis>(1)。"
 
 #. (itstool) path: varlistentry/term
 #: debmake-doc.en.x02:3581
@@ -7126,6 +7168,8 @@ msgid ""
 "<emphasis role=\"strong\">compat</emphasis> <superscript><emphasis role="
 "\"strong\">-x1</emphasis></superscript>"
 msgstr ""
+"<emphasis role=\"strong\">compat</emphasis> <superscript><emphasis role="
+"\"strong\">-x1</emphasis></superscript>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:3585
