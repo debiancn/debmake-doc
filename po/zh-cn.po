@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-08-06 00:03+0800\n"
-"PO-Revision-Date: 2018-08-05 23:58+0800\n"
+"PO-Revision-Date: 2018-08-06 00:33+0800\n"
 "Last-Translator: Honghao Li <jerrylee1999@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -8857,7 +8857,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4418
 msgid "CMake tutorial"
-msgstr ""
+msgstr "CMake 教程"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4424
@@ -9011,7 +9011,7 @@ msgstr ""
 #: debmake-doc.en.x02:4497 debmake-doc.en.x02:4502 debmake-doc.en.x02:4730
 #: debmake-doc.en.x02:4735 debmake-doc.en.x02:4962 debmake-doc.en.x02:4967
 msgid "Debian wiki <_:ulink-1/>"
-msgstr ""
+msgstr "Debian 维基 <_:ulink-1/>"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4503
@@ -9026,7 +9026,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4507
 msgid "Debian debian-devel post: <_:ulink-1/> (2015-08-15)"
-msgstr ""
+msgstr "Debian debian-devel 列表发布的邮件：<_:ulink-1/> (2015-08-15)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4513
