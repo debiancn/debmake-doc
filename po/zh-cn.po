@@ -9030,7 +9030,7 @@ msgstr "Debian debian-devel 列表发布的邮件：<_:ulink-1/> (2015-08-15)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4513
-msgid "New -dbgsym package (Strech 9.0 and after)"
+msgid "New -dbgsym package (Stretch 9.0 and after)"
 msgstr "新的 -dbgsym 软件包（Stretch 9.0 或更新）"
 
 #. (itstool) path: section/simpara
@@ -9111,7 +9111,7 @@ msgstr ""
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:4545
-msgid "This is deprecated for Strech 9.0 and after."
+msgid "This is deprecated for Stretch 9.0 and after."
 msgstr ""
 
 #. (itstool) path: section/title

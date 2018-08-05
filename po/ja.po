@@ -7654,7 +7654,7 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4513
-msgid "New -dbgsym package (Strech 9.0 and after)"
+msgid "New -dbgsym package (Stretch 9.0 and after)"
 msgstr ""
 
 #. (itstool) path: section/simpara
@@ -7729,7 +7729,7 @@ msgstr ""
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:4545
-msgid "This is deprecated for Strech 9.0 and after."
+msgid "This is deprecated for Stretch 9.0 and after."
 msgstr ""
 
 #. (itstool) path: section/title

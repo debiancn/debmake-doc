@@ -9921,8 +9921,8 @@ msgstr "Сообщение в списке рассылки debian-devel: <_:uli
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4513
-msgid "New -dbgsym package (Strech 9.0 and after)"
-msgstr "Новый пакет -dbgsym (Strech 9.0 и более поздние выпуски)"
+msgid "New -dbgsym package (Stretch 9.0 and after)"
+msgstr "Новый пакет -dbgsym (Stretch 9.0 и более поздние выпуски)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:4514
@@ -10024,8 +10024,8 @@ msgstr ""
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:4545
-msgid "This is deprecated for Strech 9.0 and after."
-msgstr "Устарело в Strech 9.0 и более поздних выпусках."
+msgid "This is deprecated for Stretch 9.0 and after."
+msgstr "Устарело в Stretch 9.0 и более поздних выпусках."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4549
