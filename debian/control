@@ -41,6 +41,7 @@ Build-Depends:
  texlive-lang-cyrillic,
  texlive-lang-english,
  texlive-lang-french,
+ texlive-lang-german,
  texlive-lang-japanese,
  texlive-xetex,
  tree,
