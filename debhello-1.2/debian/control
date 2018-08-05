@@ -11,7 +11,7 @@ Architecture: all
 Multi-Arch: foreign
 Depends: zenity, ${misc:Depends}
 Description: example package in the debmake-doc package
- This is an example package to demonstrate the Debian packaging using
+ This is an example package to demonstrate Debian packaging using
  the debmake command.
  .
  The generated Debian package uses the dh command offered by the
