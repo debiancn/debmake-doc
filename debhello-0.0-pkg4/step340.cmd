@@ -1,16 +1,11 @@
-# This is cheating :-)
-cat  >debian/source/local-patch-header <<EOF
-Description: set prefix to /usr
-Author: "Firstname Lastname" <email.address@example.org>
-
-EOF
-: > debian/patches/series
-# fool dpkg-source and timeout safely
+# This is cheating :-) dpkg-source isn't easy
 echo " \$ dpkg-source --commit . 000-prefix-usr.patch"
-expect -c "
-set timeout 3
-spawn dpkg-source --commit . 000-prefix-usr.patch
-expect \"^ all: src/hello\"
-send ':wq\n'
-exit
-" | sed -e 1d -e 's/\r//'
+echo " ... edit the DEP-3 patch header with editor"
+# But in reality, use quilt to record.
+dquilt refresh >/dev/null
+dquilt header -a >/dev/null <<EOF
+Description: set prefix=/usr patch
+Author: Osamu Aoki <osamu@debian.org>
+EOF
+# dpkg-source doesn't add ===== line, so fake it
+sed -i -e 's/^=*$//g' debian/patches/000-prefix-usr.patch 

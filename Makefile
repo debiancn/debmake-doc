@@ -1,6 +1,9 @@
 # Build all Debian packaging examples and produce documentation
 # Copyright (C) 2015 Osamu Aoki
 
+# Define if not defined (Prevent error when Make is run independently)
+SOURCE_DATE_EPOCH ?= "1400000000"
+
 # run "make prep" before commit
 
 #ifndef DEBUG

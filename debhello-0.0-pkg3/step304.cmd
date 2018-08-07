@@ -12,8 +12,7 @@ dquilt header -a >/dev/null <<EOF
 Description: set prefix=/usr patch
 Author: Osamu Aoki <osamu@debian.org>
 EOF
-echo " ... hack, hack, hack, ..."
-echo  "Replaced header of patch 000-prefix-usr.patch"
+echo " ... edit the DEP-3 patch header with editor"
 #L "dquilt pop -a"
 L "tree -a"
 L "cat debian/patches/series"
