@@ -50,30 +50,3 @@ Description: example development package
  .
  This package contains the development files.
 
-Package: debhello-dbg
-Section: debug
-Architecture: any
-Multi-Arch: same
-Depends: debhello (= ${binary:Version}), ${misc:Depends}
-Description: example debugging package for debhello
- This is an example package to demonstrate Debian packaging using
- the debmake command.
- .
- The generated Debian package uses the dh command offered by the
- debhelper package and the dpkg source format `3.0 (quilt)'.
- .
- This package contains the debugging symbols for debhello.
-
-Package: libsharedlib1-dbg
-Section: debug
-Architecture: any
-Multi-Arch: same
-Depends: libsharedlib1 (= ${binary:Version}), ${misc:Depends}
-Description: example debugging package for libsharedlib1
- This is an example package to demonstrate Debian packaging using
- the debmake command.
- .
- The generated Debian package uses the dh command offered by the
- debhelper package and the dpkg source format `3.0 (quilt)'.
- .
- This package contains the debugging symbols for libsharedlib1.

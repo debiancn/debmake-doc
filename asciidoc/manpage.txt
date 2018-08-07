@@ -80,14 +80,13 @@ set the Debian package revision.
 set the tarball type, 'extension'=(*tar.gz*|*tar.bz2*|*tar.xz*). (alias: *z*, *b*, *x*)
 
 *-b* "'binarypackage[:type],...'", *--binaryspec* "'binarypackage[:type],...'"::
-set the binary package specs by a comma separated list of 'binarypackage:type' pairs, e.g., in the full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,libfoo-dev:dev*'' or in the short form, ``*-doc,libfoo1,libfoo1-dbg,libfoo-dev*''.
+set the binary package specs by a comma separated list of 'binarypackage:type' pairs, e.g., in the full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo-dev:dev*'' or in the short form, ``*-doc,libfoo1,libfoo-dev*''.
 +
 Here, 'binarypackage' is the binary package name, and the optional 'type' is chosen from the following 'type' values:
 +
 --
 ** *bin*: C/C++ compiled ELF binary code package (any, foreign) (default, alias: *""*, i.e., 'null-string')
 ** *data*: Data (fonts, graphics, ...) package (all, foreign) (alias: *da*)
-** *dbg*: Debug symbol package (any, same) (alias: *db*) (deprecated for stretch and after since the -dbgsym package is automatically generated)
 ** *dev*: Library development package (any, same) (alias: *de*)
 ** *doc*: Documentation package (all, foreign) (alias: *do*)
 ** *lib*: Library package (any, same) (alias: *l*)

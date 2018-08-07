@@ -44,12 +44,6 @@ debhello (3.0-1) unstable; urgency=low
 
  -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 03:00:01 +0900
 
-debhello (2.1-2) unstable; urgency=low
-
-  * Single -dbg package.
-
- -- Osamu Aoki <osamu@debian.org>  Mon, 12 Jan 2015 02:02:01 +0900
-
 debhello (2.1-1) unstable; urgency=low
 
   * New upstream release.
