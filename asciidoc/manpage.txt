@@ -292,6 +292,4 @@ Expat License
 
 The *debmake-doc* package provides the “Guide for Debian Maintainers” in plain text, HTML and PDF formats under the */usr/share/doc/debmake-doc/* directory.
 
-Also, please read the original https://www.debian.org/doc/manuals/maint-guide/[Debian New Maintainers’ Guide] provided by the the *maint-guide* package.
-
 See also *dpkg-source*(1), *deb-control*(5), *debhelper*(7), *dh*(1), *dpkg-buildpackage*(1), *debuild*(1), *quilt*(1), *dpkg-depcheck*(1), *pdebuild*(1), *pbuilder*(8), *cowbuilder*(8), *gbp-buildpackage*(1), *gbp-pq*(1), and *git-pbuilder*(1) manpages.
