@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-08-06 00:03+0800\n"
-"PO-Revision-Date: 2018-08-06 00:33+0800\n"
+"PO-Revision-Date: 2018-08-08 22:35+0800\n"
 "Last-Translator: Honghao Li <jerrylee1999@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -15668,38 +15668,38 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9502
-#, fuzzy
 msgid ""
 "Python3 programs may require the <emphasis role=\"strong\">dh-python</"
 "emphasis> package."
-msgstr "它支持多架构（<emphasis role=\"strong\">multiarch</emphasis>）软件包。"
+msgstr ""
+"Python3 程序可能需要 <emphasis role=\"strong\">dh-python</emphasis> 软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9507
-#, fuzzy
 msgid ""
 "The Autotools (Autoconf + Automake) build system may require <emphasis role="
 "\"strong\">autotools-dev</emphasis> or <emphasis role=\"strong\">dh-"
 "autoreconf</emphasis> package."
 msgstr ""
-"向具有 <emphasis role=\"strong\">required</emphasis> 和 <emphasis role="
-"\"strong\">important</emphasis> 优先级的软件包提交补丁。"
+"Autotools (Autoconf + Automake) 建构系统可能需要 <emphasis role=\"strong"
+"\">autotools-dev</emphasis> 或 <emphasis role=\"strong\">dh-autoreconf"
+"</emphasis> 软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9512
-#, fuzzy
 msgid ""
 "Ruby programs may require the <emphasis role=\"strong\">gem2deb</emphasis> "
 "package."
-msgstr "它支持多架构（<emphasis role=\"strong\">multiarch</emphasis>）软件包。"
+msgstr ""
+"Ruby 程序可能需要 <emphasis role=\"strong\">gem2deb</emphasis> 软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9517
-#, fuzzy
 msgid ""
 "Java programs may require the <emphasis role=\"strong\">javahelper</"
 "emphasis> package."
-msgstr "<emphasis role=\"strong\">debhelper</emphasis> 软件包"
+msgstr ""
+"Java 程序可能需要 <emphasis role=\"strong\">javahelper</emphasis> 软件包。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9522
