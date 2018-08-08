@@ -6,7 +6,7 @@ Let's recap the customization of the Debian packaging.
 All customization data for the Debian package resides in the *debian/* directory.  A simple example is given in <<step-maintainer>>.  Normally, this customization involves a combination of the following:
 
 * The Debian package build system can be customized through the *debian/rules* file (see <<customrules>>).
-* The Debian package installation path etc. can be customized through the addition of configuration files such as 'package'*.install* and 'package'*.doc* in the *debian/* directory for the *dh_** commands from the *debhelper* package (see <<debianconf>>).
+* The Debian package installation path etc. can be customized through the addition of configuration files such as 'package'*.install* and 'package'*.docs* in the *debian/* directory for the *dh_** commands from the *debhelper* package (see <<debianconf>>).
 
 When these are not sufficient to make a good Debian package, modifications to the upstream source recorded as the *-p1* patches in the *debian/patches/* directory is deployed.  These patches are applied in the sequence defined in the *debian/patches/series* file before building the package (see <<patches>>).  Simple examples are given in <<alt-patch>>.
 
