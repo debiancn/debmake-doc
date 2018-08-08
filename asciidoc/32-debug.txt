@@ -21,7 +21,7 @@ The debugging information is automatically packaged separately as the debug pack
 
 If there were no *-dbg* packages defined in the *debian/control* file, no special care is needed for updating the package after the Stretch 9.0 release.
 
-* The *debian/rules* file shouldn't contain *dh_strip*.
+* The *debian/rules* file shouldn't explicitly contain *dh_strip*.
 
 If there were *-dbg* packages defined in the *debian/control* file, following care is needed for updating the old package after the Stretch 9.0 release.
 
