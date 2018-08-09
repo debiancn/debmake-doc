@@ -3,6 +3,9 @@
 
 Upstream build systems are designed to go through several steps to install generated binary files to the system from the source distribution.
 
+TIP: Before attempting to make a Debian package, you should become familiar with the upstream build system of the upstream source code and try to build it.
+
+
 [[autotools]]
 ==== Autotools
 
@@ -18,6 +21,8 @@ The upstream maintainer usually performs step 1 and builds the upstream tarball 
 The package maintainer needs to take care of steps 2 to 4 at least.  This is realized by the ``*dh $@ --with autotools-dev*'' command used in the *debian/rules* file.
 
 The package maintainer may wish to take care all steps 1 to 4.  This is realized by the ``*dh $@ --with autoreconf*'' command used in the *debian/rules* file.  This rebuilds all auto-generated files to the latest version and provides better support for porting to the newer architectures.
+
+For *compat* level *10* or newer, the simple ``*dh $@*'' command without ``*--with autoreconf*'' option can take care all steps 1 to 4, too.
 
 If you wish to learn more on Autotools, please see:
 
@@ -65,3 +70,4 @@ If you wish to learn more on Python3 and *distutils*, please see:
 
 * https://docs.python.org/3/[Python3]
 * https://docs.python.org/3.4/library/distutils.html#module-distutils[distutils]
+

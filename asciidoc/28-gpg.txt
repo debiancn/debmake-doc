@@ -36,7 +36,7 @@ gpg: Good signature from "Reuben Thomas <rrt@sc3d.org>"
 Primary key fingerprint: 9297 8852 A62F A5E2 85B2  A174 6808 9F73 80EE 4A00
 ----
 
-TIP:  If your network environment blocks access to the HPK port *11371*, use ``*hkp://keyserver.ubuntu.com:80*'' instead.
+TIP:  If your network environment blocks access to the HKP port *11371*, use ``*hkp://keyserver.ubuntu.com:80*'' instead.
 
 After confirming the key ID *80EE4A00* is a trustworthy one, download its public key into the *debian/upstream/signing-key.asc* file.
 

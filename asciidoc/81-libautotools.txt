@@ -52,10 +52,8 @@ Let's package this with the *debmake* command into multiple packages:
 * *debhello*: type = *bin*
 * *libsharedlib1*: type = *lib*
 * *libsharedlib-dev*: type = *dev*
-* *debhello-dbg*: type = *dbg*
-* *libsharedlib1-dbg*: type = *dbg*
 
-Here, the *-b\',libsharedlib1,libsharedlib-dev,-dbg,libsharedlib1-dbg'* option is used to specify the generated binary packages.
+Here, the *-b\',libsharedlib1,libsharedlib-dev'* option is used to specify the generated binary packages.
 
 ----
 sys::[head -n16  ../debhello-2.0-pkg1/step200.slog]
@@ -99,9 +97,9 @@ include::../debhello-2.0-pkg1/step400.slog[]
 
 The rest of the packaging activities are practically the same as the one in <<configure-single>>.
 
-Here are the generated dependency lists of binary packages.
+Here are the generated dependency list of all binary packages.
 
-.The generated dependency lists of binary packages (v=2.0):
+.The generated dependency list of all binary packages (v=2.0):
 ----
 include::../debhello-2.0-pkg1/step702.slog[]
 ----

@@ -10,7 +10,3 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 override_dh_install:
 	dh_install --list-missing -X.la
 
-override_dh_strip:
-	dh_strip -Xlibsharedlib1 --dbg-package=debhello-dbg
-	dh_strip -Xdebhello --dbg-package=libsharedlib1-dbg
-

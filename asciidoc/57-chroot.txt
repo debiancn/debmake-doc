@@ -46,7 +46,7 @@ An arbitrary 'dist' distribution environment can be used as follows.
 * The command to update the 'dist' chroot
 ** *pbuilder update --basepath=/var/cache/pbuilder/base-*'dist'*.cow*
 ** *DIST=*'dist' *git-pbuilder update*
-* The command to login to the *sid* chroot to modify it
+* The command to login to the *dist* chroot to modify it
 ** *pbuilder --login --basepath=/var/cache/pbuilder/base-*'dist'*.cow --save-after-login*
 ** *DIST=*'dist' *git-pbuilder login --save-after-login*
 

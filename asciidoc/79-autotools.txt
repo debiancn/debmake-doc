@@ -44,6 +44,8 @@ include::../debhello-1.6-pkg1/step102.slog[]
 include::../debhello-1.6-pkg1/step103.slog[]
 ----
 
+TIP: Without ``*foreign*'' strictness level specified in *AM_INIT_AUTOMAKE()* as above, *automake* defaults to ``*gnu*'' strictness level requiring several files in the top-level directory.  See ``3.2 Strictness'' in the *automake* document.  
+
 Let's package this with the *debmake* command.
 
 ----

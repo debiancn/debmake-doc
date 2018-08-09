@@ -8,12 +8,16 @@ If you wanted to create a Debian package to fulfill these wishes and to share yo
 
 Debian has many social and technical rules and conventions to follow since it is a large volunteer organization with history.  Debian also has developed a huge array of packaging tools and archive maintenance tools to build consistent sets of binary packages addressing many technical objectives:
 
-* clean build under clearly specified package dependencies and patches
-* packages build across many architectures
-* optimal splits into multiple binary packages
-* smooth library transitions
-* security enhancement using specific compiler flags
-* multiarch support
+* packages build across many architectures (<<variablesrules>>)
+* reproducible build (<<reproducible>>)
+* clean build under clearly specified package dependencies and patches (<<control>>, <<patches>>, <<chroot>>)
+* optimal splits into multiple binary packages (<<split>>)
+* smooth library transitions (<<lib-trans>>)
+* interactive installation customization (<<debconf>>)
+* multiarch support (<<multiarch>>)
+* security enhancement using specific compiler flags (<<harden>>)
+* continuous integration (<<ci>>)
+* boot strapping (<<bootstrap>>))
 * ...
 
 These make it somewhat overwhelming for many new prospective Debian maintainers to get involved with Debian.  This guide tries to provide entry points for them to get started.  It describes the following:

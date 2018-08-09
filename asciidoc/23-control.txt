@@ -51,7 +51,6 @@ Here are some typical multiarch package split scenarios for the following upstre
 |====
 |'binarypackage'   |'type'   |*Architecture:*|*Multi-Arch:*	|Package content
 |*lib*'foo1'	   |*lib*^*^ |any |same    |the shared library, co-installable
-|*lib*'foo1'*-dbg* |*dbg*^*^ |any |same    |the shared library debug symbols, co-installable
 |*lib*'foo'*-dev*  |*dev*^*^ |any |same    |the shared library header files etc., co-installable
 |*lib*'foo'*-tools*|*bin*^*^ |any |foreign |the run-time support programs, not co-installable
 |*lib*'foo'*-doc*  |*doc*^*^ |all |foreign |the shared library documentation files

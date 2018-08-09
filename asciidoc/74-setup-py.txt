@@ -103,9 +103,9 @@ The rest of the packaging activities are practically the same as the ones in <<m
 include::../debhello-1.1-pkg1/step400.slog[]
 ----
 
-Here is the generated dependency list of binary packages.
+Here is the generated dependency list of *debhello_1.1-1_all.deb*.
 
-.The generated dependency list of binary packages (v=1.1):
+.The generated dependency list of *debhello_1.1-1_all.deb*:
 ----
 include::../debhello-1.1-pkg1/step702.slog[]
 ----
