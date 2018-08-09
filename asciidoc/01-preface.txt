@@ -13,9 +13,9 @@ Debian has many social and technical rules and conventions to follow since it is
 * clean build under clearly specified package dependencies and patches (<<control>>, <<patches>>, <<chroot>>)
 * optimal splits into multiple binary packages (<<split>>)
 * smooth library transitions (<<lib-trans>>)
+* interactive installation customization (<<debconf>>)
 * multiarch support (<<multiarch>>)
 * security enhancement using specific compiler flags (<<harden>>)
-* interactive installation customization (<<debconf>>)
 * continuous integration (<<ci>>)
 * boot strapping (<<bootstrap>>))
 * ...
