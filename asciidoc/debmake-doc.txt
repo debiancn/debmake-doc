@@ -89,11 +89,11 @@ include::33-lib.txt[]
 
 include::34-symbols.txt[]
 
-include::35-multiarch.txt[]
+include::35-debconf.txt[]
 
-include::36-harden.txt[]
+include::36-multiarch.txt[]
 
-include::37-debconf.txt[]
+include::37-harden.txt[]
 
 include::38-pkgtest.txt[]
 

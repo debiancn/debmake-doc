@@ -80,14 +80,13 @@ set the Debian package revision.
 set the tarball type, 'extension'=(*tar.gz*|*tar.bz2*|*tar.xz*). (alias: *z*, *b*, *x*)
 
 *-b* "'binarypackage[:type],...'", *--binaryspec* "'binarypackage[:type],...'"::
-set the binary package specs by a comma separated list of 'binarypackage:type' pairs, e.g., in the full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo1-dbg:dbg,libfoo-dev:dev*'' or in the short form, ``*-doc,libfoo1,libfoo1-dbg, libfoo-dev*''.
+set the binary package specs by a comma separated list of 'binarypackage:type' pairs, e.g., in the full form ``*foo:bin,foo-doc:doc,libfoo1:lib,libfoo-dev:dev*'' or in the short form, ``*-doc,libfoo1,libfoo-dev*''.
 +
 Here, 'binarypackage' is the binary package name, and the optional 'type' is chosen from the following 'type' values:
 +
 --
 ** *bin*: C/C++ compiled ELF binary code package (any, foreign) (default, alias: *""*, i.e., 'null-string')
 ** *data*: Data (fonts, graphics, ...) package (all, foreign) (alias: *da*)
-** *dbg*: Debug symbol package (any, same) (alias: *db*) (deprecated for stretch and after since the -dbgsym package is automatically generated)
 ** *dev*: Library development package (any, same) (alias: *de*)
 ** *doc*: Documentation package (all, foreign) (alias: *do*)
 ** *lib*: Library package (any, same) (alias: *l*)
@@ -172,14 +171,14 @@ For  Autotools based packages, setting *autoreconf* as 'addon' forces running ``
 For Autotools based packages, if they install Python programs, *python2* as 'addon' is needed for packages with ``*compat < 9*'' since this is non-obvious.   But for *setup.py* based packages, *python2* as 'addon' is not needed since this is obvious and it is automatically set for the *dh*(1) command by the *debmake* command when it is required.
 
 *-x* 'n', *--extra* 'n'::
-generate extra configuration files as templates.
+generate configuration files as templates.  (Please note *debian/changelog*, *debian/control*, *debian/copyright*, and *debian/rules* are bare minimum configuration files to build a Debian binary package.)
 +
 The number 'n' determines which configuration templates are generated.
 
-* *-x0*: bare minimum configuration files. (default if these files exist already)
-* *-x1*: all *-x0* files + desirable configuration files. (default for new packages)
-* *-x2*: all *-x1* files + interesting configuration files. (recommended for experts, multi binary aware)
-* *-x3*:  all *-x2* files + unusual configuration template files with the extra *.ex* suffix to ease their removal. (recommended for new users) To use these as configuration files, rename their file names to ones without the *.ex* suffix.
+* *-x0*: bare minimum configuration files. (default option if any of bare minimum configuration files already exist)
+* *-x1*: all *-x0* files + desirable configuration files for the single binary package. (default option for the single binary package if none of bare minimum configuration files exist)
+* *-x2*: all *-x1* files + desirable configuration files for the multi binary package. (default option for the multi binary package if none of bare minimum configuration files exist)
+* *-x3*: all *-x2* files + unusual configuration template files. Unsual configuration template files are generated with the extra *.ex* suffix to ease their removal. To use these as configuration files, rename their file names to ones without the *.ex* suffix.
 * *-x4*: all *-x3* files + copyright file examples.
 //
 Existing configuration files are never overwritten.  If you wish to update some of the existing configuration files, please rename them  before  running  the *debmake* command and manually merge the generated configuration files with the old renamed ones.
@@ -292,7 +291,5 @@ Expat License
 == SEE ALSO
 
 The *debmake-doc* package provides the “Guide for Debian Maintainers” in plain text, HTML and PDF formats under the */usr/share/doc/debmake-doc/* directory.
-
-Also, please read the original https://www.debian.org/doc/manuals/maint-guide/[Debian New Maintainers’ Guide] provided by the the *maint-guide* package.
 
 See also *dpkg-source*(1), *deb-control*(5), *debhelper*(7), *dh*(1), *dpkg-buildpackage*(1), *debuild*(1), *quilt*(1), *dpkg-depcheck*(1), *pdebuild*(1), *pbuilder*(8), *cowbuilder*(8), *gbp-buildpackage*(1), *gbp-pq*(1), and *git-pbuilder*(1) manpages.

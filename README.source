@@ -14,6 +14,9 @@ The "devel" branch is meant to build the non-native Debian binary package
 using the “debmake -t -i debuild” command with quasi-native Debian package
 scheme as described in 6.2.
 
+Playing with git purely from command line isn't easy.  Please consider using
+GUI tool such as gitk.
+
 == Build
 
 The build process involves several files for make:
@@ -41,28 +44,86 @@ This takes long time and isn't friendly for debug.
 
 == Debug build
 
-If DEBUG is set, the debug build of this source via XML can be done in 2 steps.
+Since regenerating the packaging example logs takes time, we provide a way to
+avoid this step for people updating the text not involving the packaging
+example logs.
 
-If DEBUG is set, this source build requires 2 steps.
+First, you set up source with:
 
- $ export DEBUG=1
+ $ export DEBUG=1 # more verbose reporting
+ $ sudo apt-get update
+ $ sudo apt-get install git gitk debmake devscripts
+ $ sudo apt-get build-dep debmake-doc
+ $ git clone git@salsa.debian.org:debian/debmake-doc.git
+ $ cd debmake-doc
+ $ gitk --all     # check the source (you are on "master" now.)
+ $ git checkout --track origin/upstream
+ $ git checkout --track origin/pristine-tar
+ $ git checkout --track origin/devel
+ $ git checkout devel
  $ make pkg       # building packaging log example
- $ make css html  # building page just like the one in package
 
-Results are found under tmp/
+or
 
-For checking updated English ASCIIDOC and translation PO contents, this
-DEBUG=1 saves time.  You only build html page with existing packaging logs.
+ ...
+ $ git clone --branch devel git@salsa.debian.org:debian/debmake-doc.git
+ $ cd debmake-doc
+ $ gitk --all     # check the source (you are on "devel" now.)
+ $ make pkg       # building packaging log example
 
- $ make css html
+(Checking out branch may be easier if you use GUI of gitk.  That is what I
+actually do here.)
 
-to check their goodness when rebuilding.  (Long package example build results
-are kept and reused.)
+Then refresh files under po/ directory with:
+
+ $ make base-xml  # building base xml from asciidoc
+ $ make all-xml   # building all xml source while updating PO from base-xml
+
+or simply as:
+
+ $ make build     # building all xml source while updating PO from asciidoc
+
+Now you are ready to translate this source by hacking PO files under po/
+directory using tools such as poedit.  The result of your translation can be
+previewed with the browser by generating html files.
+
+ $ make LANGPO=<lang> css html  # preview html
+
+Results are found under tmp/html/ .
+
+If you get error free html file, you may wish to check PDF file.
+
+ $ make LANGPO=<lang> pdf  # preview PDF
+
+Results are found under tmp/ .
+
+If satisfied, make sure to commit only your modified PO files to git "devel"
+branch.  Assuming you are editing po/<lang>.po:
+
+ $ git add po/<lang>.po
+ $ git commit po/<lang>.po
+
+Update English original content by hacking ASCIIDOC text files under asciidoc/
+directory.  The result can be previewed with the browser by generating html
+files. 
+
+ $ make base-xml  # building base xml from asciidoc
+ $ make LANGPO= all-xml   # building all xml source while updating PO from base-xml
+ $ make LANGPO= css html  # preview html
+
+Please note that LANGPO is set to empty string in the above.
+
+Results are found under tmp/html/ .
+
+If you get error free html file, you may wish to check PDF file.
+
+ $ make LANGPO= pdf  # preview PDF
+
+Results are found under tmp/ .
 
 If you are checking ASCIIDOC markup issue and wish to test build without going
 through XML, there is an alternative html build method:
 
- $ export DEBUG=1
  $ make pkg       # building packaging log example
  $ cd asciidoc
  $ make
@@ -77,7 +138,26 @@ In order to keep the translation in sync with the English, po/pot files are
 generated in the way not to contain <screen> contents and url attribute of
 <ulink>.
 
-This is done directory by the itstool from gettext (without using po4a).
+This is done directly by the itstool from gettext (without using po4a) as
+described in the above "Debug build".
+
+If you updated a PO file while others committing the same file before you
+commit it, merging of the PO file isn't trivial.  Don't try to merge just by
+git.  Here is the way to do it.
+
+* Copy your latest po/<lang>.po to outside of the source tree as
+  /path/to/<lang>.po.my .
+* Use gitk to checkout local "devel" branch.
+* Use gitk to reset your local "devel" to "remotes/origin/devel" (hard reset).
+* Use "git pull origin devel"
+* Move po/<lang>.po to po/<lang>.po.their .
+* Move back /path/to/<lang>.po.my to po/<lang>.po.my .
+* msgcat --use-first po/<lang>.po.my po/<lang>.po.their >po/<lang>.po
+* Update po with the latest source "make build"
+
+Now you have merged PO to po/<lang>.po .
+
+You may un-fuzzy and commit po/<lang>.po .
 
 == debian-template/
 

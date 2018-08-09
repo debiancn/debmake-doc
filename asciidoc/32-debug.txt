@@ -15,23 +15,20 @@ See
 * Debian wiki https://wiki.debian.org/AutomaticDebugPackages[AutomaticDebugPackages]
 * Debian debian-devel post: https://lists.debian.org/debian-devel/2015/08/msg00443.html[Status on automatic debug packages] (2015-08-15)
 
-==== New -dbgsym package (Strech 9.0 and after)
+[[dbgsym]]
+==== New -dbgsym package (Stretch 9.0 and after)
 
 The debugging information is automatically packaged separately as the debug package using the *dh_strip* command with its default behavior.  The name of such a debug package normally has the *-dbgsym* suffix.
 
-* No special care is needed in the *debian/rules* file, if there were no *-dbg* packages.
-* Use the *--dbgsym-migration* option for the *dh_strip* command, if there were *-dbg* packages.
+If there were no *-dbg* packages defined in the *debian/control* file, no special care is needed for updating the package after the Stretch 9.0 release.
 
-==== Old -dbg package (Jessie 8.0 or before)
+* The *debian/rules* file shouldn't explicitly contain *dh_strip*.
+* Set *debian/compat* to *11* or newer.
+* Bump the *Build-Depends* to *debhelper (>=11~)* or newer. 
 
-The debugging information can be packaged separately as the debug package using the ``*dh_strip --dbg-package=*'package''' command in the *override_dh_strip:* target of the *debian/rules* file.  The name of such a debug package normally has the *-dbg* suffix.
+If there were *-dbg* packages defined in the *debian/control* file, following care is needed for updating the old package after the Stretch 9.0 release.
 
-The installation path of the debugging information is as follows to enable auto-loading of it by the *gdb* command.
-
-* */usr/lib/debug/.build-id/*'12/3456...' (compat>=9, for *buildID*='123456...')
-* */usr/lib/debug/*'path/to/binary' (compat<<9, for '/path/to/binary')
-
-NOTE: The creation of the *-dbg* package is optional.
-
-NOTE: This is deprecated for Strech 9.0 and after.
-
+* Drop definition entries of such *-dbg* packages in the *debian/control* file.
+* Replace ``*dh_strip --dbg-package=*'package''' with ``*dh_strip --dbgsym-migration=*'package''' in the *debian/rules* file to avoid file conflicts with the (now obsolete) *-dbg* package.  See *dh_strip*(1).
+* Set *debian/compat* to *11* or newer.
+* Bump the *Build-Depends* to *debhelper (>=11~)* or newer. 

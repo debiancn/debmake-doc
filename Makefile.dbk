@@ -56,7 +56,7 @@ ITSTOOL := itstool -i $(XSLT_DIR)/docbook.its
 MKDIRP := mkdir -p
 MSGCAT := msgcat
 MSGFMT := msgfmt
-MSGMERGE := msgmerge
+MSGMERGE := msgmerge --update --previous
 MSGATTRIB := msgattrib
 DBLATEX	:= dblatex
 # Change $(DRAFTMODE) from "yes" to "maybe" when this document
@@ -64,6 +64,10 @@ DBLATEX	:= dblatex
 #export DRAFTMODE := yes
 export DRAFTMODE := maybe
 #######################################################################
+# Normal doc content as English base xml
+$(BASEXML): $(wildcard $(ASCIIDOC_DIR)/*.txt)
+	$(MAKE) -C $(ASCIIDOC_DIR) xml	# base XML doc
+
 # set last chapter as appendix.
 $(MANUAL).en.x01: $(BASEXML)
 	@$(call check-command, xsltproc, xsltproc)
@@ -120,7 +124,7 @@ po: $(SRC_PO)
 # Always update
 $(PO_DIR)/%.po: $(PO_DIR)/templates.pot
 	@$(call check-command, msgmerge, gettext)
-	$(MSGMERGE) -U $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
+	$(MSGMERGE) $(PO_DIR)/$*.po $(PO_DIR)/templates.pot
 	MESS1="no-obsolete  $*  `$(MSGATTRIB) --no-obsolete  $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
 	MESS2="untranslated $*  `$(MSGATTRIB) --untranslated $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
 	MESS3="fuzzy        $*  `$(MSGATTRIB) --fuzzy        $(PO_DIR)/$*.po |grep ^msgid |sed 1d|wc -l`";\
@@ -148,8 +152,12 @@ doc-clean:
 clean:: doc-clean
 
 #######################################################################
-.PHONY: xml
-xml: $(SRC_XML) $(ENT_ALL)
+.PHONY: base-xml
+base-xml: $(BASEXML)
+
+#######################################################################
+.PHONY: all-xml
+all-xml: $(SRC_XML) $(ENT_ALL)
 
 #######################################################################
 .PHONY: doc-all
@@ -158,7 +166,7 @@ doc-all: css html txt epub
 #######################################################################
 # $ make test      # build html for testing (for Translator)
 #######################################################################
-.PHONY: test
+.PHONY: doc-test
 doc-test: html css
 
 #######################################################################

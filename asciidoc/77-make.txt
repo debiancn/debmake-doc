@@ -74,9 +74,9 @@ include::../debhello-1.4-pkg1/step400.slog[]
 
 The rest of the packaging activities are practically the same as the one in <<step-debuild>>.
 
-Here is the generated dependency list of binary packages.
+Here is the generated dependency list of all binary packages.
 
-.The generated dependency list of binary packages (v=1.4):
+.The generated dependency list of all binary packages (v=1.4):
 ----
 include::../debhello-1.4-pkg1/step702.slog[]
 ----

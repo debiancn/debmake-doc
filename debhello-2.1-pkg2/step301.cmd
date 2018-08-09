@@ -14,9 +14,6 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 override_dh_auto_configure:
 	dh_auto_configure -- \\
 	      -DCMAKE_LIBRARY_ARCHITECTURE="\$(DEB_TARGET_MULTIARCH)"
-
-override_dh_strip:
-	dh_strip --dbg-package=debhello-dbg
 EOF
 L "cat ${PROJECT}/debian/rules"
 
