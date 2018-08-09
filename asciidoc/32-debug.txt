@@ -22,6 +22,8 @@ The debugging information is automatically packaged separately as the debug pack
 If there were no *-dbg* packages defined in the *debian/control* file, no special care is needed for updating the package after the Stretch 9.0 release.
 
 * The *debian/rules* file shouldn't explicitly contain *dh_strip*.
+* Set *debian/compat* to *11* or newer.
+* Bump the *Build-Depends* to *debhelper (>=11~)* or newer. 
 
 If there were *-dbg* packages defined in the *debian/control* file, following care is needed for updating the old package after the Stretch 9.0 release.
 
