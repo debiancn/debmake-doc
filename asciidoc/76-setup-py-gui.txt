@@ -63,9 +63,9 @@ Since this upstream source has a manpage and other files with matching entries i
 
 The rest of the packaging activities are practically the same as in <<setup-py>>.
 
-Here is the generated dependency list of binary packages.
+Here is the generated dependency list of *debhello_1.3-1_all.deb*.
 
-.The generated dependency list of binary packages (v=1.3):
+.The generated dependency list of *debhello_1.3-1_all.deb*:
 ----
 include::../debhello-1.3-pkg1/step702.slog[]
 ----
