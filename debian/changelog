@@ -1,11 +1,12 @@
 debmake-doc (1.11-1) unstable; urgency=medium
 
   * Fix debian/control grammar error.  Closes: #903804
-  * Update contents in line with the Buster environment. Closes: #905167
+  * Update contents in line with the Buster environment such as
+    *-debsym, *.build, and *.buildinfo. Closes: #905167
   * Improve README.source and manpage content.
   * Now updating po files leave previous msgid contents.
 
- -- Osamu Aoki <osamu@debian.org>  Thu, 09 Aug 2018 01:46:59 +0900
+ -- Osamu Aoki <osamu@debian.org>  Thu, 09 Aug 2018 22:52:24 +0900
 
 debmake-doc (1.10-1) unstable; urgency=medium
 
