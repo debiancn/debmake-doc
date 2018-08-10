@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-10 15:11+0800\n"
+"PO-Revision-Date: 2018-08-10 08:20-0400\n"
 "Last-Translator: Honghao Li <jerrylee1999@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -291,7 +291,7 @@ msgstr "跨多个架构构建软件包"
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:144
 msgid "reproducible build (<xref linkend=\"reproducible\"/>)"
-msgstr ""
+msgstr "可重现的构建（<xref linkend=\"reproducible\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:149
@@ -339,10 +339,8 @@ msgstr "使用特定的编译选项进行安全增强"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:179
-#, fuzzy
-#| msgid "continuous integration"
 msgid "continuous integration (<xref linkend=\"ci\"/>)"
-msgstr "持续集成"
+msgstr "持续集成（<xref linkend=\"ci\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:184
@@ -14191,9 +14189,9 @@ msgid ""
 "hello\" for the linking of <emphasis role=\"strong\">libm</emphasis>."
 msgstr ""
 "如果环境变量 <emphasis role=\"strong\">DEB_BUILD_MAINT_OPTIONS</emphasis> 没"
-"有导入到 <emphasis role=\"strong\">debian/rules</emphasis> 中，lintian 会在链"
-"接 <emphasis role=\"strong\">libm</emphasis> 时抛出警告：“W: debhello: "
-"hardening-no-relro usr/bin/hello”。"
+"有在 <emphasis role=\"strong\">debian/rules</emphasis> 文件中进行导出，"
+"lintian 会在链接 <emphasis role=\"strong\">libm</emphasis> 时抛出警告：“W: "
+"debhello: hardening-no-relro usr/bin/hello”。"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7362
