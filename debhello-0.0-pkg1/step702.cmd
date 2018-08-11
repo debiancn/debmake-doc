@@ -1,3 +1,6 @@
 for deb in $(ls *.deb); do
-L "dpkg -f ${deb} pre-depends depends recommends conflicts breaks"
+# keep it within 80-chars
+echo " \$ dpkg -f ${deb} pre-depends \\"
+echo "            depends recommends conflicts breaks"
+dpkg -f ${deb} pre-depends depends recommends conflicts breaks
 done
