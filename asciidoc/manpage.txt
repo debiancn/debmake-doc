@@ -211,9 +211,9 @@ For a typical Python module in the 'package-version'**.tar.gz** archive:
 
 * *debmake -s -a 'package-version'.tar.gz -b":python" -i debuild*
 
-For a typical Perl module in the 'Package-version'*.tar.gz* archive:
+For a typical Perl module in the 'package-version'*.tar.gz* archive:
 
-* *debmake -a 'Package-version'.tar.gz -b":perl" -i debuild*
+* *debmake -a 'package-version'.tar.gz -b":perl" -i debuild*
 
 
 == HELPER PACKAGES
