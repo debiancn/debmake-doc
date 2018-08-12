@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-10 21:31+0200\n"
+"PO-Revision-Date: 2018-08-12 09:13+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -11248,7 +11248,7 @@ msgstr ""
 #. (itstool) path: chapter/title
 #: debmake-doc.en.x02:6169
 msgid "More Examples"
-msgstr ""
+msgstr "Weitere Beispiele"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:6170
@@ -11256,6 +11256,8 @@ msgid ""
 "There is an old Latin saying: “<emphasis role=\"strong\">fabricando fit "
 "faber</emphasis>” (“practice makes perfect”)."
 msgstr ""
+"Es gibt ein altes Sprichwort auf Latein: »<emphasis "
+"role=\"strong\">fabricando fit faber</emphasis>« (»Übung macht den Meister«)."
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:6171
@@ -11274,7 +11276,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6175
 msgid "Programing in the POSIX shell, Python3, and C."
-msgstr ""
+msgstr "Programmieren in der POSIX-Shell, Python3 und C"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6180
@@ -11284,22 +11286,22 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:6186
 msgid "CLI"
-msgstr ""
+msgstr "CLI"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:6186
 msgid "GUI"
-msgstr ""
+msgstr "GUI"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6185
 msgid "Conversion of a command from <_:ulink-1/> to <_:ulink-2/>."
-msgstr ""
+msgstr "Umwandlung eines Befehls aus <_:ulink-1/> in <_:ulink-2/>."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:6191
 msgid "internationalization and localization"
-msgstr ""
+msgstr "Internationalisierung und Lokalisierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6190
@@ -11307,6 +11309,8 @@ msgid ""
 "Conversion of a program to use <emphasis role=\"strong\">gettext</emphasis> "
 "for <_:ulink-1/>: POSIX shell, Python3, and C sources."
 msgstr ""
+"Umwandlung eines Programms, um <emphasis role=\"strong\">gettext</emphasis> "
+"für POSIX-Shell, Python3 und C-Quellen zu verwenden."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6195
@@ -11314,11 +11318,13 @@ msgid ""
 "Overview of many build systems: Makefile, Python distutils, Autotools, and "
 "CMake."
 msgstr ""
+"Überblick über viele Bausysteme: Makefile, Python-Distutils, Autotools und "
+"CMake."
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:6200
 msgid "Please note that Debian takes a few things seriously:"
-msgstr ""
+msgstr "Bitte beachten Sie, dass Debian ein paar Dinge sehr Ernst nimmt:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:6203
@@ -11438,7 +11444,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:6291
 msgid "No Makefile (shell, CLI)"
-msgstr ""
+msgstr "Keine Makefile (Shell, CLI)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6292
@@ -11473,6 +11479,7 @@ msgstr ""
 #: debmake-doc.en.x02:6300
 msgid "Download <emphasis role=\"strong\">debhello-0.2.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-0.2.tar.gz</emphasis> herunter"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6319
@@ -11484,7 +11491,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6320
 msgid "<emphasis role=\"strong\">hello</emphasis> (v=0.2)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello</emphasis> (v=0.2)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:6328
@@ -11501,7 +11508,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6329
 msgid "<emphasis role=\"strong\">hello.desktop</emphasis> (v=0.2)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello.desktop</emphasis> (v=0.2)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6343
@@ -11535,6 +11542,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (template file, v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Vorlagendatei, v=0.2):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6399
@@ -11550,6 +11558,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (template file, v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Vorlagendatei, v=0.2):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6418
@@ -11590,6 +11599,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (maintainer version, "
 "v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Betreuerversion, "
+"v=0.2):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6431
@@ -11597,6 +11608,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (maintainer version, "
 "v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Betreuerversion, "
+"v=0.2):"
 
 #. (itstool) path: warning/simpara
 #: debmake-doc.en.x02:6454
@@ -11613,6 +11626,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/install</emphasis> (maintainer version, "
 "v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/install</emphasis> (Betreuerversion, "
+"v=0.2):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6463
@@ -11620,12 +11635,15 @@ msgid ""
 "<emphasis role=\"strong\">debian/manpages</emphasis> (maintainer version, "
 "v=0.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/manpages</emphasis> (Betreuerversion, "
+"v=0.2):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6470
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=0.2):"
 msgstr ""
+"Vorlagendateien unter <emphasis role=\"strong\">debian/</emphasis>. (v=0.2):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6490
@@ -11729,6 +11747,8 @@ msgid ""
 "Here is the generated dependency list of <emphasis role=\"strong"
 "\">debhello_0.2-1_all.deb</emphasis>."
 msgstr ""
+"Dies ist die erstellte Abhängigkeitsliste von <emphasis role=\"strong"
+"\">debhello_0.2-1_all.deb</emphasis>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6618
@@ -11761,6 +11781,7 @@ msgstr ""
 #: debmake-doc.en.x02:6632
 msgid "Download <emphasis role=\"strong\">debhello-1.0.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.0.tar.gz</emphasis> herunter"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6652
@@ -11774,7 +11795,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6653
 msgid "<emphasis role=\"strong\">Makefile</emphasis> (v=1.0)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Makefile</emphasis> (v=1.0)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6697 debmake-doc.en.x02:6849 debmake-doc.en.x02:7016
@@ -11788,6 +11809,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (template file, v=1.0):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Vorlagendatei, v=1.0):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6714
@@ -11795,6 +11817,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (maintainer version, "
 "v=1.0):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Betreuerversion, "
+"v=1.0):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6727
@@ -11817,6 +11841,7 @@ msgstr ""
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=1.0):"
 msgstr ""
+"Vorlagendateien unter <emphasis role=\"strong\">debian/</emphasis>. (v=1.0):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6748
@@ -11828,7 +11853,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:6751
 msgid "setup.py (Python3, CLI)"
-msgstr ""
+msgstr "setup.py (Python3, CLI)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6752
@@ -11859,6 +11884,7 @@ msgstr ""
 #: debmake-doc.en.x02:6760
 msgid "Download <emphasis role=\"strong\">debhello-1.1.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.1.tar.gz</emphasis> herunter"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6779
@@ -11871,12 +11897,12 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6780
 msgid "<emphasis role=\"strong\">hello</emphasis> (v=1.1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello</emphasis> (v=1.1)"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6788
 msgid "<emphasis role=\"strong\">hello_py/__init__.py</emphasis> (v=1.1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello_py/__init__.py</emphasis> (v=1.1)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6799
@@ -11889,17 +11915,17 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6800
 msgid "<emphasis role=\"strong\">setup.py</emphasis> (v=1.1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">setup.py</emphasis> (v=1.1)"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6829
 msgid "<emphasis role=\"strong\">MANIFEST.in</emphasis> (v=1.1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">MANIFEST.in</emphasis> (v=1.1)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:6834
 msgid "setuptools"
-msgstr ""
+msgstr "setuptools"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:6834
@@ -11923,6 +11949,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (template file, v=1.1):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Vorlagendatei, v=1.1):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6859
@@ -11954,6 +11981,7 @@ msgstr ""
 msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (template file, v=1.1):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Vorlagendatei, v=1.1):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6881
@@ -11972,6 +12000,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (maintainer version, "
 "v=1.1):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Betreuerversion, "
+"v=1.1):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6893
@@ -11979,6 +12009,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (maintainer version, "
 "v=1.1):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Betreuerversion, "
+"v=1.1):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6917
@@ -12008,6 +12040,7 @@ msgstr ""
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=1.1):"
 msgstr ""
+"Vorlagendateien unter <emphasis role=\"strong\">debian/</emphasis>. (v=1.1):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6948
@@ -12015,6 +12048,8 @@ msgid ""
 "Here is the generated dependency list of <emphasis role=\"strong"
 "\">debhello_1.1-1_all.deb</emphasis>."
 msgstr ""
+"Hier ist die erstellte Abhängigkeitsliste von <emphasis role=\"strong"
+"\">debhello_1.1-1_all.deb</emphasis>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6949
@@ -12054,6 +12089,7 @@ msgstr ""
 #: debmake-doc.en.x02:6960
 msgid "Download <emphasis role=\"strong\">debhello-1.2.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.2.tar.gz</emphasis> herunter"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6980
@@ -12066,7 +12102,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6981
 msgid "<emphasis role=\"strong\">hello</emphasis> (v=1.2)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello</emphasis> (v=1.2)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:6986
@@ -12078,18 +12114,19 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:6987
 msgid "<emphasis role=\"strong\">hello.desktop</emphasis> (v=1.2)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello.desktop</emphasis> (v=1.2)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7001
 msgid "All other files are the same as in <xref linkend=\"makefile-sh\"/>."
-msgstr ""
+msgstr "Alle anderen Dateien sind identisch zu <xref linkend=\"makefile-sh\"/>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7017
 msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (template file, v=1.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Vorlagendatei, v=1.2):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7036
@@ -12097,6 +12134,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (maintainer version, "
 "v=1.2):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Betreuerversion, "
+"v=1.2):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7059
@@ -12133,6 +12172,8 @@ msgid ""
 "Here is the generated dependency list of <emphasis role=\"strong"
 "\">debhello_1.2-1_all.deb</emphasis>."
 msgstr ""
+"Hier ist die erstellte Abhängigkeitsliste von <emphasis role=\"strong"
+"\">debhello_1.2-1_all.deb</emphasis>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7082
@@ -12181,22 +12222,22 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7118
 msgid "<emphasis role=\"strong\">hello</emphasis> (v=1.3)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello</emphasis> (v=1.3)"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7126
 msgid "<emphasis role=\"strong\">hello_py/__init__.py</emphasis> (v=1.3)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">hello_py/__init__.py</emphasis> (v=1.3)"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7160
 msgid "<emphasis role=\"strong\">setup.py</emphasis> (v=1.3)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">setup.py</emphasis> (v=1.3)"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7194
 msgid "<emphasis role=\"strong\">MANIFEST.in</emphasis> (v=1.3)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">MANIFEST.in</emphasis> (v=1.3)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7202
@@ -12218,6 +12259,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/rules</emphasis> (maintainer version, "
 "v=1.3):"
 msgstr ""
+"<emphasis role=\"strong\">debian/rules</emphasis> (Betreuerversion, "
+"v=1.3):"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7228
@@ -12225,6 +12268,8 @@ msgid ""
 "<emphasis role=\"strong\">debian/control</emphasis> (maintainer version, "
 "v=1.3):"
 msgstr ""
+"<emphasis role=\"strong\">debian/control</emphasis> (Betreuerversion, "
+"v=1.3):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7252
@@ -12259,6 +12304,8 @@ msgid ""
 "Here is the generated dependency list of <emphasis role=\"strong"
 "\">debhello_1.3-1_all.deb</emphasis>."
 msgstr ""
+"Hier ist die erstellte Abhängigkeitsliste von <emphasis role=\"strong"
+"\">debhello_1.3-1_all.deb</emphasis>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7256
@@ -12309,6 +12356,7 @@ msgstr ""
 #: debmake-doc.en.x02:7273
 msgid "Download <emphasis role=\"strong\">debhello-1.4.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.4.tar.gz</emphasis> herunter"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7294 debmake-doc.en.x02:7424 debmake-doc.en.x02:7614
@@ -12383,6 +12431,7 @@ msgstr ""
 msgid ""
 "Template files under <emphasis role=\"strong\">debian/</emphasis>. (v=1.4):"
 msgstr ""
+"Vorlagendateien unter <emphasis role=\"strong\">debian/</emphasis>. (v=1.4):"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:7382 debmake-doc.en.x02:7576 debmake-doc.en.x02:7738
@@ -12399,7 +12448,7 @@ msgstr ""
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7384
 msgid "The generated dependency list of all binary packages (v=1.4):"
-msgstr ""
+msgstr "Die erstellte Abhängigkeitsliste aller Binärpakete (v=1.4):"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:7392
@@ -12446,6 +12495,7 @@ msgstr ""
 #: debmake-doc.en.x02:7403
 msgid "Download <emphasis role=\"strong\">debhello-1.5.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.5.tar.gz</emphasis> herunter"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7425
@@ -12478,6 +12528,8 @@ msgid ""
 "The result is similar to <xref linkend=\"step-debmake\"/> but not exactly "
 "the same."
 msgstr ""
+"Das Ergebnis ist ähnlich zu <xref linkend=\"step-debmake\"/>, aber nicht "
+"exakt identisch."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7544
@@ -12542,6 +12594,7 @@ msgstr ""
 #: debmake-doc.en.x02:7592
 msgid "Download <emphasis role=\"strong\">debhello-1.6.tar.gz</emphasis>"
 msgstr ""
+"Laden Sie <emphasis role=\"strong\">debhello-1.6.tar.gz</emphasis> herunter"
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:7615
