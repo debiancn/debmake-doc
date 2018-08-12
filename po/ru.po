@@ -1832,7 +1832,6 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1007
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">devscripts</emphasis> package should be "
 "installed in the maintainer environment."
@@ -1842,17 +1841,15 @@ msgstr ""
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1008
-#, fuzzy
 msgid ""
 "Although this is not necessarily an absolute requirement, it is a good idea "
 "to install and set up all of the popular set of packages mentioned in this "
 "chapter in the maintainer environment. This enables us to share the common "
 "baseline working environment."
 msgstr ""
-"Хотя это и не является с необходимостью абсолютным требованием, полезно "
-"установить и настроить популярный набор пакетов, обсуждаемых в этой главе, в "
-"окружение сопровождающего. Это позволит нам иметь общую базовую рабочую "
-"среду."
+"В окружении сопровождающего, хотя это и не абсолютно необходимое требование, полезно "
+"установить и настроить популярный набор пакетов, упоминаемых в данной главе. "
+"Это позволит нам иметь общую базовую рабочую среду."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:1009
@@ -1861,12 +1858,11 @@ msgstr "Обзор инструментов Debian для сопровождаю
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1009
-#, fuzzy
 msgid ""
 "Please install the tools mentioned in the <_:ulink-1/> in the “Debian "
 "Developer’s Reference”, as needed, too."
 msgstr ""
-"Также при необходимости установите инструменты, указанные в разделе <_:"
+"Также, при необходимости, установите инструменты, указанные в разделе <_:"
 "ulink-1/> из «Справочника разработчика Debian»."
 
 #. (itstool) path: caution/simpara
@@ -1894,7 +1890,7 @@ msgid ""
 "use by the shell environment variables <emphasis role=\"strong\">$DEBEMAIL</"
 "emphasis> and <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
 msgstr ""
-"Различные инструменты сопровождения Debian берут ваш адрес электронной почты "
+"Различные инструменты сопровождения Debian назначают ваш адрес электронной почты "
 "и ваше имя из переменных окружения <emphasis role=\"strong\">$DEBEMAIL</"
 "emphasis> и <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
 
@@ -1907,8 +1903,8 @@ msgid ""
 msgstr ""
 "Предполагается, что в качестве интерактивной командной оболочки с "
 "регистрацией вы используете Bash. Если вы используете какую-то другую "
-"командную оболочку, например, Z, то вместо <emphasis role=\"strong\">~/."
-"bashrc</emphasis> вам необходимо изменить соответствующие файлы настройки."
+"командную оболочку, например, Zsh, то вместо <emphasis role=\"strong\">~/."
+"bashrc</emphasis> необходимо изменить соответствующие файлы настройки."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1014
@@ -1931,7 +1927,6 @@ msgstr "mc"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1023
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">mc</emphasis> command offers very easy ways to "
 "manage files. It can open the binary <emphasis role=\"strong\">deb</"
@@ -1946,7 +1941,7 @@ msgstr ""
 "клавиши «Ввод» при выборе соответствующего двоичного <emphasis role=\"strong"
 "\">deb</emphasis>-файла. В качестве движка эта программа использует команду "
 "<emphasis role=\"strong\">dpkg-deb</emphasis>. Настроим её на поддержку "
-"просто функции <emphasis role=\"strong\">chdir</emphasis> следующим образом."
+"простой функции <emphasis role=\"strong\">chdir</emphasis> следующим образом."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1031
@@ -1959,8 +1954,8 @@ msgid ""
 "Nowadays, the <emphasis role=\"strong\">git</emphasis> command is the "
 "essential tool to manage the source tree with history."
 msgstr ""
-"На сегодняший день команда <emphasis role=\"strong\">git</emphasis> является "
-"необходимым инструментов для работы с деревом исходного кода с историей."
+"На сегодняшний день команда <emphasis role=\"strong\">git</emphasis> является "
+"необходимым инструментом для работы с деревом исходного кода с историей."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1033
@@ -1980,7 +1975,7 @@ msgid ""
 "If you are too accustomed to the CVS or Subversion commands, you may wish to "
 "set several command aliases as follows."
 msgstr ""
-"Если вы привыкли использовать команды CVS или Subversion, то вы можете "
+"Если вы привыкли использовать команды CVS или Subversion, то можете "
 "установить несколько указанных ниже псевдонимов команд."
 
 #. (itstool) path: section/simpara
@@ -1995,7 +1990,7 @@ msgid ""
 "\">gitk</emphasis> or <emphasis role=\"strong\">gitg</emphasis> to work "
 "effectively with the history of the git repository."
 msgstr ""
-"Для эффектиной работы с историей git-репозитория необходимо использовать "
+"Для эффективной работы с историей git-репозитория необходимо использовать "
 "какой-нибудь инструмент с графическим интерфейсом пользователя, например, "
 "<emphasis role=\"strong\">gitk</emphasis> или <emphasis role=\"strong"
 "\">gitg</emphasis>."
@@ -2015,7 +2010,7 @@ msgid ""
 "\">patches/</emphasis> directory."
 msgstr ""
 "Команда <emphasis role=\"strong\">quilt</emphasis> предлагает простой метод "
-"записи изменений. Для работы с пакетами Debian этот метод следует изменить "
+"записи изменений. Для работы с пакетами Debian следует выполнить настройку "
 "так, чтобы изменения записывались в каталог <emphasis role=\"strong\">debian/"
 "patches/</emphasis> вместо каталога <emphasis role=\"strong\">patches/</"
 "emphasis> по умолчанию."
@@ -2031,13 +2026,11 @@ msgid ""
 "role=\"strong\">quilt</emphasis> command to the <emphasis role=\"strong"
 "\">dquilt</emphasis> command."
 msgstr ""
-"Для того, чтобы не менять поведение самой команды <emphasis role=\"strong"
-"\">quilt</emphasis>, давайте создадим псевдоним <emphasis role=\"strong"
+"Чтобы не менять поведение самой команды <emphasis role=\"strong"
+"\">quilt</emphasis>, создадим псевдоним <emphasis role=\"strong"
 "\">dquilt</emphasis> для работы с пакетами Debian, добавив следующие строки "
 "в файл <emphasis role=\"strong\">~/.bashrc</emphasis>. Вторая строка "
-"предоставляет ту же функциональность автодополнения команде <emphasis role="
-"\"strong\">dquilt</emphasis>, что уже имеется у команды <emphasis role="
-"\"strong\">quilt</emphasis>."
+"предоставляет команде <emphasis role=\"strong\">dquilt</emphasis> ту же функциональность автодополнения, что и у команды <emphasis role=\"strong\">quilt</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1051
@@ -2065,7 +2058,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1066
 msgid "See <xref linkend=\"alt-patch\"/> for example usages."
-msgstr "Примеры использования см. в <xref linkend=\"alt-patch\"/>."
+msgstr "Для примеров использования см. <xref linkend=\"alt-patch\"/>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1069
@@ -2079,13 +2072,12 @@ msgid ""
 "<emphasis role=\"strong\">devscripts</emphasis> package, is used to sign the "
 "Debian package with your private GPG key."
 msgstr ""
-"Команда <emphasis role=\"strong\">debsign</emphasis>, входящая в состав "
-"пакета <emphasis role=\"strong\">devscripts</emphasis>, используется для "
-"подписывания пакета Debian вашим закрытым GPG-ключом."
+"Для подписывания пакета Debian вашим закрытым GPG-ключом "
+"используется команда <emphasis role=\"strong\">debsign</emphasis>, входящая в состав "
+"пакета <emphasis role=\"strong\">devscripts</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1071
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debuild</emphasis> command, included in the "
 "<emphasis role=\"strong\">devscripts</emphasis> package, builds the binary "
@@ -2101,7 +2093,6 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1072
-#, fuzzy
 msgid ""
 "You can set these up in <emphasis role=\"strong\">~/.devscripts</emphasis> "
 "as follows."
@@ -2131,10 +2122,9 @@ msgstr "Создание нового GPG-ключа"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1077
-#, fuzzy
 msgid "Currently, an RSA key with 4096 bits is a good idea. See <_:ulink-1/>."
 msgstr ""
-"В настоящее время хорошо иметь RSA-ключ длины 4096 бит. См. <_:ulink-1/>."
+"В настоящее время хорошо иметь RSA-ключ длины 4096 бит, см. <_:ulink-1/>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1080
@@ -2148,11 +2138,10 @@ msgid ""
 "alternative chroot platform."
 msgstr ""
 "Пакет <emphasis role=\"strong\">sbuild</emphasis> предоставляет "
-"алитернативную chroot-платформу."
+"альтернативную chroot-платформу."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1081
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">pbuilder</emphasis> package provides a clean "
 "room (<emphasis role=\"strong\">chroot</emphasis>) build environment. <_:"
@@ -2203,8 +2192,8 @@ msgid ""
 "<emphasis role=\"strong\">gcc</emphasis> speed. (optional)"
 msgstr ""
 "Пакет <emphasis role=\"strong\">ccache</emphasis> предназначен для "
-"увеличения скорости работы <emphasis role=\"strong\">gcc</emphasis>. "
-"(необязательно)"
+"увеличения скорости работы <emphasis role=\"strong\">gcc</emphasis> "
+"(необязательно)."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1105
@@ -2213,8 +2202,8 @@ msgid ""
 "<emphasis role=\"strong\">dpkg</emphasis> speed. (optional)"
 msgstr ""
 "Пакет <emphasis role=\"strong\">libeatmydata1</emphasis> предназначен для "
-"увеличения скорости работы <emphasis role=\"strong\">dpkg</emphasis>. "
-"(необязательно)"
+"увеличения скорости работы <emphasis role=\"strong\">dpkg</emphasis> "
+"(необязательно)."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1110
@@ -2223,7 +2212,7 @@ msgid ""
 "speed. (optional)"
 msgstr ""
 "Параллельный запуск <emphasis role=\"strong\">make</emphasis> позволяет "
-"увеличить скорость сборки. (необязательно)"
+"увеличить скорость сборки (необязательно)."
 
 #. (itstool) path: warning/simpara
 #: debmake-doc.en.x02:1115
@@ -2272,7 +2261,6 @@ msgstr ""
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:1139
-#, fuzzy
 msgid ""
 "Install <emphasis role=\"strong\">libeatmydata1</emphasis> (&gt;=82-2) both "
 "inside and outside of the chroot or disable to use <emphasis role=\"strong"
@@ -2280,7 +2268,7 @@ msgid ""
 "systems."
 msgstr ""
 "Установите <emphasis role=\"strong\">libeatmydata1</emphasis> (&gt;=82-2) и "
-"в chroot-окружение, и во вне его, либо отключите использование <emphasis "
+"в chroot-окружение, и вне его, либо отключите использование <emphasis "
 "role=\"strong\">libeatmydata1</emphasis>. Это может вызывать состояние гонки "
 "на некоторых сборочных системах."
 
@@ -2339,8 +2327,8 @@ msgid ""
 msgstr ""
 "Каталог с кэшем <emphasis role=\"strong\">ccache</emphasis>, <emphasis role="
 "\"strong\">/var/cache/pbuilder/ccache</emphasis>, должен быть открыт для "
-"записи всем пользователям: «<emphasis role=\"strong\">-rwxrwxrwx 1 root "
-"root</emphasis>» для команды <emphasis role=\"strong\">pbuilder</emphasis>. "
+"записи команды <emphasis role=\"strong\">pbuilder</emphasis> всем пользователям: «<emphasis role=\"strong\">-rwxrwxrwx 1 root "
+"root</emphasis>». "
 "Вам необходимо осознавать связанные с этим проблемы безопасности."
 
 #. (itstool) path: section/title
@@ -2377,8 +2365,8 @@ msgid ""
 "You should set up a local HTTP caching proxy to save the bandwidth for the "
 "Debian package repository access. There are several choices:"
 msgstr ""
-"Вам следует настроить локальный кэширующий HTTP-прокси, чтобы сохранить "
-"пропускную способность при обращении к репозиторию пакетов Debian. Имеется "
+"Чтобы сохранить "
+"пропускную способность при обращении к репозиторию пакетов Debian вам следует настроить локальный кэширующий HTTP-прокси. Имеется "
 "несколько вариантов:"
 
 #. (itstool) path: listitem/simpara
@@ -2387,7 +2375,7 @@ msgid ""
 "Simple HTTP caching proxy using the <emphasis role=\"strong\">squid</"
 "emphasis> package."
 msgstr ""
-"Простой кэширующий HTTP-прокси, использующий пакет <emphasis role=\"strong"
+"Простой кэширующий HTTP-прокси, используя пакет <emphasis role=\"strong"
 "\">squid</emphasis>."
 
 #. (itstool) path: listitem/simpara
