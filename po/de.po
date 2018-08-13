@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-12 09:13+0200\n"
+"PO-Revision-Date: 2018-08-13 09:41+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -13777,6 +13777,8 @@ msgid ""
 "<emphasis role=\"strong\">-s</emphasis>, <emphasis role=\"strong\">--spec</"
 "emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">-s</emphasis>, <emphasis role=\"strong\">--spec</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9296
@@ -13850,6 +13852,8 @@ msgid ""
 "<emphasis role=\"strong\">-x</emphasis> <emphasis>n</emphasis>, <emphasis "
 "role=\"strong\">--extra</emphasis> <emphasis>n</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">-x</emphasis> <emphasis>n</emphasis>, <emphasis "
+"role=\"strong\">--extra</emphasis> <emphasis>n</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9329
@@ -13917,6 +13921,8 @@ msgid ""
 "<emphasis role=\"strong\">-y</emphasis>, <emphasis role=\"strong\">--yes</"
 "emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">-y</emphasis>, <emphasis role=\"strong\">--yes</"
+"emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9367
@@ -13966,7 +13972,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:9406
 msgid "EXAMPLES"
-msgstr ""
+msgstr "BEISPIELE"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9407
@@ -13986,7 +13992,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9408
 msgid "For a typical C program source tree packaged with autoconf/automake:"
-msgstr ""
+msgstr "Für ein typischen, mit Autoconf/Automake paketierten C-Programmquellbaum:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9411
@@ -13996,7 +14002,7 @@ msgstr "<emphasis role=\"strong\">debmake -d -i debuild</emphasis>"
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9416
 msgid "For a typical Python module source tree:"
-msgstr ""
+msgstr "Für einen typischen Pythonmodulquellbaum:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9419
@@ -14018,6 +14024,8 @@ msgid ""
 "<emphasis role=\"strong\">debmake -s -a <emphasis>package-version</emphasis>."
 "tar.gz -b\":python\" -i debuild</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">debmake -s -a <emphasis>Paketversion</emphasis>."
+"tar.gz -b\":python\" -i debuild</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9432
@@ -14032,11 +14040,13 @@ msgid ""
 "<emphasis role=\"strong\">debmake -a <emphasis>Package-version</emphasis>."
 "tar.gz -b\":perl\" -i debuild</emphasis>"
 msgstr ""
+"<emphasis role=\"strong\">debmake -a <emphasis>Paketversion</emphasis>."
+"tar.gz -b\":perl\" -i debuild</emphasis>"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:9442
 msgid "HELPER PACKAGES"
-msgstr ""
+msgstr "HELFERPAKETE"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9443
@@ -14200,7 +14210,7 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9585
 msgid "See README.developer in the source for more."
-msgstr ""
+msgstr "Siehe README.developer in den Quellen für weiteres."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:9588
@@ -14270,16 +14280,3 @@ msgstr ""
 "\">cowbuilder</emphasis>(8), <emphasis role=\"strong\">gbp-buildpackage</"
 "emphasis>(1), <emphasis role=\"strong\">gbp-pq</emphasis>(1) und <emphasis "
 "role=\"strong\">git-pbuilder</emphasis>(1)."
-
-#~ msgid "multiarch support"
-#~ msgstr "Unterstützung von Multiarch"
-
-#~ msgid "Debian New Maintainers’ Guide"
-#~ msgstr "Debian-Leitfaden für Neue Paketbetreuer"
-
-#~ msgid ""
-#~ "Also, please read the original <_:ulink-1/> provided by the the <emphasis "
-#~ "role=\"strong\">maint-guide</emphasis> package."
-#~ msgstr ""
-#~ "Bitte lesen Sie auch das ursprünglich <_:ulink-1/>. Es wird durch das "
-#~ "Paket <emphasis role=\"strong\">maint-guide</emphasis> bereitgestellt."
