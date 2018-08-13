@@ -1,0 +1,8 @@
+**.log
+**.slog
+debhello-*.tar.gz
+debhello-*/*
+debhello_*.tar.gz
+debmake-doc.*.x0*
+debmake-doc.*.xml
+po/*.po~
