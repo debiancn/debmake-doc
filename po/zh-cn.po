@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.10\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-10 08:20-0400\n"
+"PO-Revision-Date: 2018-08-15 01:29+0800\n"
 "Last-Translator: Honghao Li <jerrylee1999@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -282,11 +282,9 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:139
-#, fuzzy
-#| msgid "packages build across many architectures"
 msgid ""
 "packages build across many architectures (<xref linkend=\"variablesrules\"/>)"
-msgstr "跨多个架构构建软件包"
+msgstr "跨多个架构构建的软件包（<xref linkend=\"variablesrules\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:144
@@ -295,13 +293,13 @@ msgstr "可重现的构建（<xref linkend=\"reproducible\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:149
-#, fuzzy
-#| msgid "clean build under clearly specified package dependencies and patches"
 msgid ""
 "clean build under clearly specified package dependencies and patches (<xref "
 "linkend=\"control\"/>, <xref linkend=\"patches\"/>, <xref linkend=\"chroot\"/"
 ">)"
-msgstr "在明确指定软件包依赖和补丁情况下干净地构建"
+msgstr ""
+"在明确指定软件包依赖和补丁情况下干净地构建（<xref linkend=\"control\"/>, "
+"<xref linkend=\"patches\"/>, <xref linkend=\"chroot\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:154
@@ -313,10 +311,8 @@ msgstr "拆分多个二进制软件包的最佳实践"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:159
-#, fuzzy
-#| msgid "smooth library transitions"
 msgid "smooth library transitions (<xref linkend=\"lib-trans\"/>)"
-msgstr "平滑的软件库变迁"
+msgstr "平滑的程序库迁移（<xref linkend=\"lib-trans\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:164
@@ -330,12 +326,10 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:174
-#, fuzzy
-#| msgid "security enhancement using specific compiler flags"
 msgid ""
 "security enhancement using specific compiler flags (<xref linkend=\"harden\"/"
 ">)"
-msgstr "使用特定的编译选项进行安全增强"
+msgstr "使用特定的编译选项进行安全增强（<xref linkend=\"harden\"/>）"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:179
@@ -3326,10 +3320,8 @@ msgstr ""
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:1876
-#, fuzzy
-#| msgid "The non-native Debian package is the normal Debian package."
 msgid "The binary package contents of all binary packages:"
-msgstr "非本土软件包是标准的 Debian 软件包。"
+msgstr "所有二进制包的包内容："
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1900
@@ -9275,11 +9267,11 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4579
-#, fuzzy
 msgid ""
 "Debian encourages using versioned symbols in the shared library (see <xref "
 "linkend=\"symbols\"/>)."
-msgstr "该文档鼓励在共享库中使用带版本的符号。"
+msgstr ""
+"Debian 鼓励在共享库中使用带版本的符号（见 <xref linkend=\"symbols\"/>）。"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4584
@@ -15157,9 +15149,8 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:8932
-#, fuzzy
 msgid "debmake - program to make a Debian source package"
-msgstr "Debian 源码包的元信息"
+msgstr "debmake，用来制作 Debian 源码包的程序"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:8935
@@ -15971,13 +15962,12 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9424
-#, fuzzy
 msgid ""
 "For a typical Python module in the <emphasis>package-version</"
 "emphasis><emphasis role=\"strong\">.tar.gz</emphasis> archive:"
 msgstr ""
-"下载上游源码压缩包（tarball）并命名为 <emphasis>package-version</"
-"emphasis><emphasis role=\"strong\">.tar.gz</emphasis> 文件。"
+"对于 <emphasis>package-version</emphasis><emphasis role=\"strong\">.tar.gz</"
+"emphasis> 存档里的一个典型 Python 模块："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9427
@@ -15988,13 +15978,12 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:9432
-#, fuzzy
 msgid ""
 "For a typical Perl module in the <emphasis>Package-version</"
 "emphasis><emphasis role=\"strong\">.tar.gz</emphasis> archive:"
 msgstr ""
-"下载上游源码压缩包（tarball）并命名为 <emphasis>package-version</"
-"emphasis><emphasis role=\"strong\">.tar.gz</emphasis> 文件。"
+"对于 <emphasis>package-version</emphasis><emphasis role=\"strong\">.tar.gz</"
+"emphasis> 存档里的一个典型 Perl 模块："
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:9435
