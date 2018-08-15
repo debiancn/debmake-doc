@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-13 09:41+0200\n"
+"PO-Revision-Date: 2018-08-15 10:34+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -9232,11 +9232,13 @@ msgid ""
 "Here are some notable options for the <emphasis role=\"strong\">debmake</"
 "emphasis> command."
 msgstr ""
+"Es gibt einige bemerkenswerte Optionen für den Befehl <emphasis "
+"role=\"strong\">debmake</emphasis>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:5156
 msgid "Shortcut options (-a, -i)"
-msgstr ""
+msgstr "Abkürzungs-Optionen (-a, -i)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5157
@@ -9244,11 +9246,15 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command offers 2 shortcut "
 "options."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> bietet 2 "
+"Abkürzungsoptionen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:5160
 msgid "<emphasis role=\"strong\">-a</emphasis> : open the upstream tarball"
 msgstr ""
+"<emphasis role=\"strong\">-a</emphasis>: öffnen des Tarballs der "
+"Originalautoren"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:5165
@@ -9256,6 +9262,8 @@ msgid ""
 "<emphasis role=\"strong\">-i</emphasis> : execute script to build the binary "
 "package"
 msgstr ""
+"<emphasis role=\"strong\">-i</emphasis>: Ausführen der Skripte zum Bau des "
+"Binärpakets"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5170
@@ -9263,6 +9271,7 @@ msgid ""
 "The example in the above <xref linkend=\"simple\"/> can be done simply as "
 "follows."
 msgstr ""
+"Das obige Beispiel <xref linkend=\"simple\"/> kann so einfach wie folgt sein."
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:5172
@@ -9271,6 +9280,9 @@ msgid ""
 "package-1.0.tar.gz</emphasis>” may be used for the <emphasis role=\"strong"
 "\">-a</emphasis> option."
 msgstr ""
+"Eine URL wie »<emphasis role=\"strong\">https://www.example.org/DL/Paket-1.0."
+"tar.gz</emphasis>« kann für die Option <emphasis role=\"strong\">-a</"
+"emphasis> verwandt werden."
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:5173
@@ -9279,11 +9291,14 @@ msgid ""
 "packages/ibus/1.5.7/3.fc21/src/ibus-1.5.7-3.fc21.src.rpm</emphasis>” may be "
 "used for the <emphasis role=\"strong\">-a</emphasis> option, too."
 msgstr ""
+"Eine URL wie »<emphasis role=\"strong\">https://arm.koji.fedoraproject.org/"
+"packages/ibus/1.5.7/3.fc21/src/ibus-1.5.7-3.fc21.src.rpm</emphasis>« kann "
+"auch für die Option <emphasis role=\"strong\">-a</emphasis> verwandt werden."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:5175
 msgid "Python module"
-msgstr ""
+msgstr "Python-Modul"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5176
@@ -9296,6 +9311,14 @@ msgid ""
 "emphasis> and the <emphasis role=\"strong\">-s</emphasis> option to copy the "
 "package description from the upstream package need to be specified."
 msgstr ""
+"Sie können direkt aus dem als Tarball angebotenen Python-Paket "
+"<emphasis>Pythonmodul-1.0</emphasis><emphasis role=\"strong\">.tar."
+"gz</emphasis> ein funktionierendes Debian-Paket mit einem einzelnen Programm "
+"und einer vernünftigen Paketbeschreibung erstellen. Es müssen die Option "
+"<emphasis role=\"strong\">-b</emphasis> für das Festlegen des Pakettyps "
+"<emphasis role=\"strong\">python</emphasis> und die Option <emphasis "
+"role=\"strong\">-s</emphasis> für das Kopieren der Paketbeschreibung aus dem "
+"Paket der Originalautoren festgelegt werden."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5178
