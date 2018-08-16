@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-15 10:34+0200\n"
+"PO-Revision-Date: 2018-08-16 11:02+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -7837,12 +7837,12 @@ msgstr "GNU-Autoconf-Dokumentation"
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4373
 msgid "Autotools Tutorial"
-msgstr ""
+msgstr "Autotools-Anleitung"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4378
 msgid "Introduction to the autotools (autoconf, automake, and libtool)"
-msgstr ""
+msgstr "Einführung in die Autotools (Autoconf, Automake und Libtool)"
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4383
@@ -7853,12 +7853,12 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4389 debmake-doc.en.x02:4419
 msgid "CMake"
-msgstr ""
+msgstr "CMake"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:4390
 msgid "CMake has 4 steps."
-msgstr ""
+msgstr "CMake hat 4 Schritte."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4393
@@ -7949,6 +7949,8 @@ msgid ""
 "The situation of other build systems, such as CMake, are very similar to "
 "this Python one."
 msgstr ""
+"Die Situation für andere Bausysteme, wie CMake, sind sehr ähnlich dieser für "
+"Python."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:4452
@@ -8138,6 +8140,9 @@ msgid ""
 "Packaging library software requires you to perform much more work than "
 "usual. Here are some reminders for packaging library software:"
 msgstr ""
+"Die Paketierung von Bibliothekssoftware verlangt von Ihnen deutlich mehr "
+"Arbeit als normal. Es folgen ein paar Erinnerungen zur Paketierung von "
+"Bibliothekssoftware:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4569
@@ -8673,7 +8678,7 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:4924
 msgid "<emphasis role=\"strong\">dpkg-architecture</emphasis>(1)"
-msgstr ""
+msgstr "<emphasis role=\"strong\">dpkg-architecture</emphasis>(1)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:4940
@@ -8688,7 +8693,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:4941
 msgid "/usr/lib : Libraries for programming and packages"
-msgstr ""
+msgstr "/usr/lib: Bibliotheken fürs Programmieren und Pakete"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:4941
@@ -9327,6 +9332,9 @@ msgid ""
 "b</emphasis> option, specify the pertinent <emphasis>type</emphasis> for the "
 "<emphasis role=\"strong\">-b</emphasis> option."
 msgstr ""
+"Für andere interpretierte Sprachen, die die Option <emphasis "
+"role=\"strong\">-b</emphasis> unterstützen, legen Sie die relevante Option "
+"<emphasis role=\"strong\">-b</emphasis> fest."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5179
@@ -9341,7 +9349,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:5183
 msgid "Upstream snapshot (-d, -t)"
-msgstr ""
+msgstr "Schnappschuss der Originalautoren (-d, -t)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:5184
