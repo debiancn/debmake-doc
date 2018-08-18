@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-16 11:02+0200\n"
+"PO-Revision-Date: 2018-08-18 10:28+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -1337,17 +1337,17 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:688
 msgid "Archive situation"
-msgstr ""
+msgstr "Archivsituation"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:689
 msgid "Please realize the situation of the Debian archive."
-msgstr ""
+msgstr "Bitte begreifen Sie die Situation des Debian-Archivs."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:692
 msgid "Debian already has packages for most kinds of programs."
-msgstr ""
+msgstr "Debian hat bereits Pakete für die meisten Programmarten."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:697
@@ -1355,6 +1355,8 @@ msgid ""
 "The number of packages already in the Debian archive is several tens of "
 "times greater than that of active maintainers."
 msgstr ""
+"Die Anzahl an Paketen im Debian-Archiv ist mehrere zehnmal so groß wie die "
+"Anzahl der aktiven Betreuer."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:702
@@ -1382,7 +1384,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:711
 msgid "Contribution approaches"
-msgstr ""
+msgstr "Wege, beizutragen"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:712
@@ -1390,6 +1392,8 @@ msgid ""
 "Here is pseudo-Python code for your contribution approaches to Debian with a "
 "<emphasis role=\"strong\">program</emphasis>:"
 msgstr ""
+"Hier ist Pseudo-Python-Code für Ihre Wege, zu Debian mit einem <emphasis "
+"role=\"strong\">Programm</emphasis> beizutragen:"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:748
@@ -1544,7 +1548,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:871
 msgid "Novice contributor and maintainer"
-msgstr ""
+msgstr "Neue Beitragende und Betreuer"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:872
@@ -1552,11 +1556,14 @@ msgid ""
 "The novice contributor and maintainer may wonder what to learn to start your "
 "contribution to Debian. Here are my suggestions depending on your focus:"
 msgstr ""
+"Die neuen Beitragenden und Betreuer könnten sich fagen, was sie lernen "
+"sollten, um zu Debian beizutragen. Hier sind meine Vorschläge, abhängig von "
+"Ihrem Schwerpunkt:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:875
 msgid "Packaging"
-msgstr ""
+msgstr "Paketierung"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:880
@@ -1659,7 +1666,7 @@ msgstr ""
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:971
 msgid "Debian Wiki"
-msgstr ""
+msgstr "Debian-Wiki"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:970
@@ -1696,11 +1703,13 @@ msgid ""
 "<emphasis role=\"strong\">setuid</emphasis> or <emphasis role=\"strong"
 "\">setgid</emphasis> program"
 msgstr ""
+"<emphasis role=\"strong\">Setuid</emphasis>- oder <emphasis role=\"strong"
+"\">Setgid</emphasis>-Programme"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:991
 msgid "<emphasis role=\"strong\">daemon</emphasis> program"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Daemon</emphasis>-Programme"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:996
@@ -1708,6 +1717,9 @@ msgid ""
 "program installed in the <emphasis role=\"strong\">/sbin/</emphasis> or "
 "<emphasis role=\"strong\">/usr/sbin/</emphasis> directories"
 msgstr ""
+"Programme, die in den Verzeichnissen <emphasis role=\"strong\">/sbin/</"
+"emphasis> oder <emphasis role=\"strong\">/usr/sbin/</emphasis> installiert "
+"werden"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1001
@@ -1715,11 +1727,13 @@ msgid ""
 "When you gain more experience in packaging, you’ll be able to package such "
 "programs."
 msgstr ""
+"Wenn Sie mehr Erfahrung beim Paketieren gesammelt haben, werden Sie in der "
+"Lage sein, solche Programme zu paketieren."
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.x02:1005
 msgid "Tool Setups"
-msgstr ""
+msgstr "Werkzeugeinrichtung"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1006
@@ -1727,6 +1741,8 @@ msgid ""
 "The <emphasis role=\"strong\">build-essential</emphasis> package must be "
 "installed in the build environment."
 msgstr ""
+"Das Paket <emphasis role=\"strong\">build-essential</emphasis> muss in Ihrer "
+"Bauumgebung installiert sein."
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1007
@@ -1803,10 +1819,11 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1022
 msgid "mc"
-msgstr "Mc"
+msgstr "MC"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1023
+#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">mc</emphasis> command offers very easy ways to "
 "manage files. It can open the binary <emphasis role=\"strong\">deb</"
@@ -1815,6 +1832,12 @@ msgid ""
 "role=\"strong\">dpkg-deb</emphasis> command as its back-end. Let’s set it up "
 "to support easy <emphasis role=\"strong\">chdir</emphasis> as follows."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">mc</emphasis> bietet Ihnen einen sehr "
+"leichten Zugang zur Verwaltung von Dateien. Es kann binäre <emphasis "
+"role=\"strong\">deb</emphasis>-Dateien zum Prüfen ihrer Inhalte öffnen, "
+"indem die Eingabetaste über der binären <emphasis role=\"strong\">deb</"
+"emphasis>-Datei gedrückt wird. Es verwendet den Befehl <emphasis "
+"role=\"strong\">dpkg-deb</emphasis> als …"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1031
@@ -2123,7 +2146,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1167 debmake-doc.en.x02:5340
 msgid "git-buildpackage"
-msgstr ""
+msgstr "git-buildpackage"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1168
@@ -2131,6 +2154,8 @@ msgid ""
 "You may wish to set several global configurations in <emphasis role=\"strong"
 "\">~/.gbp.conf</emphasis>"
 msgstr ""
+"Es kann sinnvoll sein, dass Sie mehrere globale Konfigurationen in <emphasis "
+"role=\"strong\">~/.gbp.conf</emphasis> setzen."
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:1178
@@ -2138,6 +2163,8 @@ msgid ""
 "The <emphasis role=\"strong\">gbp</emphasis> command is the alias of the "
 "<emphasis role=\"strong\">git-buildpackage</emphasis> command."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">gbp</emphasis> ist ein Alias für den "
+"Befehl <emphasis role=\"strong\">git-buildpackage</emphasis>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1181
@@ -2168,7 +2195,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1197
 msgid "Private Debian repository"
-msgstr ""
+msgstr "Privates Debian-Depot"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1198
@@ -2176,11 +2203,13 @@ msgid ""
 "You can set up a private Debian package repository with the <emphasis role="
 "\"strong\">reprepro</emphasis> package."
 msgstr ""
+"Sie können ein privates Debian-Depot mit dem Paket <emphasis role="
+"\"strong\">reprepro</emphasis> einrichten."
 
 #. (itstool) path: chapter/title
 #: debmake-doc.en.x02:1202
 msgid "Simple Example"
-msgstr ""
+msgstr "Einfaches Beispiel"
 
 #. (itstool) path: chapter/simpara
 #: debmake-doc.en.x02:1203
@@ -2232,7 +2261,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1214
 msgid "Big picture"
-msgstr ""
+msgstr "Gesamtbild"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1215
@@ -2312,7 +2341,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1264
 msgid "What is debmake?"
-msgstr ""
+msgstr "Was ist Debmake?"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1265
@@ -2320,6 +2349,8 @@ msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command is the helper "
 "script for the Debian packaging."
 msgstr ""
+"Der Befehl <emphasis role=\"strong\">debmake</emphasis> ist ein Hilfsskript "
+"für die Debian-Paketierung."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1268
@@ -2373,7 +2404,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1297
 msgid "What is debuild?"
-msgstr ""
+msgstr "Was ist Debuild?"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1298
@@ -2381,6 +2412,8 @@ msgid ""
 "Here is a summary of commands similar to the <emphasis role=\"strong"
 "\">debuild</emphasis> command."
 msgstr ""
+"Hier ist eine Zusammenfassung von Befehlen, die dem Befehl <emphasis "
+"role=\"strong\">debuild</emphasis> ähnlich sind."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1301
@@ -2388,6 +2421,8 @@ msgid ""
 "The <emphasis role=\"strong\">debian/rules</emphasis> file defines how the "
 "Debian binary package is built."
 msgstr ""
+"Die Datei <emphasis role=\"strong\">debian/rules</emphasis> definiert, wie "
+"das binäre Debian-Paket gebaut wird."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1306
@@ -2500,7 +2535,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1388
 msgid "Step 1: Get the upstream source"
-msgstr ""
+msgstr "Schritt 1: Holen der Quellen der Originalautoren"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1389
@@ -2730,7 +2765,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1659
 msgid "Step 3: Modification to the template files"
-msgstr ""
+msgstr "Schritt 3: Anpassung der Vorlagendateien"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1660
