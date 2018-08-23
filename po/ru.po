@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
-"POT-Creation-Date: 2018-08-12 19:40+0300\n"
+"POT-Creation-Date: 2018-08-23 23:31+0300\n"
 "PO-Revision-Date: 2018-04-14 22:24+0500\n"
 "Last-Translator: Lev Lamberov <dogsleg@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russia@lists.debian.org>\n"
@@ -449,8 +449,8 @@ msgid ""
 "topics are only covered by the external pointers. These are intentional "
 "choices to keep this guide simple and maintainable."
 msgstr ""
-"Некоторые важные темы объясняются подробно. Некоторые из них могут "
-"показаться вам незначительными, но, пожалуйста, проявите терпение. Некоторые "
+"Некоторые важные темы объяснены подробно. Некоторые из них могут показаться "
+"вам незначительными, но, пожалуйста, проявите терпение. Некоторые "
 "специальные случаи пропускаются. Для некоторых тем приводятся только ссылки "
 "на внешние источники. Всё это сделано намеренно, чтобы данное руководство "
 "оставалось простым и удобным в сопровождении."
@@ -1847,9 +1847,9 @@ msgid ""
 "chapter in the maintainer environment. This enables us to share the common "
 "baseline working environment."
 msgstr ""
-"В окружении сопровождающего, хотя это и не абсолютно необходимое требование, полезно "
-"установить и настроить популярный набор пакетов, упоминаемых в данной главе. "
-"Это позволит нам иметь общую базовую рабочую среду."
+"В окружении сопровождающего, хотя это и не абсолютно необходимое требование, "
+"полезно установить и настроить популярный набор пакетов, упоминаемых в "
+"данной главе. Это позволит нам иметь общую базовую рабочую среду."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:1009
@@ -1890,9 +1890,9 @@ msgid ""
 "use by the shell environment variables <emphasis role=\"strong\">$DEBEMAIL</"
 "emphasis> and <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
 msgstr ""
-"Различные инструменты сопровождения Debian назначают ваш адрес электронной почты "
-"и ваше имя из переменных окружения <emphasis role=\"strong\">$DEBEMAIL</"
-"emphasis> и <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
+"Различные инструменты сопровождения Debian назначают ваш адрес электронной "
+"почты и ваше имя из переменных окружения <emphasis role=\"strong\">"
+"$DEBEMAIL</emphasis> и <emphasis role=\"strong\">$DEBFULLNAME</emphasis>."
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:1014
@@ -1954,8 +1954,9 @@ msgid ""
 "Nowadays, the <emphasis role=\"strong\">git</emphasis> command is the "
 "essential tool to manage the source tree with history."
 msgstr ""
-"На сегодняшний день команда <emphasis role=\"strong\">git</emphasis> является "
-"необходимым инструментом для работы с деревом исходного кода с историей."
+"На сегодняшний день команда <emphasis role=\"strong\">git</emphasis> "
+"является необходимым инструментом для работы с деревом исходного кода с "
+"историей."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1033
@@ -2026,11 +2027,12 @@ msgid ""
 "role=\"strong\">quilt</emphasis> command to the <emphasis role=\"strong"
 "\">dquilt</emphasis> command."
 msgstr ""
-"Чтобы не менять поведение самой команды <emphasis role=\"strong"
-"\">quilt</emphasis>, создадим псевдоним <emphasis role=\"strong"
-"\">dquilt</emphasis> для работы с пакетами Debian, добавив следующие строки "
-"в файл <emphasis role=\"strong\">~/.bashrc</emphasis>. Вторая строка "
-"предоставляет команде <emphasis role=\"strong\">dquilt</emphasis> ту же функциональность автодополнения, что и у команды <emphasis role=\"strong\">quilt</emphasis>."
+"Чтобы не менять поведение самой команды <emphasis role=\"strong\">quilt</"
+"emphasis>, создадим псевдоним <emphasis role=\"strong\">dquilt</emphasis> "
+"для работы с пакетами Debian, добавив следующие строки в файл <emphasis role="
+"\"strong\">~/.bashrc</emphasis>. Вторая строка предоставляет команде "
+"<emphasis role=\"strong\">dquilt</emphasis> ту же функциональность "
+"автодополнения, что и у команды <emphasis role=\"strong\">quilt</emphasis>."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1051
@@ -2072,8 +2074,8 @@ msgid ""
 "<emphasis role=\"strong\">devscripts</emphasis> package, is used to sign the "
 "Debian package with your private GPG key."
 msgstr ""
-"Для подписывания пакета Debian вашим закрытым GPG-ключом "
-"используется команда <emphasis role=\"strong\">debsign</emphasis>, входящая в состав "
+"Для подписывания пакета Debian вашим закрытым GPG-ключом используется "
+"команда <emphasis role=\"strong\">debsign</emphasis>, входящая в состав "
 "пакета <emphasis role=\"strong\">devscripts</emphasis>."
 
 #. (itstool) path: section/simpara
@@ -2268,9 +2270,9 @@ msgid ""
 "systems."
 msgstr ""
 "Установите <emphasis role=\"strong\">libeatmydata1</emphasis> (&gt;=82-2) и "
-"в chroot-окружение, и вне его, либо отключите использование <emphasis "
-"role=\"strong\">libeatmydata1</emphasis>. Это может вызывать состояние гонки "
-"на некоторых сборочных системах."
+"в chroot-окружение, и вне его, либо отключите использование <emphasis role="
+"\"strong\">libeatmydata1</emphasis>. Это может вызывать состояние гонки на "
+"некоторых сборочных системах."
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:1140
@@ -2327,9 +2329,9 @@ msgid ""
 msgstr ""
 "Каталог с кэшем <emphasis role=\"strong\">ccache</emphasis>, <emphasis role="
 "\"strong\">/var/cache/pbuilder/ccache</emphasis>, должен быть открыт для "
-"записи команды <emphasis role=\"strong\">pbuilder</emphasis> всем пользователям: «<emphasis role=\"strong\">-rwxrwxrwx 1 root "
-"root</emphasis>». "
-"Вам необходимо осознавать связанные с этим проблемы безопасности."
+"записи команды <emphasis role=\"strong\">pbuilder</emphasis> всем "
+"пользователям: «<emphasis role=\"strong\">-rwxrwxrwx 1 root root</"
+"emphasis>». Вам необходимо осознавать связанные с этим проблемы безопасности."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1167 debmake-doc.en.x02:5324
@@ -2365,8 +2367,8 @@ msgid ""
 "You should set up a local HTTP caching proxy to save the bandwidth for the "
 "Debian package repository access. There are several choices:"
 msgstr ""
-"Чтобы сохранить "
-"пропускную способность при обращении к репозиторию пакетов Debian вам следует настроить локальный кэширующий HTTP-прокси. Имеется "
+"Чтобы сохранить пропускную способность при обращении к репозиторию пакетов "
+"Debian вам следует настроить локальный кэширующий HTTP-прокси. Имеется "
 "несколько вариантов:"
 
 #. (itstool) path: listitem/simpara
@@ -2424,7 +2426,7 @@ msgid ""
 "source using the <emphasis role=\"strong\">Makefile</emphasis> as its build "
 "system."
 msgstr ""
-"Ниже приводится пример создания простого пакета Debian из простого исходного "
+"Ниже приведён пример создания простого пакета Debian из простого исходного "
 "кода на языке C, использующего в качестве системы сборки <emphasis role="
 "\"strong\">Makefile</emphasis>."
 
@@ -2449,7 +2451,6 @@ msgstr ""
 #. (itstool) path: chapter/simpara
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1211 debmake-doc.en.x02:6364
-#, fuzzy
 msgid ""
 "Debian packaging requires changing this “<emphasis role=\"strong\">make "
 "install</emphasis>” process to install files to the target system image "
@@ -2463,13 +2464,12 @@ msgstr ""
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:1212
-#, fuzzy
 msgid ""
 "Examples of creating a Debian package from other complicated build systems "
 "are described in <xref linkend=\"more\"/>."
 msgstr ""
-"Примеры создания пакета Debian из других более сложных систем сборки "
-"описывается в <xref linkend=\"more\"/>."
+"Примеры создания пакета Debian из других более сложных систем сборки описаны "
+"в <xref linkend=\"more\"/>."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1214
@@ -2489,7 +2489,6 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1218
-#, fuzzy
 msgid ""
 "The maintainer obtains the upstream tarball <emphasis role=\"strong"
 "\">debhello-0.0.tar.gz</emphasis> and untars its contents to the <emphasis "
@@ -2501,7 +2500,6 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1223
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command debianizes the "
 "upstream source tree by adding template files only in the <emphasis role="
@@ -2551,7 +2549,6 @@ msgstr "Общая картина сборки пакета"
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:1260
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debuild</emphasis> command in this and "
 "following examples may be substituted by equivalent commands such as the "
@@ -2563,7 +2560,6 @@ msgstr ""
 
 #. (itstool) path: tip/simpara
 #: debmake-doc.en.x02:1261
-#, fuzzy
 msgid ""
 "If the upstream tarball in the <emphasis role=\"strong\">.tar.xz</emphasis> "
 "format is available, use it instead of the one in the <emphasis role=\"strong"
@@ -2599,7 +2595,7 @@ msgid ""
 "It always sets most of the obvious option states and values to reasonable "
 "defaults."
 msgstr ""
-"Она всегда устанавливает большую часть очевидных опций в разумные значения."
+"Она всегда устанавливает большинство очевидных опций в разумные значения."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1273
@@ -2607,8 +2603,8 @@ msgid ""
 "It generates the upstream tarball and its required symlink if they are "
 "missing."
 msgstr ""
-"Она создаёт tar-архив основной ветки разработки и необходимую символьную "
-"ссылку в случае их отсутствия."
+"Создаёт tar-архив основной ветки разработки и необходимую символьную ссылку "
+"в случае их отсутствия."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1278
@@ -2616,25 +2612,23 @@ msgid ""
 "It doesn’t overwrite the existing configuration files in the <emphasis role="
 "\"strong\">debian/</emphasis> directory."
 msgstr ""
-"Она не переписывает существующие файлы настройки в каталоге <emphasis role="
+"Не переписывает существующие файлы настройки в каталоге <emphasis role="
 "\"strong\">debian/</emphasis>."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1283
 msgid "It supports the <emphasis role=\"strong\">multiarch</emphasis> package."
 msgstr ""
-"Она поддерживает <emphasis role=\"strong\">мультиархитектурные</emphasis> "
-"пакеты."
+"Поддерживает <emphasis role=\"strong\">мультиархитектурные</emphasis> пакеты."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1288
-#, fuzzy
 msgid ""
 "It creates good template files such as the <emphasis role=\"strong\">debian/"
 "copyright</emphasis> file compliant with <emphasis role=\"strong\">DEP-5</"
 "emphasis>."
 msgstr ""
-"Она создаёт хорошие шаблонные файлы. Например, файл <emphasis role=\"strong"
+"Создаёт хорошие шаблонные файлы. Например, файл <emphasis role=\"strong"
 "\">debian/copyright</emphasis>, соответствующий <emphasis role=\"strong"
 "\">DEP-5</emphasis>."
 
@@ -2670,7 +2664,7 @@ msgid ""
 "Here is a summary of commands similar to the <emphasis role=\"strong"
 "\">debuild</emphasis> command."
 msgstr ""
-"Ниже приводтся обзор команд, похожих на команду <emphasis role=\"strong"
+"Ниже приведён обзор команд, похожих на команду <emphasis role=\"strong"
 "\">debuild</emphasis>."
 
 #. (itstool) path: listitem/simpara
@@ -2684,7 +2678,6 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1306
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">dpkg-buildpackage</emphasis> command is the "
 "official command to build the Debian binary package. For normal binary "
@@ -2763,9 +2756,9 @@ msgid ""
 "\"strong\">*.dsc</emphasis> and <emphasis role=\"strong\">*.changes</"
 "emphasis> files)"
 msgstr ""
-"«<emphasis role=\"strong\">debsign</emphasis>» (подписывание файлы <emphasis "
-"role=\"strong\">*.dsc</emphasis> и <emphasis role=\"strong\">*.changes</"
-"emphasis>)"
+"«<emphasis role=\"strong\">debsign</emphasis>» (подписывание файлов "
+"<emphasis role=\"strong\">*.dsc</emphasis> и <emphasis role=\"strong\">*."
+"changes</emphasis>)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1361
@@ -2775,10 +2768,11 @@ msgid ""
 "options, this step is skipped and you must run the <emphasis role=\"strong"
 "\">debsign</emphasis> command manually."
 msgstr ""
-"Если вы последовали <xref linkend=\"devscripts-setup\"/> и передали "
-"программе сборки опции <emphasis role=\"strong\">-us</emphasis> и <emphasis "
-"role=\"strong\">-uc</emphasis>, то данный шаг пропускается, а вам требуется "
-"вручную запустить команду <emphasis role=\"strong\">debsign</emphasis>."
+"Если вы следовали инструкциям (см. <xref linkend=\"devscripts-setup\"/>) и "
+"передали программе сборки опции <emphasis role=\"strong\">-us</emphasis> и "
+"<emphasis role=\"strong\">-uc</emphasis>, то данный шаг будет пропущен, а "
+"для подписи требуется вручную запустить команду <emphasis role=\"strong"
+"\">debsign</emphasis>."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1370
@@ -2847,8 +2841,8 @@ msgid ""
 "Here, the C source <emphasis role=\"strong\">hello.c</emphasis> is a very "
 "simple one."
 msgstr ""
-"В нём содерижится исходный код на языке C, <emphasis role=\"strong\">hello."
-"c</emphasis>, довольно простой."
+"В нём содержится исходный код на языке C, <emphasis role=\"strong\">hello.c</"
+"emphasis>, довольно простой."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:1421
@@ -2861,7 +2855,7 @@ msgid ""
 "Here, the <emphasis role=\"strong\">Makefile</emphasis> supports <_:ulink-1/"
 "> and <_:ulink-2/>. Notably:"
 msgstr ""
-"Итак, <emphasis role=\"strong\">Makefile</emphasis> поддерживает <_:ulink-1/"
+"Итак, <emphasis role=\"strong\">Makefile</emphasis> соответствует <_:ulink-1/"
 "> и <_:ulink-2/>. А именно:"
 
 #. (itstool) path: listitem/simpara
@@ -2877,17 +2871,15 @@ msgstr ""
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1439
-#, fuzzy
 msgid ""
 "install files with <emphasis role=\"strong\">$(DESTDIR)</emphasis> defined "
 "to the target system image"
 msgstr ""
-"установку файлов в <emphasis role=\"strong\">$(DESTDIR)</emphasis> в "
+"установку файлов с учётом <emphasis role=\"strong\">$(DESTDIR)</emphasis> в "
 "качестве целевого системного образа"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:1444
-#, fuzzy
 msgid ""
 "install files with <emphasis role=\"strong\">$(prefix)</emphasis> defined, "
 "which can be overridden to be <emphasis role=\"strong\">/usr</emphasis>"
@@ -2902,15 +2894,14 @@ msgstr "<emphasis role=\"strong\">Makefile</emphasis>"
 
 #. (itstool) path: note/simpara
 #: debmake-doc.en.x02:1475
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">echo</emphasis> of the <emphasis role=\"strong"
 "\">$(CFLAGS)</emphasis> variable is used to verify the proper setting of the "
 "build flag in the following example."
 msgstr ""
-"В приводимом ниже примере применение команды <emphasis role=\"strong\">echo</"
-"emphasis> к <emphasis role=\"strong\">$(CFLAGS)</emphasis> используется для "
-"того, чтобы проверить настройки сборочных флагов."
+"В приведённом ниже примере применение команды <emphasis role=\"strong"
+"\">echo</emphasis> к <emphasis role=\"strong\">$(CFLAGS)</emphasis> "
+"используется для проверки настройки сборочных флагов."
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:1478
@@ -2924,8 +2915,8 @@ msgid ""
 "the <emphasis role=\"strong\">-T</emphasis> option, more verbose comments "
 "are generated for the template files."
 msgstr ""
-"Если команда <emphasis role=\"strong\">debmake</emphasis> вызывается с "
-"опцией <emphasis role=\"strong\">-T</emphasis>, то в шаблонные файлы будут "
+"Если команда <emphasis role=\"strong\">debmake</emphasis> вызвана с опцией "
+"<emphasis role=\"strong\">-T</emphasis>, то в шаблонные файлы будут "
 "добавлены более подробные комментарии."
 
 #. (itstool) path: section/simpara
@@ -2934,13 +2925,12 @@ msgid ""
 "The output from the <emphasis role=\"strong\">debmake</emphasis> command is "
 "very verbose and explains what it does as follows."
 msgstr ""
-"вывод команды <emphasis role=\"strong\">debmake</emphasis> довольно "
-"подробен, в нём объясняются выполняемые действия, например, так как это "
-"указано ниже."
+"Вывод команды <emphasis role=\"strong\">debmake</emphasis> довольно "
+"подробен, в нём объяснены выполняемые действия, например, как это указано "
+"ниже."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1509
-#, fuzzy
 msgid ""
 "The <emphasis role=\"strong\">debmake</emphasis> command generates all these "
 "template files based on command line options. Since no options are "
@@ -2980,7 +2970,7 @@ msgid ""
 "The package type: <emphasis role=\"strong\">bin</emphasis> (the ELF binary "
 "executable package)"
 msgstr ""
-"Тип пакета: <emphasis role=\"strong\">bin</emphasis> (пакет с дволичными "
+"Тип пакета: <emphasis role=\"strong\">bin</emphasis> (пакет с двоичными "
 "исполняемыми файлами формата ELF)"
 
 #. (itstool) path: listitem/simpara
@@ -3015,8 +3005,8 @@ msgid ""
 msgstr ""
 "Файл <emphasis role=\"strong\">debian/rules</emphasis> является сборочным "
 "сценарием, предоставляемым сопровождающим пакета. Ниже приводится его "
-"шаблонный файл, созданный с помощью команды <emphasis role=\"strong"
-"\">debmake</emphasis>."
+"шаблонный файл, созданный командой <emphasis role=\"strong\">debmake</"
+"emphasis>."
 
 #. (itstool) path: formalpara/title
 #: debmake-doc.en.x02:1572
@@ -3032,7 +3022,7 @@ msgid ""
 msgstr ""
 "По сути, это стандартный файл <emphasis role=\"strong\">debian/rules</"
 "emphasis> с командой <emphasis role=\"strong\">dh</emphasis>. (Для удобства "
-"его настройки в нём содержится несколько закомментированных строк.)"
+"настройки в нём содержится несколько закомментированных строк.)"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1587
@@ -3042,7 +3032,7 @@ msgid ""
 "by the <emphasis role=\"strong\">debmake</emphasis> command."
 msgstr ""
 "Файл <emphasis role=\"strong\">debian/control</emphasis> предоставляет "
-"основные метаданные пакета Debian. Ниже приводится шаблонный файл, созданный "
+"основные метаданные пакета Debian. Ниже приведён шаблонный файл, созданный "
 "командой <emphasis role=\"strong\">debmake</emphasis>."
 
 #. (itstool) path: formalpara/title
@@ -3052,7 +3042,6 @@ msgstr "<emphasis role=\"strong\">debian/control</emphasis> (шаблонный 
 
 #. (itstool) path: warning/simpara
 #: debmake-doc.en.x02:1609
-#, fuzzy
 msgid ""
 "If you leave “<emphasis role=\"strong\">Section: unknown</emphasis>” in the "
 "template <emphasis role=\"strong\">debian/control</emphasis> file unchanged, "
@@ -3062,7 +3051,7 @@ msgstr ""
 "Если вы оставите «<emphasis role=\"strong\">Section: unknown</emphasis>» в "
 "шаблонном файле <emphasis role=\"strong\">debian/control</emphasis> без "
 "изменений, то ошибка <emphasis role=\"strong\">lintian</emphasis> может "
-"вызвать ошибку сборки."
+"прервать сборку."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1610
@@ -3081,7 +3070,7 @@ msgstr ""
 "Arch: foreign</emphasis>». Кроме того, она устанавливает требуемые параметры "
 "<emphasis role=\"strong\">переменных подстановки</emphasis> следующим "
 "образом: «<emphasis role=\"strong\">Depends: ${shlibs:Depends}, ${misc:"
-"Depends}</emphasis>». Это объясняется в <xref linkend=\"basics\"/>."
+"Depends}</emphasis>». Для объяснения см. <xref linkend=\"basics\"/>."
 
 #. (itstool) path: simpara/ulink
 #: debmake-doc.en.x02:1611
@@ -3095,9 +3084,9 @@ msgid ""
 "uses the RFC-822 style as documented in <_:ulink-1/> of the “Debian Policy "
 "Manual”. The use of the empty line and the leading space are significant."
 msgstr ""
-"Заметьте, что этот файл <emphasis role=\"strong\">debian/control</emphasis> "
-"использует стиль оформления RFC-822, описываемый в <_:ulink-1/> в "
-"«Руководстве по политике Debian». Использование пустой строки и начального "
+"Заметьте, что файл <emphasis role=\"strong\">debian/control</emphasis> "
+"использует стиль оформления RFC-822, описываемый в <_:ulink-1/> из "
+"«Руководства по политике Debian». Использование пустой строки и начального "
 "пробела важно и имеет особый смысл."
 
 #. (itstool) path: section/simpara
@@ -3108,7 +3097,7 @@ msgid ""
 "generated by the <emphasis role=\"strong\">debmake</emphasis> command."
 msgstr ""
 "Файл <emphasis role=\"strong\">debian/copyright</emphasis> предоставляет "
-"данные об авторском праве на пакет Debian. Ниже приводтся шаблонный файл, "
+"данные об авторском праве на пакет Debian. Ниже приведён шаблонный файл, "
 "созданный командой <emphasis role=\"strong\">debmake</emphasis>."
 
 #. (itstool) path: formalpara/title
@@ -3159,21 +3148,19 @@ msgstr ""
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1661
-#, fuzzy
 msgid ""
 "Exporting the <emphasis role=\"strong\">DH_VERBOSE</emphasis> environment "
 "variable in the <emphasis role=\"strong\">debian/rules</emphasis> file as "
 "above forces the <emphasis role=\"strong\">debhelper</emphasis> tool to make "
 "a fine grained build report."
 msgstr ""
-"Экспортирование <emphasis role=\"strong\">DH_VERBOSE</emphasis> в файле "
-"<emphasis role=\"strong\">debian/rules</emphasis> как это сделано выше "
-"приводит к тому, что инструмент <emphasis role=\"strong\">debhelper</"
-"emphasis> создаёт более подробный отчёт о сборке."
+"Экспортирование переменой окружения <emphasis role=\"strong\">DH_VERBOSE</"
+"emphasis> в файле <emphasis role=\"strong\">debian/rules</emphasis>, как это "
+"сделано выше, приводит к тому, что инструмент <emphasis role=\"strong"
+"\">debhelper</emphasis> создаёт более подробный отчёт о сборке."
 
 #. (itstool) path: footnote/simpara
 #: debmake-doc.en.x02:1662
-#, fuzzy
 msgid ""
 "This is a cliché to force a read-only relocation link for the hardening and "
 "to prevent the lintian warning “<emphasis role=\"strong\">W: debhello: "
@@ -3185,8 +3172,8 @@ msgstr ""
 "усиления безопасности и предотвращения появления предупреждения lintian "
 "«<emphasis role=\"strong\">W: debhello: hardening-no-relro usr/bin/hello</"
 "emphasis>». Для данного примера это не является необходимым, но и не "
-"повредит. Как кажется, lintian в данном случае срабатывает ошибочно, "
-"поскольку компоновки с какой-либо библиотекой не происходит."
+"повредит. Кажется, lintian в данном случае срабатывает ошибочно, поскольку "
+"компоновки с какой-либо библиотекой не происходит."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:1662
