@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debmake-doc 1.9-1\n"
 "POT-Creation-Date: 2018-08-09 23:11+0900\n"
-"PO-Revision-Date: 2018-08-18 15:27+0200\n"
+"PO-Revision-Date: 2018-08-24 07:20+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -3318,7 +3318,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:2135
 msgid "Packaging workflow"
-msgstr ""
+msgstr "Arbeitsablauf des Paketierens"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2136
@@ -3327,6 +3327,10 @@ msgid ""
 "generating several specifically named files (see <xref linkend=\"name-version"
 "\"/>) as defined in the “Debian Policy Manual”."
 msgstr ""
+"Der Arbeitsablauf beim Paketieren, um ein Debian-Binärpaket zu erstellen, "
+"beinhaltete die Erstellung mehrere Dateien mit bestimmten Namen (siehe <xref "
+"linkend=\"name-version\"/>), wie dies in dem »Debian Policy Manual« "
+"definiert ist."
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2137
@@ -3334,6 +3338,8 @@ msgid ""
 "The oversimplified method for the Debian packaging workflow can be "
 "summarized in 5 steps as follows."
 msgstr ""
+"Stark vereinfacht kann der Arbeitsablauf beim Debian-Paketieren in folgende "
+"5 Schritte zusammengefasst werden:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2140 debmake-doc.en.x02:8943
@@ -3341,6 +3347,8 @@ msgid ""
 "The upstream tarball is downloaded as the <emphasis>package-version</"
 "emphasis><emphasis role=\"strong\">.tar.gz</emphasis> file."
 msgstr ""
+"Der Tarball der Originalautoren wird als Datei <emphasis>Paket-Version</"
+"emphasis><emphasis role=\"strong\">.tar.gz</emphasis> heruntergeladen."
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2145
@@ -4634,22 +4642,22 @@ msgstr ""
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2790
 msgid "Please check examples in this guide:"
-msgstr ""
+msgstr "Bitte prüfen Sie die Beispiele in dieser Anleitung:"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2793
 msgid "<xref linkend=\"autotools-multi\"/> (Autotools based)"
-msgstr ""
+msgstr "<xref linkend=\"autotools-multi\"/> (Autotools-basiert)"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2798
 msgid "<xref linkend=\"cmake-multi\"/> (CMake based)"
-msgstr ""
+msgstr "<xref linkend=\"cmake-multi\"/> (CMake-basiert)"
 
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:2804
 msgid "debmake -b"
-msgstr ""
+msgstr "debmake -b"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2805
@@ -4664,29 +4672,29 @@ msgstr ""
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2808
 msgid "<emphasis role=\"strong\">Package:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Package:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2813 debmake-doc.en.x02:2935
 msgid "<emphasis role=\"strong\">Architecture:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Architecture:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2818 debmake-doc.en.x02:2936
 msgid "<emphasis role=\"strong\">Multi-Arch:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Multi-Arch:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2823
 msgid "<emphasis role=\"strong\">Depends:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Depends:</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2828
 msgid "<emphasis role=\"strong\">Pre-Depends:</emphasis>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">Pre-Depends:</emphasis>"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2833
@@ -4832,7 +4840,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: debmake-doc.en.x02:2905
 msgid "Package split scenario and examples"
-msgstr ""
+msgstr "Pakettrennungsszenarien und -beispiele"
 
 #. (itstool) path: section/simpara
 #: debmake-doc.en.x02:2906
@@ -4848,6 +4856,8 @@ msgid ""
 "a library source <emphasis>libfoo-1.0</emphasis><emphasis role=\"strong\">."
 "tar.gz</emphasis>"
 msgstr ""
+"eine Bibliotheksquelle <emphasis>libfoo-1.0</emphasis><emphasis role=\"strong\">."
+"tar.gz</emphasis>"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2914
@@ -4855,6 +4865,8 @@ msgid ""
 "a tool source <emphasis>bar-1.0</emphasis><emphasis role=\"strong\">.tar.gz</"
 "emphasis> written in a compiled language"
 msgstr ""
+"eine Werkzeugquelle <emphasis>bar-1.0</emphasis><emphasis role=\"strong\">."
+"tar.gz</emphasis>, geschrieben in einer kompilierten Sprache"
 
 #. (itstool) path: listitem/simpara
 #: debmake-doc.en.x02:2919
@@ -4862,21 +4874,23 @@ msgid ""
 "a tool source <emphasis>baz-1.0</emphasis><emphasis role=\"strong\">.tar.gz</"
 "emphasis> written in an interpreted language"
 msgstr ""
+"eine Werkzeugquelle <emphasis>baz-1.0</emphasis><emphasis role=\"strong\">."
+"tar.gz</emphasis>, geschrieben in einer interpretierten Sprache"
 
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2933
 msgid "<emphasis>binarypackage</emphasis>"
-msgstr ""
+msgstr "<emphasis>Binärpaket</emphasis>"
 
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2934
 msgid "<emphasis>type</emphasis>"
-msgstr ""
+msgstr "<emphasis>Typ</emphasis>"
 
 #. (itstool) path: row/entry
 #: debmake-doc.en.x02:2937
 msgid "Package content"
-msgstr ""
+msgstr "Paketinhalt"
 
 #. (itstool) path: entry/simpara
 #: debmake-doc.en.x02:2942
